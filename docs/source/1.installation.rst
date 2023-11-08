@@ -25,11 +25,10 @@ Setting up the R Project
 ------------------------
 1. Download from the github repository `STEGO.R <https://github.com/KerryAM-R/STEGO.R>`_ download and unzip the `'Directory_for_Project.zip' <https://github.com/KerryAM-R/STEGO.R/blob/main/Directory_for_Project.zip>`_ and rename the folder.
    - This folder contains how to process the data and will be used to set up the R.project environment.
-
-
   
 2. Open Rstudio
-   - Quick tutorial of understanding RStudio environment with this [YouTube](https://www.youtube.com/watch?v=FIrsOBy5k58) Video.
+   - Quick tutorial of understanding RStudio environment with this `YouTube <https://www.youtube.com/watch?v=FIrsOBy5k58>`_ Video.
+
 3. In RStudio Go to File (top left of the screen) -> New project -> Create the new project in the renamed 'Directory_for_Project' Directory.
 
 !!! short-cut for running R code
@@ -61,25 +60,18 @@ This folder contains the following folder:
   
 Downloading and installing STEGO.R
 ----------------------------------
-Step 1.
-~~~~~~~
+**Step 1.** File -> New File -> R Script 
 
-File -> New File -> R Script 
+**Step 2.** Copy all the R code in this document to following to the 'untitled' script (top left panel) 
 
-Step 2. 
-~~~~~~~
+Devtools and BiocManager are required to download the necessary packages from Github and Bioconductor
+``install.packages("devtools")``
+``install.packages("BiocManager")``
+``install.packages("usethis")``
 
-Copy all the R code in this document to following to the 'untitled' script (top left panel) 
+This line will install STEGO
+``devtools::install_github("KerryAM-R/STEGO.R")``
 
-``` r
-# Devtools and BiocManager are required to download the necessary packages from Github and Bioconductor
-install.packages("devtools")
-install.packages("BiocManager")
-install.packages("usethis")
-
-# This line will install STEGO
-devtools::install_github("KerryAM-R/STEGO.R")
-```
 **Step 3.** put the cursor on the install.packages("devtools") line, and hit run (top-right corner of the panel) 
 
 **Step 4.** repeat step 3 for install.packages("BiocManager")
@@ -88,13 +80,14 @@ devtools::install_github("KerryAM-R/STEGO.R")
 
 **Step 6.** repeat step 3 for devtools::install_github("KerryAM-R/STEGO.R")
 
-!!! Possible installing prompts 
+.. note:: 
+   Possible installing prompts
+   
+   When you see this line: "These packages have more recent versions available. It is recommended to update all of them. Which would you like to update? Enter one or more numbers, or an empty line to skip updates:", answer with  **1** and hit **Enter**.
+      
+   On a **Mac** if you see "Do you want to install from sources the package which needs compilation? (Yes/no/cancel)", answer with  **no** and hit **Enter**. *This same message will appear as an popup on Windows.*
 
-    When you see this line: "These packages have more recent versions available. It is recommended to update all of them. Which would you like to update? Enter one or more numbers, or an empty line to skip updates:", answer with  **1** and hit **Enter**.
-
-    On a **Mac** if you see "Do you want to install from sources the package which needs compilation? (Yes/no/cancel)", answer with  **no** and hit **Enter**. *This same message will appear as an popup on Windows.*
-
-    Once all packages are installed, this will be the final section of the installation process. 
+Once all packages are installed, this will be the final section of the installation process. 
     
 
 .. code-block:: RST
