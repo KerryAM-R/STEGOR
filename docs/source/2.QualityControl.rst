@@ -1,14 +1,4 @@
 Quality control
-===============
-
-But still, that's nothing compared to a name like
-|j2ee-cas|__.
-
-.. |j2ee-cas| replace::
-   the Java `TM`:super: 2 Platform, Enterprise Edition Client
-   Access Services
-__ http://developer.java.sun.com/developer/earlyAccess/
-   j2eecas/
 
 .. note:: 
     Consideration for the analysis.  
@@ -30,7 +20,7 @@ Formatting the 10x Genomics, BD Rhapsody or Array to create the necessary docume
 
 While this process was initially developed for TCR-seq, we have also included the capacity for pairing the BCR sequences. 
 
-#### 10x Genomics 
+**10x Genomics**
 
 There are several files formats that are compatible with STEGO.R QC process. This includes the standard cell ranger output of barcode, features, matrix files as well as the separate contig file. If the formatting is already in the cellxgene (.csv.gz or .h5 file), then this file format can be uploaded to thet "Seruat QC" section. Upload all the required files. 
 
@@ -40,7 +30,7 @@ There are several files formats that are compatible with STEGO.R QC process. Thi
   :width: 600
   :alt: Alternative text
 
-#### BD Rhapsody 
+**BD Rhapsody**
 
 There are two format outputs of BD Rhapsody aligment of either a cellxgene (.csv.gz) or the barcode, features and matrix file. Unlike the 10x Genomics, there is also an extra file called "Sample Tags", which contains the multi-plex ID names. The **"Sample Tags"** file is required. However, if some this file is not created (one sample in the experimet), it can be created under the "Create Sample Tags file". 
 
@@ -50,9 +40,10 @@ Additionally there are several formats for the TCR contig file: paired dominant,
   :width: 600
   :alt: Alternative text
 
-#### Array
+**Array**
 
-*Note: The TCR_Explore file is for the interrogation of the TCR repertoire independent of the gene expression data at the [TCR_Explore website](https://tcr-explore.erc.monash.edu)*
+*Note: The TCR_Explore file is for the interrogation of the TCR repertoire independent of the gene expression data at the `TCR_Explore <https://tcr-explore.erc.monash.edu/>`_ 
+website*
 
 ### Recommended process
 
@@ -75,7 +66,7 @@ Upload the documents to the required sections depending on the technological and
 **Merging TCRex**
 
 1. Upload all the files stored in the "1_TCRex" for merging and download save the merged file to the 1_TCRex. 
-2. The TCRex merge file will be uploaded to the [TCRex website](https://tcrex.biodatamining.be) to predict if the beta chain will interact with certain epitopes.
+2. The TCRex merge file will be uploaded to the `TCRex <https://tcrex.biodatamining.be>`_ website to predict if the beta chain will interact with certain epitopes.
 3. Once the TCRex process is complete, download the processed file, and move it to the **3_Analysis** folder
 
 .. image:: img/MergeCluster.png

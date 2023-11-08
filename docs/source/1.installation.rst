@@ -6,7 +6,7 @@ To use STEGO, first install R, RStudio and other required programs
 MAC:
 ^^^^
 
-* Install `R <https://cran.r-project.org/bin/macosx/>`_
+* Install `R <https://cran.r-project.org/bin/macosx/>`_ asdfads
 * Install `RStudio <https://posit.co/download/rstudio-desktop/>`_
 * Install `Quartz <https://www.xquartz.org>`_
 
