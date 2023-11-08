@@ -105,7 +105,6 @@ Once all packages are installed, this will be the final section of the installat
           ─  checking for LF line-endings in source and make files and shell scripts
           ─  checking for empty or unneeded directories
           ─  building ‘STEGO.R_1.0.0.tar.gz’
-         
       * installing *source* package STEGO.R’ ...
       ** using staged installation
       ** R
