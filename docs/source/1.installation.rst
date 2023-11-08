@@ -4,14 +4,14 @@ Installation
 To use STEGO, first install R, RStudio and other required programs
 ------------------------------------------------------------------
 #### MAC:
-* Install [R](https://cran.r-project.org/bin/macosx/)
-* Install [RStudio](https://posit.co/download/rstudio-desktop/).
-* Install [Quartz](https://www.xquartz.org)
+* Install `R <https://cran.r-project.org/bin/macosx/>`
+* Install `RStudio <https://posit.co/download/rstudio-desktop/>`
+* Install `Quartz <https://www.xquartz.org>`
 
 #### Windows:
-* Install [R](https://cran.r-project.org)
-* Install [RStudio](https://posit.co/download/rstudio-desktop/)
-* Install [Rtools](https://cran.r-project.org/bin/windows/Rtools/)
+* Install `R <https://cran.r-project.org>`
+* Install `RStudio <https://posit.co/download/rstudio-desktop/>`
+* Install `Rtools <https://cran.r-project.org/bin/windows/Rtools/>`
 
 #### Computer requirements
 Recommended to use a 64-bit OS with 16GB of RAM, with ideally 32GB of RAM. This is needed for the memory intensive merging and annotation steps. 
@@ -88,15 +88,17 @@ devtools::install_github("KerryAM-R/STEGO.R")
     Once all packages are installed, this will be the final section of the installation process. 
     
 
-```
-── R CMD build ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-✔  checking for file ‘/Users/kerrymullan/Desktop/STEGO_copy.R/Temp/Rtmp0n6xNi/remotes176117593b632/KerryAM-R-STEGO.R-df4640eae1a05f44f3c91ca527215f4af56894ff/DESCRIPTION’ ...
-─  preparing ‘STEGO.R’:
-✔  checking DESCRIPTION meta-information ...
-─  checking for LF line-endings in source and make files and shell scripts
-─  checking for empty or unneeded directories
-─  building ‘STEGO.R_1.0.0.tar.gz’
+.. code-block:: RST
+    ── R CMD build ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+    ✔  checking for file ‘/Users/kerrymullan/Desktop/STEGO_copy.R/Temp/Rtmp0n6xNi/remotes176117593b632/KerryAM-R-STEGO.R-df4640eae1a05f44f3c91ca527215f4af56894ff/DESCRIPTION’ ...
+    ─  preparing ‘STEGO.R’:
+    ✔  checking DESCRIPTION meta-information ...
+    ─  checking for LF line-endings in source and make files and shell scripts
+    ─  checking for empty or unneeded directories
+    ─  building ‘STEGO.R_1.0.0.tar.gz’
    
+
+
 * installing *source* package ‘STEGO.R’ ...
 ** using staged installation
 ** R
