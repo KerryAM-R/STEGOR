@@ -127,6 +127,7 @@ Expected final lines once STEGO.R has been correctly installed.
 **Step 7.** Run each of the following the following lines to set up the .Renviron (R environment)
 
 ``.rs.restartR()`` # restart R
+
 ``getwd()`` # path to current working directory, which will be used for defining where to put the temporary file will be stored.  e.g. /Users/kerrymullan/Documents/GitHub/STEGO (mac)
 
 onto the end of the line add the Temp folder name e.g. /Users/kerrymullan/Documents/GitHub/STEGO/Temp (mac)
