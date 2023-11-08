@@ -12,7 +12,7 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 3
 
    1.installation
    2.QualityControl
