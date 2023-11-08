@@ -17,10 +17,6 @@ Contents
    FAQ
    History
 
-# Welcome to STEGO's documentation!
-
-STEGO is an R Shiny application to aid in scRNA-seq with scTCR-seq.
-
 .. note::
 
    This project is under active development.
