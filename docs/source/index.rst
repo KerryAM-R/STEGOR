@@ -2,10 +2,6 @@ Welcome to STEGO.R's documentation!
 ===================================
 
 **STEGO.R** is an R shiny application
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
 
 Check out the :doc:`1.installation` for how to install the project
 - :ref:`Installation`
@@ -20,9 +16,14 @@ Contents
 
 .. toctree::
 
+   Installation
+   QualityControl
+   Analysis
+   FAQ
+   History
+
    usage
    api
-
 
 # Welcome to STEGO's documentation!
 
