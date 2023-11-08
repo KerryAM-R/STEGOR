@@ -22,8 +22,6 @@ Contents
    FAQ
    History
 
-   usage
-   api
 
 # Welcome to STEGO's documentation!
 
