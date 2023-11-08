@@ -3,7 +3,8 @@ Installation
 
 To use STEGO, first install R, RStudio and other required programs
 ------------------------------------------------------------------
-#### MAC:
+MAC:
+++++
 
 * Install `R <https://cran.r-project.org/bin/macosx/>`_
 * Install `RStudio <https://posit.co/download/rstudio-desktop/>`_
