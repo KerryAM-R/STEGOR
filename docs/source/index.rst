@@ -11,6 +11,7 @@ Contents
 
 .. toctree::
    :maxdepth: 2
+
    1.installation
    2.QualityControl
    3.Analysis
