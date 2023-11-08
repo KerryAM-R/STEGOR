@@ -1,14 +1,23 @@
 Quality control
 ===============
 
+But still, that's nothing compared to a name like
+|j2ee-cas|__.
+
+.. |j2ee-cas| replace::
+   the Java `TM`:super: 2 Platform, Enterprise Edition Client
+   Access Services
+__ http://developer.java.sun.com/developer/earlyAccess/
+   j2eecas/
+
 .. note:: 
     Consideration for the analysis.  
        The pipeline was built for scRNA-seq with scTCR-seq datasets. 
 
        QC documentation is being actively updated. 
 
-Pre-requeisites 
----------------
+Prerequisite
+------------
 
 Install STEGO. 
 
@@ -28,7 +37,7 @@ There are several files formats that are compatible with STEGO.R QC process. Thi
 *Under development: multi-TCR (requires unfiltered contig file)*
 
 .. image:: img/10xFormatting.png
-  :width: 400
+  :width: 600
   :alt: Alternative text
 
 #### BD Rhapsody 
@@ -36,6 +45,10 @@ There are several files formats that are compatible with STEGO.R QC process. Thi
 There are two format outputs of BD Rhapsody aligment of either a cellxgene (.csv.gz) or the barcode, features and matrix file. Unlike the 10x Genomics, there is also an extra file called "Sample Tags", which contains the multi-plex ID names. The **"Sample Tags"** file is required. However, if some this file is not created (one sample in the experimet), it can be created under the "Create Sample Tags file". 
 
 Additionally there are several formats for the TCR contig file: paired dominant, AIRR dominant (unpaired), AIRR unfilted. For the latter two file formates we include to filter to keep only the 'paired' and if BCR was present as well. 
+
+.. image:: img/BDFormatting.png
+  :width: 600
+  :alt: Alternative text
 
 #### Array
 
@@ -54,26 +67,34 @@ Upload the documents to the required sections depending on the technological and
 5. Two files need to be downloaded per sample under the "ClusTCR" to the "1_ClusTCR" folder. They will have the prefix of AG_ and BD_ (*Version 1.5*)
 6. Download the TCR_Explore file "1_TCR_Explore" folder
 
+
+
 ## **STEP 2.** ClusTCR2 and TCRex
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#### Merging TCRex
+Merging TCRex
+^^^^^^^^^^^^^
 
 1. Upload all the files stored in the "1_TCRex" for merging and download save the merged file to the 1_TCRex. 
 2. The TCRex merge file will be uploaded to the [TCRex website](https://tcrex.biodatamining.be) to predict if the beta chain will interact with certain epitopes.
 3. Once the TCRex process is complete, download the processed file, and move it to the **3_Analysis** folder
 
-#### ClusTCR2
+.. image:: img/MergeCluster.png
+  :width: 300
+  :alt: Alternative text
 
-1. If there are multiple files under the 'ClusTCR2', the user will upload all the AG_ or BD_ from the **1_ClusTCR2** folder.
-      - save the file with AG_ or BD_ prefix.
+Clustering with ClusTCR2
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-2. Upload either the merged file or single AG_ or BD_ under the "Clustering inputs" tab.
+1. If there are multiple files under the 'ClusTCR2', the user will upload all the **AG_** or **BD_** from the **1_ClusTCR2** folder.
+      - save the file with **AG_** or **BD_** prefix.
+
+2. Upload either the merged file or single **AG_** or **BD_** under the "Clustering inputs" tab.
 3. Hit the "Update clustering" button to perform the clustering. 
 
 4. Under the "output" tab has three sub-sections
       - Processing: Time taken to complete the clustering
-      - Table for analysis: Download the table to the "3_Analysis" section; make sure you add the AG_ or BD_ prefix to the file name.
+      - Table for analysis: Download the table to the "3_Analysis" section; make sure you add the **AG_** or **BD_** prefix to the file name.
       - Figures: There use can explore the data and download the clutering network and the corresponding motif. The latter figure is also generated in the "Analysis section".  
 
 ## **STEP 3** Quality control of one Seurat object and adding the TCR pairing information. 
@@ -85,12 +106,24 @@ This section describes the Seurat QC process for human samples with 10x Genomics
 3. Select the data origin, as it will change the cut-off settings.
       - 10x Genomics >6000 features (transcripts per cell), are deemed to be doublets.
       - BD Rhapsody Immune panel > 150 features, are deemed to be doublets.
+
+
+
 4.   Check that the file was uploaded
 5.   Look at the first volcano plot "before" tab, as we need to check the cut-off for the MtDNA and rDNA cut-offs
       - MtDNA standard cut-off less than 20%
       - rRNA standard cut-off is greater than 5%. If there is no rRNA genes identifed, set value to 0 or the program will crash due to no cell's remaining.
+
+.. image:: img/BeforeVolc.png
+  :width: 600
+  :alt: Alternative text
+
 6. Once the settings are hit update and this will add the File name.
 7. The user can then inspect the presence of the top variable features, elbow plot and Heatmaps. The latter two plots are to aid in setting the number of dimentions to use for the UMAP dimentional reduction. Default is set to 15. The resolutions are used for the unsupervised clustering. *note: I use the scGate for the annotation stratergy rather than the unsupervised clusters as it is not suitable for identifying subtle differences in T cell sub-populations.*
+
+.. image:: img/ElbowPlot.png
+  :width: 600
+  :alt: Alternative text
 
 8. In the side panel, hit the "Run clustering" button to run the dimentional reduction.
 9. In the "Add meta data", first check that the file has uploaded correctly.
