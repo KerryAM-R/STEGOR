@@ -87,15 +87,13 @@ This line will install STEGO
 
 **Step 6.** repeat step 3 for devtools::install_github("KerryAM-R/STEGO.R")
 
-.. :: 
+.. code_chunk:: 
    Possible installing prompts
-   When you see this line: "These packages have more recent versions available. It is recommended to update all of them. Which would you like to update? Enter one or more numbers, or an empty line to skip updates:", answer with  **1** and hit **Enter**.
+   When you see this line: "These packages have more recent versions available. It is recommended to update all of them. Which would you like to update?      Enter one or more numbers, or an empty line to skip updates:", answer with  **1** and hit **Enter**. 
    On a **Mac** if you see "Do you want to install from sources the package which needs compilation? (Yes/no/cancel)", answer with  **no** and hit **Enter**. *This same message will appear as an popup on Windows.*
-
-Once all packages are installed, this will be the final section of the installation process. 
+   Once all packages are installed, this will be the final section of the installation process. 
     
-
-.. ::
+.. code_chunk::
    R CMD build 
           ✔  checking for file ‘/Users/kerrymullan/Desktop/STEGO_copy.R/Temp/Rtmp0n6xNi/remotes176117593b632/KerryAM-R-STEGO.R-df4640eae1a05f44f3c91ca527215f4af56894ff/DESCRIPTION’ ...
           ─  preparing ‘STEGO.R’:
