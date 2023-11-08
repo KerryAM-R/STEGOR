@@ -27,6 +27,10 @@ There are several files formats that are compatible with STEGO.R QC process. Thi
 
 *Under development: multi-TCR (requires unfiltered contig file)*
 
+.. image:: img/10xFormatting.png
+  :width: 400
+  :alt: Alternative text
+
 #### BD Rhapsody 
 
 There are two format outputs of BD Rhapsody aligment of either a cellxgene (.csv.gz) or the barcode, features and matrix file. Unlike the 10x Genomics, there is also an extra file called "Sample Tags", which contains the multi-plex ID names. The **"Sample Tags"** file is required. However, if some this file is not created (one sample in the experimet), it can be created under the "Create Sample Tags file". 
