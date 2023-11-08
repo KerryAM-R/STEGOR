@@ -68,9 +68,13 @@ Downloading and installing STEGO.R
 **Step 2.** Copy all the R code in this document to following to the 'untitled' script (top left panel) 
 
 Devtools and BiocManager are required to download the necessary packages from Github and Bioconductor
-``install.packages("devtools")``
-``install.packages("BiocManager")``
-``install.packages("usethis")``
+``
+install.packages("devtools")
+
+install.packages("BiocManager")
+
+install.packages("usethis")
+``
 
 This line will install STEGO
 ``devtools::install_github("KerryAM-R/STEGO.R")``
