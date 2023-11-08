@@ -2,7 +2,7 @@ Quality control
 ===============
 
 .. note:: 
-    consideration for the analysis.  
+    Consideration for the analysis.  
        The pipeline was built for scRNA-seq with scTCR-seq datasets. 
 
        QC documentation is being actively updated. 
@@ -51,6 +51,7 @@ Upload the documents to the required sections depending on the technological and
 6. Download the TCR_Explore file "1_TCR_Explore" folder
 
 ## **STEP 2.** ClusTCR2 and TCRex
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #### Merging TCRex
 
@@ -94,11 +95,13 @@ This section describes the Seurat QC process for human samples with 10x Genomics
 11. Now your file has completed the seurat QC and has had the TCR sequences added to the meta-data. click the "Download Seurat" object and save it to the "2_SCobj" folder.
  
 ## **STEP 4** Merging multiple Seurat objects 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 
 
 ## **STEP 5** Annotating the Seurat object
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [X] 10X Genomics for human
 [ ] 10X Genomcis for Mouse
 [X] BD Rhapsody Human immune panel

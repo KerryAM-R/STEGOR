@@ -17,8 +17,7 @@ Contents
    4.FAQ
    5.History
 
-
-adfSDFS 
+There are also some notes. 
 
 .. note::
 
