@@ -46,6 +46,7 @@ Understanding the "Directory_for_Project" Folder
 Unzip the "Directory_for_Project.zip" file. This folder contains our recommended structure on how to organise your files for each scRNA-seq project. I will refer to these files through out the Tutorial.
 
 This folder contains the following folder:
+
 - 0_Raw_Files
 - 1_ClusTCR
 - 1_SeratQC
