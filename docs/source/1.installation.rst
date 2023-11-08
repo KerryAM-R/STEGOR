@@ -23,7 +23,7 @@ When running STEGO.R merging and annotation steps, we recommend to limited the n
 
 Setting up the R Project
 ------------------------
-1. Download from the github repository [STEGO.R](https://github.com/KerryAM-R/STEGO.R) download and unzip the 'Directory_for_Project.zip' [file](https://github.com/KerryAM-R/STEGO.R/blob/main/Directory_for_Project.zip) and rename the folder.
+1. Download from the github repository `STEGO.R <https://github.com/KerryAM-R/STEGO.R>`_ download and unzip the `'Directory_for_Project.zip' <https://github.com/KerryAM-R/STEGO.R/blob/main/Directory_for_Project.zip>`_ and rename the folder.
    - This folder contains how to process the data and will be used to set up the R.project environment.
 
 
@@ -143,9 +143,9 @@ TMPDIR = PATH/TO/Directory_for_project/found/with/getwd()/Temp
 
 **Step 9.** Save, close .Renviron and restart R to make the changes take effect. 
 
-```r
-.rs.restartR() # restart R
-```
+.. code-block:: RST
+   .rs.restartR() # restart R
+
 
 Running STEGO.R
 ---------------
@@ -153,10 +153,9 @@ Now the the R environment is set up and the STEGO.R and it's dependencies are in
 
 Run the following lines in R. A window will opened that runs the STEGO.R shiny R application. 
 
-``` r
-require(STEGO.R)
-Load_required_packages()
-runSTEGO()
-```
+.. code-block:: RST
+   require(STEGO.R)
+   Load_required_packages()
+   runSTEGO()
 
 You are now ready to process your scRNA-seq with scTCR-seq data!
