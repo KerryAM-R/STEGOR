@@ -1,4 +1,5 @@
 Quality control
+===============
 
 .. note:: 
     Consideration for the analysis.  
