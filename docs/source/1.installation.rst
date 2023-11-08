@@ -100,7 +100,7 @@ This line will install STEGO
 
 Expected final lines once STEGO.R has been correctly installed.
 
-.. 
+.. code_chunk:: R
    R CMD build 
           ✔  checking for file ‘/Users/kerrymullan/Desktop/STEGO_copy.R/Temp/Rtmp0n6xNi/remotes176117593b632/KerryAM-R-STEGO.R-df4640eae1a05f44f3c91ca527215f4af56894ff/DESCRIPTION’ ...
           ─  preparing ‘STEGO.R’:
