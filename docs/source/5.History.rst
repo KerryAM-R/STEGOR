@@ -7,14 +7,16 @@ History
 
   Added in 'stats', 'dot plot' and 'over-representation' to "Expanded", "Epitope and  "ClusTCR2" section under the "TCR and GEX"
   
-  Added in the "Marker" tab to the "TCR and GEX" analysis which is used to identify T cells associated with specific transcript for a single marker. The Dextramer (dual marker) is under development. 
+  Added in the "Marker" tab to the "TCR and GEX" analysis which is used to identify T cells associated with specific transcript for a single marker. The Dextramer (dual marker) is *under development*. 
 
   Changed from a single ClusTCR2 output file to segregate to two files with the suffix AG_ and BD_. This was to increase the clustering speed, as well as streamline the merging process in the "Analysis" section. 
 
 **Bug Fixes**
+
 Fixed the issue with cell Index issue causing no identificaiton of over-represented marker analysis in the "Expanded" section.
 
 **Other changes**
+
   Added in a novel ID and keeping the original cell ID, which is needed for adding in the multi-TCR section that is under active development.
 
   Added in a place holder for the proritisation scheme with a list of 'rule' of the analysis. This is being actively developed and refined based on the anlysis of the 12 available datasets. 
