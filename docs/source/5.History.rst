@@ -13,7 +13,7 @@ History
 
 **Bug Fixes**
 
-Fixed the issue with cell Index issue causing no identificaiton of over-represented marker analysis in the "Expanded" section.
+  Fixed the issue with cell Index issue causing no identificaiton of over-represented marker analysis in the "Expanded" section.
 
 **Other changes**
 
