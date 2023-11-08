@@ -69,11 +69,10 @@ Upload the documents to the required sections depending on the technological and
 
 
 
-## **STEP 2.** ClusTCR2 and TCRex
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**STEP 2.** ClusTCR2 and TCRex
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Merging TCRex
-^^^^^^^^^^^^^
+**Merging TCRex**
 
 1. Upload all the files stored in the "1_TCRex" for merging and download save the merged file to the 1_TCRex. 
 2. The TCRex merge file will be uploaded to the [TCRex website](https://tcrex.biodatamining.be) to predict if the beta chain will interact with certain epitopes.
@@ -83,8 +82,7 @@ Merging TCRex
   :width: 300
   :alt: Alternative text
 
-Clustering with ClusTCR2
-^^^^^^^^^^^^^^^^^^^^^^^^
+**Clustering with ClusTCR2**
 
 1. If there are multiple files under the 'ClusTCR2', the user will upload all the **AG_** or **BD_** from the **1_ClusTCR2** folder.
       - save the file with **AG_** or **BD_** prefix.
@@ -131,18 +129,18 @@ This section describes the Seurat QC process for human samples with 10x Genomics
       - This will render a new table, and check that there are TCR present. 
 11. Now your file has completed the seurat QC and has had the TCR sequences added to the meta-data. click the "Download Seurat" object and save it to the "2_SCobj" folder.
  
-## **STEP 4** Merging multiple Seurat objects 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
-## **STEP 5** Annotating the Seurat object
+**STEP 4** Merging multiple Seurat objects 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+**STEP 5** Annotating the Seurat object
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [X] 10X Genomics for human
 [ ] 10X Genomcis for Mouse
 [X] BD Rhapsody Human immune panel
 [ ] BD Rhapsody Mouse
                
-##  **STEP 6** Analysis 
+
 
