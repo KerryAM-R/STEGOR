@@ -67,14 +67,14 @@ Downloading and installing STEGO.R
 
 **Step 2.** Copy all the R code in this document to following to the 'untitled' script (top left panel) 
 
-Devtools and BiocManager are required to download the necessary packages from Github and Bioconductor
-``
-install.packages("devtools")
+Devtools and BiocManager are required to download the necessary packages from Github and Bioconductor:
 
-install.packages("BiocManager")
+``install.packages("devtools")``
 
-install.packages("usethis")
-``
+``install.packages("BiocManager")``
+
+``install.packages("usethis")``
+
 
 This line will install STEGO
 ``devtools::install_github("KerryAM-R/STEGO.R")``
@@ -98,53 +98,49 @@ Once all packages are installed, this will be the final section of the installat
     
 
 .. code-block:: RST
-    ── R CMD build ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-    ✔  checking for file ‘/Users/kerrymullan/Desktop/STEGO_copy.R/Temp/Rtmp0n6xNi/remotes176117593b632/KerryAM-R-STEGO.R-df4640eae1a05f44f3c91ca527215f4af56894ff/DESCRIPTION’ ...
-    ─  preparing ‘STEGO.R’:
-    ✔  checking DESCRIPTION meta-information ...
-    ─  checking for LF line-endings in source and make files and shell scripts
-    ─  checking for empty or unneeded directories
-    ─  building ‘STEGO.R_1.0.0.tar.gz’
-   
-* installing *source* package STEGO.R’ ...
-** using staged installation
-** R
-** inst
-** byte-compile and prepare package for lazy loading
-** help
-*** installing help indices
-*** copying figures
-** building package indices
-** testing if installed package can be loaded from temporary location
-** testing if installed package can be loaded from final location
-** testing if installed package keeps a record of temporary installation path
-* DONE (STEGO.R)
+── R CMD build ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+       ✔  checking for file ‘/Users/kerrymullan/Desktop/STEGO_copy.R/Temp/Rtmp0n6xNi/remotes176117593b632/KerryAM-R-STEGO.R-df4640eae1a05f44f3c91ca527215f4af56894ff/DESCRIPTION’ ...
+       ─  preparing ‘STEGO.R’:
+       ✔  checking DESCRIPTION meta-information ...
+       ─  checking for LF line-endings in source and make files and shell scripts
+       ─  checking for empty or unneeded directories
+       ─  building ‘STEGO.R_1.0.0.tar.gz’
+      
+   * installing *source* package STEGO.R’ ...
+   ** using staged installation
+   ** R
+   ** inst
+   ** byte-compile and prepare package for lazy loading
+   ** help
+   *** installing help indices
+   *** copying figures
+   ** building package indices
+   ** testing if installed package can be loaded from temporary location
+   ** testing if installed package can be loaded from final location
+   ** testing if installed package keeps a record of temporary installation path
+   * DONE (STEGO.R)
 
 
 **Step 7.** Run each of the following the following lines to set up the .Renviron (R environment)
-.. code-block:: RST
-   .rs.restartR() # restart R
-   getwd() # path to current working directory, which will be used for defining where to put the temporary file will be stored.  
 
-   e.g. /Users/kerrymullan/Documents/GitHub/STEGO (mac)
-   onto the end of the line add the Temp folder name e.g. /Users/kerrymullan/Documents/GitHub/STEGO/Temp (mac)
-   Windows file paths may look differnet from this. 
+``.rs.restartR()`` # restart R
+``getwd()`` # path to current working directory, which will be used for defining where to put the temporary file will be stored.  e.g. /Users/kerrymullan/Documents/GitHub/STEGO (mac)
 
-# this will open the .Renviron hidden file
-usethis::edit_r_environ("project")
+onto the end of the line add the Temp folder name e.g. /Users/kerrymullan/Documents/GitHub/STEGO/Temp (mac)
 
+*Windows file paths may look differnet from this.*
+
+This will open the .Renviron hidden file
+``usethis::edit_r_environ("project")``
 
 **Step 8.** Pasted the following in the .Renviron:
-```
+
 R_MAX_VSIZE=200Gb
 TMPDIR = PATH/TO/Directory_for_project/found/with/getwd()/Temp
-```
 
 **Step 9.** Save, close .Renviron and restart R to make the changes take effect. 
 
-.. code-block:: RST
-   .rs.restartR() # restart R
-
+``.rs.restartR()`` # restart R
 
 Running STEGO.R
 ---------------
@@ -152,9 +148,11 @@ Now the the R environment is set up and the STEGO.R and it's dependencies are in
 
 Run the following lines in R. A window will opened that runs the STEGO.R shiny R application. 
 
-.. code-block:: RST
-   require(STEGO.R)
-   Load_required_packages()
-   runSTEGO()
+
+   ``require(STEGO.R)``
+
+   ``Load_required_packages()``
+
+   ``runSTEGO()``
 
 You are now ready to process your scRNA-seq with scTCR-seq data!
