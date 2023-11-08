@@ -86,7 +86,7 @@ Upload the documents to the required sections depending on the technological and
       - Table for analysis: Download the table to the "3_Analysis" section; make sure you add the **AG_** or **BD_** prefix to the file name.
       - Figures: There use can explore the data and download the clutering network and the corresponding motif. The latter figure is also generated in the "Analysis section".  
 
-**STEP 3** Quality control of a Seurat object
+**STEP 3.** Quality control of a Seurat object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section describes the Seurat QC process for human samples with 10x Genomics. I use the S133 sample from GES145370 dataset for the example screen shots. 
@@ -118,7 +118,7 @@ This section describes the Seurat QC process for human samples with 10x Genomics
       - This will render a new table, and check that there are TCR present. 
 11. Now your file has completed the seurat QC and has had the TCR sequences added to the meta-data. click the "Download Seurat" object and save it to the "2_SCobj" folder.
  
-**STEP 4** Merging multiple Seurat objects 
+**STEP 4.** Merging multiple Seurat objects 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section is to merge multiple .h5Seurat objects and correct for the batch effect. 
@@ -144,7 +144,7 @@ This section is to merge multiple .h5Seurat objects and correct for the batch ef
 
 **WARNING** This section may not run on Windows. 
 
-**STEP 5** Annotating the Seurat object
+**STEP 5.** Annotating the Seurat object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
