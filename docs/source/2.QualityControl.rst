@@ -14,6 +14,9 @@ Install STEGO.
 
 Copy all your raw files to the 0_Raw_files folder within your project. 
 
+Quality control process.
+------------------------
+
 STEP 1. Formatting
 ~~~~~~~~~~~~~~~~~~
 
