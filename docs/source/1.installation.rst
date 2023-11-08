@@ -4,14 +4,16 @@ Installation
 To use STEGO, first install R, RStudio and other required programs
 ------------------------------------------------------------------
 #### MAC:
-* Install `R <https://cran.r-project.org/bin/macosx/>`
-* Install `RStudio <https://posit.co/download/rstudio-desktop/>`
-* Install `Quartz <https://www.xquartz.org>`
+
+* Install `R <https://cran.r-project.org/bin/macosx/>`_
+* Install `RStudio <https://posit.co/download/rstudio-desktop/>`_
+* Install `Quartz <https://www.xquartz.org>`_
 
 #### Windows:
-* Install `R <https://cran.r-project.org>`
-* Install `RStudio <https://posit.co/download/rstudio-desktop/>`
-* Install `Rtools <https://cran.r-project.org/bin/windows/Rtools/>`
+
+* Install `R <https://cran.r-project.org>`_
+* Install `RStudio <https://posit.co/download/rstudio-desktop/>`_
+* Install `Rtools <https://cran.r-project.org/bin/windows/Rtools/>`_
 
 #### Computer requirements
 Recommended to use a 64-bit OS with 16GB of RAM, with ideally 32GB of RAM. This is needed for the memory intensive merging and annotation steps. 
@@ -59,9 +61,16 @@ This folder contains the following folder:
   
 Downloading and installing STEGO.R
 ----------------------------------
-**Step 1.** File -> New File -> R Script 
+Step 1.
+~~~~~~~
 
-**Step 2.** Copy all the R code in this document to following to the 'untitled' script (top left panel) 
+File -> New File -> R Script 
+
+Step 2. 
+~~~~~~~
+
+Copy all the R code in this document to following to the 'untitled' script (top left panel) 
+
 ``` r
 # Devtools and BiocManager are required to download the necessary packages from Github and Bioconductor
 install.packages("devtools")
@@ -99,7 +108,7 @@ devtools::install_github("KerryAM-R/STEGO.R")
    
 
 
-* installing *source* package ‘STEGO.R’ ...
+* installing *source* package STEGO.R’ ...
 ** using staged installation
 ** R
 ** inst
