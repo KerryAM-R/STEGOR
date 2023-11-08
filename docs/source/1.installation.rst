@@ -87,7 +87,7 @@ This line will install STEGO
 
 **Step 6.** repeat step 3 for devtools::install_github("KerryAM-R/STEGO.R")
 
-.. Possible installing prompts:: 
+.. Possible_installing_prompts:: 
 
    When you see this line: "These packages have more recent versions available. It is recommended to update all of them. Which would you like to update?
    
