@@ -34,7 +34,6 @@ Setting up the R Project
 
 3. In RStudio Go to File (top left of the screen) -> New project -> Create the new project in the renamed 'Directory_for_Project' Directory.
 
-!!! short-cut for running R code
 
     short-cut key for running a line of R code
     
