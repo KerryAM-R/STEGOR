@@ -10,12 +10,15 @@ Contents
 --------
 
 .. toctree::
+   Usage
+   1.Installation
+   2.QualityControl
+   3.Analysis
+   4.FAQ
+   5.History
 
-   Installation
-   QualityControl
-   Analysis
-   FAQ
-   History
+
+adfSDFS 
 
 .. note::
 
