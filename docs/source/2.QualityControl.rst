@@ -1,10 +1,10 @@
 Quality control
 ===============
 
-.. note:: consideration for the analysis
-      
+.. note:: 
+    consideration for the analysis.  
        The pipeline was built for scRNA-seq with scTCR-seq datasets. 
-       
+
        QC documentation is being actively updated. 
 
 Pre-requeisites 

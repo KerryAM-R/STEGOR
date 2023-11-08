@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
+project = 'STEGO.R'
 copyright = '2021, Graziella'
-author = 'Graziella'
+author = 'Mullan'
 
 release = '0.1'
 version = '0.1.0'

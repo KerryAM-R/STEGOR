@@ -11,7 +11,7 @@ Contents
 
 .. toctree::
    Usage
-   1.Installation
+   1.installation
    2.QualityControl
    3.Analysis
    4.FAQ
