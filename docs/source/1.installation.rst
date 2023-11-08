@@ -102,8 +102,6 @@ Once all packages are installed, this will be the final section of the installat
     ─  checking for empty or unneeded directories
     ─  building ‘STEGO.R_1.0.0.tar.gz’
    
-
-
 * installing *source* package STEGO.R’ ...
 ** using staged installation
 ** R
@@ -117,20 +115,21 @@ Once all packages are installed, this will be the final section of the installat
 ** testing if installed package can be loaded from final location
 ** testing if installed package keeps a record of temporary installation path
 * DONE (STEGO.R)
-```
+
 
 **Step 7.** Run each of the following the following lines to set up the .Renviron (R environment)
-```r
-.rs.restartR() # restart R
-getwd() # path to current working directory, which will be used for defining where to put the temporary file will be stored.  
+.. code-block:: RST
+   .rs.restartR() # restart R
+   getwd() # path to current working directory, which will be used for defining where to put the temporary file will be stored.  
 
-e.g. /Users/kerrymullan/Documents/GitHub/STEGO (mac)
-onto the end of the line add the Temp folder name e.g. /Users/kerrymullan/Documents/GitHub/STEGO/Temp (mac)
-Windows file paths may look differnet from this. 
+   e.g. /Users/kerrymullan/Documents/GitHub/STEGO (mac)
+   onto the end of the line add the Temp folder name e.g. /Users/kerrymullan/Documents/GitHub/STEGO/Temp (mac)
+   Windows file paths may look differnet from this. 
 
 # this will open the .Renviron hidden file
 usethis::edit_r_environ("project")
-```
+
+
 **Step 8.** Pasted the following in the .Renviron:
 ```
 R_MAX_VSIZE=200Gb
