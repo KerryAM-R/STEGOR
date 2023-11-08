@@ -121,13 +121,32 @@ This section describes the Seurat QC process for human samples with 10x Genomics
 **STEP 4** Merging multiple Seurat objects 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. 
+This section is to merge multiple .h5Seurat objects and correct for the batch effect. 
 
+1. From the **"2_SCobj"** upload all the .h5Seurat files.
 
+.. image:: img/mergeSC.png
+  :width: 600
+  :alt: Alternative text
 
+2. Wait for the files to finish uploading before proceeding 
+3. Update the Project name e.g., BreastCancer
+4. Hit the bottons in each tab in the following order:
+    - Run VariableFeatures
+    - Run Scale
+    - Run PCA
+    - Run Harmony *Note: Harmony R package is used for the batch correction.*
+    - Run Dimentional Reduction
+
+5. Once completed click the "Download merged Seurat"
+
+*Note: Depending on the number of files, and total number of cells will impact the speed of merging*
+
+**WARNING** This section may not run on Windows. 
 
 **STEP 5** Annotating the Seurat object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 Default annotation models with scGate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
