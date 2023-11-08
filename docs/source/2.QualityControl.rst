@@ -87,7 +87,8 @@ Upload the documents to the required sections depending on the technological and
       - Table for analysis: Download the table to the "3_Analysis" section; make sure you add the **AG_** or **BD_** prefix to the file name.
       - Figures: There use can explore the data and download the clutering network and the corresponding motif. The latter figure is also generated in the "Analysis section".  
 
-## **STEP 3** Quality control of one Seurat object and adding the TCR pairing information. 
+**STEP 3** Quality control of one Seurat object and adding the TCR pairing information.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section describes the Seurat QC process for human samples with 10x Genomics. I use the S133 sample from GES145370 dataset for the example screen shots. 
 
@@ -96,8 +97,6 @@ This section describes the Seurat QC process for human samples with 10x Genomics
 3. Select the data origin, as it will change the cut-off settings.
       - 10x Genomics >6000 features (transcripts per cell), are deemed to be doublets.
       - BD Rhapsody Immune panel > 150 features, are deemed to be doublets.
-
-
 
 4.   Check that the file was uploaded
 5.   Look at the first volcano plot "before" tab, as we need to check the cut-off for the MtDNA and rDNA cut-offs
