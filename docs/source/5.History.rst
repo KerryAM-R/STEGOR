@@ -9,7 +9,7 @@ History
   
   Added in the "Marker" tab to the "TCR and GEX" analysis which is used to identify T cells associated with specific transcript for a single marker. The Dextramer (dual marker) is *under development*. 
 
-  Changed from a single ClusTCR2 output file to segregate to two files with the suffix AG_ and BD_. This was to increase the clustering speed, as well as streamline the merging process in the "Analysis" section. 
+  Changed from a single ClusTCR2 output file to segregate to two files with the suffix *AG_* and *BD_*. This was to increase the clustering speed, as well as streamline the merging process in the "Analysis" section. 
 
 **Bug Fixes**
 
