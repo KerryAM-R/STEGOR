@@ -89,7 +89,7 @@ Upload the documents to the required sections depending on the technological and
       - Figures: There use can explore the data and download the clutering network and the corresponding motif. The latter figure is also generated in the "Analysis section".  
 
 **STEP 3.** Quality control of a Seurat object
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section describes the Seurat QC process for human samples with 10x Genomics. I use the S133 sample from GES145370 dataset for the example screen shots. 
 
@@ -121,7 +121,7 @@ This section describes the Seurat QC process for human samples with 10x Genomics
 11. Now your file has completed the seurat QC and has had the TCR sequences added to the meta-data. click the "Download Seurat" object and save it to the "2_SCobj" folder.
  
 **STEP 4.** Merging multiple Seurat objects 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section is to merge multiple .h5Seurat objects and correct for the batch effect. 
 
@@ -149,10 +149,14 @@ This section is to merge multiple .h5Seurat objects and correct for the batch ef
 **STEP 5.** Annotating the Seurat object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+This section describes how to annotated the files either from the "default" and/or "custom" modules with scGate. 
+
+Also, there is a "TCR" annotation section that identifies the human unconcentional T cells: MAIT, iNKT, gamma-delta T cells, and possible CD1c restricted (mouse is under development). 
+
+If you dont select all a
 
 Default annotation models with scGate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 **10X Genomics for human**
 
@@ -162,9 +166,16 @@ Default annotation models with scGate
 
 **BD Rhapsody Mouse**
 
+TCR annotations
+^^^^^^^^^^^^^^^
+
+This section, which currently is annotated separately from the scGate
 
 Creating custom annotation stratergies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                
+There are nine custom databases that a user can amend. If needed, these can be added to an already annotated file.
+
+1. Design your custom marker set bas
 
 
