@@ -11,7 +11,7 @@ The analysis section is divided into several sub-sections.
 - Overview
 - TCR and GEX 
 
-*Note: The proritisation pipeline is under active development and will be completed in several stages. The first update will include automated the simple case analyis (one sample), one group (multiple samples) and paired analysis (one group; paired samples) (STEGO.R Version 2). Stage two will add several of the more complex analysis (STEGO.R version 3)
+*Note: The proritisation pipeline is under active development and will be completed in several stages. The first update will include automated the simple case analyis (one sample), one group (multiple samples) and paired analysis (one group; paired samples) (STEGO.R Version 2). Stage two will add several of the more complex analysis (STEGO.R version 3).*
 
 Uploading the files
 -------------------
