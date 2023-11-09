@@ -24,7 +24,7 @@ Formatting the 10x Genomics, BD Rhapsody or Array to create the necessary docume
 
 While this process was initially developed for TCR-seq, we have also included the capacity for pairing the BCR sequences. 
 
-#### 10x Genomics 
+**10x Genomics** 
 
 There are several files formats that are compatible with STEGO.R QC process. This includes the standard cell ranger output of barcode, features, matrix files as well as the separate contig file. If the formatting is already in the cellxgene (.csv.gz or .h5 file), then this file format can be uploaded to thet "Seruat QC" section. Upload all the required files. 
 
@@ -34,7 +34,7 @@ There are several files formats that are compatible with STEGO.R QC process. Thi
   :width: 600
   :alt: Alternative text
 
-#### BD Rhapsody 
+**BD Rhapsody**
 
 There are two format outputs of BD Rhapsody aligment of either a cellxgene (.csv.gz) or the barcode, features and matrix file. Unlike the 10x Genomics, there is also an extra file called "Sample Tags", which contains the multi-plex ID names. The **"Sample Tags"** file is required. However, if some this file is not created (one sample in the experimet), it can be created under the "Create Sample Tags file". 
 
@@ -44,11 +44,12 @@ Additionally there are several formats for the TCR contig file: paired dominant,
   :width: 600
   :alt: Alternative text
 
-#### Array
+**Array**
 
 *Note: The TCR_Explore file is for the interrogation of the TCR repertoire independent of the gene expression data at the [TCR_Explore website](https://tcr-explore.erc.monash.edu)*
 
-### Recommended process
+Recommended process
+^^^^^^^^^^^^^^^^^^^
 
 Upload the documents to the required sections depending on the technological and files available. Repeat for each of the samples within your project.
 
