@@ -17,22 +17,22 @@ Windows:
 * Install `RStudio <https://posit.co/download/rstudio-desktop/>`_
 * Install `Rtools <https://cran.r-project.org/bin/windows/Rtools/>`_
 
-Computer requirements
+Sytem requirements
 ^^^^^^^^^^^^^^^^^^^^^
-Recommended to use a 64-bit OS with 16GB of RAM, with ideally 32GB of RAM. This is needed for the memory intensive merging and annotation steps. 
+Recommended to use a 64-bit OS with at least 16GB of RAM, ideally >=32GB. This is needed for the memory intensive merging and annotation steps. 
 
-When running STEGO.R merging and annotation steps, we recommend to limited the number of other programs open to help prevent RAM memory issues, espeically if you have <32Gb of RAM. 
+When running STEGO.R merging and annotation steps, we recommend to limit the number of other running programs to help prevent RAM memory overflow, espeically if you have <32Gb of RAM. 
 
 
 Setting up the R Project
 ------------------------
-1. Download from the github repository `STEGO.R <https://github.com/KerryAM-R/STEGO.R>`_ download and unzip the `'Directory_for_Project.zip' <https://github.com/KerryAM-R/STEGO.R/blob/main/Directory_for_Project.zip>`_ and rename the folder.
-   - This folder contains how to process the data and will be used to set up the R.project environment.
+1. From the github repository `STEGO.R <https://github.com/KerryAM-R/STEGO.R>`_ download and unzip the `'Directory_for_Project.zip' <https://github.com/KerryAM-R/STEGO.R/blob/main/Directory_for_Project.zip>`_ and rename the folder.
+   - This folder contains instructions on how to process the data and, will be used to set up the R.project environment.
   
 2. Open Rstudio
-   - Quick tutorial of understanding RStudio environment with this `YouTube <https://www.youtube.com/watch?v=FIrsOBy5k58>`_ Video.
+   - Quick tutorial for understanding RStudio environment with this `YouTube <https://www.youtube.com/watch?v=FIrsOBy5k58>`_ video.
 
-3. In RStudio Go to File (top left of the screen) -> New project -> Create the new project in the renamed 'Directory_for_Project' Directory.
+3. In RStudio, go to File (top left of the screen) -> New project -> Create the new project in the renamed 'Directory_for_Project' Directory.
 
 
     short-cut key for running a line of R code
@@ -43,7 +43,7 @@ Setting up the R Project
 
 Understanding the "Directory_for_Project" Folder
 ------------------------------------------------
-Unzip the "Directory_for_Project.zip" file. This folder contains our recommended structure on how to organise your files for each scRNA-seq project. I will refer to these files through out the Tutorial.
+Unzip the "Directory_for_Project.zip" file. This folder contains our recommended structure on how to organise your files for each scRNA-seq project. We will refer to these files through out the Tutorial.
 
 This folder contains the following folder:
 
@@ -65,7 +65,7 @@ Downloading and installing STEGO.R
 ----------------------------------
 **Step 1.** File -> New File -> R Script 
 
-**Step 2.** Copy all the R code in this document to following to the 'untitled' script (top left panel) 
+**Step 2.** Copy all the R code in this document to the 'untitled' script (top left panel) 
 
 Devtools and BiocManager are required to download the necessary packages from Github and Bioconductor:
 
