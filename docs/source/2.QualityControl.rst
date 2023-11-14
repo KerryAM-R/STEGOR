@@ -24,7 +24,7 @@ Formatting the 10x Genomics, BD Rhapsody or Array to create the necessary docume
 
 While this process was initially developed for TCR-seq, we have also included the capacity for pairing the BCR sequences. 
 
-**10x Genomics** 
+* **10x Genomics** 
 
 There are several file formats that are compatible with the STEGO.R QC process. These includes the standard cell ranger output of barcode, features, matrix files as well as the separate contig file. If the formatting is already in the cellxgene (.csv.gz or .h5 file), then this file format can be uploaded to the "Seurat QC" section. Upload all the required files. 
 
