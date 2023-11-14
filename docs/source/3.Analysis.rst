@@ -72,14 +72,19 @@ Version 2 of STEGO.R
 ^^^^^^^^^^^^^^^^^^^^
 
 Phase 1. Add in simple case (one sample)
+
 Phase 2. Add in one group (one indiviual with multiple time points).
+
 Phase 3. Add in paired analysis (one indiviudal)
+
 Phase 4. Add in paired analysis (multiple individuals)
 
 Version 3 of STEGO.R
 ^^^^^^^^^^^^^^^^^^^^
 
-Phase 1. Complex analysis of unpaired samples (3 groups)
-Phase 2. Complex analysis of paired analysis with unpaired group (two time points)
+Phase 1. Complex analysis of unpaired samples (3 groups).
+
+Phase 2. Complex analysis of paired analysis with unpaired group (two time points).
+
 Phase 3. Complex analysis of datasets with longitudinal traction. 
 
