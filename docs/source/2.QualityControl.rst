@@ -153,20 +153,28 @@ This section describes how to annotated the files either from the "default" and/
 
 Also, there is a "TCR" annotation section that identifies the human unconventional T cells: MAIT, iNKT, gamma-delta T cells, and possible CD1c-restricted (mouse is under development). 
 
-If you dont select all a
 
 Default annotation models with scGate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*Note: section is incomplete.*
+*Note: Under development.*
+
+The scGate threshold was set to 0.2 for full capture and 0.5 for the immune panel (<400 transcripts). 
 
 **10X Genomics for human**
 
 **10X Genomcis for Mouse**
 
+*Will likely be the same as the BD Rhapsody mouse full panel model.* 
+
 **BD Rhapsody Human immune panel**
 
+
+
+
 **BD Rhapsody Mouse**
+
+
 
 TCR annotations
 ^^^^^^^^^^^^^^^
