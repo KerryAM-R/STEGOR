@@ -191,7 +191,6 @@ There are nine custom databases that a user can amend. If needed, these can be a
 **Design your custom marker set**
 
 Check that the cells express the markers under the "marker check" tab
-
     - To run, click the 'View Feature plot'
     - The user can alter the range to a custom 
 If needed, you can use either the "Treatment differences within cluster" or "cluster difference" to have better identification of marker differneces between clusters.
