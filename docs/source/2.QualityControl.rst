@@ -163,9 +163,9 @@ The scGate threshold was set to 0.2 for full capture and 0.5 for the immune pane
 
 * **10X Genomics for human**
 
-* **10X Genomcis for Mouse**
+* **10X Genomcis for Mouse** (*Will likely be the same as the BD Rhapsody mouse full panel model.*)
 
-*Will likely be the same as the BD Rhapsody mouse full panel model.* 
+
 
 * **BD Rhapsody Human immune panel**
 
