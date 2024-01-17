@@ -5,3 +5,13 @@ Frequenctly Asked Questions
 
     Under active construction
 
+Why won't STEGO.R install? 
+--------------------------
+
+1. Incorrect version of R. Install the latest version of R. 
+    - For window, if RStudio does not idnetify the newer version of R, locate the folder containing all R files (ProgramFiles -> R) and move or delete the older version of R. 
+
+2. API error from github. 
+
+create a github account if you dont have one already. 
+Create a new token with usethis::
