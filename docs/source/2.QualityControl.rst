@@ -1,4 +1,4 @@
-STEP 3. Quality control
+Step 3. Quality control
 =======================
 
 .. note:: 
@@ -12,83 +12,11 @@ Prerequisite
 
 Install STEGO. 
 
-Copy all your raw files to the 0_Raw_files folder within your project. 
+This section will require the matrix and meta data available in the 1_SeuratQC folder. 
 
-Quality control process.
-------------------------
 
-STEP 1. Formatting
-~~~~~~~~~~~~~~~~~~
 
-Formatting the 10x Genomics, BD Rhapsody or Array to create the necessary documents for Seurat QC process, ClusTCR2, TCRex and TCR_Explore.
-
-While this process was initially developed for TCR-seq, we have also included the capacity for pairing the BCR sequences. 
-
-**10x Genomics** 
-
-There are several file formats that are compatible with the STEGO.R QC process. These includes the standard cell ranger output of barcode, features, matrix files as well as the separate contig file. If the formatting is already in the cellxgene (.csv.gz or .h5 file), then this file format can be uploaded to the "Seurat QC" section. Upload all the required files. 
-
-*Under development: multi-TCR (requires unfiltered contig file)*
-
-.. image:: img/10xFormatting.png
-  :width: 600
-  :alt: Alternative text
-
-**BD Rhapsody**
-
-There are two format outputs of BD Rhapsody aligment of either a cellxgene (.csv.gz) or the barcode, features and matrix file. Unlike the 10x Genomics, there is also an extra file called "Sample Tags", which contains the multi-plex ID names. The **"Sample Tags"** file is required. However, if this file is not created (one sample in the experiment), it can be created under the "Create Sample Tags file". 
-
-Additionally there are several formats for the TCR contig file: paired dominant, AIRR dominant (unpaired), AIRR unfilted. For the latter two file formates we include to filter to keep only the 'paired' and if BCR was present as well. 
-
-.. image:: img/BDFormatting.png
-  :width: 600
-  :alt: Alternative text
-
-**Array**
-
-*Note: The TCR_Explore file is for the interrogation of the TCR repertoire independent of the gene expression data at the `TCR_Explore <https://tcr-explore.erc.monash.edu>`*
-
-Recommended process
-^^^^^^^^^^^^^^^^^^^
-
-Upload the documents to the required sections depending on the technology and files available. Repeat for each of the samples within your project.
-
-1. Check that the files have uploaded
-2. Add File Name, this will be added to the "orig.ident" and "Sample_Name"
-      - (10x Genomics and Array, as this is added from the "Sample Tags" in BD Rhapsody) column and used through out the process. This name needs to be unqiue to the file.
-      - If, at a latter point it needs to be updated, this can be done with the "Updated_label.csv", located in 3_Analysis folder
-3. Download the TCRex (functional Beta chains) to "1_TCRex" folder
-4. Download both the "meta-data" and "Matrix" in the SeuratQC into the "1_SeuratQC" folder
-5. Two files need to be downloaded per sample under the "ClusTCR" to the "1_ClusTCR" folder. They will have the prefix of AG_ and BD_ (*Version 1.5*)
-6. Download the TCR_Explore file "1_TCR_Explore" folder
-
-**STEP 2.** ClusTCR2 and TCRex
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-**Merging TCRex**
-
-1. Upload all the files stored in the "1_TCRex" for merging and save the merged file to the 1_TCRex. 
-2. The TCRex merge file will be uploaded to the [TCRex website](https://tcrex.biodatamining.be) to predict if the beta chain will interact with certain epitopes.
-3. Once the TCRex process is complete, download the processed file, and move it to the **3_Analysis** folder
-
-.. image:: img/MergeClust.png
-  :width: 300
-  :alt: Alternative text
-
-**Clustering with ClusTCR2**
-
-1. If there are multiple files under the 'ClusTCR2', the user will upload all the **AG_** or **BD_** from the **1_ClusTCR2** folder.
-      - save the file with **AG_** or **BD_** prefix.
-
-2. Upload either the merged file or single **AG_** or **BD_** under the "Clustering inputs" tab.
-3. Hit the "Update clustering" button to perform the clustering. 
-
-4. Under the "output" tab has three sub-sections
-      - Processing: Time taken to complete the clustering
-      - Table for analysis: Download the table to the "3_Analysis" section; make sure you add the **AG_** or **BD_** prefix to the file name.
-      - Figures: The user can explore the data and download the clustering network and the corresponding motif. The latter figure is also generated in the "Analysis section".  
-
-**STEP 3.** Quality control of a Seurat object
+**STEP 3a.** Quality control of a Seurat object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section describes the Seurat QC process for human samples with 10x Genomics. I use the S133 sample from GES145370 dataset for the example screen shots. 
@@ -120,7 +48,7 @@ This section describes the Seurat QC process for human samples with 10x Genomics
       - This will render a new table, and check that there are TCRs present. 
 11. Now your file has completed the Seurat QC and has had the TCR sequences added to the meta-data. click the "Download Seurat" object and save it to the "2_SCobj" folder.
  
-**STEP 4.** Merging multiple Seurat objects 
+**STEP 3b.** Merging multiple Seurat objects 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section is to merge multiple .h5Seurat objects and correct for the batch effect. 
@@ -146,12 +74,12 @@ This section is to merge multiple .h5Seurat objects and correct for the batch ef
 
 **WARNING** This section may not run on Windows. 
 
-**STEP 5.** Annotating the Seurat object
+**STEP 3c.** Annotating the Seurat object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section describes how to annotated the files either from the "default" and/or "custom" modules with scGate. 
 
-Also, there is a "TCR" annotation section that identifies the human unconventional T cells: MAIT, iNKT, gamma-delta T cells, and possible CD1c-restricted (mouse is under development). 
+Also, there is a "TCR" annotation section that identifies the human unconventional T cells: MAIT, iNKT, gamma-delta T cells, and possible CD1b/CD1c-restricted (mouse is under development). 
 
 
 Default annotation models with scGate
@@ -161,18 +89,73 @@ Default annotation models with scGate
 
 The scGate threshold was set to 0.2 for full capture and 0.5 for the immune panel (<400 transcripts). 
 
-* **10X Genomics for human**
+Human Panels. 
 
-* **10X Genomcis for Mouse** (*Will likely be the same as the BD Rhapsody mouse full panel model.*)
+.. list-table:: Title
+   :widths: 25 25 100
+   :header-rows: 1
+
+   * - Heading row 1, column 1
+     - Heading row 1, column 2
+     - Heading row 1, column 3
+   * - Row 1, column 1
+     -
+     - Row 1, column 3
+   * - Row 2, column 1
+     - Row 2, column 2
+     - Row 2, column 3
 
 
-
-* **BD Rhapsody Human immune panel**
-
-
-
-
-* **BD Rhapsody Mouse**
+Cell_type	Sub-classification	Transcriptional_markers
+CD4	CD4	CD8A-,CD8B-,CD4,Cyto-,FOXP3-,RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3-, Naive, KLRB1-, FTH1-
+	CD161	CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3-, Naive, KLRB1, IL32-
+	CD161.IL32	CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3-, Naive, KLRB1, IL32
+	Eff	CD8A-, CD8B-, CD4, Cyto, RORC-, CXCR3-
+	Eff.Th1	CD8A-, CD8B-, CD4, Cyto, RORC-, CXCR3
+	Eff.Th17	CD8A-, CD8B-, CD4, Cyto, RORC
+	FTH1	CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3-, Naive, KLRB1-, FTH1
+	Naive	CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3-, Naive 
+	Tfh	CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21
+	Th1	CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3
+	Th17	CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC
+	Th2	CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4
+	Th22	CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10
+	Th9	CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4
+	Treg	CD8A-, CD8B-, CD4, Cyto-, FOXP3
+CD8aa	CD8aa	CD8A, CD8B-, Cyto-, FOXP3-, KIR2DL1-, Naïve-, FTH1-
+	Eff	CD8A, CD8B-, Cyto, KIR2DL1-
+	Eff.KIR	CD8A, CD8B-, Cyto, KIR2DL1
+	FTH1	CD8A, CD8B-, Cyto-, FOXP3-, KIR2DL1-, Naïve-, FTH1
+	KIR	CD8A, CD8B-, Cyto-, FOXP3-, KIR2DL1
+	Naive	CD8A, CD8B-, Cyto-, FOXP3-, KIR2DL1-,Naive 
+	Treg	CD8A, CD8B-, Cyto-, FOXP3
+CD8ab	CD8ab	CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1, RORC-, CCR4-, CCR10-, IRF4-, CXCR3-, Naive-, KLRK1-
+	Eff	CD8A, CD8B, Cyto, RORC-, CCR4-, CCR10-, IRF4-, CXCR3-
+	Eff.Tc1	CD8A, CD8B, Cyto, RORC-, CCR4-, CCR10-, IRF4-, CXCR3
+	Eff.Tc2	CD8A, CD8B, Cyto, RORC-, CCR4
+	Eff.Tc22	CD8A, CD8B, Cyto, RORC-, CCR4-, CCR10
+	Eff.Tc9	CD8A, CD8B, Cyto, RORC-, CCR4-, CCR10-, IRF4
+	Eff.Tc17	CD8A, CD8B, Cyto, RORC
+	KIR	CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1
+	Naive	CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1-, RORC-, CCR4-, CCR10-, IRF4-, CXCR3-, Naive
+	NKG2D	CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1-, RORC-, CCR4-, CCR10-, IRF4-, CXCR3-, Naive-, KLRK1
+	Tc1	CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1-, RORC-, CCR4-, CCR10-, IRF4-, CXCR3
+	Tc17	CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1-, RORC
+	Tc2	CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1-, RORC-, CCR4
+	Tc22	CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1-, RORC-, CCR4-, CCR10
+	Tc9	CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1-, RORC-, CCR4-, CCR10-, IRF4
+	Treg	CD8A, CD8B, Cyto-, FOXP3
+DN	DN	CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3-, Naive-, FTH1-
+	Eff	CD8A-, CD8B-, CD4-, Cyto
+	FTH1	CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3-, Naive-, FTH1
+	Naive	CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3-, Naive
+	Tfh	CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC-, CCR4-, IL21
+	Th1	CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3
+	Th17	CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC
+	Th2	CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC-, CCR4
+	Th22	CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10
+	Th9	CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4
+	Treg	CD8A-, CD8B-, CD4-, Cyto-, FOXP3
 
 
 
@@ -198,3 +181,7 @@ If needed, you can use either the "Treatment differences within cluster" or "clu
 
 
 
+**STEP 3d.** Removing samples 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Upload the .rds object to 
