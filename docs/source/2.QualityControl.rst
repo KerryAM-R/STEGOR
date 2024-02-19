@@ -1,5 +1,5 @@
-Quality control
-===============
+STEP 1. Quality control
+=======================
 
 .. note:: 
     Consideration for the analysis.  
