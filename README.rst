@@ -6,4 +6,6 @@ with some basic Sphinx docs.
 
 Read the tutorial here:
 
-https://docs.readthedocs.io/en/stable/tutorial/
+Get the latest tutorial at `STEGO.R`_.
+
+.. _STEGO.R: https://stegor-documents.readthedocs.io/en/latest/index.html
