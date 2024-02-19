@@ -1,4 +1,4 @@
-STEP 1. Quality control
+STEP 3. Quality control
 =======================
 
 .. note:: 
