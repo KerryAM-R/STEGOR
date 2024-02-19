@@ -1,5 +1,5 @@
-STEP2. TCRex and ClusTCR2
-=========================
+Step 2. TCRex and ClusTCR2
+==========================
 
 .. note:: 
     Consideration for the analysis.  
