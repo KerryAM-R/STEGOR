@@ -1,0 +1,74 @@
+Formatting
+==========
+
+.. note:: 
+    Consideration for the analysis.  
+       The pipeline was built for scRNA-seq with scTCR-seq datasets. 
+
+       QC documentation is being actively updated. 
+
+
+Running STEGO.R
+---------------
+Now the the R environment is set up and the STEGO.R and it's dependencies are installed, we can now run the application.
+
+Run the following lines in R. A window will opened that runs the STEGO.R shiny R application. 
+   ``require(STEGO.R)``
+
+   ``runSTEGO()``
+
+You are now ready to process your scRNA-seq with scTCR-seq data!
+
+
+Prerequisite
+------------
+
+Install STEGO. 
+
+Copy all your raw files to the 0_Raw_files folder within your project. 
+
+
+Formatting the BD Rhapsody and 10x Genomics matrix and meta-data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Formatting the 10x Genomics, BD Rhapsody or Array to create the necessary documents for Seurat QC process, ClusTCR2, TCRex and TCR_Explore.
+
+While this process was initially developed for TCR-seq, we have also included the capacity for pairing the BCR sequences. 
+
+**10x Genomics** 
+
+There are several file formats that are compatible with the STEGO.R QC process. These includes the standard cell ranger output of barcode, features, matrix files as well as the separate contig file. If the formatting is already in the cellxgene (.csv.gz or .h5 file), then this file format can be uploaded to the "Seurat QC" section. Upload all the required files. 
+
+*Under development: multi-TCR (requires unfiltered contig file)*
+
+.. image:: img/10xFormatting.png
+  :width: 600
+  :alt: Alternative text
+
+**BD Rhapsody**
+
+There are two format outputs of BD Rhapsody aligment of either a cellxgene (.csv.gz) or the barcode, features and matrix file. Unlike the 10x Genomics, there is also an extra file called "Sample Tags", which contains the multi-plex ID names. The **"Sample Tags"** file is required. However, if this file is not created (one sample in the experiment), it can be created under the "Create Sample Tags file". 
+
+Additionally there are several formats for the TCR contig file: paired dominant, AIRR dominant (unpaired), AIRR unfilted. For the latter two file formates we include to filter to keep only the 'paired' and if BCR was present as well. 
+
+.. image:: img/BDFormatting.png
+  :width: 600
+  :alt: Alternative text
+
+**Array**
+
+*Note: The TCR_Explore file is for the interrogation of the TCR repertoire independent of the gene expression data at the `TCR_Explore <https://tcr-explore.erc.monash.edu>`*
+
+Recommended process
+^^^^^^^^^^^^^^^^^^^
+
+Upload the documents to the required sections depending on the technology and files available. Repeat for each of the samples within your project.
+
+1. Check that the files have uploaded
+2. Add File Name, this will be added to the "orig.ident" and "Sample_Name"
+      - (10x Genomics and Array, as this is added from the "Sample Tags" in BD Rhapsody) column and used through out the process. This name needs to be unqiue to the file.
+      - If, at a latter point it needs to be updated, this can be done with the "Updated_label.csv", located in 3_Analysis folder
+3. Download the TCRex (functional Beta chains) to "1_TCRex" folder
+4. Download both the "meta-data" and "Matrix" in the SeuratQC into the "1_SeuratQC" folder
+5. Two files need to be downloaded per sample under the "ClusTCR" to the "1_ClusTCR" folder. They will have the prefix of AG_ and BD_ (*Version 1.5*)
+6. Download the TCR_Explore file "1_TCR_Explore" folder

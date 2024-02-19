@@ -1,0 +1,90 @@
+Analysis
+========
+.. note::
+
+    Under active construction
+
+
+The analysis section is divided into several sub-sections. 
+
+- Overview 
+- TCR with GEX 
+- Prioritisation 
+
+*Note: The proritisation pipeline is under active development and will be completed in several stages. The first update will include automated the simple case analyis (one sample), one group (multiple samples) and paired analysis (one group; paired samples) (STEGO.R Version 2). Stage two will add several of the more complex analysis (STEGO.R version 3).*
+
+Uploading the files
+-------------------
+
+There first tab will show in the side panel the files that can be uploaded. 
+
+This includes:
+- Annotated  object (.h5Seurat)
+- Adding in additional identifiers if needed. This file is merged with the meta-data based on the 'Sample_Name'
+- Two clusTCR2 files (prefex with AG and BD) (.csv)
+- TCRex output file (.tsv)
+
+.. image:: img/AnalysisUpload.png
+  :width: 600
+  :alt: Alternative text
+
+Overview
+--------
+
+*Note: Sections to complete.*
+
+This section includes separate interrogation of the gene expression layer and TCR-seq layer. 
+
+GEx
+^^^
+
+TCR-seq
+^^^^^^^
+
+GEx + TCR-seq
+-------------
+
+Top clonotype
+^^^^^^^^^^^^^
+
+Expanded
+^^^^^^^^
+
+Epitope
+^^^^^^^
+
+ClusTCR2
+^^^^^^^^
+
+Marker
+^^^^^^
+
+Multi-TCR 
+^^^^^^^^^
+
+
+Prioritisation stratergy (under active development)
+---------------------------------------------------
+
+*Note: Sections to complete.*
+
+Version 2 of STEGO.R
+^^^^^^^^^^^^^^^^^^^^
+
+Phase 1. Add in simple case (one sample)
+
+Phase 2. Add in one group (one indiviual with multiple time points).
+
+Phase 3. Add in paired analysis (one indiviudal)
+
+Phase 4. Add in paired analysis (multiple individuals)
+
+Version 3 of STEGO.R
+^^^^^^^^^^^^^^^^^^^^
+
+Phase 1. Complex analysis of unpaired samples (3 groups).
+
+Phase 2. Complex analysis of paired analysis with unpaired group (two time points).
+
+Phase 3. Complex analysis of datasets with longitudinal traction. 
+

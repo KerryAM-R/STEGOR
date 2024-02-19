@@ -14,8 +14,10 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   1.installation
-   2.QualityControl
-   3.Analysis
-   4.FAQ
-   5.History
+   0.installation
+   1.formatting
+   2.STEP2
+   3.STEP3SeuratQC
+   4.STEP4Analysis
+   5.FAQ
+   6.History
