@@ -164,9 +164,6 @@ Run the following lines in R. A window will opened that runs the STEGO.R shiny R
 
 
    ``require(STEGO.R)``
-
-   ``Load_required_packages()``
-
    ``runSTEGO()``
 
 You are now ready to process your scRNA-seq with scTCR-seq data!
