@@ -45,17 +45,6 @@ If the file produces a matrix larger than 2^31, the user will need to use the co
 
 .. example-code::
 
-  .. code-block:: JSON
-
-    {
-      "key": "value"
-    }
-
-  .. code-block:: python
-
-    pygments_style = 'sphinx'
-
-
   .. code-block:: R
 
     require(ClusTCR2)
