@@ -21,7 +21,7 @@ Downloaded files to 1_ClusTCR2 and 1_TCRex
 ~~~~~~~~~~~~~~~~~~
 
 1. Upload all the files stored in the "1_TCRex" for merging and save the merged file to the 1_TCRex. 
-2. The TCRex merge file will be uploaded to the [TCRex website](https://tcrex.biodatamining.be) to predict if the beta chain will interact with certain epitopes.
+2. The TCRex merge file will be uploaded to the `TCRex website <https://tcrex.biodatamining.be>`_ to predict if the beta chain will interact with certain epitopes.
 3. Once the TCRex process is complete, download the processed file, and move it to the **3_Analysis** folder
 
 .. image:: img/MergeClust.png
