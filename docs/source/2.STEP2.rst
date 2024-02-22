@@ -61,20 +61,17 @@ If the file produces a matrix larger than 2^31, the user will need to use the co
   .. code-block:: ruby
 
     print "Hello, World!\n"
+    require(ClusTCR2)
+    clust.data.raw <- read.csv("1_ClusTCR/AG_Multi_ClusTCR.csv")
+    names(clust.data.raw)[2]
+    step1 <- ClusTCR2::ClusTCR_Large(clust.data.raw,allele = F,v_gene = names(clust.data.raw)[2])
+    step2 <- ClusTCR2::mcl_cluster_large(step1)
+    saveRDS(step2,"1_ClusTCR/AG_clusTCR2.all.rds") # saves the two list objects
+    write.csv(step2[[1]],"AG_clusTCR2.csv",row.names = F)
 
-
-.. code-block:: language
-  require(ClusTCR2)
-  clust.data.raw <- read.csv("1_ClusTCR/AG_Multi_ClusTCR.csv")
-  names(clust.data.raw)[2]
-  step1 <- ClusTCR2::ClusTCR_Large(clust.data.raw,allele = F,v_gene = names(clust.data.raw)[2])
-  step2 <- ClusTCR2::mcl_cluster_large(step1)
-  saveRDS(step2,"1_ClusTCR/AG_clusTCR2.all.rds") # saves the two list objects
-  write.csv(step2[[1]],"AG_clusTCR2.csv",row.names = F)
-
-  clust.data.raw <- read.csv("1_ClusTCR/BD_Multi_ClusTCR.csv")
-  names(clust.data.raw)[2]
-  step1 <- ClusTCR2::ClusTCR_Large(clust.data.raw,allele = F,v_gene = names(clust.data.raw)[2])
-  step2 <- ClusTCR2::mcl_cluster_large(step1)
-  saveRDS(step2,"1_ClusTCR/BD_clusTCR2.all.rds") # saves the two list objects
-  write.csv(step2[[1]],"3_Analysis/BD_clusTCR2.csv",row.names = F)
+    clust.data.raw <- read.csv("1_ClusTCR/BD_Multi_ClusTCR.csv")
+    names(clust.data.raw)[2]
+    step1 <- ClusTCR2::ClusTCR_Large(clust.data.raw,allele = F,v_gene = names(clust.data.raw)[2])
+    step2 <- ClusTCR2::mcl_cluster_large(step1)
+    saveRDS(step2,"1_ClusTCR/BD_clusTCR2.all.rds") # saves the two list objects
+    write.csv(step2[[1]],"3_Analysis/BD_clusTCR2.csv",row.names = F)
