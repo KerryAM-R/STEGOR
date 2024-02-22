@@ -58,7 +58,7 @@ Additionally there are several formats for the TCR contig file: paired dominant,
 
 **Array**
 
-*Note: The TCR_Explore file is for the interrogation of the TCR repertoire independent of the gene expression data at the `TCR_Explore <https://tcr-explore.erc.monash.edu>`_ *
+* Note: The TCR_Explore file is for the interrogation of the TCR repertoire independent of the gene expression data at the `TCR_Explore <https://tcr-explore.erc.monash.edu>`_ *
 
 Recommended process
 ^^^^^^^^^^^^^^^^^^^
