@@ -4,14 +4,11 @@ Step 3. Quality control
 .. note:: 
     Consideration for the analysis.  
         Steps 3b and 3c can be done either in the interface or with the command-line code in the "merging.batch.harmony.R" in the project directory.
-
     Prerequisite
         Completed the step 1. foramtting and have the two files (matrix.csv and meta.data.csv files in the 1_SeuratQC folder) 
 
-
-
 **STEP 3a.** Quality control of a Seurat object
-------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section describes the Seurat QC process for human samples with 10x Genomics. I use the S133 sample from GES145370 dataset for the example screen shots. 
 
