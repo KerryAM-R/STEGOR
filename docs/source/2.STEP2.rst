@@ -45,7 +45,7 @@ Error issues
 
 If the file produces a matrix larger than 2^31, the user will need to use the command-line process. 
 
-.. code-block:: R
+.. code:: R
   require(ClusTCR2)
   clust.data.raw <- read.csv("1_ClusTCR/AG_Multi_ClusTCR.csv")
   names(clust.data.raw)[2]
