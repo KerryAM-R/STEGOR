@@ -72,7 +72,7 @@ This section is to merge multiple .rds objects and correct for the batch effect.
 **WARNING** This section may not run on Windows. 
 
 
-**STEP 5.** Annotating the Seurat object
+**Step 3d.** Annotating the Seurat object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section describes how to annotated the files either from the "default" and/or "custom" modules with scGate. 
