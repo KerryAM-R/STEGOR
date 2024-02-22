@@ -7,9 +7,7 @@ Step 2. TCRex and ClusTCR2
 
        QC documentation is being actively updated. 
 
-Prerequisite
-------------
-
+.. note:: Prerequisite
 Install STEGO. 
 
 Copy all your raw files to the 0_Raw_files folder within your project. 
