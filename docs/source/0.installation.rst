@@ -17,6 +17,16 @@ Windows:
 * Install `RStudio <https://posit.co/download/rstudio-desktop/>`_
 * Install `Rtools <https://cran.r-project.org/bin/windows/Rtools/>`_
 
+Linux:
+^^^^^^
+
+* install `R <>`_
+
+using `sudo apt install` the following:
+libcurl, libfontconfig1, libtiff5, liblapack-dev, libblas-dev, libglpk-dev, libudunits2-dev, libgdal-dev libgeos-dev, libproj-dev
+and also the fortran
+
+
 Sytem requirements
 ^^^^^^^^^^^^^^^^^^^^^
 Recommended to use a 64-bit OS with at least 16GB of RAM, ideally >=32GB. This is needed for the memory intensive merging and annotation steps. 
