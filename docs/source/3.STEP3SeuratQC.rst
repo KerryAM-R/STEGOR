@@ -8,7 +8,7 @@ Step 3. Quality control
        QC documentation is being actively updated. 
 
 Prerequisite
-------------
+~~~~~~~~~~~~
 
 Install STEGO. 
 
@@ -17,7 +17,7 @@ This process assumes you have completed the step 1. foramtting and have the two 
 Steps 3b and 3c can be done either in the interface or with the command-line code in the "merging.batch.harmony.R" in the project directory.
 
 **STEP 3a.** Quality control of a Seurat object
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------
 
 This section describes the Seurat QC process for human samples with 10x Genomics. I use the S133 sample from GES145370 dataset for the example screen shots. 
 
