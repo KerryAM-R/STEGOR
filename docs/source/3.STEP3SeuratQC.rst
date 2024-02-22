@@ -3,18 +3,12 @@ Step 3. Quality control
 
 .. note:: 
     Consideration for the analysis.  
-       The pipeline was built for scRNA-seq with scTCR-seq datasets. 
+        Steps 3b and 3c can be done either in the interface or with the command-line code in the "merging.batch.harmony.R" in the project directory.
 
-       QC documentation is being actively updated. 
+    Prerequisite
+        Completed the step 1. foramtting and have the two files (matrix.csv and meta.data.csv files in the 1_SeuratQC folder) 
 
-Prerequisite
-~~~~~~~~~~~~
 
-Install STEGO. 
-
-This process assumes you have completed the step 1. foramtting and have the two files (matrix.csv and meta.data.csv files in the 1_SeuratQC folder) 
-
-Steps 3b and 3c can be done either in the interface or with the command-line code in the "merging.batch.harmony.R" in the project directory.
 
 **STEP 3a.** Quality control of a Seurat object
 ------------------------------------------------
