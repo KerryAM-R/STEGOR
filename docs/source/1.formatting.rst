@@ -6,6 +6,9 @@ Step 1. Formatting
        The pipeline was built for scRNA-seq with scTCR-seq datasets. 
 
        QC documentation is being actively updated. 
+    Prerequisite
+       Install STEGO. 
+       Copy all your raw files to the 0_Raw_files folder within your project. 
 
 
 Running STEGO.R
@@ -14,19 +17,12 @@ Now the the R environment is set up and the STEGO.R and it's dependencies are in
 
 Run the following lines in R. A window will opened that runs the STEGO.R shiny R application. 
 
-.. code-block:: R
+.. code-block:: console
    require(STEGO.R)
    runSTEGO()
 
 You are now ready to process your scRNA-seq with scTCR-seq data!
 
-
-Prerequisite
-------------
-
-Install STEGO. 
-
-Copy all your raw files to the 0_Raw_files folder within your project. 
 
 
 Formatting the BD Rhapsody and 10x Genomics matrix and meta-data
