@@ -71,14 +71,14 @@ This folder contains the following folder:
     + TCR and GEX
 - Priortisation
    + Clustering
-      = AG
-      = BD
+      - AG
+      - BD
    + EpitopePred
    + ImmunoDom
    + Multi
-      = PublicLike
-      = private
-   = PolyClonal
+      - PublicLike
+      - private
+   + PolyClonal
 
 the user will also have access to the following files 
 
