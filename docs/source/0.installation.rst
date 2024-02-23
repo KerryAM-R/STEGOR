@@ -22,7 +22,7 @@ Linux:
 
 * install `R <https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html>`_
 
-using _sudo apt install_ the following:
+using **sudo apt install** the following:
 libcurl, libfontconfig1, libtiff5, liblapack-dev, libblas-dev, libglpk-dev, libudunits2-dev, libgdal-dev libgeos-dev, libproj-dev
 and also the gfortran
 
