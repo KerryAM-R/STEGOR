@@ -79,11 +79,12 @@ Downloading and installing STEGO.R
 
 Devtools and BiocManager are required to download the necessary packages from Github and Bioconductor:
 
-``install.packages("devtools")``
-
-``install.packages("BiocManager")``
-
-``install.packages("usethis")``
+::
+   ``install.packages("devtools")``
+   
+   ``install.packages("BiocManager")``
+   
+   ``install.packages("usethis")``
 
 
 This line will install STEGO
