@@ -195,8 +195,9 @@ Run the following lines in R. A window will opened that runs the STEGO.R shiny R
 
 You are now ready to process your scRNA-seq with scTCR-seq data!
 
-.. note::
-   If a window doesnt open, you will need to trouble shoot which packages haven't been installed.
+.. note:: 
+   If a window doesnt open
+      you will need to trouble shoot which packages haven't been installed.
 
 
 Trouble shooting missing packages
