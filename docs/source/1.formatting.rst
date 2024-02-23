@@ -17,9 +17,10 @@ Now the the R environment is set up and the STEGO.R and it's dependencies are in
 
 Run the following lines in R. A window will opened that runs the STEGO.R shiny R application. 
 
-.. code-block:: console
+``` R
    require(STEGO.R)
    runSTEGO()
+```
 
 You are now ready to process your scRNA-seq with scTCR-seq data!
 
