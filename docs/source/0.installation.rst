@@ -82,11 +82,11 @@ This folder contains the following folder:
 
 the user will also have access to the following files 
 
-   - Installing.R
-   - ClusTCR2_large.R
-   - Merging.Batch.Harmony.R
-   - Project.Rproj
-   - STEGO.R 
+- Installing.R
+- ClusTCR2_large.R
+- Merging.Batch.Harmony.R
+- Project.Rproj
+- STEGO.R 
 
 Downloading and installing STEGO.R
 ----------------------------------
@@ -167,7 +167,9 @@ onto the end of the line add the Temp folder name e.g. /Users/kerrymullan/Docume
 *Windows file paths may look differnet from this.*
 
 This will open the .Renviron hidden file
-``usethis::edit_r_environ("project")``
+:: 
+
+   usethis::edit_r_environ("project")
 
 **Step 8.** Pasted the following in the .Renviron:
 
