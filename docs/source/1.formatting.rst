@@ -30,8 +30,8 @@ You are now ready to process your scRNA-seq with scTCR-seq data!
 ============   =======
  Source        Inputs                            
 ============   =======
-10x Genomics   Features.csv.gz: Gene ID (SYMBOL)                                     
-               Barcode.csv.gz: Cell ID (AGGATTT_1)
+10x Genomics   - Features.csv.gz: Gene ID (SYMBOL)                                     
+               - Barcode.csv.gz: Cell ID (AGGATTT_1)
 ============   =======
 
 
