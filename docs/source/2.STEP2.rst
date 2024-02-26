@@ -6,8 +6,6 @@ Step 2. TCRex and ClusTCR2
        The pipeline was built for scRNA-seq with scTCR-seq datasets. 
 
        QC documentation is being actively updated. 
-
-.. Prerequisite:: 
     Prerequisite
         - Install STEGO. 
         - Copy all your raw files to the 0_Raw_files folder within your project. 
@@ -43,9 +41,7 @@ Error issues
 
 If the file produces a matrix larger than 2^31, the user will need to use the command-line process. 
 
-.. example-code::
-
-  .. code-block:: R
+::
 
     require(ClusTCR2)
     clust.data.raw <- read.csv("1_ClusTCR/AG_Multi_ClusTCR.csv")
