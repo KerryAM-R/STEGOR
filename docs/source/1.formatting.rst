@@ -32,6 +32,13 @@ You are now ready to process your scRNA-seq with scTCR-seq data!
 ============   =======
 10x Genomics   - Features.csv.gz: Gene ID (SYMBOL)                                     
                - Barcode.csv.gz: Cell ID (AGGATTT_1)
+               - Matrix.mtx.gz: Gene expression.
+               - Contig file (AIRR) format: contains the V(D)J sequences
+BD Rhapsody    - Features.csv.gz: Gene ID (SYMBOL)
+               - Barcode.csv.gz: Cell ID (numeric) 
+               - Matrix.mtx.gz: expression captured
+               - Sample_Tag.csv: multiplexing annotations 
+               - Contig file (AIRR) format: contains the V(D)J sequences
 ============   =======
 
 
