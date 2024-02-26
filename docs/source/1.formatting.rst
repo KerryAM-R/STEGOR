@@ -26,12 +26,12 @@ Run the following lines in R. A window will opened that runs the STEGO.R shiny R
 
 You are now ready to process your scRNA-seq with scTCR-seq data!
 
-==========   =======
- Source      Inputs                            
-==========   =======
-10x          Features.csv.gz: Gene ID (SYMBOL)                                     
-Genomics     Barcode.csv.gz: Cell ID (AGGATTT_1)
-==========   =======
+==========       =======
+ Source          Inputs                            
+==========       =======
+10x Genomics     Features.csv.gz: Gene ID (SYMBOL)                                     
+                 Barcode.csv.gz: Cell ID (AGGATTT_1)
+==========       =======
 
 
 =====  =====
