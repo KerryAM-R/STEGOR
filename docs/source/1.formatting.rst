@@ -27,6 +27,14 @@ Run the following lines in R. A window will opened that runs the STEGO.R shiny R
 You are now ready to process your scRNA-seq with scTCR-seq data!
 
 
+Formatting the BD Rhapsody and 10x Genomics matrix and meta-data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Formatting the 10x Genomics, BD Rhapsody or Array to create the necessary documents for Seurat QC process, ClusTCR2, TCRex and TCR_Explore.
+
+While this process was initially developed for TCR-seq, we have also included the capacity for pairing the BCR sequences. 
+
+
 ============   =======
  Source        Inputs                            
 ============   =======
@@ -40,41 +48,6 @@ BD Rhapsody    - Features.csv.gz: Gene ID (SYMBOL)
                - Sample_Tag.csv: multiplexing annotations 
                - Contig file (AIRR) format: contains the V(D)J sequences
 ============   =======
-
-
-=====  =====
-col 1  col 2
-=====  =====
-1      Second column of row 1.
-2      Second column of row 2.
-       Second line of paragraph.
-3      - Second column of row 3.
-
-       - Second item in bullet
-         list (row 3, column 2).
-\      Row 4; column 1 will be empty.
-=====  =====
-
-
-Source	Inputs
-10x Genomics	
-
-Matrix.mtx.gz: Gene expression.
-Unfiltered contig file (AIRR) format or Dominant (AIRR): contains the V(D)J sequences
-BD Rhapsody	Features.csv.gz: Gene ID (SYMBOL)
-Barcode.csv.gz: Cell ID (numeric) 
-Matrix.mtx.gz: expression captured
-Sample_Tag.csv: multiplexing annotations 
-Unfiltered contig file (AIRR) format or Dominant (AIRR): contains the V(D)J sequences
-
-
-
-Formatting the BD Rhapsody and 10x Genomics matrix and meta-data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Formatting the 10x Genomics, BD Rhapsody or Array to create the necessary documents for Seurat QC process, ClusTCR2, TCRex and TCR_Explore.
-
-While this process was initially developed for TCR-seq, we have also included the capacity for pairing the BCR sequences. 
 
 **10x Genomics** 
 
