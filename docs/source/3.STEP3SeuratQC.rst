@@ -95,6 +95,12 @@ The scGate threshold was set to 0.2 for full capture and 0.5 for the immune pane
 
 * **BD Rhapsody Human immune panel**
 
+.. csv-table:: xyz
+    :header-rows: 1
+    :file: path/anno_table.csv
+    :widths: 20, 30, 50
+    :class: longtable
+
 +------------+------------+----------+----------+
 | Cell type  | Header 2   | Header 3 | Header 4 |
 +============+============+==========+==========+
