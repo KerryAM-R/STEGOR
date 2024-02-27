@@ -72,6 +72,7 @@ This section is to merge multiple .rds objects and correct for the batch effect.
 **WARNING** This section may not run on Windows. 
 
 ::
+
             require(STEGO.R)
 
 
