@@ -102,6 +102,17 @@ The scGate threshold was set to 0.2 for full capture and 0.5 for the immune pane
     :class: longtable
 
 
+=====  =====  ======
+   Inputs     Output
+------------  ------
+  A      B    A or B
+=====  =====  ======
+False  False  False
+True   False  True
+False  True   True
+True   True   True
+=====  =====  ======
+
 
 +------------+------------+----------+----------+
 | Cell type  | Header 2   | Header 3 | Header 4 |
