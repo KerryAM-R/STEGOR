@@ -73,24 +73,17 @@ This section is to merge multiple .rds objects and correct for the batch effect.
 
 ::
     require(STEGO.R)
-
     # large file merging and annotating
     # as the program window may disappear, we recommend merging and annotating using the following commands
-    
     ###### merging seurat object ------
     # Check that you are in the correct working directory with your RDS files
     merging_multi_SeuratRDS(set_directory = "2_scObj/", merge_RDS = F, pattern_RDS = ".rds$") 
-    
     # once that is check, switch merge_RDS to TRUE or T
     sc_merge <- merging_multi_SeuratRDS(set_directory = "2_scObj/", merge_RDS = T, pattern_RDS = ".rds$") 
-    
     # merges the different layers
     sc <- JoinLayers(sc_merge,  assay = "RNA") 
-    
     # save the merged file - it will not have the scaled data and PCA stored any more due to the merging process. This is in case R crashes and it needs to be read in
     saveRDS(sc_merge,"2_scObj/sc_merge.rds") 
-    
-    
     ## perform the harmony batch correction ------
     sc <- harmony_batch_correction_1_variableFeatures(file = sc)
     sc <- harmony_batch_correction_2_Scaling(file = sc, Seruat_version = "V5")
@@ -114,11 +107,12 @@ This section is to merge multiple .rds objects and correct for the batch effect.
     
     sc@meta.data$Cell_Index_old <- sc@meta.data$Cell_Index
     sc@meta.data$Cell_Index <- rownames(sc@meta.data)
-    head(sc@meta.data)
     saveRDS(sc,"3_analysis/sc_anno.rds")
     
     # loading RDS file
     sc <- readRDS("path/to/RDS/file")
+
+
 
 **Step 3d.** Annotating the Seurat object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
