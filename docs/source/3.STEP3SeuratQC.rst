@@ -74,9 +74,6 @@ This section is to merge multiple .rds objects and correct for the batch effect.
 ::
 
             require(STEGO.R)
-
-
-::
             # large file merging and annotating
             # as the program window may disappear, we recommend merging and annotating using the following commands
             ###### merging seurat object ------
