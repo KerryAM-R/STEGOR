@@ -145,13 +145,13 @@ The scGate threshold was set to 0.2 for full capture and 0.5 for the immune pane
 
 * **Human**
 
-- TcellFunction
-- Generic
-- exhausted
-- senescence
-- cycling
-- Th1_cytokines (IFNg and TNF)
-- TCRseq (meta.data TCR-seq)
+    - TcellFunction
+    - Generic
+    - exhausted
+    - senescence
+    - cycling
+    - Th1_cytokines (IFNg and TNF)
+    - TCRseq (meta.data TCR-seq)
 
 * **10X Genomcis for Mouse** (*Will likely be the same as the BD Rhapsody mouse full panel model.*)
 
