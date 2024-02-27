@@ -69,7 +69,7 @@ This section is to merge multiple .rds objects and correct for the batch effect.
 
 *Note: Depending on the number of files, and total number of cells will impact the speed of merging*
 
-**WARNING** This section may not run on Windows. 
+If you have more than a few files to merge and annotate, we recommend using the following code: 
 
 ::
 
@@ -85,7 +85,7 @@ This section is to merge multiple .rds objects and correct for the batch effect.
     # once that is check, switch merge_RDS to TRUE or T
     sc_merge <- merging_multi_SeuratRDS(set_directory = "2_scObj/", merge_RDS = T, pattern_RDS = ".rds$") 
     
-    # merges the different layers
+    # merges the different layers in V5 of seurat 
     sc <- JoinLayers(sc_merge,  assay = "RNA") 
     
     # save the merged file - it will not have the scaled data and PCA stored any more due to the merging process. This is in case R crashes and it needs to be read in
@@ -97,9 +97,18 @@ This section is to merge multiple .rds objects and correct for the batch effect.
     sc <- harmony_batch_correction_3_PC(file = sc)
     sc <- harmony_batch_correction_4_Harmony(file = sc)
     saveRDS(sc,"2_scObj/sc_harmony.rds")
-    
+
+
+**Step 3d.** Annotating the Seurat object
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This section describes how to annotated the files either from the "default" and/or "custom" modules with scGate. If you have large files, we recommend using scripts and not the interface. 
+
+::
+
     #### annotating Seurat object -----
-    
+    sc <- readRDS("2_scObj/sc_harmony.rds")
+
     sc <-     scGate_annotating(
               file = sc,
               TcellFunction = T,
@@ -117,16 +126,6 @@ This section is to merge multiple .rds objects and correct for the batch effect.
     sc@meta.data$Cell_Index <- rownames(sc@meta.data)
     head(sc@meta.data)
     saveRDS(sc,"3_analysis/sc_anno.rds")
-    
-    # loading RDS file ------
-    sc <- readRDS("path/to/RDS/file")
-
-**Step 3d.** Annotating the Seurat object
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This section describes how to annotated the files either from the "default" and/or "custom" modules with scGate. 
-
-Also, there is a "TCR" annotation section that identifies the human unconventional T cells: MAIT, iNKT, gamma-delta T cells, and possible CD1c-restricted (mouse is under development). 
 
 
 Default annotation models with scGate
