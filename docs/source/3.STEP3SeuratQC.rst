@@ -144,7 +144,6 @@ Default annotation models with scGate
 The scGate threshold was set to 0.2 for full capture and 0.5 for the immune panel (<400 transcripts). 
 
 * **Human**
-
     - TcellFunction
     - Generic
     - exhausted
@@ -166,6 +165,7 @@ This section annotates the potential invariant T cells
 
 Functional T cell annotations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 .. csv-table:: Annotation_table
     :header-rows: 1
