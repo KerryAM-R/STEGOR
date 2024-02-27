@@ -90,8 +90,7 @@ This section is to merge multiple .rds objects and correct for the batch effect.
     
     # save the merged file - it will not have the scaled data and PCA stored any more due to the merging process. This is in case R crashes and it needs to be read in
     saveRDS(sc_merge,"2_scObj/sc_merge.rds") 
-    
-    
+
     ## perform the harmony batch correction ------
     sc <- harmony_batch_correction_1_variableFeatures(file = sc)
     sc <- harmony_batch_correction_2_Scaling(file = sc, Seruat_version = "V5")
@@ -99,7 +98,6 @@ This section is to merge multiple .rds objects and correct for the batch effect.
     sc <- harmony_batch_correction_4_Harmony(file = sc)
     saveRDS(sc,"2_scObj/sc_harmony.rds")
     
-    ?scGate_annotating
     #### annotating Seurat object -----
     
     sc <-     scGate_annotating(
@@ -110,6 +108,7 @@ This section is to merge multiple .rds objects and correct for the batch effect.
               senescence = T,
               cycling = T,
               Th1_cytokines = T,
+              TCRseq = T,
               threshold = 0.2, # change to 0.2 if you use the focused immuen panel from BD rhapsody
               reductionType = "harmony"
             )
@@ -119,7 +118,7 @@ This section is to merge multiple .rds objects and correct for the batch effect.
     head(sc@meta.data)
     saveRDS(sc,"3_analysis/sc_anno.rds")
     
-    # loading RDS file
+    # loading RDS file ------
     sc <- readRDS("path/to/RDS/file")
 
 **Step 3d.** Annotating the Seurat object
@@ -154,7 +153,7 @@ The scGate threshold was set to 0.2 for full capture and 0.5 for the immune pane
 TCR annotations
 ^^^^^^^^^^^^^^^
 
-This section, which currently is annotated separately from the scGate
+This section annotates the potential invariant T cells
 
 Creating custom annotation stratergies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
