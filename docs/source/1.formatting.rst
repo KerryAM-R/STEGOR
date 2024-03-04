@@ -86,3 +86,14 @@ Upload the documents to the required sections depending on the technology and fi
 4. Download both the "meta-data" and "Matrix" in the SeuratQC into the "1_SeuratQC" folder
 5. Two files need to be downloaded per sample under the "ClusTCR" to the "1_ClusTCR" folder. They will have the prefix of AG_ and BD_ (*Version 1.5*)
 6. Download the TCR_Explore file "1_TCR_Explore" folder
+
+Alternative process
+^^^^^^^^^^^^^^^^^^^
+
+Upload the documents to the required sections depending on the technology and files available. Repeat for each of the samples within your project.
+
+1. Check that the files have uploaded
+2. Add File Name, this will be added to the "orig.ident" and "Sample_Name"
+3. Download all files in order of TCRex, Seruat (matrix and meta.data),ClusTCR2 and TCR_Explore to the download folder. 
+4. Move all files to the respective folders in the Project directory
+
