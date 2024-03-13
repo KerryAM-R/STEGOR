@@ -1,5 +1,5 @@
-Analysis
-========
+Step 4. Analysis
+================
 .. note::
 
     Under active construction
@@ -19,8 +19,9 @@ Uploading the files
 There first tab will show in the side panel the files that can be uploaded. 
 
 This includes:
-- Annotated  object (.h5Seurat)
+- Annotated  object (.rds)
 - Adding in additional identifiers if needed. This file is merged with the meta-data based on the 'Sample_Name'
+    If you dont wish to do this everytime, add the extra identifiers with the STEGO.R::update_sc()
 - Two clusTCR2 files (prefex with AG and BD) (.csv)
 - TCRex output file (.tsv)
 
@@ -37,6 +38,11 @@ This section includes separate interrogation of the gene expression layer and TC
 
 GEx
 ^^^
+
+This section contains 
+* percentage
+* UMAP plot 
+    - This plot can be coloured by any variable under 
 
 TCR-seq
 ^^^^^^^
