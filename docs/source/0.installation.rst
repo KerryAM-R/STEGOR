@@ -180,6 +180,19 @@ TMPDIR = PATH/TO/Directory_for_project/found/with/getwd()/Temp
 
 ``.rs.restartR()`` # restart R
 
+Installing fonts
+----------------
+
+::
+
+   # needed to use for the first time :D
+   require(extrafont)
+   font_import()
+   loadfonts()
+   
+   fonts <- fonttable()
+   head(fonts)
+
 Running STEGO.R
 ---------------
 Now the the R environment is set up and the STEGO.R and it's dependencies are installed, we can now run the application.
