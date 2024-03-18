@@ -118,16 +118,22 @@ This line will install STEGO
 **Step 6.** repeat step 3 for devtools::install_github("KerryAM-R/STEGO.R")
 
 **STEGO.R not found/API issue**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You will need to create a git token
 
 ::
 
-      create the token
+      # Create the token
       usethis::create_github_token()
-      paste into the env
+       
+      # Open the .Renviron file
       usethis::edit_r_environ()
-      GITHUB_PAT=TOKEN
+       
+      # Paste your token into the file
+      GITHUB_PAT=insert_your_token
+       
+      # Close the file and restart R
 
 **Possible installing prompts**
 
