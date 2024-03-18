@@ -104,7 +104,6 @@ Devtools and BiocManager are required to download the necessary packages from Gi
    
    install.packages("usethis")
 
-
 This line will install STEGO
 :: 
 
@@ -117,6 +116,18 @@ This line will install STEGO
 **Step 5.** Repeat step 3 for install.packages("usethis")
 
 **Step 6.** repeat step 3 for devtools::install_github("KerryAM-R/STEGO.R")
+
+**STEGO.R not found/API issue**
+
+You will need to create a git token
+
+::
+
+      create the token
+      usethis::create_github_token()
+      paste into the env
+      usethis::edit_r_environ()
+      GITHUB_PAT=TOKEN
 
 **Possible installing prompts**
 
