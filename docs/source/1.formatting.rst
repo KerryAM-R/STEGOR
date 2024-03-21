@@ -34,7 +34,7 @@ Formatting the 10x Genomics, BD Rhapsody or Array to create the necessary docume
 
 While this process was initially developed for TCR-seq, we have also included the capacity for pairing the BCR sequences. 
 
-
+Table 1. File to upload in the respective section. 
 ============   =======
  Source        Inputs                            
 ============   =======
@@ -51,7 +51,7 @@ BD Rhapsody    - Features.csv.gz: Gene ID (SYMBOL)
 
 **10x Genomics** 
 
-There are several file formats that are compatible with the STEGO.R QC process. These includes the standard cell ranger output of barcode, features, matrix files as well as the separate contig file. If the formatting is already in the cellxgene (.csv.gz or .h5 file), then this file format can be uploaded to the "Seurat QC" section. Upload all the required files. 
+There are several file formats that are compatible with the STEGO.R QC process. These includes the standard cell ranger output of barcode, features, matrix files as well as the separate contig file. 
 
 *Under development: multi-TCR (requires unfiltered contig file)*
 
@@ -73,27 +73,25 @@ Additionally there are several formats for the TCR contig file: paired dominant,
 
 * Note: The TCR_Explore file is for the interrogation of the TCR repertoire independent of the gene expression data at the `TCR_Explore <https://tcr-explore.erc.monash.edu>`_ *
 
-Recommended process
-^^^^^^^^^^^^^^^^^^^
+File outputs and storage for STEP 1. 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Upload the documents to the required sections depending on the technology and files available. Repeat for each of the samples within your project.
 
-1. Check that the files have uploaded
-2. Add File Name, this will be added to the "orig.ident" and "Sample_Name"
+1. Upload the files according to Table 1. 
+2. Check that the files have uploaded in the "Uploaded data" tab. 
+3. Add File Name, this will be added to the "orig.ident" and "Sample_Name"
       - (10x Genomics and Array, as this is added from the "Sample Tags" in BD Rhapsody) column and used through out the process. This name needs to be unqiue to the file.
       - If, at a latter point it needs to be updated, this can be done with the "Updated_label.csv", located in 3_Analysis folder
-3. Download the TCRex (functional Beta chains) to "1_TCRex" folder
-4. Download both the "meta-data" and "Matrix" in the SeuratQC into the "1_SeuratQC" folder
-5. Two files need to be downloaded per sample under the "ClusTCR" to the "1_ClusTCR" folder. They will have the prefix of AG_ and BD_ (*Version 1.5*)
-6. Download the TCR_Explore file "1_TCR_Explore" folder
 
-Alternative process
-^^^^^^^^^^^^^^^^^^^
+Download to each of the 1_ folders e.g.,
+4. Download the TCRex (functional Beta chains) to "1_TCRex" folder
+5. Download both the "meta-data" and "Matrix" in the SeuratQC into the "1_SeuratQC" folder
+6. Two files need to be downloaded per sample under the "ClusTCR" to the "1_ClusTCR" folder. They will have the prefix of AG_ and BD_ (*Version 1.5*)
+7. Download the TCR_Explore file "1_TCR_Explore" folder
 
-Upload the documents to the required sections depending on the technology and files available. Repeat for each of the samples within your project.
+or 
 
-1. Check that the files have uploaded
-2. Add File Name, this will be added to the "orig.ident" and "Sample_Name"
-3. Download all files in order of TCRex, Seruat (matrix and meta.data),ClusTCR2 and TCR_Explore to the download folder. 
-4. Move all files to the respective folders in the Project directory
+4. Download all files in order of TCRex, Seruat (matrix and meta.data),ClusTCR2 and TCR_Explore to the download folder. 
+5. Move all files to the respective folders in the Project directory according 1_
 
