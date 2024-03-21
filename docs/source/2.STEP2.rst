@@ -15,6 +15,8 @@ Step 2. TCRex and ClusTCR2
 **2a. Merging TCRex**
 ~~~~~~~~~~~~~~~~~~~~~
 
+[insert text here to explain TCRex]
+
 1. Upload all the files stored in the "1_TCRex" for merging and save the merged file to the 1_TCRex. 
 2. The TCRex merge file will be uploaded to the `TCRex website <https://tcrex.biodatamining.be>`_ to predict if the beta chain will interact with certain epitopes.
 3. Once the TCRex process is complete, download the processed file, and move it to the **3_Analysis** folder
@@ -25,6 +27,9 @@ Step 2. TCRex and ClusTCR2
 
 **2b. Clustering with ClusTCR2**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[insert text here to explain ClusTCR2]
+
 1. If there are multiple files under the 'ClusTCR2', the user will upload all the **AG_** or **BD_** from the **1_ClusTCR2** folder.
       - save the file with **AG_** or **BD_** prefix.
 
@@ -57,3 +62,8 @@ If the file produces a matrix larger than 2^31, the user will need to use the co
     step2 <- ClusTCR2::mcl_cluster_large(step1)
     saveRDS(step2,"1_ClusTCR/BD_clusTCR2.all.rds") # saves the two list objects
     write.csv(step2[[1]],"3_Analysis/BD_clusTCR2.csv",row.names = F)
+
+
+References
+
+[add citation to TCRex and ClusTCR; add DOI links]
