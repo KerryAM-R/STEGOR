@@ -76,13 +76,16 @@ This section is to merge multiple .rds objects and correct for the batch effect.
 **STEP 3c.** Batch correction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Same processes as Seurat and see https://satijalab.org/seurat/articles/pbmc3k_tutorial.html for details. 
+
 2. Wait for the files to finish uploading before proceeding 
 3. Update the Project name e.g., BreastCancer
 4. Hit the bottons in each tab in the following order:
     - Run VariableFeatures
     - Run Scale
     - Run PCA
-    - Run Harmony *Note: Harmony R package is used for the batch correction.*
+    - Run Harmony *Note: Harmony R package is used for the batch correction.* 
+        * https://www.nature.com/articles/s41592-019-0619-0 for more detail
     - Run Dimentional Reduction
 
 5. Once completed click the "Download merged Seurat"
