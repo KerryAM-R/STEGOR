@@ -95,3 +95,25 @@ or
 4. Download all files in order of TCRex, Seruat (matrix and meta.data),ClusTCR2 and TCR_Explore to the download folder. 
 5. Move all files to the respective folders in the Project directory according 1_
 
+Command line process for STEP 1. 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Currently available for 10x genomics**
+
+Within the raw data folder should be subfolders for each unique sample in the dataset. These subfolders should contain at least the barcodes, features, matrix and filtered_contig files.
+
++ 0_rawfiles
+    - Sample1_treatment1
+        * barcode 
+        * features
+        * Matrix
+        * TCR files (needs to have the word contig to be found)
+    - Sample1_treatment2
+    - Sample2_treatment1
+        
+Use the preprocessing.R found in the R folder of the project_director
+
+::
+
+    
+        
