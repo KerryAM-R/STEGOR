@@ -21,10 +21,9 @@ Step 2. TCRex and ClusTCR2
 2. The TCRex merge file will be uploaded to the `TCRex website <https://tcrex.biodatamining.be>`_ to predict if the beta chain will interact with certain epitopes.
 3. Once the TCRex process is complete, download the processed file, and move it to the **3_Analysis** folder
 
-.. image:: img/MergeClust.png
+.. image:: img/2a_TCRex_merge.png
   :width: 300
   :alt: Alternative text
-
 
 
 **2b. Clustering with ClusTCR2**
