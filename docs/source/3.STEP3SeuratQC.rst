@@ -7,10 +7,16 @@ Step 3. Quality control
     Prerequisite
         Completed the step 1. foramtting and have the two files (matrix.csv and meta.data.csv files in the 1_SeuratQC folder) 
 
+
+
 **STEP 3a.** Quality control of a Seurat object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section describes the Seurat QC process for human samples with 10x Genomics. I use the S133 sample from GES145370 dataset for the example screen shots. 
+
+.. image:: img/3a.png
+  :width: 200
+  :alt: Alternative text
 
 1. Upload both the meta-data.csv file and the matrix file (.csv.gz, .csv or .h5). 
 2. Add the file name, which will be identical to the previous file name.
@@ -22,22 +28,27 @@ This section describes the Seurat QC process for human samples with 10x Genomics
       - MtDNA standard cut-off less than 20%
       - rRNA standard cut-off is greater than 5%. If there is no rRNA genes identifed, set value to 0 or the program will crash due to no cell's remaining.
 
-.. image:: img/BeforeVolc.png
+6. Once the settings have been configured, hit update. This will add the File name.
+
+.. image:: img/3a_AfterVolin.png
   :width: 600
   :alt: Alternative text
 
-6. Once the settings have been configured, hit update. This will add the File name.
 7. The user can then inspect the presence of the top variable features, elbow plot and Heatmaps. The latter two plots are to aid in setting the number of dimentions to use for the UMAP dimentional reduction. Default is set to 15. The resolutions are used for the unsupervised clustering. *Note: I use the scGate for the annotation stratergy rather than the unsupervised clusters as it is not suitable for identifying subtle differences in T cell sub-populations.*
 
-.. image:: img/ElbowPlot.png
-  :width: 600
-  :alt: Alternative text
-
 8. In the side panel, hit the "Run clustering" button to run the dimentionality reduction.
+
+.. image:: img/3a_UMAP.png
+  :width: 600
+  :alt: UMAP
+
 9. In the "Add meta data", first check that the file has uploaded correctly.
-10. Next, In the side panel hit the "Input metatdata after clustering"
-      - This will render a new table, and check that there are TCRs present. 
-11. Now your file has completed the Seurat QC and has had the TCR sequences added to the meta-data. click the "Download Seurat" object and save it to the **"2_SCobj"** folder.
+
+.. image:: img/3a_addmetadata.png
+  :width: 600
+  :alt: UMAP
+
+10. Now your file has completed the Seurat QC and has had the TCR sequences added to the meta-data. click the "Download Seurat" object and save it to the **"2_SCobj"** folder.
  
 **STEP 3b.** Merging multiple Seurat objects 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
