@@ -43,14 +43,10 @@ This process requires the user to upload AG separate for the BD clustering. This
 2. Upload either the merged file or single **AG_** or **BD_** under the "Clustering inputs" tab.
 
 .. image:: img/2b_uploaded_merged_ClusTCR2.png
-  :width: 300
+  :width: 450
   :alt: Alternative text
 
 3. Hit the "Update clustering" button to perform the clustering. 
-
-.. image:: img/2b_clusTCR2_merge.png
-  :width: 450
-  :alt: Alternative text
 
 4. Under the "output" tab has three sub-sections
       - Processing: Time taken to complete the clustering
@@ -58,7 +54,7 @@ This process requires the user to upload AG separate for the BD clustering. This
       - Figures: The user can explore the data and download the clustering network and the corresponding motif. The latter figure is also generated in the "Analysis section".  
 
 .. image:: img/2b_clustering_table_for_analysis.png
-  :width: 300
+  :width: 450
   :alt: Alternative text
 
 Error issues
