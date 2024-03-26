@@ -176,6 +176,9 @@ Functional T cell annotations
     :widths: 20, 30, 50
     :class: longtable
 
+Cyto = GZMA,GZMB,PRF1,GNLY,NKG7; Naive = CCR7, SELL
+
+DN = double negative; Th = T helper, Tfh = follicular T helper, Tc = cytotoxic T cell; Treg = regulatory T cell 
 
 Creating custom annotation stratergies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
