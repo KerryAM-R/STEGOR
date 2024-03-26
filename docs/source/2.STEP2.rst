@@ -84,6 +84,6 @@ If the file produces a matrix larger than 2^31, the user will need to use the co
     write.csv(step2[[1]],"3_Analysis/BD_clusTCR2.csv",row.names = F)
 
 
-References
-
-[add citation to TCRex and ClusTCR; add DOI links]
+**References**
+1. Valkiers, S. et al. ClusTCR: a python interface for rapid clustering of large sets of CDR3 sequences with unknown antigen specificity. Bioinformatics, 2021. 37(24): p. 4865-4867.
+2. Gielis, S. et al. Detection of Enriched T Cell Epitope Specificity in Full T Cell Receptor Sequence Repertoires. Front Immunol 10, 2820 (2019).
