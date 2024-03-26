@@ -12,7 +12,7 @@ Step 3. Quality control
 **STEP 3a.** Quality control of a Seurat object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This section describes the Seurat QC process for human samples with 10x Genomics. I use the S133 sample from GES145370 dataset for the example screen shots. 
+This section describes the Seurat QC process for human samples with 10x Genomics. 
 
 .. image:: img/3a.png
   :width: 200
@@ -102,6 +102,11 @@ batch correction
 
 4. Once completed click the "Download merged Seurat"
 
+.. image:: img/3b_batch_corrected_including_background.png
+  :width: 750
+  :alt: Alternative text
+
+
 *Note: Depending on the number of files, and total number of cells will impact the speed of merging*
 
 If you have more than a few files to merge and annotate, we recommend using the following code: 
@@ -124,6 +129,24 @@ If you have more than a few files to merge and annotate, we recommend using the 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section describes how to annotated the files either from the "default" and/or "custom" modules with scGate. If you have large files, we recommend using scripts and not the interface. 
+
+upload the merged file to commence the annotation process. 
+
+.. image:: img/3c_annotating_pocessing.png
+  :width: 750
+  :alt: Alternative text
+
+This is what the window will print once hte annotation is completed.
+
+.. image:: img/3c_processed_anno.png
+  :width: 750
+  :alt: Alternative text
+
+The annotations are added to the end of the meta data table in the Seurat object. 
+
+.. image:: img/3c_annotations_in_meta.data.png
+  :width: 750
+  :alt: Alternative text
 
 ::
 
@@ -159,12 +182,17 @@ Default annotation models with scGate
 The scGate threshold was set to 0.2 for full capture and 0.5 for the immune panel (<400 transcripts). 
 
 * **Human**
-    - TcellFunction
+    - TcellFunction (see Annotation table)
     - Generic
+        + CD4, CD8, DN as well as DC's, Monocytes, and B cells
     - exhausted
+        + Based on four markers: PDCD1 (PD-1), TIGIT, (LAG-3) and 
     - senescence
+        +  
     - cycling
-    - Th1_cytokines (IFNg and TNF)
+        +
+    - Th1_cytokines 
+        + combination of IFNG and TNF
     - TCRseq (meta.data TCR-seq)
 
 * **10X Genomcis for Mouse** (*Will likely be the same as the BD Rhapsody mouse full panel model.*)
@@ -176,11 +204,10 @@ The scGate threshold was set to 0.2 for full capture and 0.5 for the immune pane
 TCR annotations
 ^^^^^^^^^^^^^^^
 
-This section annotates the potential invariant T cells
+This section annotates the potential invariant T cells. 
 
 Functional T cell annotations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 .. csv-table:: Annotation_table
     :header-rows: 1
@@ -195,7 +222,7 @@ DN = double negative; Th = T helper, Tfh = follicular T helper, Tc = cytotoxic T
 Creating custom annotation stratergies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*Note: section is incomplete.*
+The user can add additonal annotations beyond the default. 
 
 There are nine custom databases that a user can amend. If needed, these can be added to an already annotated file.
 
@@ -203,13 +230,45 @@ There are nine custom databases that a user can amend. If needed, these can be a
 
 Check that the cells express the markers under the "marker check" tab.
     - To run, click the 'View Feature plot'
-    - The user can alter the range to a custom 
 
-If needed, you can use either the "Treatment differences within cluster" or "cluster difference" to have better identification of marker differneces between clusters.
+.. image:: img/3c_check_mem_expression.png
+  :width: 600
+  :alt: Alternative text
 
-**Step 3d.** Removing unwanted sample and/or downsampling
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Design the panel to add into the nine custom databases in **custom_db** folder
 
+Do not rename the master file. However, the file will need to be altered to set the markers. The user will need to define the name as well as the singature (gene list). If multiple genes are used, separate with ; as per the scGate documentation. 
+
+The user can alter the names in front of the _scGate_Model.tsv, while the latter is used to find each type of annotation. 
+
+To use scGate effectively, the genes within a set are read as OR (either of the marker need to be present), while the levels equate to AND i.e., All markers need to be present. These levels then need to use positive or negative under the use_as column. We recommend not defining the positive and negative markers in the 
+
+.. image:: img/3c_example_model_scGate.png
+  :width: 600
+  :alt: Alternative text
+
+Use a fresh run of the app, so the new database is read into, otherwise it will be the default. 
+
+.. image:: img/3c_running the_mem.png
+  :width: 600
+  :alt: Alternative text
+
+Run just the custom annotation needed. 
+
+.. image:: img/3c_running_the_mem.png
+  :width: 600
+  :alt: Alternative text
+
+Check that there the signal overlaps with the gene expression, as per the feature plot. Once this is what you expect, download the object.
+
+.. image:: img/3c_checking_mem_gate.png
+  :width: 600
+  :alt: Alternative text
+
+**Step 3d.** Removing unwanted sample and/or downsampling (optional)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Some times, there may be a need to remove cells from the object. This process allows 
 
 
 .. image:: img/3d_removing samples_from_md.png
