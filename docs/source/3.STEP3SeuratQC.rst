@@ -22,11 +22,13 @@ This section describes the Seurat QC process for human samples with 10x Genomics
       - MtDNA standard cut-off less than 20%
       - rRNA standard cut-off is greater than 5%. If there is no rRNA genes identifed, set value to 0 or the program will crash due to no cell's remaining.
 
-.. image:: img/BeforeVolc.png
+6. Once the settings have been configured, hit update. This will add the File name.
+
+.. image:: img/3a_AfterVolin.png
   :width: 600
   :alt: Alternative text
 
-6. Once the settings have been configured, hit update. This will add the File name.
+
 7. The user can then inspect the presence of the top variable features, elbow plot and Heatmaps. The latter two plots are to aid in setting the number of dimentions to use for the UMAP dimentional reduction. Default is set to 15. The resolutions are used for the unsupervised clustering. *Note: I use the scGate for the annotation stratergy rather than the unsupervised clusters as it is not suitable for identifying subtle differences in T cell sub-populations.*
 
 .. image:: img/ElbowPlot.png
