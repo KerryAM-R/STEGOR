@@ -50,27 +50,30 @@ This section describes the Seurat QC process for human samples with 10x Genomics
 
 10. Now your file has completed the Seurat QC and has had the TCR sequences added to the meta-data. click the "Download Seurat" object and save it to the **"2_SCobj"** folder.
  
-**STEP 3b.** Merging multiple Seurat objects 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**STEP 3b.** Merging multiple Seurat objects and batch correction.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section is to merge multiple .rds objects and correct for the batch effect. 
 
+Merging
++++++++
 
 1. From the **"2_SCobj"** upload all the .rds files.
 
-.. image:: img/mergeSC.png
+.. image:: img/3b_merging_sc.png
   :width: 600
   :alt: Alternative text
 
 2. Download the merged.rds object
 
+.. image:: img/3b_downloadmerged_obj.png
+  :width: 600
+  :alt: Alternative text
+
+For many file merging and annotating as the program window may disappear, we recommend merging and annotating using ** **
 ::
 
     require(STEGO.R)
-    
-    # large file merging and annotating
-    # as the program window may disappear, we recommend merging and annotating using the following commands
-    
     ###### merging seurat object ------
     # Check that you are in the correct working directory with your RDS files
     merging_multi_SeuratRDS(set_directory = "2_scObj/", merge_RDS = F, pattern_RDS = ".rds$") 
@@ -84,14 +87,12 @@ This section is to merge multiple .rds objects and correct for the batch effect.
     # save the merged file - it will not have the scaled data and PCA stored any more due to the merging process. This is in case R crashes and it needs to be read in
     saveRDS(sc_merge,"2_scObj/sc_merge.rds") 
 
-**STEP 3c.** Batch correction
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+batch correction 
+++++++++++++++++
 
-Same processes as Seurat and see https://satijalab.org/seurat/articles/pbmc3k_tutorial.html for details. 
-
-2. Wait for the files to finish uploading before proceeding 
-3. Update the Project name e.g., BreastCancer
-4. Hit the bottons in each tab in the following order:
+1. Wait for the files to finish uploading before proceeding 
+2. Update the Project name e.g., BreastCancer
+3. Hit the bottons in each tab in the following order:
     - Run VariableFeatures
     - Run Scale
     - Run PCA
@@ -99,7 +100,7 @@ Same processes as Seurat and see https://satijalab.org/seurat/articles/pbmc3k_tu
         * https://www.nature.com/articles/s41592-019-0619-0 for more detail
     - Run Dimentional Reduction
 
-5. Once completed click the "Download merged Seurat"
+4. Once completed click the "Download merged Seurat"
 
 *Note: Depending on the number of files, and total number of cells will impact the speed of merging*
 
@@ -119,7 +120,7 @@ If you have more than a few files to merge and annotate, we recommend using the 
     saveRDS(sc,"2_scObj/sc_harmony.rds")
 
 
-**Step 3d.** Annotating the Seurat object
+**Step 3c.** Annotating the Seurat object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section describes how to annotated the files either from the "default" and/or "custom" modules with scGate. If you have large files, we recommend using scripts and not the interface. 
@@ -206,5 +207,12 @@ Check that the cells express the markers under the "marker check" tab.
 
 If needed, you can use either the "Treatment differences within cluster" or "cluster difference" to have better identification of marker differneces between clusters.
 
+**Step 3d.** Removing unwanted sample and/or downsampling
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+
+.. image:: img/3d_removing samples_from_md.png
+  :width: 600
+  :alt: Alternative text
 
