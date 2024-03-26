@@ -25,6 +25,8 @@ Step 2. TCRex and ClusTCR2
   :width: 300
   :alt: Alternative text
 
+
+
 **2b. Clustering with ClusTCR2**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -35,15 +37,30 @@ This process requires the user to upload AG separate for the BD clustering. This
 1. If there are multiple files under the 'ClusTCR2', merge the **AG_** or **BD_** from the **1_ClusTCR2** folder.
       - save the file with **AG_** or **BD_** prefix. 
 
+.. image:: img/2b_clusTCR2_merge.png
+  :width: 300
+  :alt: Alternative text
+
 2. Upload either the merged file or single **AG_** or **BD_** under the "Clustering inputs" tab.
+
+.. image:: img/2b_uploaded_merged_ClusTCR2.png
+  :width: 300
+  :alt: Alternative text
+
 3. Hit the "Update clustering" button to perform the clustering. 
+
+.. image:: img/2b_clusTCR2_merge.png
+  :width: 300
+  :alt: Alternative text
 
 4. Under the "output" tab has three sub-sections
       - Processing: Time taken to complete the clustering
       - Table for analysis: Download the table to the **"3_Analysis"** section; make sure you add the **AG_** or **BD_** prefix to the file name.
       - Figures: The user can explore the data and download the clustering network and the corresponding motif. The latter figure is also generated in the "Analysis section".  
 
-[add in example of the table and an explain the columns]
+.. image:: img/2b_clustering_table_for_analysis.png
+  :width: 300
+  :alt: Alternative text
 
 Error issues
 ~~~~~~~~~~~~
