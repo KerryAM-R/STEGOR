@@ -268,10 +268,11 @@ Check that there the signal overlaps with the gene expression, as per the featur
 **Step 3d.** Removing unwanted sample and/or downsampling (optional)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Some times, there may be a need to remove cells from the object. This process allows 
+This section allows the user to remove problematic cells based on any of the information in the meta data. For isntance. If I wanted to add the downsampled object, which contains the K409 samples (melanoma study), need to be removed to avoid data duplication. 
 
 
 .. image:: img/3d_removing samples_from_md.png
   :width: 600
   :alt: Alternative text
+
 
