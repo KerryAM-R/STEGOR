@@ -69,7 +69,7 @@ This folder contains the following folder:
     + Overview
     + QC_Figures
     + TCR and GEX
-- Priortisation
+- Priortization
    + Clustering
       - AG
       - BD
@@ -83,6 +83,7 @@ This folder contains the following folder:
 the user will also have access to the following files 
 
 - Installing.R
+- preprocessing.R
 - ClusTCR2_large.R
 - Merging.Batch.Harmony.R
 - Project.Rproj
