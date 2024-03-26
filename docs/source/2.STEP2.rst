@@ -22,7 +22,7 @@ TCRex is a user-friendly webtool designed to facilitate the prediction of epitop
 3. Once the TCRex process is complete, download the processed file, and move it to the **3_Analysis** folder
 
 .. image:: img/2a_TCRex_merge.png
-  :width: 450
+  :width: 600
   :alt: Alternative text
 
 
@@ -54,7 +54,7 @@ This process requires the user to upload AG separate for the BD clustering. This
       - Figures: The user can explore the data and download the clustering network and the corresponding motif. The latter figure is also generated in the "Analysis section".  
 
 .. image:: img/2b_clustering_table_for_analysis.png
-  :width: 450
+  :width: 600
   :alt: Alternative text
 
 Error issues
