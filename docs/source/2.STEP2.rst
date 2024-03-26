@@ -37,13 +37,13 @@ This process requires the user to upload AG separate for the BD clustering. This
       - save the file with **AG_** or **BD_** prefix. 
 
 .. image:: img/2b_clusTCR2_merge.png
-  :width: 450
+  :width: 600
   :alt: Alternative text
 
 2. Upload either the merged file or single **AG_** or **BD_** under the "Clustering inputs" tab.
 
 .. image:: img/2b_uploaded_merged_ClusTCR2.png
-  :width: 450
+  :width: 600
   :alt: Alternative text
 
 3. Hit the "Update clustering" button to perform the clustering. 
