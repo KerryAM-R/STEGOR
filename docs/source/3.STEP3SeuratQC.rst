@@ -30,7 +30,7 @@ This section describes the Seurat QC process for human samples with 10x Genomics
 
 6. Once the settings have been configured, hit update. This will add the File name.
 
-.. image:: img/3a_AfterVolin.png
+.. image:: img/3a_AfterViolin.png
   :width: 600
   :alt: Alternative text
 
