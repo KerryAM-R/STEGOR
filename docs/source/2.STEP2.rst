@@ -22,7 +22,7 @@ TCRex is a user-friendly webtool designed to facilitate the prediction of epitop
 3. Once the TCRex process is complete, download the processed file, and move it to the **3_Analysis** folder
 
 .. image:: img/2a_TCRex_merge.png
-  :width: 300
+  :width: 450
   :alt: Alternative text
 
 
@@ -37,7 +37,7 @@ This process requires the user to upload AG separate for the BD clustering. This
       - save the file with **AG_** or **BD_** prefix. 
 
 .. image:: img/2b_clusTCR2_merge.png
-  :width: 300
+  :width: 450
   :alt: Alternative text
 
 2. Upload either the merged file or single **AG_** or **BD_** under the "Clustering inputs" tab.
@@ -49,7 +49,7 @@ This process requires the user to upload AG separate for the BD clustering. This
 3. Hit the "Update clustering" button to perform the clustering. 
 
 .. image:: img/2b_clusTCR2_merge.png
-  :width: 300
+  :width: 450
   :alt: Alternative text
 
 4. Under the "output" tab has three sub-sections
