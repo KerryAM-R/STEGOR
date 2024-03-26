@@ -44,7 +44,9 @@ This section describes the Seurat QC process for human samples with 10x Genomics
 
 9. In the "Add meta data", first check that the file has uploaded correctly.
 
-
+.. image:: img/3a_addmetadata.png
+  :width: 600
+  :alt: UMAP
 
 10. Now your file has completed the Seurat QC and has had the TCR sequences added to the meta-data. click the "Download Seurat" object and save it to the **"2_SCobj"** folder.
  
