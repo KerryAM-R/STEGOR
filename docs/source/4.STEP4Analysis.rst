@@ -26,7 +26,7 @@ This includes:
 - TCRex output file (.tsv)
 
 .. image:: img/4_uploading.png
-  :width: 600
+  :width: 1200
   :alt: Alternative text
 
 Overview
