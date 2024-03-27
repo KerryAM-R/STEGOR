@@ -25,7 +25,7 @@ This includes:
 - Two clusTCR2 files (prefex with AG and BD) (.csv)
 - TCRex output file (.tsv)
 
-.. image:: img/AnalysisUpload.png
+.. image:: img/4_uploading.png
   :width: 600
   :alt: Alternative text
 
