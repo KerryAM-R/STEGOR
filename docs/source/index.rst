@@ -19,5 +19,6 @@ Contents
    2.STEP2
    3.STEP3SeuratQC
    4.STEP4Analysis
-   5.FAQ
-   6.History
+   5.postAnalysis
+   6.FAQ
+   7.History
