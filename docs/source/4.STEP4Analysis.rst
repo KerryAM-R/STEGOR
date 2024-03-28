@@ -12,7 +12,9 @@ The analysis section is divided into several sub-sections.
 - Prioritisation 
 - 
 
-*Note: The proritisation pipeline is under active development and will be completed in several stages. The first update will include automated the simple case analyis (one sample), one group (multiple samples) and paired analysis (one group; paired samples) (STEGO.R Version 2). Stage two will add several of the more complex analysis (STEGO.R version 3).*
+**Version 1.** Preliminar process that include the automated scGate annotation steps
+
+**Version 2.** Improved the process with automations in STEP 1. and STEP 4. (focused extraction with prioritising the TCR order) as well as the post analysis section for easier identificaiton of TCR of interest (extracting the meta-data, filtering and summarising). 
 
 Uploading the files
 -------------------
