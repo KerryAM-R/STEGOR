@@ -9,7 +9,7 @@ Step 3. Quality control
 
 
 
-**STEP 3a.** Quality control of a Seurat object
+**3a.** Quality control of a Seurat object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section describes the Seurat QC process for human samples with 10x Genomics. 
@@ -50,7 +50,7 @@ This section describes the Seurat QC process for human samples with 10x Genomics
 
 10. Now your file has completed the Seurat QC and has had the TCR sequences added to the meta-data. click the "Download Seurat" object and save it to the **"2_SCobj"** folder.
  
-**STEP 3b.** Merging multiple Seurat objects and batch correction.
+**3b.** Merging multiple Seurat objects and batch correction.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section is to merge multiple .rds objects and correct for the batch effect. 
@@ -125,7 +125,7 @@ If you have more than a few files to merge and annotate, we recommend using the 
     saveRDS(sc,"2_scObj/sc_harmony.rds")
 
 
-**Step 3c.** Annotating the Seurat object
+**3c.** Annotating the Seurat object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section describes how to annotated the files either from the "default" and/or "custom" modules with scGate. If you have large files, we recommend using scripts and not the interface. 
@@ -265,7 +265,7 @@ Check that there the signal overlaps with the gene expression, as per the featur
   :width: 600
   :alt: Alternative text
 
-**Step 3d.** Removing unwanted sample and/or downsampling (optional)
+**3d.** Removing unwanted sample and/or downsampling (optional)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section allows the user to remove problematic cells based on any of the information in the meta data. For isntance. If I wanted to add the downsampled object, which contains the K409 samples (melanoma study), need to be removed to avoid data duplication. 
