@@ -34,11 +34,12 @@ Recommended to use a 64-bit OS with at least 16GB of RAM, ideally >=32GB. This i
 When running STEGO.R merging and annotation steps, we recommend to limit the number of other running programs to help prevent RAM memory overflow, espeically if you have <32Gb of RAM. 
 
 
-Setting up the R Project
-------------------------
+**Download the project directory**
+----------------------------------
 1. From the github repository `STEGO.R <https://github.com/KerryAM-R/STEGO.R>`_ 
    + Download the `Directory_for_Project.zip <https://raw.githubusercontent.com/KerryAM-R/STEGO.R/main/Directory_for_Project.zip>`_
-   + Unzip the file
+   + Unzip the Directory_for_Project 
+   + Rename the folder if desired. 
 
 This folder contains instructions on how to process the data and, will be used to set up the R.project environment.
   
@@ -111,33 +112,12 @@ Expected final lines once STEGO.R has been correctly installed.
       ** testing if installed package keeps a record of temporary installation path
       * DONE (STEGO.R)
 
-
-**Step 7.** Run each of the following the following lines to set up the .Renviron (R environment)
-
-``.rs.restartR()`` # restart R
-
-``getwd()`` # path to current working directory, which will be used for defining where to put the temporary file will be stored.  e.g. /Users/kerrymullan/Documents/GitHub/STEGO (mac)
-
-onto the end of the line add the Temp folder name e.g. /Users/kerrymullan/Documents/GitHub/STEGO/Temp (mac)
-
-*Windows file paths may look differnet from this.*
-
-This will open the .Renviron hidden file
-:: 
-
-   usethis::edit_r_environ("project")
-
-**Step 8.** Pasted the following in the .Renviron:
-
-R_MAX_VSIZE=200Gb
-TMPDIR = PATH/TO/Directory_for_project/found/with/getwd()/Temp
-
-**Step 9.** Save, close .Renviron and restart R to make the changes take effect. 
-
 ``.rs.restartR()`` # restart R
 
 Installing fonts
 ----------------
+
+To have access to wider variety of font, you will need to install the following found in the Install.R folder
 
 ::
 
@@ -207,8 +187,8 @@ This folder contains the following folder:
 the user will also have access to the following files 
 
 - Installing.R
-- preprocessing.R
-- ClusTCR2_large.R
+- preprocessing.R (10x only)
+- ClusTCR2_large.R 
 - Merging.Batch.Harmony.R
 - Project.Rproj
 - STEGO.R 
