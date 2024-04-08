@@ -55,7 +55,7 @@ Quick tutorial for understanding RStudio environment with this `YouTube <https:/
 Downloading and installing STEGO.R
 ----------------------------------
 
-Follow the steps in the install.R file found in the Directory_for_Project
+Follow the steps in the **install.R** file found in the **Directory_for_Project**
 
 **STEGO.R not found/API issue**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
