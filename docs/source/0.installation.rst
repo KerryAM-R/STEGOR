@@ -37,6 +37,7 @@ When running STEGO.R merging and annotation steps, we recommend to limit the num
 **Download the project directory**
 ----------------------------------
 1. From the github repository `STEGO.R <https://github.com/KerryAM-R/STEGO.R>`_ 
+
    + Download the `Directory_for_Project.zip <https://raw.githubusercontent.com/KerryAM-R/STEGO.R/main/Directory_for_Project.zip>`_
    + Unzip the Directory_for_Project 
    + Rename the folder if desired. 
@@ -44,6 +45,7 @@ When running STEGO.R merging and annotation steps, we recommend to limit the num
 This folder contains instructions on how to process the data and, will be used to set up the R.project environment.
   
 2. In the Directory_for_Project open up the Project.Rproj 
+
    - Quick tutorial for understanding RStudio environment with this `YouTube <https://www.youtube.com/watch?v=FIrsOBy5k58>`_ video.
 
     short-cut key for running a line of R code
