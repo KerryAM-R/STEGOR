@@ -28,7 +28,7 @@ and also the gfortran
 
 
 Sytem requirements
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 Recommended to use a 64-bit OS with at least 16GB of RAM, ideally >=32GB. This is needed for the memory intensive merging and annotation steps. 
 
 When running STEGO.R merging and annotation steps, we recommend to limit the number of other running programs to help prevent RAM memory overflow, espeically if you have <32Gb of RAM. 
@@ -38,19 +38,24 @@ When running STEGO.R merging and annotation steps, we recommend to limit the num
 ----------------------------------
 1. From the github repository `STEGO.R <https://github.com/KerryAM-R/STEGO.R>`_ 
 
-   a. Download the `Directory_for_Project.zip <https://raw.githubusercontent.com/KerryAM-R/STEGO.R/main/Directory_for_Project.zip>`_
-   b. Unzip the Directory_for_Project 
-   c. Rename the folder if desired. 
+   i. Download the `Directory_for_Project.zip <https://raw.githubusercontent.com/KerryAM-R/STEGO.R/main/Directory_for_Project.zip>`_
+   ii. Unzip the **Directory_for_Project** 
+   iii. Rename the folder, if desired. 
 
 This folder contains instructions on how to process the data and, will be used to set up the R.project environment.
   
 2. In the Directory_for_Project open up the Project.Rproj 
+   i. Quick tutorial for understanding RStudio environment with this `YouTube <https://www.youtube.com/watch?v=FIrsOBy5k58>`_ video.
 
-Quick tutorial for understanding RStudio environment with this `YouTube <https://www.youtube.com/watch?v=FIrsOBy5k58>`_ video.
+short-cut key for running a line of R code
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    short-cut key for running a line of R code
-        Mac: Command-shift-Enter
-        Windows: ctrl-shift-Enter
+::
+
+   put the cursor on the line you want to run. 
+
+        Mac: Command shift Enter
+        Windows: ctrl shift Enter
 
 Downloading and installing STEGO.R
 ----------------------------------
