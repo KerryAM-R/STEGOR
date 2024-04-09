@@ -58,7 +58,6 @@ There are several file formats that are compatible with the STEGO.R QC process. 
 *Under development: multi-TCR (requires unfiltered contig file)*
 
 .. image:: img/1_10xFormatting.png
-  :width: 600
   :alt: Alternative text
 
 **BD Rhapsody**
