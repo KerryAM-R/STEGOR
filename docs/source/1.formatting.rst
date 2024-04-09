@@ -116,7 +116,7 @@ Within the raw data folder should be subfolders for each unique sample in the da
 Use the preprocessing.R found in the R folder of the project_director
 
 .. image:: img/1_preprocessing_auto.png
-  :width: 600
+  :width: 1200
   :alt: Alternative text
 
       
