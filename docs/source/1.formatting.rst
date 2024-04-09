@@ -27,10 +27,11 @@ Run the following lines in R. A window will opened that runs the STEGO.R shiny R
 You are now ready to process your scRNA-seq with scTCR-seq data!
 
 
-Formatting the BD Rhapsody and 10x Genomics matrix and meta-data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Manual process 
+--------------
 
-Formatting the 10x Genomics, BD Rhapsody or Array to create the necessary documents for Seurat QC process, ClusTCR2, TCRex and TCR_Explore.
+
+Formatting the **10x Genomics**, **BD Rhapsody** or Array to create the necessary documents for Seurat QC process, ClusTCR2, TCRex and TCR_Explore.
 
 While this process was initially developed for TCR-seq, we have also included the capacity for pairing the BCR sequences. 
 
@@ -96,8 +97,8 @@ or
 4. Download all files in order of TCRex, Seruat (matrix and meta.data),ClusTCR2 and TCR_Explore to the download folder. 
 5. Move all files to the respective folders in the Project directory according 1_
 
-Command line process for STEP 1. 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Automated STEP 1. 
+-----------------
 
 **Currently available for 10x genomics**
 
@@ -114,7 +115,8 @@ Within the raw data folder should be subfolders for each unique sample in the da
         
 Use the preprocessing.R found in the R folder of the project_director
 
-::
+.. image:: img/1_preprocessing_auto.png
+  :width: 600
+  :alt: Alternative text
 
-    
-        
+      
