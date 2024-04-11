@@ -29,7 +29,14 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 
+import sphinx_rtd_theme
 html_theme = 'sphinx_rtd_theme'
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+# -- Add custom colours
+
+def setup(app):
+    app.add_css_file('custom.css')
