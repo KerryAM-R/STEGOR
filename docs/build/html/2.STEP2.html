@@ -7,6 +7,7 @@
   <title>Step 2. TCRex and ClusTCR2 &mdash; STEGO.R 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
 
   
   <!--[if lt IE 9]>
@@ -105,7 +106,13 @@
 <h2><strong>2a.</strong> Merging TCRex<a class="headerlink" href="#a-merging-tcrex" title="Link to this heading">¶</a></h2>
 <p>TCRex is a user-friendly webtool designed to facilitate the prediction of epitope-TCR binding. It starts from a TCR file containing a list of TCR beta sequences. After selecting the epitopes of interest, TCRex predicts the binding between every TCR sequence and every epitope. Currently it supports predictions for 100 epitopes. More information on how to use this tool and interpret the results can be found at <a class="reference external" href="https://tcrex.biodatamining.be/instructions/">TCRex</a></p>
 <ol class="arabic simple">
-<li><p>Upload all the files stored in the “1_TCRex” for merging and save the merged file to the 1_TCRex.</p></li>
+<li><dl class="simple">
+<dt>Upload all the files stored in the “1_TCRex” for merging and save the merged file to the 1_TCRex.</dt><dd><ul class="simple">
+<li><p>if this doesnt allow for selection of multiple files, try using in the browser instead.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 <li><p>The TCRex merge file will be uploaded to the <a class="reference external" href="https://tcrex.biodatamining.be">TCRex website</a> to predict if the beta chain will interact with certain epitopes.</p></li>
 <li><p>Once the TCRex process is complete, download the processed file, and move it to the <strong>3_Analysis</strong> folder</p></li>
 </ol>

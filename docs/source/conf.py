@@ -36,7 +36,13 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
 
-# -- Add custom colours
 
-def setup(app):
-    app.add_css_file('custom.css')
+# These folders are copied to the documentation's HTML output
+html_static_path = ['_static']
+
+# These paths are either relative to html_static_path
+# or fully qualified paths (eg. https://...)
+html_css_files = [
+    'css/custom.css',
+]
+

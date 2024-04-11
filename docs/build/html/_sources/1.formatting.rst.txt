@@ -58,6 +58,7 @@ There are several file formats that are compatible with the STEGO.R QC process. 
 *Under development: multi-TCR (requires unfiltered contig file)*
 
 .. image:: img/1_10xFormatting.png
+  :width: 1200
   :alt: Alternative text
 
 **BD Rhapsody**
@@ -67,7 +68,7 @@ There are two format outputs of BD Rhapsody aligment of either a cellxgene (.csv
 Additionally there are several formats for the TCR contig file: paired dominant, AIRR dominant (unpaired), AIRR unfilted. For the latter two file formates we include to filter to keep only the 'paired' and if BCR was present as well. 
 
 .. image:: img/1_BDFormatting.png
-  :width: 600
+  :width: 1200
   :alt: Alternative text
 
 **Array**

@@ -7,6 +7,7 @@
   <title>Step 1. Formatting &mdash; STEGO.R 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
 
   
   <!--[if lt IE 9]>
@@ -148,11 +149,11 @@ Copy all your raw files to the 0_Raw_files folder within your project.</p>
 <p><strong>10x Genomics</strong></p>
 <p>There are several file formats that are compatible with the STEGO.R QC process. These includes the standard cell ranger output of barcode, features, matrix files as well as the separate contig file.</p>
 <p><em>Under development: multi-TCR (requires unfiltered contig file)</em></p>
-<img alt="Alternative text" src="_images/1_10xFormatting.png" />
+<a class="reference internal image-reference" href="_images/1_10xFormatting.png"><img alt="Alternative text" src="_images/1_10xFormatting.png" style="width: 1200px;" /></a>
 <p><strong>BD Rhapsody</strong></p>
 <p>There are two format outputs of BD Rhapsody aligment of either a cellxgene (.csv.gz) or the barcode, features and matrix file. Unlike the 10x Genomics, there is also an extra file called “Sample Tags”, which contains the multi-plex ID names. The <strong>“Sample Tags”</strong> file is required. However, if this file is not created (one sample in the experiment), it can be created under the “Create Sample Tags file”.</p>
 <p>Additionally there are several formats for the TCR contig file: paired dominant, AIRR dominant (unpaired), AIRR unfilted. For the latter two file formates we include to filter to keep only the ‘paired’ and if BCR was present as well.</p>
-<a class="reference internal image-reference" href="_images/1_BDFormatting.png"><img alt="Alternative text" src="_images/1_BDFormatting.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/1_BDFormatting.png"><img alt="Alternative text" src="_images/1_BDFormatting.png" style="width: 1200px;" /></a>
 <p><strong>Array</strong></p>
 <ul class="simple">
 <li><p>Note: The TCR_Explore file is for the interrogation of the TCR repertoire independent of the gene expression data at the <a class="reference external" href="https://tcr-explore.erc.monash.edu">TCR_Explore</a> *</p></li>
