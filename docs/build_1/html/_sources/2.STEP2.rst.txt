@@ -1,0 +1,85 @@
+Step 2. TCRex and ClusTCR2
+==========================
+
+.. note:: 
+    Consideration for the analysis.  
+       The pipeline was built for scRNA-seq with scTCR-seq datasets. 
+
+       QC documentation is being actively updated. 
+    Prerequisite
+        - Install STEGO. 
+        - Copy all your raw files to the 0_Raw_files folder within your project. 
+        - Downloaded files to 1_ClusTCR2, 1_SeuratQC, 1_TCRex and TCR_Explore
+
+
+**2a.** Merging TCRex
+~~~~~~~~~~~~~~~~~~~~~
+
+TCRex is a user-friendly webtool designed to facilitate the prediction of epitope-TCR binding. It starts from a TCR file containing a list of TCR beta sequences. After selecting the epitopes of interest, TCRex predicts the binding between every TCR sequence and every epitope. Currently it supports predictions for 100 epitopes. More information on how to use this tool and interpret the results can be found at `TCRex <https://tcrex.biodatamining.be/instructions/>`_
+
+1. Upload all the files stored in the "1_TCRex" for merging and save the merged file to the 1_TCRex. 
+2. The TCRex merge file will be uploaded to the `TCRex website <https://tcrex.biodatamining.be>`_ to predict if the beta chain will interact with certain epitopes.
+3. Once the TCRex process is complete, download the processed file, and move it to the **3_Analysis** folder
+
+.. image:: img/2a_TCRex_merge.png
+  :width: 600
+  :alt: Alternative text
+
+
+**2b.** Clustering with ClusTCR2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[insert text here to explain ClusTCR2]
+
+This process requires the user to upload AG separate for the BD clustering. This is due to how the data is re-combined with the meta data in the Seurat object in STEP4. Analysis. 
+
+1. If there are multiple files under the 'ClusTCR2', merge the **AG_** or **BD_** from the **1_ClusTCR2** folder.
+      - save the file with **AG_** or **BD_** prefix. 
+
+.. image:: img/2b_clusTCR2_merge.png
+  :width: 600
+  :alt: Alternative text
+
+2. Upload either the merged file or single **AG_** or **BD_** under the "Clustering inputs" tab.
+
+.. image:: img/2b_uploaded_merged_ClusTCR2.png
+  :width: 600
+  :alt: Alternative text
+
+3. Hit the "Update clustering" button to perform the clustering. 
+
+4. Under the "output" tab has three sub-sections
+      - Processing: Time taken to complete the clustering
+      - Table for analysis: Download the table to the **"3_Analysis"** section; make sure you add the **AG_** or **BD_** prefix to the file name.
+      - Figures: The user can explore the data and download the clustering network and the corresponding motif. The latter figure is also generated in the "Analysis section".  
+
+.. image:: img/2b_clustering_table_for_analysis.png
+  :width: 600
+  :alt: Alternative text
+
+Error issues
+~~~~~~~~~~~~
+
+If the file produces a matrix larger than 2^31, the user will need to use the command-line process. 
+
+::
+
+    require(ClusTCR2)
+    clust.data.raw <- read.csv("1_ClusTCR/AG_Multi_ClusTCR.csv")
+    names(clust.data.raw)[2]
+    step1 <- ClusTCR2::ClusTCR_Large(clust.data.raw,allele = F,v_gene = names(clust.data.raw)[2])
+    step2 <- ClusTCR2::mcl_cluster_large(step1)
+    saveRDS(step2,"1_ClusTCR/AG_clusTCR2.all.rds") # saves the two list objects
+    write.csv(step2[[1]],"3_Analysis/AG_clusTCR2.csv",row.names = F)
+
+    clust.data.raw <- read.csv("1_ClusTCR/BD_Multi_ClusTCR.csv")
+    names(clust.data.raw)[2]
+    step1 <- ClusTCR2::ClusTCR_Large(clust.data.raw,allele = F,v_gene = names(clust.data.raw)[2])
+    step2 <- ClusTCR2::mcl_cluster_large(step1)
+    saveRDS(step2,"1_ClusTCR/BD_clusTCR2.all.rds") # saves the two list objects
+    write.csv(step2[[1]],"3_Analysis/BD_clusTCR2.csv",row.names = F)
+
+
+**References**
+1. Valkiers, S. et al. ClusTCR: a python interface for rapid clustering of large sets of CDR3 sequences with unknown antigen specificity. Bioinformatics, 2021. 37(24): p. 4865-4867.
+2. Gielis, S. et al. Detection of Enriched T Cell Epitope Specificity in Full T Cell Receptor Sequence Repertoires. Front Immunol 10, 2820 (2019).

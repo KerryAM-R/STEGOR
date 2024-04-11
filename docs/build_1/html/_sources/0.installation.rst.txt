@@ -1,0 +1,199 @@
+Installation
+============
+
+To use STEGO, first install R, RStudio and other required programs
+------------------------------------------------------------------
+MAC:
+^^^^
+
+* Install `R <https://cran.r-project.org/bin/macosx/>`_ 
+* Install `RStudio <https://posit.co/download/rstudio-desktop/>`_
+* Install `Quartz <https://www.xquartz.org>`_
+
+Windows:
+^^^^^^^^
+
+* Install `R <https://cran.r-project.org>`_
+* Install `RStudio <https://posit.co/download/rstudio-desktop/>`_
+* Install `Rtools <https://cran.r-project.org/bin/windows/Rtools/>`_
+
+Linux:
+^^^^^^
+
+* install `R <https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html>`_
+
+using **sudo apt install** the following:
+libcurl, libfontconfig1, libtiff5, liblapack-dev, libblas-dev, libglpk-dev, libudunits2-dev, libgdal-dev libgeos-dev, libproj-dev
+and also the gfortran
+
+
+Sytem requirements
+^^^^^^^^^^^^^^^^^^
+Recommended to use a 64-bit OS with at least 16GB of RAM, ideally >=32GB. This is needed for the memory intensive merging and annotation steps. 
+
+When running STEGO.R merging and annotation steps, we recommend to limit the number of other running programs to help prevent RAM memory overflow, espeically if you have <32Gb of RAM. 
+
+
+**Download the project directory**
+----------------------------------
+1. From the github repository `STEGO.R <https://github.com/KerryAM-R/STEGO.R>`_ 
+
+   i. Download the `Directory_for_Project.zip <https://raw.githubusercontent.com/KerryAM-R/STEGO.R/main/Directory_for_Project.zip>`_
+   ii. Unzip the **Directory_for_Project** 
+   iii. Rename the folder, if desired. 
+
+This folder contains instructions on how to process the data and, will be used to set up the R.project environment.
+  
+2. In the Directory_for_Project open up the Project.Rproj 
+   i. Quick tutorial for understanding RStudio environment with this `YouTube <https://www.youtube.com/watch?v=FIrsOBy5k58>`_ video.
+
+short-cut key for running a line of R code
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+   put the cursor on the line you want to run. 
+
+        Mac: Command shift Enter
+        Windows: ctrl shift Enter
+
+Downloading and installing STEGO.R
+----------------------------------
+
+Follow the steps in the **install.R** file found in the **Directory_for_Project**
+
+**STEGO.R not found/API issue**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You will need to create a git token
+
+::
+
+      # Create the token
+      usethis::create_github_token()
+       
+      # Open the .Renviron file
+      usethis::edit_r_environ()
+       
+      # Paste your token into the file
+      GITHUB_PAT=insert_your_token
+       
+      # Close the file and restart R
+
+**Possible installing prompts**
+
+:: 
+
+   When you see this line: "These packages have more recent versions available. It is recommended to update all of them. Which would you like to update?"
+   
+   Answer with  "1" and hit "Enter". 
+   
+   On a Mac if you see "Do you want to install from sources the package which needs compilation? (Yes/no/cancel)", answer with  "no" and hit "Enter". This same message will appear as an popup on Windows.
+   
+   Once all packages are installed, this will be the final section of the installation process. 
+
+Expected final lines once STEGO.R has been correctly installed.
+
+:: 
+
+   R CMD build 
+          ✔  checking for file ‘/Users/kerrymullan/Desktop/STEGO_copy.R/Temp/Rtmp0n6xNi/remotes176117593b632/KerryAM-R-STEGO.R-df4640eae1a05f44f3c91ca527215f4af56894ff/DESCRIPTION’ ...
+          ─  preparing ‘STEGO.R’:
+          ✔  checking DESCRIPTION meta-information ...
+          ─  checking for LF line-endings in source and make files and shell scripts
+          ─  checking for empty or unneeded directories
+          ─  building ‘STEGO.R_1.0.0.tar.gz’
+      * installing *source* package STEGO.R’ ...
+      ** using staged installation
+      ** R
+      ** inst
+      ** byte-compile and prepare package for lazy loading
+      ** help
+      *** installing help indices
+      *** copying figures
+      ** building package indices
+      ** testing if installed package can be loaded from temporary location
+      ** testing if installed package can be loaded from final location
+      ** testing if installed package keeps a record of temporary installation path
+      * DONE (STEGO.R)
+
+``.rs.restartR()`` # restart R
+
+Installing fonts
+----------------
+
+To have access to wider variety of font, you will need to install the following found in the Install.R folder
+
+::
+
+   # needed to use for the first time :D
+   require(extrafont)
+   font_import()
+   loadfonts()
+   
+   fonts <- fonttable()
+   head(fonts)
+
+Running STEGO.R
+---------------
+Now the the R environment is set up and the STEGO.R and it's dependencies are installed, we can now run the application.
+
+Run the following lines in R. A window will opened that runs the STEGO.R shiny R application. 
+
+::
+
+   require(STEGO.R)
+
+   runSTEGO()
+
+
+You are now ready to process your scRNA-seq with scTCR-seq data!
+
+.. note:: 
+   If a window doesnt open
+      you will need to trouble shoot which packages haven't been installed.
+
+
+Trouble shooting missing packages
+---------------------------------
+      
+
+
+
+Understanding the "Directory_for_Project" Folder
+------------------------------------------------
+Unzip the "Directory_for_Project.zip" file. This folder contains our recommended structure on how to organise your files for each scRNA-seq project. We will refer to these files through out the Tutorial.
+
+This folder contains the following folder:
+
+- 0_Raw_Files
+- 1_ClusTCR
+- 1_SeratQC
+- 1_TCR_Explore
+- 1_TCRex
+- 2_SCobj
+- 3_Analysis
+- custom_db
+- Figures.Tables
+    + Overview
+    + QC_Figures
+    + TCR and GEX
+- Priortization
+   + Clustering
+      - AG
+      - BD
+   + EpitopePred
+   + ImmunoDom
+   + Multi
+      - PublicLike
+      - private
+   + PolyClonal
+
+the user will also have access to the following files 
+
+- Installing.R
+- preprocessing.R (10x only)
+- ClusTCR2_large.R 
+- Merging.Batch.Harmony.R
+- Project.Rproj
+- STEGO.R 

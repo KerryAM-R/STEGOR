@@ -1,0 +1,17 @@
+Post Analysis
+================
+.. note::
+
+    Under active construction
+
+
+The analysis section is divided into several sub-sections. 
+
+- Extracting meta data 
+    + Requires the .rds file
+- Filtering
+    + Upload any .csv file 
+- Summarising 
+    + upload any .csv file
+- OLGA
+    + upload the .rds object

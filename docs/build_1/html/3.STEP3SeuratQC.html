@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Step 3. Quality control &mdash; STEGO.R 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Step 4. Analysis" href="4.STEP4Analysis.html" />
+    <link rel="prev" title="Step 2. TCRex and ClusTCR2" href="2.STEP2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            STEGO.R
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="0.installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.formatting.html">Step 1. Formatting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.STEP2.html">Step 2. TCRex and ClusTCR2</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Step 3. Quality control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a-quality-control-of-a-seurat-object"><strong>3a.</strong> Quality control of a Seurat object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#b-merging-multiple-seurat-objects-and-batch-correction"><strong>3b.</strong> Merging multiple Seurat objects and batch correction.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#merging">Merging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#batch-correction">batch correction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#c-annotating-the-seurat-object"><strong>3c.</strong> Annotating the Seurat object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#d-removing-unwanted-sample-and-or-downsampling-optional"><strong>3d.</strong> Removing unwanted sample and/or downsampling (optional)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4.STEP4Analysis.html">Step 4. Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.postAnalysis.html">Post Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.FAQ.html">Frequenctly Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7.History.html">History</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">STEGO.R</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Step 3. Quality control</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/3.STEP3SeuratQC.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="step-3-quality-control">
+<h1>Step 3. Quality control<a class="headerlink" href="#step-3-quality-control" title="Link to this heading">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<dl class="simple">
+<dt>Consideration for the analysis.</dt><dd><p>Steps 3b and 3c can be done either in the interface or with the command-line code in the “merging.batch.harmony.R” in the project directory.</p>
+</dd>
+<dt>Prerequisite</dt><dd><p>Completed the step 1. foramtting and have the two files (matrix.csv and meta.data.csv files in the 1_SeuratQC folder)</p>
+</dd>
+</dl>
+</div>
+<section id="a-quality-control-of-a-seurat-object">
+<h2><strong>3a.</strong> Quality control of a Seurat object<a class="headerlink" href="#a-quality-control-of-a-seurat-object" title="Link to this heading">¶</a></h2>
+<p>This section describes the Seurat QC process for human samples with 10x Genomics.</p>
+<a class="reference internal image-reference" href="_images/3a.png"><img alt="Alternative text" src="_images/3a.png" style="width: 200px;" /></a>
+<ol class="arabic simple">
+<li><p>Upload both the meta-data.csv file and the matrix file (.csv.gz, .csv or .h5).</p></li>
+<li><p>Add the file name, which will be identical to the previous file name.</p></li>
+<li><dl class="simple">
+<dt>Select the data origin, as it will change the cut-off settings.</dt><dd><ul class="simple">
+<li><p>10x Genomics &gt;6000 features (transcripts per cell), are deemed to be doublets.</p></li>
+<li><p>BD Rhapsody Immune panel &gt; 150 features, are deemed to be doublets.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Check that the file was uploaded</p></li>
+<li><dl class="simple">
+<dt>Look at the first volcano plot “before” tab, as we need to check the cut-off for the MtDNA and rDNA cut-offs</dt><dd><ul class="simple">
+<li><p>MtDNA standard cut-off less than 20%</p></li>
+<li><p>rRNA standard cut-off is greater than 5%. If there is no rRNA genes identifed, set value to 0 or the program will crash due to no cell’s remaining.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Once the settings have been configured, hit update. This will add the File name.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/3a_AfterViolin.png"><img alt="Alternative text" src="_images/3a_AfterViolin.png" style="width: 600px;" /></a>
+<ol class="arabic simple" start="7">
+<li><p>The user can then inspect the presence of the top variable features, elbow plot and Heatmaps. The latter two plots are to aid in setting the number of dimentions to use for the UMAP dimentional reduction. Default is set to 15. The resolutions are used for the unsupervised clustering. <em>Note: I use the scGate for the annotation stratergy rather than the unsupervised clusters as it is not suitable for identifying subtle differences in T cell sub-populations.</em></p></li>
+<li><p>In the side panel, hit the “Run clustering” button to run the dimentionality reduction.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/3a_UMAP.png"><img alt="UMAP" src="_images/3a_UMAP.png" style="width: 600px;" /></a>
+<ol class="arabic simple" start="9">
+<li><p>In the “Add meta data”, first check that the file has uploaded correctly.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/3a_addmetadata.png"><img alt="UMAP" src="_images/3a_addmetadata.png" style="width: 600px;" /></a>
+<ol class="arabic simple" start="10">
+<li><p>Now your file has completed the Seurat QC and has had the TCR sequences added to the meta-data. click the “Download Seurat” object and save it to the <strong>“2_SCobj”</strong> folder.</p></li>
+</ol>
+</section>
+<section id="b-merging-multiple-seurat-objects-and-batch-correction">
+<h2><strong>3b.</strong> Merging multiple Seurat objects and batch correction.<a class="headerlink" href="#b-merging-multiple-seurat-objects-and-batch-correction" title="Link to this heading">¶</a></h2>
+<p>This section is to merge multiple .rds objects and correct for the batch effect.</p>
+<section id="merging">
+<h3>Merging<a class="headerlink" href="#merging" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>From the <strong>“2_SCobj”</strong> upload all the .rds files.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/3b_merging_sc.png"><img alt="Alternative text" src="_images/3b_merging_sc.png" style="width: 600px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>Download the merged.rds object</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/3b_downloadmerged_obj.png"><img alt="Alternative text" src="_images/3b_downloadmerged_obj.png" style="width: 600px;" /></a>
+<p>For many file merging and annotating as the program window may disappear, we recommend merging and annotating using ** **</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">require</span><span class="p">(</span><span class="n">STEGO</span><span class="o">.</span><span class="n">R</span><span class="p">)</span>
+<span class="c1">###### merging seurat object ------</span>
+<span class="c1"># Check that you are in the correct working directory with your RDS files</span>
+<span class="n">merging_multi_SeuratRDS</span><span class="p">(</span><span class="n">set_directory</span> <span class="o">=</span> <span class="s2">&quot;2_scObj/&quot;</span><span class="p">,</span> <span class="n">merge_RDS</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">pattern_RDS</span> <span class="o">=</span> <span class="s2">&quot;.rds$&quot;</span><span class="p">)</span>
+
+<span class="c1"># once that is check, switch merge_RDS to TRUE or T</span>
+<span class="n">sc_merge</span> <span class="o">&lt;-</span> <span class="n">merging_multi_SeuratRDS</span><span class="p">(</span><span class="n">set_directory</span> <span class="o">=</span> <span class="s2">&quot;2_scObj/&quot;</span><span class="p">,</span> <span class="n">merge_RDS</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">pattern_RDS</span> <span class="o">=</span> <span class="s2">&quot;.rds$&quot;</span><span class="p">)</span>
+
+<span class="c1"># merges the different layers in V5 of seurat</span>
+<span class="n">sc</span> <span class="o">&lt;-</span> <span class="n">JoinLayers</span><span class="p">(</span><span class="n">sc_merge</span><span class="p">,</span>  <span class="n">assay</span> <span class="o">=</span> <span class="s2">&quot;RNA&quot;</span><span class="p">)</span>
+
+<span class="c1"># save the merged file - it will not have the scaled data and PCA stored any more due to the merging process. This is in case R crashes and it needs to be read in</span>
+<span class="n">saveRDS</span><span class="p">(</span><span class="n">sc_merge</span><span class="p">,</span><span class="s2">&quot;2_scObj/sc_merge.rds&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="batch-correction">
+<h3>batch correction<a class="headerlink" href="#batch-correction" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Wait for the files to finish uploading before proceeding</p></li>
+<li><p>Update the Project name e.g., BreastCancer</p></li>
+<li><dl class="simple">
+<dt>Hit the bottons in each tab in the following order:</dt><dd><ul class="simple">
+<li><p>Run VariableFeatures</p></li>
+<li><p>Run Scale</p></li>
+<li><p>Run PCA</p></li>
+<li><dl class="simple">
+<dt>Run Harmony <em>Note: Harmony R package is used for the batch correction.</em></dt><dd><ul>
+<li><p><a class="reference external" href="https://www.nature.com/articles/s41592-019-0619-0">https://www.nature.com/articles/s41592-019-0619-0</a> for more detail</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Run Dimentional Reduction</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Once completed click the “Download merged Seurat”</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/3b_batch_corrected_including_background.png"><img alt="Alternative text" src="_images/3b_batch_corrected_including_background.png" style="width: 750px;" /></a>
+<p><em>Note: Depending on the number of files, and total number of cells will impact the speed of merging</em></p>
+<p>If you have more than a few files to merge and annotate, we recommend using the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">require</span><span class="p">(</span><span class="n">STEGO</span><span class="o">.</span><span class="n">R</span><span class="p">)</span>
+
+<span class="n">sc</span> <span class="o">&lt;-</span> <span class="n">readRDS</span><span class="p">(</span><span class="s2">&quot;2_scObj/sc_merge.rds&quot;</span><span class="p">)</span>
+
+<span class="c1">## perform the harmony batch correction ------</span>
+<span class="n">sc</span> <span class="o">&lt;-</span> <span class="n">harmony_batch_correction_1_variableFeatures</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="n">sc</span><span class="p">)</span>
+<span class="n">sc</span> <span class="o">&lt;-</span> <span class="n">harmony_batch_correction_2_Scaling</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="n">sc</span><span class="p">,</span> <span class="n">Seruat_version</span> <span class="o">=</span> <span class="s2">&quot;V5&quot;</span><span class="p">)</span>
+<span class="n">sc</span> <span class="o">&lt;-</span> <span class="n">harmony_batch_correction_3_PC</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="n">sc</span><span class="p">)</span>
+<span class="n">sc</span> <span class="o">&lt;-</span> <span class="n">harmony_batch_correction_4_Harmony</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="n">sc</span><span class="p">)</span>
+<span class="n">saveRDS</span><span class="p">(</span><span class="n">sc</span><span class="p">,</span><span class="s2">&quot;2_scObj/sc_harmony.rds&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="c-annotating-the-seurat-object">
+<h2><strong>3c.</strong> Annotating the Seurat object<a class="headerlink" href="#c-annotating-the-seurat-object" title="Link to this heading">¶</a></h2>
+<p>This section describes how to annotated the files either from the “default” and/or “custom” modules with scGate. If you have large files, we recommend using scripts and not the interface.</p>
+<p>upload the merged file to commence the annotation process.</p>
+<a class="reference internal image-reference" href="_images/3c_annotating_pocessing.png"><img alt="Alternative text" src="_images/3c_annotating_pocessing.png" style="width: 750px;" /></a>
+<p>This is what the window will print once hte annotation is completed.</p>
+<a class="reference internal image-reference" href="_images/3c_processed_anno.png"><img alt="Alternative text" src="_images/3c_processed_anno.png" style="width: 750px;" /></a>
+<p>The annotations are added to the end of the meta data table in the Seurat object.</p>
+<a class="reference internal image-reference" href="_images/3c_annotations_in_meta.data.png"><img alt="Alternative text" src="_images/3c_annotations_in_meta.data.png" style="width: 750px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>require(STEGO.R)
+
+#### annotating Seurat object -----
+sc &lt;- readRDS(&quot;2_scObj/sc_harmony.rds&quot;)
+
+sc &lt;-     scGate_annotating(
+          file = sc,
+          TcellFunction = T,
+          generic = T,
+          exhausted = T,
+          senescence = T,
+          cycling = T,
+          Th1_cytokines = T,
+          TCRseq = T,
+          threshold = 0.2, # change to 0.2 if you use the focused immuen panel from BD rhapsody
+          reductionType = &quot;harmony&quot;
+        )
+
+sc@meta.data$Cell_Index_old &lt;- sc@meta.data$Cell_Index
+sc@meta.data$Cell_Index &lt;- rownames(sc@meta.data)
+head(sc@meta.data)
+saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
+</pre></div>
+</div>
+<p><em>Note: Under development.</em></p>
+<p>The scGate threshold was set to 0.2 for full capture and 0.5 for the immune panel (&lt;400 transcripts).</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Human</strong></dt><dd><ul>
+<li><p>TcellFunction (see Annotation table)</p></li>
+<li><dl class="simple">
+<dt>Generic</dt><dd><ul>
+<li><p>CD4, CD8, DN as well as DC’s, Monocytes, and B cells</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>exhausted</dt><dd><ul>
+<li><p>Based on four markers: PDCD1 (PD-1), TIGIT, (LAG-3) and</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>senescence</dt><dd><ul>
+<li></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>cycling</dt><dd><ul>
+<li></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Th1_cytokines</dt><dd><ul>
+<li><p>combination of IFNG and TNF</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>TCRseq (meta.data TCR-seq)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>10X Genomcis for Mouse</strong> (<em>Will likely be the same as the BD Rhapsody mouse full panel model.</em>)</p></li>
+<li><p><strong>BD Rhapsody Human immune panel</strong></p></li>
+<li><p><strong>Mouse Panel</strong> Under development</p></li>
+</ul>
+<p>This section annotates the potential invariant T cells.</p>
+<table class="longtable docutils align-default" id="id1">
+<caption><span class="caption-text">Annotation_table</span><a class="headerlink" href="#id1" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Cell type</p></th>
+<th class="head"><p>Sub-classification</p></th>
+<th class="head"><p>Transcriptional markers</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CD4</p></td>
+<td><p>CD4</p></td>
+<td><p>CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3-, Naive, KLRB1-, FTH1-</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>CD161</p></td>
+<td><p>CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3-, Naive, KLRB1, IL32-</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>CD161.IL32</p></td>
+<td><p>CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3-, Naive, KLRB1, IL32</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Eff</p></td>
+<td><p>CD8A-, CD8B-, CD4, Cyto, RORC-, CXCR3-</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Eff.Th1</p></td>
+<td><p>CD8A-, CD8B-, CD4, Cyto, RORC-, CXCR3</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Eff.Th17</p></td>
+<td><p>CD8A-, CD8B-, CD4, Cyto, RORC</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>FTH1</p></td>
+<td><p>CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3-, Naive, KLRB1-, FTH1</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Naive</p></td>
+<td><p>CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3-, Naive</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Tfh</p></td>
+<td><p>CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Th1</p></td>
+<td><p>CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Th17</p></td>
+<td><p>CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Th2</p></td>
+<td><p>CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Th22</p></td>
+<td><p>CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Th9</p></td>
+<td><p>CD8A-, CD8B-, CD4, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Treg</p></td>
+<td><p>CD8A-, CD8B-, CD4, Cyto-, FOXP3</p></td>
+</tr>
+<tr class="row-odd"><td><p>CD8aa</p></td>
+<td><p>CD8aa</p></td>
+<td><p>CD8A, CD8B-, Cyto-, FOXP3-, KIR2DL1-, Naïve-, FTH1-</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Eff</p></td>
+<td><p>CD8A, CD8B-, Cyto, KIR2DL1-</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Eff.KIR</p></td>
+<td><p>CD8A, CD8B-, Cyto, KIR2DL1</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>FTH1</p></td>
+<td><p>CD8A, CD8B-, Cyto-, FOXP3-, KIR2DL1-, Naïve-, FTH1</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>KIR</p></td>
+<td><p>CD8A, CD8B-, Cyto-, FOXP3-, KIR2DL1</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Naive</p></td>
+<td><p>CD8A, CD8B-, Cyto-, FOXP3-, KIR2DL1-,Naive</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Treg</p></td>
+<td><p>CD8A, CD8B-, Cyto-, FOXP3</p></td>
+</tr>
+<tr class="row-even"><td><p>CD8ab</p></td>
+<td><p>CD8ab</p></td>
+<td><p>CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1, RORC-, CCR4-, CCR10-, IRF4-, CXCR3-, Naive-, KLRK1-</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Eff</p></td>
+<td><p>CD8A, CD8B, Cyto, RORC-, CCR4-, CCR10-, IRF4-, CXCR3-</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Eff.Tc1</p></td>
+<td><p>CD8A, CD8B, Cyto, RORC-, CCR4-, CCR10-, IRF4-, CXCR3</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Eff.Tc2</p></td>
+<td><p>CD8A, CD8B, Cyto, RORC-, CCR4</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Eff.Tc22</p></td>
+<td><p>CD8A, CD8B, Cyto, RORC-, CCR4-, CCR10</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Eff.Tc9</p></td>
+<td><p>CD8A, CD8B, Cyto, RORC-, CCR4-, CCR10-, IRF4</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Eff.Tc17</p></td>
+<td><p>CD8A, CD8B, Cyto, RORC</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>KIR</p></td>
+<td><p>CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Naive</p></td>
+<td><p>CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1-, RORC-, CCR4-, CCR10-, IRF4-, CXCR3-, Naive</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>NKG2D</p></td>
+<td><p>CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1-, RORC-, CCR4-, CCR10-, IRF4-, CXCR3-, Naive-, KLRK1</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Tc1</p></td>
+<td><p>CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1-, RORC-, CCR4-, CCR10-, IRF4-, CXCR3</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Tc17</p></td>
+<td><p>CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1-, RORC</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Tc2</p></td>
+<td><p>CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1-, RORC-, CCR4</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Tc22</p></td>
+<td><p>CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1-, RORC-, CCR4-, CCR10</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Tc9</p></td>
+<td><p>CD8A, CD8B, Cyto-, FOXP3-, KIR2DL1-, RORC-, CCR4-, CCR10-, IRF4</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Treg</p></td>
+<td><p>CD8A, CD8B, Cyto-, FOXP3</p></td>
+</tr>
+<tr class="row-even"><td><p>DN</p></td>
+<td><p>DN</p></td>
+<td><p>CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3-, Naive-, FTH1-</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Eff</p></td>
+<td><p>CD8A-, CD8B-, CD4-, Cyto</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>FTH1</p></td>
+<td><p>CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3-, Naive-, FTH1</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Naive</p></td>
+<td><p>CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3-, Naive</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Tfh</p></td>
+<td><p>CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC-, CCR4-, IL21</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Th1</p></td>
+<td><p>CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4-, CXCR3</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Th17</p></td>
+<td><p>CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Th2</p></td>
+<td><p>CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC-, CCR4</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Th22</p></td>
+<td><p>CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Th9</p></td>
+<td><p>CD8A-, CD8B-, CD4-, Cyto-, FOXP3-, RORC-, CCR4-, IL21-, CCR10-, IRF4</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Treg</p></td>
+<td><p>CD8A-, CD8B-, CD4-, Cyto-, FOXP3</p></td>
+</tr>
+</tbody>
+</table>
+<p>Cyto = GZMA,GZMB,PRF1,GNLY,NKG7; Naive = CCR7, SELL</p>
+<p>DN = double negative; Th = T helper, Tfh = follicular T helper, Tc = cytotoxic T cell; Treg = regulatory T cell</p>
+<p>The user can add additonal annotations beyond the default.</p>
+<p>There are nine custom databases that a user can amend. If needed, these can be added to an already annotated file.</p>
+<p><strong>Design your custom marker set</strong></p>
+<dl class="simple">
+<dt>Check that the cells express the markers under the “marker check” tab.</dt><dd><ul class="simple">
+<li><p>To run, click the ‘View Feature plot’</p></li>
+</ul>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/3c_check_mem_expression.png"><img alt="Alternative text" src="_images/3c_check_mem_expression.png" style="width: 600px;" /></a>
+<p>Design the panel to add into the nine custom databases in <strong>custom_db</strong> folder</p>
+<p>Do not rename the master file. However, the file will need to be altered to set the markers. The user will need to define the name as well as the singature (gene list). If multiple genes are used, separate with ; as per the scGate documentation.</p>
+<p>The user can alter the names in front of the _scGate_Model.tsv, while the latter is used to find each type of annotation.</p>
+<p>To use scGate effectively, the genes within a set are read as OR (either of the marker need to be present), while the levels equate to AND i.e., All markers need to be present. These levels then need to use positive or negative under the use_as column. We recommend not defining the positive and negative markers in the</p>
+<a class="reference internal image-reference" href="_images/3c_example_model_scGate.png"><img alt="Alternative text" src="_images/3c_example_model_scGate.png" style="width: 600px;" /></a>
+<p>Use a fresh run of the app, so the new database is read into, otherwise it will be the default.</p>
+<a class="reference internal image-reference" href="img/3c_runningthe_mem.png"><img alt="Alternative text" src="img/3c_runningthe_mem.png" style="width: 600px;" /></a>
+<p>Run just the custom annotation needed.</p>
+<a class="reference internal image-reference" href="_images/3c_running_the_mem.png"><img alt="Alternative text" src="_images/3c_running_the_mem.png" style="width: 600px;" /></a>
+<p>Check that there the signal overlaps with the gene expression, as per the feature plot. Once this is what you expect, download the object.</p>
+<a class="reference internal image-reference" href="_images/3c_checking_mem_gate.png"><img alt="Alternative text" src="_images/3c_checking_mem_gate.png" style="width: 600px;" /></a>
+</section>
+<section id="d-removing-unwanted-sample-and-or-downsampling-optional">
+<h2><strong>3d.</strong> Removing unwanted sample and/or downsampling (optional)<a class="headerlink" href="#d-removing-unwanted-sample-and-or-downsampling-optional" title="Link to this heading">¶</a></h2>
+<p>This section allows the user to remove problematic cells based on any of the information in the meta data. For isntance. If I wanted to add the downsampled object, which contains the K409 samples (melanoma study), need to be removed to avoid data duplication.</p>
+<a class="reference internal image-reference" href="img/3d_removingsamples_from_md.png"><img alt="Alternative text" src="img/3d_removingsamples_from_md.png" style="width: 600px;" /></a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="2.STEP2.html" class="btn btn-neutral float-left" title="Step 2. TCRex and ClusTCR2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="4.STEP4Analysis.html" class="btn btn-neutral float-right" title="Step 4. Analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Graziella.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
