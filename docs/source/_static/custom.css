@@ -1,13 +1,8 @@
-.wy-side-nav-title {
-  color: orange;
-  }
-
 /* Override the background color of the search area */
 .wy-side-nav-search {
     background-color: #6F00B0; /* Darker purple */
     color: #E9C2FF;
 }
-
 
 .wy-side-nav-search a:hover {
     background-color: #6F00B0; /* Darker purple */
