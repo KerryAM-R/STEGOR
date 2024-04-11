@@ -7,13 +7,15 @@
   <title>Step 2. TCRex and ClusTCR2 &mdash; STEGO.R 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=2eb5ab77" />
 
   
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=2709fde1"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -87,7 +89,7 @@
            <div itemprop="articleBody">
              
   <section id="step-2-tcrex-and-clustcr2">
-<h1>Step 2. TCRex and ClusTCR2<a class="headerlink" href="#step-2-tcrex-and-clustcr2" title="Link to this heading">¶</a></h1>
+<h1>Step 2. TCRex and ClusTCR2<a class="headerlink" href="#step-2-tcrex-and-clustcr2" title="Link to this heading"></a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <dl>
@@ -103,7 +105,7 @@
 </dl>
 </div>
 <section id="a-merging-tcrex">
-<h2><strong>2a.</strong> Merging TCRex<a class="headerlink" href="#a-merging-tcrex" title="Link to this heading">¶</a></h2>
+<h2><strong>2a.</strong> Merging TCRex<a class="headerlink" href="#a-merging-tcrex" title="Link to this heading"></a></h2>
 <p>TCRex is a user-friendly webtool designed to facilitate the prediction of epitope-TCR binding. It starts from a TCR file containing a list of TCR beta sequences. After selecting the epitopes of interest, TCRex predicts the binding between every TCR sequence and every epitope. Currently it supports predictions for 100 epitopes. More information on how to use this tool and interpret the results can be found at <a class="reference external" href="https://tcrex.biodatamining.be/instructions/">TCRex</a></p>
 <ol class="arabic simple">
 <li><dl class="simple">
@@ -119,7 +121,7 @@
 <a class="reference internal image-reference" href="_images/2a_TCRex_merge.png"><img alt="Alternative text" src="_images/2a_TCRex_merge.png" style="width: 600px;" /></a>
 </section>
 <section id="b-clustering-with-clustcr2">
-<h2><strong>2b.</strong> Clustering with ClusTCR2<a class="headerlink" href="#b-clustering-with-clustcr2" title="Link to this heading">¶</a></h2>
+<h2><strong>2b.</strong> Clustering with ClusTCR2<a class="headerlink" href="#b-clustering-with-clustcr2" title="Link to this heading"></a></h2>
 <p>[insert text here to explain ClusTCR2]</p>
 <p>This process requires the user to upload AG separate for the BD clustering. This is due to how the data is re-combined with the meta data in the Seurat object in STEP4. Analysis.</p>
 <ol class="arabic simple">
@@ -151,7 +153,7 @@
 <a class="reference internal image-reference" href="_images/2b_clustering_table_for_analysis.png"><img alt="Alternative text" src="_images/2b_clustering_table_for_analysis.png" style="width: 600px;" /></a>
 </section>
 <section id="error-issues">
-<h2>Error issues<a class="headerlink" href="#error-issues" title="Link to this heading">¶</a></h2>
+<h2>Error issues<a class="headerlink" href="#error-issues" title="Link to this heading"></a></h2>
 <p>If the file produces a matrix larger than 2^31, the user will need to use the command-line process.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">require</span><span class="p">(</span><span class="n">ClusTCR2</span><span class="p">)</span>
 <span class="n">clust</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">raw</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s2">&quot;1_ClusTCR/AG_Multi_ClusTCR.csv&quot;</span><span class="p">)</span>

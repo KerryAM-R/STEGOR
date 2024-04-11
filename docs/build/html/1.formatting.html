@@ -7,13 +7,15 @@
   <title>Step 1. Formatting &mdash; STEGO.R 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=2eb5ab77" />
 
   
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=2709fde1"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -90,7 +92,7 @@
            <div itemprop="articleBody">
              
   <section id="step-1-formatting">
-<h1>Step 1. Formatting<a class="headerlink" href="#step-1-formatting" title="Link to this heading">¶</a></h1>
+<h1>Step 1. Formatting<a class="headerlink" href="#step-1-formatting" title="Link to this heading"></a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <dl>
@@ -103,7 +105,7 @@ Copy all your raw files to the 0_Raw_files folder within your project.</p>
 </dl>
 </div>
 <section id="running-stego-r">
-<h2>Running STEGO.R<a class="headerlink" href="#running-stego-r" title="Link to this heading">¶</a></h2>
+<h2>Running STEGO.R<a class="headerlink" href="#running-stego-r" title="Link to this heading"></a></h2>
 <p>Now the the R environment is set up and the STEGO.R and it’s dependencies are installed, we can now run the application.</p>
 <p>Run the following lines in R. A window will opened that runs the STEGO.R shiny R application.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">require</span><span class="p">(</span><span class="n">STEGO</span><span class="o">.</span><span class="n">R</span><span class="p">)</span>
@@ -114,7 +116,7 @@ Copy all your raw files to the 0_Raw_files folder within your project.</p>
 <p>You are now ready to process your scRNA-seq with scTCR-seq data!</p>
 </section>
 <section id="manual-process">
-<h2>Manual process<a class="headerlink" href="#manual-process" title="Link to this heading">¶</a></h2>
+<h2>Manual process<a class="headerlink" href="#manual-process" title="Link to this heading"></a></h2>
 <p>Formatting the <strong>10x Genomics</strong>, <strong>BD Rhapsody</strong> or Array to create the necessary documents for Seurat QC process, ClusTCR2, TCRex and TCR_Explore.</p>
 <p>While this process was initially developed for TCR-seq, we have also included the capacity for pairing the BCR sequences.</p>
 <p><strong>Table 1. File to upload in the respective section.</strong></p>
@@ -159,7 +161,7 @@ Copy all your raw files to the 0_Raw_files folder within your project.</p>
 <li><p>Note: The TCR_Explore file is for the interrogation of the TCR repertoire independent of the gene expression data at the <a class="reference external" href="https://tcr-explore.erc.monash.edu">TCR_Explore</a> *</p></li>
 </ul>
 <section id="file-outputs-and-storage-for-step-1">
-<h3>File outputs and storage for STEP 1.<a class="headerlink" href="#file-outputs-and-storage-for-step-1" title="Link to this heading">¶</a></h3>
+<h3>File outputs and storage for STEP 1.<a class="headerlink" href="#file-outputs-and-storage-for-step-1" title="Link to this heading"></a></h3>
 <p>Upload the documents to the required sections depending on the technology and files available. Repeat for each of the samples within your project.</p>
 <ol class="arabic simple">
 <li><p>Upload the files according to Table 1.</p></li>
@@ -186,7 +188,7 @@ Copy all your raw files to the 0_Raw_files folder within your project.</p>
 </section>
 </section>
 <section id="automated-step-1">
-<h2>Automated STEP 1.<a class="headerlink" href="#automated-step-1" title="Link to this heading">¶</a></h2>
+<h2>Automated STEP 1.<a class="headerlink" href="#automated-step-1" title="Link to this heading"></a></h2>
 <p><strong>Currently available for 10x genomics</strong></p>
 <p>Within the raw data folder should be subfolders for each unique sample in the dataset. These subfolders should contain at least the barcodes, features, matrix and filtered_contig files.</p>
 <ul class="simple">

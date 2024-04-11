@@ -7,13 +7,15 @@
   <title>Installation &mdash; STEGO.R 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=2eb5ab77" />
 
   
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=2709fde1"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -103,11 +105,11 @@
            <div itemprop="articleBody">
              
   <section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h1>
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
 <section id="to-use-stego-first-install-r-rstudio-and-other-required-programs">
-<h2>To use STEGO, first install R, RStudio and other required programs<a class="headerlink" href="#to-use-stego-first-install-r-rstudio-and-other-required-programs" title="Link to this heading">¶</a></h2>
+<h2>To use STEGO, first install R, RStudio and other required programs<a class="headerlink" href="#to-use-stego-first-install-r-rstudio-and-other-required-programs" title="Link to this heading"></a></h2>
 <section id="mac">
-<h3>MAC:<a class="headerlink" href="#mac" title="Link to this heading">¶</a></h3>
+<h3>MAC:<a class="headerlink" href="#mac" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Install <a class="reference external" href="https://cran.r-project.org/bin/macosx/">R</a></p></li>
 <li><p>Install <a class="reference external" href="https://posit.co/download/rstudio-desktop/">RStudio</a></p></li>
@@ -115,7 +117,7 @@
 </ul>
 </section>
 <section id="windows">
-<h3>Windows:<a class="headerlink" href="#windows" title="Link to this heading">¶</a></h3>
+<h3>Windows:<a class="headerlink" href="#windows" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Install <a class="reference external" href="https://cran.r-project.org">R</a></p></li>
 <li><p>Install <a class="reference external" href="https://posit.co/download/rstudio-desktop/">RStudio</a></p></li>
@@ -123,7 +125,7 @@
 </ul>
 </section>
 <section id="linux">
-<h3>Linux:<a class="headerlink" href="#linux" title="Link to this heading">¶</a></h3>
+<h3>Linux:<a class="headerlink" href="#linux" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>install <a class="reference external" href="https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html">R</a></p></li>
 </ul>
@@ -132,13 +134,13 @@ libcurl, libfontconfig1, libtiff5, liblapack-dev, libblas-dev, libglpk-dev, libu
 and also the gfortran</p>
 </section>
 <section id="sytem-requirements">
-<h3>Sytem requirements<a class="headerlink" href="#sytem-requirements" title="Link to this heading">¶</a></h3>
+<h3>Sytem requirements<a class="headerlink" href="#sytem-requirements" title="Link to this heading"></a></h3>
 <p>Recommended to use a 64-bit OS with at least 16GB of RAM, ideally &gt;=32GB. This is needed for the memory intensive merging and annotation steps.</p>
 <p>When running STEGO.R merging and annotation steps, we recommend to limit the number of other running programs to help prevent RAM memory overflow, espeically if you have &lt;32Gb of RAM.</p>
 </section>
 </section>
 <section id="download-the-project-directory">
-<h2><strong>Download the project directory</strong><a class="headerlink" href="#download-the-project-directory" title="Link to this heading">¶</a></h2>
+<h2><strong>Download the project directory</strong><a class="headerlink" href="#download-the-project-directory" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>From the github repository <a class="reference external" href="https://github.com/KerryAM-R/STEGO.R">STEGO.R</a></p>
 <ol class="lowerroman simple">
@@ -154,7 +156,7 @@ and also the gfortran</p>
 i. Quick tutorial for understanding RStudio environment with this <a class="reference external" href="https://www.youtube.com/watch?v=FIrsOBy5k58">YouTube</a> video.</p></li>
 </ol>
 <section id="short-cut-key-for-running-a-line-of-r-code">
-<h3>short-cut key for running a line of R code<a class="headerlink" href="#short-cut-key-for-running-a-line-of-r-code" title="Link to this heading">¶</a></h3>
+<h3>short-cut key for running a line of R code<a class="headerlink" href="#short-cut-key-for-running-a-line-of-r-code" title="Link to this heading"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">put</span> <span class="n">the</span> <span class="n">cursor</span> <span class="n">on</span> <span class="n">the</span> <span class="n">line</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">run</span><span class="o">.</span>
 
      <span class="n">Mac</span><span class="p">:</span> <span class="n">Command</span> <span class="n">shift</span> <span class="n">Enter</span>
@@ -164,10 +166,10 @@ i. Quick tutorial for understanding RStudio environment with this <a class="refe
 </section>
 </section>
 <section id="downloading-and-installing-stego-r">
-<h2>Downloading and installing STEGO.R<a class="headerlink" href="#downloading-and-installing-stego-r" title="Link to this heading">¶</a></h2>
+<h2>Downloading and installing STEGO.R<a class="headerlink" href="#downloading-and-installing-stego-r" title="Link to this heading"></a></h2>
 <p>Follow the steps in the <strong>install.R</strong> file found in the <strong>Directory_for_Project</strong></p>
 <section id="stego-r-not-found-api-issue">
-<h3><strong>STEGO.R not found/API issue</strong><a class="headerlink" href="#stego-r-not-found-api-issue" title="Link to this heading">¶</a></h3>
+<h3><strong>STEGO.R not found/API issue</strong><a class="headerlink" href="#stego-r-not-found-api-issue" title="Link to this heading"></a></h3>
 <p>You will need to create a git token</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the token</span>
 <span class="n">usethis</span><span class="p">::</span><span class="n">create_github_token</span><span class="p">()</span>
@@ -218,7 +220,7 @@ i. Quick tutorial for understanding RStudio environment with this <a class="refe
 </section>
 </section>
 <section id="installing-fonts">
-<h2>Installing fonts<a class="headerlink" href="#installing-fonts" title="Link to this heading">¶</a></h2>
+<h2>Installing fonts<a class="headerlink" href="#installing-fonts" title="Link to this heading"></a></h2>
 <p>To have access to wider variety of font, you will need to install the following found in the Install.R folder</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># needed to use for the first time :D</span>
 <span class="n">require</span><span class="p">(</span><span class="n">extrafont</span><span class="p">)</span>
@@ -231,7 +233,7 @@ i. Quick tutorial for understanding RStudio environment with this <a class="refe
 </div>
 </section>
 <section id="running-stego-r">
-<h2>Running STEGO.R<a class="headerlink" href="#running-stego-r" title="Link to this heading">¶</a></h2>
+<h2>Running STEGO.R<a class="headerlink" href="#running-stego-r" title="Link to this heading"></a></h2>
 <p>Now the the R environment is set up and the STEGO.R and it’s dependencies are installed, we can now run the application.</p>
 <p>Run the following lines in R. A window will opened that runs the STEGO.R shiny R application.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">require</span><span class="p">(</span><span class="n">STEGO</span><span class="o">.</span><span class="n">R</span><span class="p">)</span>
@@ -249,10 +251,10 @@ i. Quick tutorial for understanding RStudio environment with this <a class="refe
 </div>
 </section>
 <section id="trouble-shooting-missing-packages">
-<h2>Trouble shooting missing packages<a class="headerlink" href="#trouble-shooting-missing-packages" title="Link to this heading">¶</a></h2>
+<h2>Trouble shooting missing packages<a class="headerlink" href="#trouble-shooting-missing-packages" title="Link to this heading"></a></h2>
 </section>
 <section id="understanding-the-directory-for-project-folder">
-<h2>Understanding the “Directory_for_Project” Folder<a class="headerlink" href="#understanding-the-directory-for-project-folder" title="Link to this heading">¶</a></h2>
+<h2>Understanding the “Directory_for_Project” Folder<a class="headerlink" href="#understanding-the-directory-for-project-folder" title="Link to this heading"></a></h2>
 <p>Unzip the “Directory_for_Project.zip” file. This folder contains our recommended structure on how to organise your files for each scRNA-seq project. We will refer to these files through out the Tutorial.</p>
 <p>This folder contains the following folder:</p>
 <ul class="simple">
