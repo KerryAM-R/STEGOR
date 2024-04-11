@@ -1,4 +1,5 @@
-.sidebar {
+/* Override the background color of the sidebar */
+.wy-nav-side {
     background-color: purple;
 }
 
