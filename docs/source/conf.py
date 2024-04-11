@@ -31,6 +31,7 @@ templates_path = ['_templates']
 epub_show_urls = 'footnote'
 
 # These folders are copied to the documentation's HTML output
+html_static_path = ['_static']
 
 html_theme = "sphinx_rtd_theme"
 
@@ -38,5 +39,5 @@ html_theme = "sphinx_rtd_theme"
 # or fully qualified paths (eg. https://...)
 
 html_css_files = [
-    'css/custom.css',
+    'custom.css'
 ]
