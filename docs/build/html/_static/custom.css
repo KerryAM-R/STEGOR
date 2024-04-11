@@ -1,38 +1,40 @@
-/* Change the default color of the logo text in the sidebar */
-.wy-nav-content-wrap a.wy-logo {
-    color: #d8ffc2 !important; /* White text color */
+.wy-side-nav-title {
+  color: orange;
+  }
+
+/* Override the background color of the search area */
+.wy-side-nav-search {
+    background-color: #6F00B0; /* Darker purple */
+    color: #E9C2FF;
 }
 
-/* Ensure text remains visible when hovered */
-.wy-nav-content-wrap a.wy-logo:hover {
-    color: #d8ffc2 !important; /* White text color */
+
+.wy-side-nav-search a:hover {
+    background-color: #6F00B0; /* Darker purple */
 }
+
+/* Override the color of the text in the side-nav-search */
+.wy-side-nav-search input[type="text"] {
+    color: #6F00B0 ; /* Change to your desired color */
+}
+
 
 /* Override the background color of the sidebar */
 .wy-nav-side {
-    background-color: #E9C2FF !important;
+    background-color: #E9C2FF;
     color: #6F00B0;
 }
 
 /* Override the color of the navigation links in the side menu */
 .wy-nav-side a {
-    color: #6F00B0; /* Change to your desired color */
+    color: #6F00B0; /* Change to your desired hover color */
+    background-color: #E9C2FF; /* Darker purple */
 }
 
 /* Change the hover color of the navigation links in the side menu */
 .wy-nav-side a:hover {
     color: #E9C2FF; /* Change to your desired hover color */
     background-color: #6F00B0; /* Darker purple */
-}
-
-/* Override the background color of the search area */
-.wy-side-nav-search {
-    background-color: #6F00B0; /* Darker purple */
-}
-
-/* Override the color of the text in the side-nav-search */
-.wy-side-nav-search input[type="text"] {
-    color: #6F00B0 !important; /* Change to your desired color */
 }
 
 /* Change the background color of the drop-down menu items in the sidebar */
@@ -55,26 +57,43 @@
 /* Override the background color and border color of note elements */
 .admonition.note {
     background-color: #E9C2FF; /* Change to your desired background color */
-    border-color: #6F00B0; /* Change to your desired border color */
+
 }
 
 /* Override styles for note elements */
 .admonition.note {
     color: #333; /* Change to your desired text color */
     padding: 10px; /* Adjust padding as needed */
-    margin-bottom: 20px; /* Adjust margin as needed */
-    border-radius: 5px; /* Adjust border radius as needed */
+    margin-bottom: 10px; /* Adjust margin as needed */
+    border-radius: 10px; /* Adjust border radius as needed */
 }
 
 /* Override styles for the note symbol/icon */
 .admonition.note .admonition-title:before {
     color: #E9C2FF; /* Change to your desired color */
     background-color: #6F00B0; /* Change to your desired background color */
+
+
 }
 
 /* Override styles for the "Note" text */
 .admonition.note .admonition-title {
     color: #E9C2FF; /* Change to your desired color */
     background-color: #6F00B0; /* Change to your desired background color */
+    border-radius: 10px; /* Adjust border radius as needed */
 }
 
+/* Override the color of HTML links */
+a {
+    color: #6F00B0; /* Change to your desired color */
+}
+
+/* Override the color of HTML links */
+a:hover {
+    color: #E9C2FF; /* Change to your desired color */
+}
+
+/* Override the color of visited HTML links */
+a:visited {
+    color: #6F00B0; /* Change to your desired color */
+}
