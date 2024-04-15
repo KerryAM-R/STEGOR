@@ -18,10 +18,18 @@ The analysis section is divided into several sub-sections.
 
 **Version 2.** Improved the process with automations in STEP 1. and STEP 4. (focused extraction with prioritising the TCR order) as well as the post analysis section for easier identificaiton of TCR of interest (extracting the meta-data, filtering and summarising). 
 
+Application structure
+---------------------
+
+Features for all Tabs. 
+
+
 Uploading the files
 -------------------
 
 There first tab will show in the side panel the files that can be uploaded. 
+
+
 
 This includes:
 - Annotated  object (.rds)
@@ -30,15 +38,61 @@ This includes:
 - Two clusTCR2 files (prefex with AG and BD) (.csv)
 - TCRex output file (.tsv)
 
+
+Side bar panel for uploading 
+
+.. image:: img/4_overview_sbp.png
+  :width: 1200
+  :alt: Alternative text
+
+Uploaded example K409 Melanoma dataset
+
 .. image:: img/4_uploading.png
   :width: 1200
   :alt: Alternative text
 
+Side Bar Panel 
+^^^^^^^^^^^^^^^^
 
-Application structure
----------------------
+These drop down menues allow the user to change what is presented on the graphs and the analysis
 
-Features for all Tabs.
+The selected individuals = Sample Name (default)
+
+Display by Selected Individual = no or yes. This is linked to the "Selected Individual" button. 
+
+Number of plot row  = 2. This allows the user to select the number of rows to display as desired.
+
+The "Split graph by:" button allows for some graphs e.g., Pie charts, to be split by this variable rather than the "Selected Individual"
+
+
+
+.. image:: img/4_display-graph.png
+  :width: 1200
+  :alt: Alternative text
+
+The user can also select which variable to colour the graphs by with "Colour by:" 
+
+Additionally, the uder can also select the colouring Palettes that includes: "default", "rainbow", "random", "heat.colors", "terrain.colors", "topo.colors", "hcl.colors", "one"
+
+The "one" colour is linked to the "One colour". Additionally all NA variable will be coloured the light grey #E5E5E5
+
+.. image:: img/4_colouring_buttons.png
+  :width: 1200
+  :alt: Alternative text
+
+For some of the functions, the user can restrict to "What individuals to include"
+
+This includes both the 
+- "Display one individual?"
+- "Display one individual"
+
+For instance this is used to filter the TCR table in the clonal abudance section to more easily identify the most abundant cloens relative to a specific sample/individual based on the "selected individuals" button. 
+
+.. image:: img/4_What_individuals_to_include.png
+  :width: 1200
+  :alt: Alternative text
+
+
 
 
 Overview
@@ -49,52 +103,31 @@ Overview
 
 - TCR
 
-GEx + TCR-seq
+TCR-seq -> GEX
 ^^^^^^^^^^^^^^^^
 
-- 
+- Clonal abudance
+- Exapanded
+- ClusTCR
+- Epitope 
 
+Automation (TCR -> GEX)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+- Analysis steps
+- Clonotype
+- Cluster 
+- Epitope/Annotation
 
-*Note: Sections to complete.*
+GEx -> TCR
+^^^^^^^^^^^^^^^^
 
-This section includes separate interrogation of the gene expression layer and TCR-seq layer. 
+- Annotation
+    - Under development 
 
-GEx
-^^^
-
-This section contains 
-* percentage
-* UMAP plot 
-    - This plot can be coloured by any variable under 
-
-TCR-seq
-^^^^^^^
-
-
-
-Top clonotype
-^^^^^^^^^^^^^
-
-Expanded
-^^^^^^^^
-
-Epitope
-^^^^^^^
-
-ClusTCR2
-^^^^^^^^
-
-Marker
-^^^^^^
-
-Multi-TCR 
-^^^^^^^^^
-
-
-Prioritisation stratergy (under active development)
----------------------------------------------------
-
+- Marker 
+    - Single marker
+    - Dual marker 
 
 
 Example 1. Colitis dataset
