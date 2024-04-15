@@ -7,7 +7,7 @@
   <title>Step 3. Quality control &mdash; STEGO.R 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=aa808d12" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=fab6a3b9" />
 
   
   <!--[if lt IE 9]>
@@ -59,7 +59,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#batch-correction">batch correction</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#c-annotating-the-seurat-object"><strong>3c.</strong> Annotating the Seurat object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-annotating-the-seurat-object"><strong>3c.</strong> Annotating the Seurat object</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#default-annotation-models-with-scgate">Default annotation models with scGate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tcr-annotations">TCR annotations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#functional-t-cell-annotations">Functional T cell annotations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-custom-annotation-stratergies">Creating custom annotation stratergies</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#d-removing-unwanted-sample-and-or-downsampling-optional"><strong>3d.</strong> Removing unwanted sample and/or downsampling (optional)</a></li>
 </ul>
 </li>
@@ -248,6 +254,8 @@ head(sc@meta.data)
 saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 </pre></div>
 </div>
+<section id="default-annotation-models-with-scgate">
+<h3>Default annotation models with scGate<a class="headerlink" href="#default-annotation-models-with-scgate" title="Link to this heading"></a></h3>
 <p><em>Note: Under development.</em></p>
 <p>The scGate threshold was set to 0.2 for full capture and 0.5 for the immune panel (&lt;400 transcripts).</p>
 <ul class="simple">
@@ -298,7 +306,13 @@ saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 <li><p><strong>BD Rhapsody Human immune panel</strong></p></li>
 <li><p><strong>Mouse Panel</strong> Under development</p></li>
 </ul>
+</section>
+<section id="tcr-annotations">
+<h3>TCR annotations<a class="headerlink" href="#tcr-annotations" title="Link to this heading"></a></h3>
 <p>This section annotates the potential invariant T cells.</p>
+</section>
+<section id="functional-t-cell-annotations">
+<h3>Functional T cell annotations<a class="headerlink" href="#functional-t-cell-annotations" title="Link to this heading"></a></h3>
 <table class="longtable docutils align-default" id="id1">
 <caption><span class="caption-text">Annotation_table</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
 <colgroup>
@@ -513,6 +527,9 @@ saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 </table>
 <p>Cyto = GZMA,GZMB,PRF1,GNLY,NKG7; Naive = CCR7, SELL</p>
 <p>DN = double negative; Th = T helper, Tfh = follicular T helper, Tc = cytotoxic T cell; Treg = regulatory T cell</p>
+</section>
+<section id="creating-custom-annotation-stratergies">
+<h3>Creating custom annotation stratergies<a class="headerlink" href="#creating-custom-annotation-stratergies" title="Link to this heading"></a></h3>
 <p>The user can add additonal annotations beyond the default.</p>
 <p>There are nine custom databases that a user can amend. If needed, these can be added to an already annotated file.</p>
 <p><strong>Design your custom marker set</strong></p>
@@ -534,6 +551,7 @@ saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 <a class="reference internal image-reference" href="_images/3c_running_the_mem.png"><img alt="Alternative text" src="_images/3c_running_the_mem.png" style="width: 600px;" /></a>
 <p>Check that there the signal overlaps with the gene expression, as per the feature plot. Once this is what you expect, download the object.</p>
 <a class="reference internal image-reference" href="_images/3c_checking_mem_gate.png"><img alt="Alternative text" src="_images/3c_checking_mem_gate.png" style="width: 600px;" /></a>
+</section>
 </section>
 <section id="d-removing-unwanted-sample-and-or-downsampling-optional">
 <h2><strong>3d.</strong> Removing unwanted sample and/or downsampling (optional)<a class="headerlink" href="#d-removing-unwanted-sample-and-or-downsampling-optional" title="Link to this heading"></a></h2>

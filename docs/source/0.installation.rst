@@ -3,24 +3,28 @@ Installation
 
 To use STEGO, first install R, RStudio and other required programs
 ------------------------------------------------------------------
+
+
 MAC:
 ^^^^
 
-* Install `R <https://cran.r-project.org/bin/macosx/>`_ 
+Please install R version 4.3.2 or greater. If your operating system doesn't support this version of R, than some of the functions (e.g., annotation with scGate) may not work as expected. 
+
+* Install `R_mac <https://cran.r-project.org/bin/macosx/>`_ 
 * Install `RStudio <https://posit.co/download/rstudio-desktop/>`_
 * Install `Quartz <https://www.xquartz.org>`_
 
 Windows:
 ^^^^^^^^
 
-* Install `R <https://cran.r-project.org>`_
+* Install `R.Windows <https://cran.r-project.org>`_
 * Install `RStudio <https://posit.co/download/rstudio-desktop/>`_
 * Install `Rtools <https://cran.r-project.org/bin/windows/Rtools/>`_
 
 Linux:
 ^^^^^^
 
-* install `R <https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html>`_
+* install `R.linux <https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html>`_
 
 using **sudo apt install** the following:
 libcurl, libfontconfig1, libtiff5, liblapack-dev, libblas-dev, libglpk-dev, libudunits2-dev, libgdal-dev libgeos-dev, libproj-dev
@@ -32,7 +36,6 @@ Sytem requirements
 Recommended to use a 64-bit OS with at least 16GB of RAM, ideally >=32GB. This is needed for the memory intensive merging and annotation steps. 
 
 When running STEGO.R merging and annotation steps, we recommend to limit the number of other running programs to help prevent RAM memory overflow, espeically if you have <32Gb of RAM. 
-
 
 **Download the project directory**
 ----------------------------------
@@ -157,7 +160,11 @@ You are now ready to process your scRNA-seq with scTCR-seq data!
 Trouble shooting missing packages
 ---------------------------------
       
+Check that you have the latest version of R. 
 
+Check that you downloaded first the devtools and bioconductor
+
+API issue with creating a github token
 
 
 Understanding the "Directory_for_Project" Folder
@@ -166,34 +173,16 @@ Unzip the "Directory_for_Project.zip" file. This folder contains our recommended
 
 This folder contains the following folder:
 
-- 0_Raw_Files
-- 1_ClusTCR
-- 1_SeratQC
-- 1_TCR_Explore
-- 1_TCRex
-- 2_SCobj
-- 3_Analysis
-- custom_db
-- Figures.Tables
-    + Overview
-    + QC_Figures
-    + TCR and GEX
-- Priortization
-   + Clustering
-      - AG
-      - BD
-   + EpitopePred
-   + ImmunoDom
-   + Multi
-      - PublicLike
-      - private
-   + PolyClonal
+.. image:: img/0_Directory_for_project.png
+  :width: 1200
+  :alt: Alternative text
+
 
 the user will also have access to the following files 
 
 - Installing.R
-- preprocessing.R (10x only)
-- ClusTCR2_large.R 
-- Merging.Batch.Harmony.R
+- 1. preprocessing.R (10x only)
+- 2b. ClusTCR2_large.R 
+- 3a-c filtering_merging_harmony_annotating.R
 - Project.Rproj
 - STEGO.R 

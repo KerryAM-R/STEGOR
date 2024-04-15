@@ -11,6 +11,7 @@
 /* Override the color of the text in the side-nav-search */
 .wy-side-nav-search input[type="text"] {
     color: #6F00B0 ; /* Change to your desired color */
+    background-color: #E9C2FF; /* Darker purple */
 }
 
 
