@@ -253,61 +253,24 @@ i. Quick tutorial for understanding RStudio environment with this <a class="refe
 </section>
 <section id="trouble-shooting-missing-packages">
 <h2>Trouble shooting missing packages<a class="headerlink" href="#trouble-shooting-missing-packages" title="Link to this heading"></a></h2>
+<p>Check that you have the latest version of R.</p>
+<p>Check that you downloaded first the devtools and bioconductor</p>
+<p>API issue with creating a github token</p>
 </section>
 <section id="understanding-the-directory-for-project-folder">
 <h2>Understanding the “Directory_for_Project” Folder<a class="headerlink" href="#understanding-the-directory-for-project-folder" title="Link to this heading"></a></h2>
 <p>Unzip the “Directory_for_Project.zip” file. This folder contains our recommended structure on how to organise your files for each scRNA-seq project. We will refer to these files through out the Tutorial.</p>
 <p>This folder contains the following folder:</p>
-<ul class="simple">
-<li><p>0_Raw_Files</p></li>
-<li><p>1_ClusTCR</p></li>
-<li><p>1_SeratQC</p></li>
-<li><p>1_TCR_Explore</p></li>
-<li><p>1_TCRex</p></li>
-<li><p>2_SCobj</p></li>
-<li><p>3_Analysis</p></li>
-<li><p>custom_db</p></li>
-<li><dl class="simple">
-<dt>Figures.Tables</dt><dd><ul>
-<li><p>Overview</p></li>
-<li><p>QC_Figures</p></li>
-<li><p>TCR and GEX</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Priortization</dt><dd><ul>
-<li><dl class="simple">
-<dt>Clustering</dt><dd><ul>
-<li><p>AG</p></li>
-<li><p>BD</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>EpitopePred</p></li>
-<li><p>ImmunoDom</p></li>
-<li><dl class="simple">
-<dt>Multi</dt><dd><ul>
-<li><p>PublicLike</p></li>
-<li><p>private</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>PolyClonal</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
+<a class="reference internal image-reference" href="_images/0_Directory_for_project.png"><img alt="Alternative text" src="_images/0_Directory_for_project.png" style="width: 1200px;" /></a>
 <p>the user will also have access to the following files</p>
 <ul class="simple">
 <li><p>Installing.R</p></li>
+<li><ol class="arabic simple">
 <li><p>preprocessing.R (10x only)</p></li>
-<li><p>ClusTCR2_large.R</p></li>
-<li><p>Merging.Batch.Harmony.R</p></li>
+</ol>
+</li>
+<li><p>2b. ClusTCR2_large.R</p></li>
+<li><p>3a-c filtering_merging_harmony_annotating.R</p></li>
 <li><p>Project.Rproj</p></li>
 <li><p>STEGO.R</p></li>
 </ul>

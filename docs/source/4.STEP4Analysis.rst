@@ -23,21 +23,19 @@ Application structure
 
 Features for all Tabs. 
 
-
 Uploading the files
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 There first tab will show in the side panel the files that can be uploaded. 
 
 This includes:
 - Annotated  object (.rds)
 - Adding in additional identifiers if needed. This file is merged with the meta-data based on the 'Sample_Name'
-    If you dont wish to do this everytime, add the extra identifiers with the STEGO.R::update_sc()
+    - If you dont wish to do this everytime, add the extra identifiers with the STEGO.R::update_sc()
 - Two clusTCR2 files (prefex with AG and BD) (.csv)
 - TCRex output file (.tsv)
 
-
-Side bar panel for uploading 
+Side bar panel for uploading the four analysis files. 
 
 .. image:: img/4_overview_sbp.png
   :width: 600
@@ -49,9 +47,8 @@ Uploaded example K409 Melanoma dataset
   :width: 600
   :alt: Alternative text
 
-
 Side Bar Panel 
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 These drop down menues allow the user to change what is presented on the graphs and the analysis
 
@@ -62,8 +59,6 @@ Display by Selected Individual = no or yes. This is linked to the "Selected Indi
 Number of plot row  = 2. This allows the user to select the number of rows to display as desired.
 
 The "Split graph by:" button allows for some graphs e.g., Pie charts, to be split by this variable rather than the "Selected Individual"
-
-
 
 .. image:: img/4_display-graph.png
   :width: 600

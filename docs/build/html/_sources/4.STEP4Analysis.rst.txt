@@ -3,6 +3,8 @@ Step 4. Analysis
 .. note::
 
     Under active construction
+    
+    This section will include example analyses depending on the type of data present.
 
 
 The analysis section is divided into several sub-sections. 
@@ -16,84 +18,122 @@ The analysis section is divided into several sub-sections.
 
 **Version 2.** Improved the process with automations in STEP 1. and STEP 4. (focused extraction with prioritising the TCR order) as well as the post analysis section for easier identificaiton of TCR of interest (extracting the meta-data, filtering and summarising). 
 
+Application structure
+---------------------
+
+Features for all Tabs. 
+
 Uploading the files
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 There first tab will show in the side panel the files that can be uploaded. 
 
 This includes:
 - Annotated  object (.rds)
 - Adding in additional identifiers if needed. This file is merged with the meta-data based on the 'Sample_Name'
-    If you dont wish to do this everytime, add the extra identifiers with the STEGO.R::update_sc()
+    - If you dont wish to do this everytime, add the extra identifiers with the STEGO.R::update_sc()
 - Two clusTCR2 files (prefex with AG and BD) (.csv)
 - TCRex output file (.tsv)
 
+Side bar panel for uploading the four analysis files. 
+
+.. image:: img/4_overview_sbp.png
+  :width: 600
+  :alt: Alternative text
+
+Uploaded example K409 Melanoma dataset
+
 .. image:: img/4_uploading.png
-  :width: 1200
+  :width: 600
+  :alt: Alternative text
+
+Side Bar Panel 
+^^^^^^^^^^^^^^
+
+These drop down menues allow the user to change what is presented on the graphs and the analysis
+
+The selected individuals = Sample Name (default)
+
+Display by Selected Individual = no or yes. This is linked to the "Selected Individual" button. 
+
+Number of plot row  = 2. This allows the user to select the number of rows to display as desired.
+
+The "Split graph by:" button allows for some graphs e.g., Pie charts, to be split by this variable rather than the "Selected Individual"
+
+.. image:: img/4_display-graph.png
+  :width: 600
+  :alt: Alternative text
+
+The user can also select which variable to colour the graphs by with "Colour by:" 
+
+Additionally, the uder can also select the colouring Palettes that includes: "default", "rainbow", "random", "heat.colors", "terrain.colors", "topo.colors", "hcl.colors", "one"
+
+The "one" colour is linked to the "One colour". Additionally all NA variable will be coloured the light grey #E5E5E5
+
+.. image:: img/4_colouring_buttons.png
+  :alt: Alternative text
+  :width: 600
+
+For some of the functions, the user can restrict to "What individuals to include"
+
+This includes both the 
+- "Display one individual?"
+- "Display one individual"
+
+For instance this is used to filter the TCR table in the clonal abudance section to more easily identify the most abundant cloens relative to a specific sample/individual based on the "selected individuals" button. 
+
+.. image:: img/4_What_individuals_to_include.png
+  :width: 600
+  :alt: Alternative text
+
+The user can also select the plot parameters that are relevant to the majority of the graphs
+
+This includes:
+    - Size of the # - size of the numbered axis
+
+
+4_plot_parameters.png
+
+.. image:: img/4_What_individuals_to_include.png
   :alt: Alternative text
 
 Overview
---------
-
-*Note: Sections to complete.*
-
-This section includes separate interrogation of the gene expression layer and TCR-seq layer. 
-
-GEx
-^^^
-
-This section contains 
-* percentage
-* UMAP plot 
-    - This plot can be coloured by any variable under 
-
-TCR-seq
-^^^^^^^
-
-GEx + TCR-seq
--------------
-
-Top clonotype
-^^^^^^^^^^^^^
-
-Expanded
 ^^^^^^^^
+- GEx
+    - Side bar panel = 
+    - main panel = 
 
-Epitope
-^^^^^^^
+- TCR
 
-ClusTCR2
-^^^^^^^^
+TCR-seq -> GEX
+^^^^^^^^^^^^^^^^
 
-Marker
-^^^^^^
+- Clonal abudance
+- Exapanded
+- ClusTCR
+- Epitope 
 
-Multi-TCR 
-^^^^^^^^^
+Automation (TCR -> GEX)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Analysis steps
+- Clonotype
+- Cluster 
+- Epitope/Annotation
+
+GEx -> TCR
+^^^^^^^^^^^^^^^^
+
+- Annotation
+    - Under development 
+
+- Marker 
+    - Single marker
+    - Dual marker 
 
 
-Prioritisation stratergy (under active development)
----------------------------------------------------
+Example 1. Colitis dataset
+--------------------------
 
-*Note: Sections to complete.*
-
-Version 2 of STEGO.R
-^^^^^^^^^^^^^^^^^^^^
-
-Phase 1. Add in simple case (one sample)
-
-Phase 2. Add in one group (one indiviual with multiple time points).
-
-Phase 3. Add in paired analysis (one indiviudal)
-
-Phase 4. Add in paired analysis (multiple individuals)
-
-Version 3 of STEGO.R
-^^^^^^^^^^^^^^^^^^^^
-
-Phase 1. Complex analysis of unpaired samples (3 groups).
-
-Phase 2. Complex analysis of paired analysis with unpaired group (two time points).
-
-Phase 3. Complex analysis of datasets with longitudinal traction. 
+In the zenodo repository we have uploaded the colitis dataset. This consis of 
 

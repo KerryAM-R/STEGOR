@@ -160,7 +160,11 @@ You are now ready to process your scRNA-seq with scTCR-seq data!
 Trouble shooting missing packages
 ---------------------------------
       
+Check that you have the latest version of R. 
 
+Check that you downloaded first the devtools and bioconductor
+
+API issue with creating a github token
 
 
 Understanding the "Directory_for_Project" Folder
@@ -169,34 +173,16 @@ Unzip the "Directory_for_Project.zip" file. This folder contains our recommended
 
 This folder contains the following folder:
 
-- 0_Raw_Files
-- 1_ClusTCR
-- 1_SeratQC
-- 1_TCR_Explore
-- 1_TCRex
-- 2_SCobj
-- 3_Analysis
-- custom_db
-- Figures.Tables
-    + Overview
-    + QC_Figures
-    + TCR and GEX
-- Priortization
-   + Clustering
-      - AG
-      - BD
-   + EpitopePred
-   + ImmunoDom
-   + Multi
-      - PublicLike
-      - private
-   + PolyClonal
+.. image:: img/0_Directory_for_project.png
+  :width: 1200
+  :alt: Alternative text
+
 
 the user will also have access to the following files 
 
 - Installing.R
-- preprocessing.R (10x only)
-- ClusTCR2_large.R 
-- Merging.Batch.Harmony.R
+- 1. preprocessing.R (10x only)
+- 2b. ClusTCR2_large.R 
+- 3a-c filtering_merging_harmony_annotating.R
 - Project.Rproj
 - STEGO.R 
