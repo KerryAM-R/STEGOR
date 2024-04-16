@@ -165,7 +165,8 @@ The annotations are added to the end of the meta data table in the Seurat object
               Th1_cytokines = T,
               TCRseq = T,
               threshold = 0.2, # change to 0.2 if you use the focused immuen panel from BD rhapsody
-              reductionType = "harmony"
+              reductionType = "harmony",
+              chunk_size = 50000
             )
     
     sc@meta.data$Cell_Index_old <- sc@meta.data$Cell_Index
@@ -181,30 +182,32 @@ Default annotation models with scGate
 
 The scGate threshold was set to 0.2 for full capture and 0.5 for the immune panel (<400 transcripts). 
 
-* **Human**
+* **Human** 
     - TcellFunction (see Annotation table)
     - Generic
         + CD4, CD8, DN as well as DC's, Monocytes, and B cells
     - exhausted
         + Based on four markers: PDCD1 (PD-1), TIGIT, (LAG-3) and 
     - senescence
-        +  
+        + Activated (B3GAT1+CD28+)
+        + activated-early/senescent (B3GAT1-CD28-)
+        + non-activated/early-activated (B3GAT1-CD28+)
+        + Terminally differentiated (B3GAT1+CD28-)
     - cycling
-        +
+        + MKI67+TOP2A+
     - Th1_cytokines 
         + combination of IFNG and TNF
     - TCRseq (meta.data TCR-seq)
+        + MAIT cells (TRAV1-2 TRAJ33/12/20)
+        + iNKT cells ()
+        + possible CD1b/c restricted 
+        + ab T cells (excludes the above categories)
+        + gd T cells
 
-* **10X Genomcis for Mouse** (*Will likely be the same as the BD Rhapsody mouse full panel model.*)
+* **Mouse** 
 
-* **BD Rhapsody Human immune panel**
+*Note: Requires varification of models development.*
 
-* **Mouse Panel** Under development
-
-TCR annotations
-^^^^^^^^^^^^^^^
-
-This section annotates the potential invariant T cells. 
 
 Functional T cell annotations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -215,7 +218,9 @@ Functional T cell annotations
     :widths: 20, 30, 50
     :class: longtable
 
-Cyto = GZMA,GZMB,PRF1,GNLY,NKG7; Naive = CCR7, SELL
+Cyto = GZMA,GZMB,PRF1,GNLY,NKG7
+
+Naive = CCR7, SELL
 
 DN = double negative; Th = T helper, Tfh = follicular T helper, Tc = cytotoxic T cell; Treg = regulatory T cell 
 
@@ -260,6 +265,7 @@ Run just the custom annotation needed.
   :alt: Alternative text
 
 Check that there the signal overlaps with the gene expression, as per the feature plot. Once this is what you expect, download the object.
+
 
 .. image:: img/3c_checking_mem_gate.png
   :width: 600

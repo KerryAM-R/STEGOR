@@ -61,7 +61,6 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#c-annotating-the-seurat-object"><strong>3c.</strong> Annotating the Seurat object</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#default-annotation-models-with-scgate">Default annotation models with scGate</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tcr-annotations">TCR annotations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#functional-t-cell-annotations">Functional T cell annotations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#creating-custom-annotation-stratergies">Creating custom annotation stratergies</a></li>
 </ul>
@@ -245,7 +244,8 @@ sc &lt;-     scGate_annotating(
           Th1_cytokines = T,
           TCRseq = T,
           threshold = 0.2, # change to 0.2 if you use the focused immuen panel from BD rhapsody
-          reductionType = &quot;harmony&quot;
+          reductionType = &quot;harmony&quot;,
+          chunk_size = 50000
         )
 
 sc@meta.data$Cell_Index_old &lt;- sc@meta.data$Cell_Index
@@ -278,14 +278,17 @@ saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 </li>
 <li><dl class="simple">
 <dt>senescence</dt><dd><ul>
-<li></li>
+<li><p>Activated (B3GAT1+CD28+)</p></li>
+<li><p>activated-early/senescent (B3GAT1-CD28-)</p></li>
+<li><p>non-activated/early-activated (B3GAT1-CD28+)</p></li>
+<li><p>Terminally differentiated (B3GAT1+CD28-)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
 <dt>cycling</dt><dd><ul>
-<li></li>
+<li><p>MKI67+TOP2A+</p></li>
 </ul>
 </dd>
 </dl>
@@ -297,19 +300,24 @@ saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 </dd>
 </dl>
 </li>
-<li><p>TCRseq (meta.data TCR-seq)</p></li>
+<li><dl class="simple">
+<dt>TCRseq (meta.data TCR-seq)</dt><dd><ul>
+<li><p>MAIT cells (TRAV1-2 TRAJ33/12/20)</p></li>
+<li><p>iNKT cells ()</p></li>
+<li><p>possible CD1b/c restricted</p></li>
+<li><p>ab T cells (excludes the above categories)</p></li>
+<li><p>gd T cells</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p><strong>10X Genomcis for Mouse</strong> (<em>Will likely be the same as the BD Rhapsody mouse full panel model.</em>)</p></li>
-<li><p><strong>BD Rhapsody Human immune panel</strong></p></li>
-<li><p><strong>Mouse Panel</strong> Under development</p></li>
 </ul>
-</section>
-<section id="tcr-annotations">
-<h3>TCR annotations<a class="headerlink" href="#tcr-annotations" title="Link to this heading"></a></h3>
-<p>This section annotates the potential invariant T cells.</p>
+</dd>
+</dl>
+</li>
+<li><p><strong>Mouse</strong></p></li>
+</ul>
+<p><em>Note: Requires varification of models development.</em></p>
 </section>
 <section id="functional-t-cell-annotations">
 <h3>Functional T cell annotations<a class="headerlink" href="#functional-t-cell-annotations" title="Link to this heading"></a></h3>
@@ -525,7 +533,8 @@ saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 </tr>
 </tbody>
 </table>
-<p>Cyto = GZMA,GZMB,PRF1,GNLY,NKG7; Naive = CCR7, SELL</p>
+<p>Cyto = GZMA,GZMB,PRF1,GNLY,NKG7</p>
+<p>Naive = CCR7, SELL</p>
 <p>DN = double negative; Th = T helper, Tfh = follicular T helper, Tc = cytotoxic T cell; Treg = regulatory T cell</p>
 </section>
 <section id="creating-custom-annotation-stratergies">
@@ -546,7 +555,7 @@ saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 <p>To use scGate effectively, the genes within a set are read as OR (either of the marker need to be present), while the levels equate to AND i.e., All markers need to be present. These levels then need to use positive or negative under the use_as column. We recommend not defining the positive and negative markers in the</p>
 <a class="reference internal image-reference" href="_images/3c_example_model_scGate.png"><img alt="Alternative text" src="_images/3c_example_model_scGate.png" style="width: 600px;" /></a>
 <p>Use a fresh run of the app, so the new database is read into, otherwise it will be the default.</p>
-<a class="reference internal image-reference" href="img/3c_runningthe_mem.png"><img alt="Alternative text" src="img/3c_runningthe_mem.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/3c_runningthe_mem.png"><img alt="Alternative text" src="_images/3c_runningthe_mem.png" style="width: 600px;" /></a>
 <p>Run just the custom annotation needed.</p>
 <a class="reference internal image-reference" href="_images/3c_running_the_mem.png"><img alt="Alternative text" src="_images/3c_running_the_mem.png" style="width: 600px;" /></a>
 <p>Check that there the signal overlaps with the gene expression, as per the feature plot. Once this is what you expect, download the object.</p>
