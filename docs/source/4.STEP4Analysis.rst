@@ -38,13 +38,13 @@ This includes:
 Side bar panel for uploading the four analysis files. 
 
 .. image:: img/4_overview_sbp.png
-  :width: 600
+  :width: 200
   :alt: Alternative text
 
 Uploaded example K409 Melanoma dataset
 
 .. image:: img/4_uploading.png
-  :width: 600
+  :width: 1200
   :alt: Alternative text
 
 Side Bar Panel 
@@ -61,7 +61,7 @@ Number of plot row  = 2. This allows the user to select the number of rows to di
 The "Split graph by:" button allows for some graphs e.g., Pie charts, to be split by this variable rather than the "Selected Individual"
 
 .. image:: img/4_display-graph.png
-  :width: 600
+  :width: 300
   :alt: Alternative text
 
 The user can also select which variable to colour the graphs by with "Colour by:" 
