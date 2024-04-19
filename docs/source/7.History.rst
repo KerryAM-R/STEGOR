@@ -4,27 +4,27 @@ History
 ---------------
 **Major additions**
 
-Added in the automated section for the TCR -> GEx focused analysis. 
+    Added in the automated section for the TCR -> GEx focused analysis. 
 
-Layout changes of the tabs to match the steps in the tutorial to improve user experience. 
+    Layout changes of the tabs to match the steps in the tutorial to improve user experience. 
 
-Added in the post analysis section for easy extraction of the final meta data table. Also in this section added in filtering and summarising .csv files as needed, which can be useful when explore the summary outputs of the automated preocesses to know which TCR to focus on. 
+    Added in the post analysis section for easy extraction of the final meta data table. Also in this section added in filtering and summarising .csv files as needed, which can be useful when explore the summary outputs of the automated preocesses to know which TCR to focus on. 
 
-Change exporting from the .h5Seurat to .rds object due to V4 vs V5 Seurat update. 
+    Change exporting from the .h5Seurat to .rds object due to V4 vs V5 Seurat update. 
 
-Added in V4 and V5 to merging and annotation, due to data storage changes with Seurat objects. 
+    Added in V4 and V5 to merging and annotation, due to data storage changes with Seurat objects. 
 
-Changed Top clonotype to clonal abudance. 
+    Changed Top clonotype to clonal abudance. 
 
-Improve the merging function to reduce to 2 at a time in a loop. 
+    Improve the merging function to reduce to 2 at a time in a loop. 
 
-Improved harmony_batch_correction_2_Scaling() to add in Seruat_version, as there was a object layout change between V4 and V5. 
+    Improved harmony_batch_correction_2_Scaling() to add in Seruat_version, as there was a object layout change between V4 and V5. 
 
-Improve the scGate_annotating() function to include batch annotations for larger datasets. I recommended with the system I have between 50,000 to 100,000 cells per batch (max) due to computational time requirements. 
+    Improve the scGate_annotating() function to include batch annotations for larger datasets. I recommended with the system I have between 50,000 to 100,000 cells per batch (max) due to computational time requirements. 
 
 **New Functions**
 
-Updated the Directory_for_project to include the new command-line functions. This is for larger dataset to help automate the process. 
+    Updated the Directory_for_project to include the new command-line functions. This is for larger dataset to help automate the process. 
 
 - Step 1. pre-processing.R
     - preprocessing_10x() # for 10x Genomics
@@ -47,17 +47,17 @@ Fixed program not opening if the user was not working in the project file. Remov
 
 **minor changes**
 
-Change the layout coloring to purple and better highlighting the active tab.
+    Change the layout coloring to purple and better highlighting the active tab.
 
-Also, added in changing colour when hovering over the buttons.
+    Also, added in changing colour when hovering over the buttons.
 
-Add in coloring to better see if the list variable colour was selected and hovering to more accurately pick the list variables. 
+    Add in coloring to better see if the list variable colour was selected and hovering to more accurately pick the list variables. 
 
-Added in heatmap figures for the top clonotype section (re-labelled to clonal abudance). 
+    Added in heatmap figures for the top clonotype section (re-labelled to clonal abudance). 
 
-Removed redundant packages. 
+    Removed redundant packages. 
 
-Fixed some figure download issues. 
+    Fixed some figure download issues. 
 
 **Version 1.5**
 ---------------
