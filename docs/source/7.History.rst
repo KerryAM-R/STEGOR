@@ -43,7 +43,7 @@ History
 
 **Bug Fixes**
 
-Fixed program not opening if the user was not working in the project file. Removed the need to find the custom_db folder and sub-folders.
+    Fixed program not opening if the user was not working in the project file. Removed the need to find the custom_db folder and sub-folders.
 
 **minor changes**
 
