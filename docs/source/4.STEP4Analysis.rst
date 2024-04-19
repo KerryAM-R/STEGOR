@@ -89,10 +89,11 @@ For instance this is used to filter the TCR table in the clonal abudance section
 The user can also select the plot parameters that are relevant to the majority of the graphs
 
 This includes:
-    - Size of the # - size of the numbered axis
-
-
-4_plot_parameters.png
+    - Axis number size - size of the numbered axis
+    - Axis text size i.e., axis title
+    - Legend text size
+    - legend location (left, right, top, bottom or none)
+    - Type of Font 
 
 .. image:: img/4_plot_parameters.png
   :alt: Alternative text
@@ -112,7 +113,9 @@ Overview
 TCR-seq -> GEX
 ^^^^^^^^^^^^^^^^
 
-Each section has a summary, UMAP, Heatmap, stats, dot-plot and over-representation.
+Each section has a summary table, UMAP, Heatmap, stats, dot-plot and over-representation.
+
+Some of the secions also have unique features.
 
 - Clonal abudance
     - Bar graph 
