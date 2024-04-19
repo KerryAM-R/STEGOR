@@ -72,7 +72,7 @@ The "one" colour is linked to the "One colour". Additionally all NA variable wil
 
 .. image:: img/4_colouring_buttons.png
   :alt: Alternative text
-  :width: 600
+  :width: 200
 
 For some of the functions, the user can restrict to "What individuals to include"
 
@@ -83,7 +83,7 @@ This includes both the
 For instance this is used to filter the TCR table in the clonal abudance section to more easily identify the most abundant cloens relative to a specific sample/individual based on the "selected individuals" button. 
 
 .. image:: img/4_What_individuals_to_include.png
-  :width: 600
+  :width: 200
   :alt: Alternative text
 
 The user can also select the plot parameters that are relevant to the majority of the graphs
@@ -94,32 +94,52 @@ This includes:
 
 4_plot_parameters.png
 
-.. image:: img/4_What_individuals_to_include.png
+.. image:: img/4_plot_parameters.png
   :alt: Alternative text
 
 Overview
 ^^^^^^^^
 - GEx
-    - Side bar panel = 
-    - main panel = 
-
+    - Percentage (Table)
+    - UMAP of the annotation models
+    - Pie chart
 - TCR
+    - UPSET plot (<31)
+    - Line graph (clone tracking)
+    - expansion (bar) 
+    - expansion (UMAP)
 
 TCR-seq -> GEX
 ^^^^^^^^^^^^^^^^
 
+Each section has a summary, UMAP, Heatmap, stats, dot-plot and over-representation.
+
 - Clonal abudance
+    - Bar graph 
+    - Ridge and Violin plots (for a specific gene)
 - Exapanded
 - ClusTCR
+    - Motif 
 - Epitope 
+    - Load Epitope list 
 
 Automation (TCR -> GEX)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Analysis steps
-- Clonotype
+- Clonotype 
+    - Download public (bar graphs), summary table, dot plot for each public-like clone
+    - Download private (single sample)
+    - Can restrict based on the calculated priority 1/(sample total * total count)
+    
 - Cluster 
+    - Download the motif, summary table, dot plot for each public-like and private clusters
+        - A common cluster is TRAV1-2 TRAJ33 
+        - separate alpha and beta cut-offs
+    - Priority: 1/(number of nodes * sample total * total count)
+
 - Epitope/Annotation
+    - with the epitopes find the associated epitopes from TCRex 
+    - Unselect "Add in Epitope data" to focus on the annotations. So, you can identify the TCR linked to specific annotation models (e.g., FunctionTcell)
 
 GEx -> TCR
 ^^^^^^^^^^^^^^^^

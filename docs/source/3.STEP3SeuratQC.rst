@@ -193,8 +193,9 @@ The scGate threshold was set to 0.2 for full capture and 0.5 for the immune pane
         + activated-early/senescent (B3GAT1-CD28-)
         + non-activated/early-activated (B3GAT1-CD28+)
         + Terminally differentiated (B3GAT1+CD28-)
-    - cycling
+    - cycling (e.g., cell division)
         + MKI67+TOP2A+
+        + This is the same as cell division 
     - Th1_cytokines 
         + combination of IFNG and TNF
     - TCRseq (meta.data TCR-seq)
