@@ -193,8 +193,9 @@ The scGate threshold was set to 0.2 for full capture and 0.5 for the immune pane
         + activated-early/senescent (B3GAT1-CD28-)
         + non-activated/early-activated (B3GAT1-CD28+)
         + Terminally differentiated (B3GAT1+CD28-)
-    - cycling
+    - cycling (e.g., cell division)
         + MKI67+TOP2A+
+        + This is the same as cell division 
     - Th1_cytokines 
         + combination of IFNG and TNF
     - TCRseq (meta.data TCR-seq)
@@ -249,7 +250,7 @@ The user can alter the names in front of the _scGate_Model.tsv, while the latter
 To use scGate effectively, the genes within a set are read as OR (either of the marker need to be present), while the levels equate to AND i.e., All markers need to be present. These levels then need to use positive or negative under the use_as column. We recommend not defining the positive and negative markers in the 
 
 .. image:: img/3c_example_model_scGate.png
-  :width: 600
+  :width: 300
   :alt: Alternative text
 
 Use a fresh run of the app, so the new database is read into, otherwise it will be the default. 

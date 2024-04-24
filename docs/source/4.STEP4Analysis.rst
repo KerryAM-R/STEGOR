@@ -158,5 +158,7 @@ GEx -> TCR
 Example 1. Colitis dataset
 --------------------------
 
-In the zenodo repository we have uploaded the colitis dataset. This consis of 
+In the zenodo repository we have uploaded the colitis dataset. This consis of 32 samples in the colitis dataset with the additon of the background data. 
+
+
 

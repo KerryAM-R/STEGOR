@@ -130,9 +130,9 @@
 <li><p>TCRex output file (.tsv)</p></li>
 </ul>
 <p>Side bar panel for uploading the four analysis files.</p>
-<a class="reference internal image-reference" href="_images/4_overview_sbp.png"><img alt="Alternative text" src="_images/4_overview_sbp.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/4_overview_sbp.png"><img alt="Alternative text" src="_images/4_overview_sbp.png" style="width: 200px;" /></a>
 <p>Uploaded example K409 Melanoma dataset</p>
-<a class="reference internal image-reference" href="_images/4_uploading.png"><img alt="Alternative text" src="_images/4_uploading.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/4_uploading.png"><img alt="Alternative text" src="_images/4_uploading.png" style="width: 1200px;" /></a>
 </section>
 <section id="side-bar-panel">
 <h3>Side Bar Panel<a class="headerlink" href="#side-bar-panel" title="Link to this heading"></a></h3>
@@ -141,57 +141,119 @@
 <p>Display by Selected Individual = no or yes. This is linked to the “Selected Individual” button.</p>
 <p>Number of plot row  = 2. This allows the user to select the number of rows to display as desired.</p>
 <p>The “Split graph by:” button allows for some graphs e.g., Pie charts, to be split by this variable rather than the “Selected Individual”</p>
-<a class="reference internal image-reference" href="_images/4_display-graph.png"><img alt="Alternative text" src="_images/4_display-graph.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/4_display-graph.png"><img alt="Alternative text" src="_images/4_display-graph.png" style="width: 300px;" /></a>
 <p>The user can also select which variable to colour the graphs by with “Colour by:”</p>
 <p>Additionally, the uder can also select the colouring Palettes that includes: “default”, “rainbow”, “random”, “heat.colors”, “terrain.colors”, “topo.colors”, “hcl.colors”, “one”</p>
 <p>The “one” colour is linked to the “One colour”. Additionally all NA variable will be coloured the light grey #E5E5E5</p>
-<a class="reference internal image-reference" href="_images/4_colouring_buttons.png"><img alt="Alternative text" src="_images/4_colouring_buttons.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/4_colouring_buttons.png"><img alt="Alternative text" src="_images/4_colouring_buttons.png" style="width: 200px;" /></a>
 <p>For some of the functions, the user can restrict to “What individuals to include”</p>
 <p>This includes both the
 - “Display one individual?”
 - “Display one individual”</p>
 <p>For instance this is used to filter the TCR table in the clonal abudance section to more easily identify the most abundant cloens relative to a specific sample/individual based on the “selected individuals” button.</p>
-<a class="reference internal image-reference" href="_images/4_What_individuals_to_include.png"><img alt="Alternative text" src="_images/4_What_individuals_to_include.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/4_What_individuals_to_include.png"><img alt="Alternative text" src="_images/4_What_individuals_to_include.png" style="width: 200px;" /></a>
 <p>The user can also select the plot parameters that are relevant to the majority of the graphs</p>
 <dl class="simple">
 <dt>This includes:</dt><dd><ul class="simple">
-<li><p>Size of the # - size of the numbered axis</p></li>
+<li><p>Axis number size - size of the numbered axis</p></li>
+<li><p>Axis text size i.e., axis title</p></li>
+<li><p>Legend text size</p></li>
+<li><p>legend location (left, right, top, bottom or none)</p></li>
+<li><p>Type of Font</p></li>
 </ul>
 </dd>
 </dl>
-<p>4_plot_parameters.png</p>
-<img alt="Alternative text" src="_images/4_What_individuals_to_include.png" />
+<img alt="Alternative text" src="_images/4_plot_parameters.png" />
 </section>
 <section id="overview">
 <h3>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><dl class="simple">
 <dt>GEx</dt><dd><ul>
-<li><p>Side bar panel =</p></li>
-<li><p>main panel =</p></li>
+<li><p>Percentage (Table)</p></li>
+<li><p>UMAP of the annotation models</p></li>
+<li><p>Pie chart</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p>TCR</p></li>
+<li><dl class="simple">
+<dt>TCR</dt><dd><ul>
+<li><p>UPSET plot (&lt;31)</p></li>
+<li><p>Line graph (clone tracking)</p></li>
+<li><p>expansion (bar)</p></li>
+<li><p>expansion (UMAP)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </section>
 <section id="tcr-seq-gex">
 <h3>TCR-seq -&gt; GEX<a class="headerlink" href="#tcr-seq-gex" title="Link to this heading"></a></h3>
+<p>Each section has a summary table, UMAP, Heatmap, stats, dot-plot and over-representation.</p>
+<p>Some of the secions also have unique features.</p>
 <ul class="simple">
-<li><p>Clonal abudance</p></li>
+<li><dl class="simple">
+<dt>Clonal abudance</dt><dd><ul>
+<li><p>Bar graph</p></li>
+<li><p>Ridge and Violin plots (for a specific gene)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 <li><p>Exapanded</p></li>
-<li><p>ClusTCR</p></li>
-<li><p>Epitope</p></li>
+<li><dl class="simple">
+<dt>ClusTCR</dt><dd><ul>
+<li><p>Motif</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Epitope</dt><dd><ul>
+<li><p>Load Epitope list</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </section>
 <section id="automation-tcr-gex">
 <h3>Automation (TCR -&gt; GEX)<a class="headerlink" href="#automation-tcr-gex" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>Analysis steps</p></li>
-<li><p>Clonotype</p></li>
-<li><p>Cluster</p></li>
-<li><p>Epitope/Annotation</p></li>
+<li><dl class="simple">
+<dt>Clonotype</dt><dd><ul>
+<li><p>Download public (bar graphs), summary table, dot plot for each public-like clone</p></li>
+<li><p>Download private (single sample)</p></li>
+<li><p>Can restrict based on the calculated priority 1/(sample total * total count)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Cluster</dt><dd><ul>
+<li><dl class="simple">
+<dt>Download the motif, summary table, dot plot for each public-like and private clusters</dt><dd><ul>
+<li><p>A common cluster is TRAV1-2 TRAJ33</p></li>
+<li><p>separate alpha and beta cut-offs</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Priority: 1/(number of nodes * sample total * total count)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Epitope/Annotation</dt><dd><ul>
+<li><p>with the epitopes find the associated epitopes from TCRex</p></li>
+<li><p>Unselect “Add in Epitope data” to focus on the annotations. So, you can identify the TCR linked to specific annotation models (e.g., FunctionTcell)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </section>
 <section id="gex-tcr">
@@ -217,7 +279,7 @@
 </section>
 <section id="example-1-colitis-dataset">
 <h2>Example 1. Colitis dataset<a class="headerlink" href="#example-1-colitis-dataset" title="Link to this heading"></a></h2>
-<p>In the zenodo repository we have uploaded the colitis dataset. This consis of</p>
+<p>In the zenodo repository we have uploaded the colitis dataset. This consis of 32 samples in the colitis dataset with the additon of the background data.</p>
 </section>
 </section>
 

@@ -38,13 +38,13 @@ This includes:
 Side bar panel for uploading the four analysis files. 
 
 .. image:: img/4_overview_sbp.png
-  :width: 600
+  :width: 200
   :alt: Alternative text
 
 Uploaded example K409 Melanoma dataset
 
 .. image:: img/4_uploading.png
-  :width: 600
+  :width: 1200
   :alt: Alternative text
 
 Side Bar Panel 
@@ -61,7 +61,7 @@ Number of plot row  = 2. This allows the user to select the number of rows to di
 The "Split graph by:" button allows for some graphs e.g., Pie charts, to be split by this variable rather than the "Selected Individual"
 
 .. image:: img/4_display-graph.png
-  :width: 600
+  :width: 300
   :alt: Alternative text
 
 The user can also select which variable to colour the graphs by with "Colour by:" 
@@ -72,7 +72,7 @@ The "one" colour is linked to the "One colour". Additionally all NA variable wil
 
 .. image:: img/4_colouring_buttons.png
   :alt: Alternative text
-  :width: 600
+  :width: 200
 
 For some of the functions, the user can restrict to "What individuals to include"
 
@@ -83,43 +83,66 @@ This includes both the
 For instance this is used to filter the TCR table in the clonal abudance section to more easily identify the most abundant cloens relative to a specific sample/individual based on the "selected individuals" button. 
 
 .. image:: img/4_What_individuals_to_include.png
-  :width: 600
+  :width: 200
   :alt: Alternative text
 
 The user can also select the plot parameters that are relevant to the majority of the graphs
 
 This includes:
-    - Size of the # - size of the numbered axis
+    - Axis number size - size of the numbered axis
+    - Axis text size i.e., axis title
+    - Legend text size
+    - legend location (left, right, top, bottom or none)
+    - Type of Font 
 
-
-4_plot_parameters.png
-
-.. image:: img/4_What_individuals_to_include.png
+.. image:: img/4_plot_parameters.png
   :alt: Alternative text
 
 Overview
 ^^^^^^^^
 - GEx
-    - Side bar panel = 
-    - main panel = 
-
+    - Percentage (Table)
+    - UMAP of the annotation models
+    - Pie chart
 - TCR
+    - UPSET plot (<31)
+    - Line graph (clone tracking)
+    - expansion (bar) 
+    - expansion (UMAP)
 
 TCR-seq -> GEX
 ^^^^^^^^^^^^^^^^
 
+Each section has a summary table, UMAP, Heatmap, stats, dot-plot and over-representation.
+
+Some of the secions also have unique features.
+
 - Clonal abudance
+    - Bar graph 
+    - Ridge and Violin plots (for a specific gene)
 - Exapanded
 - ClusTCR
+    - Motif 
 - Epitope 
+    - Load Epitope list 
 
 Automation (TCR -> GEX)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Analysis steps
-- Clonotype
+- Clonotype 
+    - Download public (bar graphs), summary table, dot plot for each public-like clone
+    - Download private (single sample)
+    - Can restrict based on the calculated priority 1/(sample total * total count)
+    
 - Cluster 
+    - Download the motif, summary table, dot plot for each public-like and private clusters
+        - A common cluster is TRAV1-2 TRAJ33 
+        - separate alpha and beta cut-offs
+    - Priority: 1/(number of nodes * sample total * total count)
+
 - Epitope/Annotation
+    - with the epitopes find the associated epitopes from TCRex 
+    - Unselect "Add in Epitope data" to focus on the annotations. So, you can identify the TCR linked to specific annotation models (e.g., FunctionTcell)
 
 GEx -> TCR
 ^^^^^^^^^^^^^^^^
@@ -135,5 +158,7 @@ GEx -> TCR
 Example 1. Colitis dataset
 --------------------------
 
-In the zenodo repository we have uploaded the colitis dataset. This consis of 
+In the zenodo repository we have uploaded the colitis dataset. This consis of 32 samples in the colitis dataset with the additon of the background data. 
+
+
 
