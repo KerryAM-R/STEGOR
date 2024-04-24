@@ -7,7 +7,7 @@
   <title>Frequenctly Asked Questions &mdash; STEGO.R 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b833e6d8" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=fab6a3b9" />
 
   
   <!--[if lt IE 9]>
@@ -55,7 +55,14 @@
 <li class="toctree-l1"><a class="reference internal" href="3.STEP3SeuratQC.html">Step 3. Quality control</a></li>
 <li class="toctree-l1"><a class="reference internal" href="4.STEP4Analysis.html">Step 4. Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="5.postAnalysis.html">Post Analysis</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Frequenctly Asked Questions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Frequenctly Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vdj-meta-data-questions">VDJ meta-data Questions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-do-the-vdj-gene-cdr3-ag-bd-mean">What do the vdj_gene_cdr3_AG_BD mean?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-the-difference-between-the-vdj-gene-cdr3-ag-bd-and-vj-cdr3-ag-bd-or-vdj-gene-ag-bd">What is the difference between the vdj_gene_cdr3_AG_BD and vj_cdr3_AG_BD or vdj_gene_AG_BD?</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="7.History.html">History</a></li>
 </ul>
 
@@ -89,6 +96,26 @@
 <blockquote>
 <div><p>Under active construction</p>
 </div></blockquote>
+<section id="vdj-meta-data-questions">
+<h2>VDJ meta-data Questions<a class="headerlink" href="#vdj-meta-data-questions" title="Link to this heading"></a></h2>
+<section id="what-do-the-vdj-gene-cdr3-ag-bd-mean">
+<h3>What do the vdj_gene_cdr3_AG_BD mean?<a class="headerlink" href="#what-do-the-vdj-gene-cdr3-ag-bd-mean" title="Link to this heading"></a></h3>
+<p>During the intial processing step 1. there meta data, based on the TCR-seq is summarised into differen columns.</p>
+<p>v = v_gene, j = j_gene and d = diversity.</p>
+<p>cdr3 = variable cdr3 sequence.</p>
+<p>AG = alpha/gamma</p>
+<p>BD = beta/delta chains</p>
+<p>This column has the vj of the alpha/gamma chains cdr3 sequence and the vdj of the beta/delta with cdr3 sequence</p>
+</section>
+<section id="what-is-the-difference-between-the-vdj-gene-cdr3-ag-bd-and-vj-cdr3-ag-bd-or-vdj-gene-ag-bd">
+<h3>What is the difference between the vdj_gene_cdr3_AG_BD and vj_cdr3_AG_BD or vdj_gene_AG_BD?<a class="headerlink" href="#what-is-the-difference-between-the-vdj-gene-cdr3-ag-bd-and-vj-cdr3-ag-bd-or-vdj-gene-ag-bd" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>has the complete pairing information of the TCR (see previous question for naming covention)</p></li>
+<li><p>only the vj genes are present for both paired chains, while the d gene is absernt from the gene name.</p></li>
+<li><p>Only the vdj genes are present for both the alpha/gamma and beta/delta. The cdr3 sequence is not present.</p></li>
+</ol>
+</section>
+</section>
 </section>
 
 
