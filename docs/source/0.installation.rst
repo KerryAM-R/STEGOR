@@ -186,3 +186,13 @@ the user will also have access to the following files
 - 3a-c filtering_merging_harmony_annotating.R
 - Project.Rproj
 - STEGO.R 
+
+Re-installing
+-------------
+
+Re-run this line from the install.R file to check for updates. 
+
+::
+
+   devtools::install_github("KerryAM-R/STEGO.R")
+
