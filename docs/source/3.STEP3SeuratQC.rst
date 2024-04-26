@@ -159,7 +159,7 @@ The annotations are added to the end of the meta data table in the Seurat object
               file = sc,
               TcellFunction = T,
               generic = T,
-              exhausted = T,
+              immune_checkpoint = T,
               senescence = T,
               cycling = T,
               Th1_cytokines = T,
@@ -180,20 +180,18 @@ Default annotation models with scGate
 
 *Note: Under development.*
 
-The scGate threshold was set to 0.2 for full capture and 0.5 for the immune panel (<400 transcripts). 
+The scGate threshold was set to 0.2 for full capture and 0.55 for the immune panel (<400 transcripts). 
 
 * **Human** 
     - TcellFunction (see Annotation table)
-    - Generic
-        + CD4, CD8, DN as well as DC's, Monocytes, and B cells
-    - exhausted
-        + Based on four markers: PDCD1 (PD-1), TIGIT, (LAG-3) and 
-    - senescence
+    - immune checkpoint
+        + Based on four markers: PDCD1 (PD-1), TIGIT, (LAG-3) and H
+    - Senescence
         + Activated (B3GAT1+CD28+)
         + activated-early/senescent (B3GAT1-CD28-)
         + non-activated/early-activated (B3GAT1-CD28+)
         + Terminally differentiated (B3GAT1+CD28-)
-    - cycling (e.g., cell division)
+    - Cycling (e.g., cell division)
         + MKI67+TOP2A+
         + This is the same as cell division 
     - Th1_cytokines 
