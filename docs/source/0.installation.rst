@@ -174,7 +174,7 @@ Unzip the "Directory_for_Project.zip" file. This folder contains our recommended
 This folder contains the following folder:
 
 .. image:: img/0_Directory_for_project.png
-  :width: 1200
+  :width: 600
   :alt: Alternative text
 
 
