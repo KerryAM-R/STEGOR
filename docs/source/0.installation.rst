@@ -192,6 +192,8 @@ Re-installing
 
 Re-run this line from the install.R file to check for updates. 
 
+Restart R, once it has been installed. If you have the latest version of R, updated all packages with 1. However, if R is out of date, use 3 instead. 
+
 ::
 
    devtools::install_github("KerryAM-R/STEGO.R")
