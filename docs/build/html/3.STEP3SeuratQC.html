@@ -238,7 +238,7 @@ sc &lt;-     scGate_annotating(
           file = sc,
           TcellFunction = T,
           generic = T,
-          exhausted = T,
+          immune_checkpoint = T,
           senescence = T,
           cycling = T,
           Th1_cytokines = T,
@@ -257,27 +257,20 @@ saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 <section id="default-annotation-models-with-scgate">
 <h3>Default annotation models with scGate<a class="headerlink" href="#default-annotation-models-with-scgate" title="Link to this heading"></a></h3>
 <p><em>Note: Under development.</em></p>
-<p>The scGate threshold was set to 0.2 for full capture and 0.5 for the immune panel (&lt;400 transcripts).</p>
+<p>The scGate threshold was set to 0.2 for full capture and 0.55 for the immune panel (&lt;400 transcripts).</p>
 <ul class="simple">
 <li><dl class="simple">
 <dt><strong>Human</strong></dt><dd><ul>
 <li><p>TcellFunction (see Annotation table)</p></li>
 <li><dl class="simple">
-<dt>Generic</dt><dd><ul>
-<li><p>CD4, CD8, DN as well as DC’s, Monocytes, and B cells</p></li>
+<dt>immune checkpoint</dt><dd><ul>
+<li><p>Based on four markers: PDCD1 (PD-1), TIGIT, (LAG-3) and H</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>exhausted</dt><dd><ul>
-<li><p>Based on four markers: PDCD1 (PD-1), TIGIT, (LAG-3) and</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>senescence</dt><dd><ul>
+<dt>Senescence</dt><dd><ul>
 <li><p>Activated (B3GAT1+CD28+)</p></li>
 <li><p>activated-early/senescent (B3GAT1-CD28-)</p></li>
 <li><p>non-activated/early-activated (B3GAT1-CD28+)</p></li>
@@ -287,7 +280,7 @@ saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 </dl>
 </li>
 <li><dl class="simple">
-<dt>cycling (e.g., cell division)</dt><dd><ul>
+<dt>Cycling (e.g., cell division)</dt><dd><ul>
 <li><p>MKI67+TOP2A+</p></li>
 <li><p>This is the same as cell division</p></li>
 </ul>

@@ -69,6 +69,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#running-stego-r">Running STEGO.R</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#trouble-shooting-missing-packages">Trouble shooting missing packages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#understanding-the-directory-for-project-folder">Understanding the “Directory_for_Project” Folder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#re-installing">Re-installing</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="1.formatting.html">Step 1. Formatting</a></li>
@@ -261,7 +262,7 @@ i. Quick tutorial for understanding RStudio environment with this <a class="refe
 <h2>Understanding the “Directory_for_Project” Folder<a class="headerlink" href="#understanding-the-directory-for-project-folder" title="Link to this heading"></a></h2>
 <p>Unzip the “Directory_for_Project.zip” file. This folder contains our recommended structure on how to organise your files for each scRNA-seq project. We will refer to these files through out the Tutorial.</p>
 <p>This folder contains the following folder:</p>
-<a class="reference internal image-reference" href="_images/0_Directory_for_project.png"><img alt="Alternative text" src="_images/0_Directory_for_project.png" style="width: 1200px;" /></a>
+<a class="reference internal image-reference" href="_images/0_Directory_for_project.png"><img alt="Alternative text" src="_images/0_Directory_for_project.png" style="width: 600px;" /></a>
 <p>the user will also have access to the following files</p>
 <ul class="simple">
 <li><p>Installing.R</p></li>
@@ -274,6 +275,14 @@ i. Quick tutorial for understanding RStudio environment with this <a class="refe
 <li><p>Project.Rproj</p></li>
 <li><p>STEGO.R</p></li>
 </ul>
+</section>
+<section id="re-installing">
+<h2>Re-installing<a class="headerlink" href="#re-installing" title="Link to this heading"></a></h2>
+<p>Re-run this line from the install.R file to check for updates.</p>
+<p>Restart R, once it has been installed. If you have the latest version of R, updated all packages with 1. However, if R is out of date, use 3 instead.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">devtools</span><span class="p">::</span><span class="n">install_github</span><span class="p">(</span><span class="s2">&quot;KerryAM-R/STEGO.R&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 </section>
 
