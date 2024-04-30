@@ -8,4 +8,4 @@ Read the tutorial here:
 
 Get the latest tutorial at `STEGO.R`_.
 
-.. _STEGO.R: https://stegor-documents.readthedocs.io/en/latest/index.html
+.. _STEGO.R: https://stegor.readthedocs.io/en/latest/index.html
