@@ -95,7 +95,7 @@ You will need to create a git token
    
    Once all packages are installed, this will be the final section of the installation process. 
 
-Expected final lines once STEGO.R has been correctly installed.
+
 
 **Other Mac prompts on M1 or greater chip**
 
@@ -111,6 +111,8 @@ The installation may ask you the following to install from source. In this insta
       Packages which are only available in source form, and may need compilation of C/C++/Fortran: ‘zlibbioc’ ‘XVector’ ‘SparseArray’ ‘S4Arrays’ ‘Biobase’ ‘DelayedArray’ ‘GenomicRanges’ ‘BiocNeighbors’ ‘BiocParallel’
       Do you want to attempt to install these from sources? (Yes/no/cancel) y
          installing the source packages ‘zlibbioc’, ‘XVector’, ‘SparseArray’, ‘S4Arrays’, ‘GenomeInfoDb’, ‘Biobase’, ‘DelayedArray’, ‘GenomicRanges’. ‘SummarizedExperiment’, ‘SingleCellExperiment’, ‘BiocNeighbors’, ‘BiocParallel’, ‘UCell’, ‘Seurat’
+
+Expected final lines once STEGO.R has been correctly installed.
 
 :: 
 
