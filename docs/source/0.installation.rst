@@ -205,12 +205,11 @@ The installation may ask you the following to install from source. In this insta
 ::
 
      There is a binary version available but the source version is later:
-       binary source needs_compilation
-Seurat  5.0.3  5.1.0              TRUE
-
-Do you want to install from sources the package which needs compilation? (Yes/no/cancel) y
-Packages which are only available in source form, and may need compilation of C/C++/Fortran: ‘zlibbioc’ ‘XVector’ ‘SparseArray’ ‘S4Arrays’ ‘Biobase’
-  ‘DelayedArray’ ‘GenomicRanges’ ‘BiocNeighbors’ ‘BiocParallel’
-Do you want to attempt to install these from sources? (Yes/no/cancel) y
-installing the source packages ‘zlibbioc’, ‘XVector’, ‘SparseArray’, ‘S4Arrays’, ‘GenomeInfoDb’, ‘Biobase’, ‘DelayedArray’, ‘GenomicRanges’, ‘SummarizedExperiment’, ‘SingleCellExperiment’, ‘BiocNeighbors’, ‘BiocParallel’, ‘UCell’, ‘Seurat’
+     binary source needs_compilation
+         Seurat  5.0.3  5.1.0              TRUE
+      
+      Do you want to install from sources the package which needs compilation? (Yes/no/cancel) y
+      Packages which are only available in source form, and may need compilation of C/C++/Fortran: ‘zlibbioc’ ‘XVector’ ‘SparseArray’ ‘S4Arrays’ ‘Biobase’ ‘DelayedArray’ ‘GenomicRanges’ ‘BiocNeighbors’ ‘BiocParallel’
+      Do you want to attempt to install these from sources? (Yes/no/cancel) y
+         installing the source packages ‘zlibbioc’, ‘XVector’, ‘SparseArray’, ‘S4Arrays’, ‘GenomeInfoDb’, ‘Biobase’, ‘DelayedArray’, ‘GenomicRanges’. ‘SummarizedExperiment’, ‘SingleCellExperiment’, ‘BiocNeighbors’, ‘BiocParallel’, ‘UCell’, ‘Seurat’
 
