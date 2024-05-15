@@ -95,6 +95,23 @@ You will need to create a git token
    
    Once all packages are installed, this will be the final section of the installation process. 
 
+
+
+**Other Mac prompts on M1 or greater chip**
+
+The installation may ask you the following to install from source. In this instance, select yes. 
+
+::
+
+     There is a binary version available but the source version is later:
+     binary source needs_compilation
+         Seurat  5.0.3  5.1.0              TRUE
+      
+      Do you want to install from sources the package which needs compilation? (Yes/no/cancel) y
+      Packages which are only available in source form, and may need compilation of C/C++/Fortran: ‘zlibbioc’ ‘XVector’ ‘SparseArray’ ‘S4Arrays’ ‘Biobase’ ‘DelayedArray’ ‘GenomicRanges’ ‘BiocNeighbors’ ‘BiocParallel’
+      Do you want to attempt to install these from sources? (Yes/no/cancel) y
+         installing the source packages ‘zlibbioc’, ‘XVector’, ‘SparseArray’, ‘S4Arrays’, ‘GenomeInfoDb’, ‘Biobase’, ‘DelayedArray’, ‘GenomicRanges’. ‘SummarizedExperiment’, ‘SingleCellExperiment’, ‘BiocNeighbors’, ‘BiocParallel’, ‘UCell’, ‘Seurat’
+
 Expected final lines once STEGO.R has been correctly installed.
 
 :: 
@@ -197,4 +214,6 @@ Restart R, once it has been installed. If you have the latest version of R, upda
 ::
 
    devtools::install_github("KerryAM-R/STEGO.R")
+
+
 
