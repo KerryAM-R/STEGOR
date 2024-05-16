@@ -195,7 +195,7 @@ This folder contains the following folder:
   :alt: Alternative text
 
 
-the user will also have access to the following files 
+The user will also have access to the following files:
 
 - Installing.R
 - 1_preprocessing.R (10x only)
