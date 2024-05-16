@@ -78,3 +78,6 @@
     background-color: #6F00B0; /* Change to your desired background color */
 }
 
+div[role="search"] input[type="text"]::placeholder {
+    color: #800080; /* Change placeholder text color to purple */
+}
