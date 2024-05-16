@@ -88,7 +88,8 @@ Merging
   :width: 600
   :alt: Alternative text
 
-For many file merging and annotating as the program window may disappear, we recommend merging and annotating using ** **
+** For many file merging and annotating as the program window may disappear, we recommend merging and annotating using command-line functions **
+
 ::
 
     require(STEGO.R)
@@ -102,7 +103,7 @@ For many file merging and annotating as the program window may disappear, we rec
     # merges the different layers in V5 of seurat 
     sc <- JoinLayers(sc_merge,  assay = "RNA") 
     
-    # save the merged file - it will not have the scaled data and PCA stored any more due to the merging process. This is in case R crashes and it needs to be read in
+    # save the merged file - it will not have the scaled data and PCA stored any more due to the merging process. 
     saveRDS(sc_merge,"2_scObj/sc_merge.rds") 
 
 batch correction 
