@@ -51,7 +51,7 @@
 
 /* Override the background color and border color of note elements */
 .admonition.note {
-    background-color: #E9C2FF; /* Change to your desired background color */
+    background-color: #E9C2FF; /* light purple */
     border-color: #6F00B0; /* Change to your desired border color */
 }
 
@@ -71,11 +71,9 @@
 
 /* Override styles for the "Note" text */
 .admonition.note .admonition-title {
-    color: #E9C2FF; /* Change to your desired color */
+    color: #E9C2FF; /* light purple */
     background-color: #6F00B0; /* Change to your desired background color */
 }
-
-
 
 div[role="search"] input[type="text"]::placeholder {
     color: #d8ffc2  !important; /* Change placeholder text color to purple */
@@ -84,10 +82,35 @@ div[role="search"] input[type="text"]::placeholder {
 div[role="search"] input[type="text"] {
     background-color: #41b000 ; /* Change background color to purple */
     border-color: #d8ffc2; /* Change border color to white */
-    border-width: 4px; /* Change border thickness to 2 pixels */
+    border-width: 3px; /* Change border thickness to 2 pixels */
+    font-size: 16px; /* Adjust the font size as needed */
 }
 
 /* Override the color of the text in the side-nav-search */
 .wy-side-nav-search input[type="text"] {
     color: #d8ffc2 !important; /* Change to your desired color */
+}
+
+/* Change the default color of hyperlinks */
+a {
+    color: #6F00B0; /* Change to your desired color */		
+}
+
+/* Change the hover color of hyperlinks */
+a:hover {
+    color: #6F00B0; /* Dark purple */
+    background-color: #E9C2FF; /* Light purple */
+}
+
+
+/* Change the color of visited hyperlinks */
+a:visited {
+    color: #6F00B0; /* Dark purple color */
+}
+
+
+/* Change the background color and text color of the selected top-level item in the sidebar */
+.wy-nav-side .current > a {
+    background-color: #6F00B0 !important; /* Change to your desired background color */
+    color: #E9C2FF !important; /* Change to your desired text color */
 }
