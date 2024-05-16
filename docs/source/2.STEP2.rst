@@ -60,24 +60,35 @@ This process requires the user to upload AG separate for the BD clustering. This
   :width: 600
   :alt: Alternative text
 
-Error issues
-~~~~~~~~~~~~
+Command line process
+~~~~~~~~~~~~~~~~~~~~
 
-If the file produces a matrix larger than 2^31, the user will need to use the command-line process. 
+**Step 2b. has command line equivalent codes.**
 
 ::
 
     require(ClusTCR2)
-    clust.data.raw <- read.csv("1_ClusTCR/AG_Multi_ClusTCR.csv")
-    names(clust.data.raw)[2]
-    step1 <- ClusTCR2::ClusTCR_Large(clust.data.raw,allele = F,v_gene = names(clust.data.raw)[2])
-    step2 <- ClusTCR2::mcl_cluster_large(step1)
-    saveRDS(step2,"1_ClusTCR/AG_clusTCR2.all.rds") # saves the two list objects
-    write.csv(step2[[1]],"3_Analysis/AG_clusTCR2.csv",row.names = F)
+    # this process assumes that you have already merged the files using the interface, and saved the file in 1_ClusTCR folder
 
+    # alpha/gamma chain -----
+    clust.data.raw <- read.csv("1_ClusTCR/AG_Multi_ClusTCR.csv")
+    
+    # this should print the v_gene name
+    names(clust.data.raw)
+    
+    # once you have checked the v_gene name matches, proceeded to runing the clustering step (1 edit distance), followed by the mcl step to label the clusters.
+    step1 <- ClusTCR2::ClusTCR_Large(clust.data.raw,allele = F,v_gene = "v_gene")
+    step2 <- ClusTCR2::mcl_cluster_large(step1)
+    # this saves both the analysis cluster table and the list object that can create each of the unique network plots
+    saveRDS(step2,"1_ClusTCR/AG_clusTCR2.all.rds")
+    
+    # saves the final clustering table for the Step 4. Analysis section.
+    write.csv(step2[[1]],"AG_clusTCR2.csv",row.names = F)
+
+     # beta/delta chain ----
     clust.data.raw <- read.csv("1_ClusTCR/BD_Multi_ClusTCR.csv")
     names(clust.data.raw)[2]
-    step1 <- ClusTCR2::ClusTCR_Large(clust.data.raw,allele = F,v_gene = names(clust.data.raw)[2])
+    step1 <- ClusTCR2::ClusTCR_Large(clust.data.raw, allele = F, v_gene = "v_gene")
     step2 <- ClusTCR2::mcl_cluster_large(step1)
     saveRDS(step2,"1_ClusTCR/BD_clusTCR2.all.rds") # saves the two list objects
     write.csv(step2[[1]],"3_Analysis/BD_clusTCR2.csv",row.names = F)
