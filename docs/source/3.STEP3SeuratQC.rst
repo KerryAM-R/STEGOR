@@ -12,7 +12,7 @@ Step 3. Quality control
 **3a.** Quality control of a Seurat object
 ------------------------------------------------------------------
 
-This section describes the Seurat QC process for human samples with 10x Genomics. 
+**This section describes the Seurat QC process for human samples with 10x Genomics.**
 
 .. image:: img/3a.png
   :width: 200
@@ -49,6 +49,24 @@ This section describes the Seurat QC process for human samples with 10x Genomics
   :alt: UMAP
 
 10. Now your file has completed the Seurat QC and has had the TCR sequences added to the meta-data. click the "Download Seurat" object and save it to the **"2_SCobj"** folder.
+
+
+**command-line equivalent**
+
+Once the user has identified the parameters for filtering, we recommend using the command-line function that automates this process. 
+
+::
+
+    ###### Step 3a. Automated file filtering ------
+    # default parameteres: folder = "1_SeuratQC", dataset_type = "10x", species = "hs",  features.min = 200, features.max = 6000, percent.mt = 20, percent.rb = 5, dimension_sc = 15, resolution_sc = 1, limit_to_TCR_GEx = F, save_plots = T
+
+    # run defaults for 10x based on seurat. 
+    automated_sc_filtering(dataset_type = "10x")
+    
+    # BD Rhapsody (immune panel) -----
+    automated_sc_filtering(dataset_type = "BD_rap",features.min = 45,features.max = 160, percent.mt = 0, percent.rb = 0)
+
+
  
 **3b.** Merging multiple Seurat objects and batch correction.
 ------------------------------------------------------------------
