@@ -190,7 +190,7 @@ The annotations are added to the end of the meta data table in the Seurat object
     
     sc@meta.data$Cell_Index_old <- sc@meta.data$Cell_Index
     sc@meta.data$Cell_Index <- rownames(sc@meta.data)
-    head(sc@meta.data)
+    
     saveRDS(sc,"3_analysis/sc_anno.rds")
 
 
