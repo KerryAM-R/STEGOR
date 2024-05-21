@@ -90,11 +90,6 @@ You will need to create a git token
    When you see this line: "These packages have more recent versions available. It is recommended to update all of them. Which would you like to update?"
    
    Answer with  "1" and hit "Enter". 
-   
-   On a Mac if you see "Do you want to install from sources the package which needs compilation? (Yes/no/cancel)", answer with  "no" and hit "Enter". This same message will appear as an popup on Windows.
-   
-   Once all packages are installed, this will be the final section of the installation process. 
-
 
 
 **Other Mac prompts on M1 or greater chip**
@@ -104,15 +99,24 @@ The installation may ask you the following to install from source. In this insta
 ::
 
      There is a binary version available but the source version is later:
-     binary source needs_compilation
-         Seurat  5.0.3  5.1.0              TRUE
-      
-      Do you want to install from sources the package which needs compilation? (Yes/no/cancel) y
-      Packages which are only available in source form, and may need compilation of C/C++/Fortran: ‘zlibbioc’ ‘XVector’ ‘SparseArray’ ‘S4Arrays’ ‘Biobase’ ‘DelayedArray’ ‘GenomicRanges’ ‘BiocNeighbors’ ‘BiocParallel’
-      Do you want to attempt to install these from sources? (Yes/no/cancel) y
-         installing the source packages ‘zlibbioc’, ‘XVector’, ‘SparseArray’, ‘S4Arrays’, ‘GenomeInfoDb’, ‘Biobase’, ‘DelayedArray’, ‘GenomicRanges’. ‘SummarizedExperiment’, ‘SingleCellExperiment’, ‘BiocNeighbors’, ‘BiocParallel’, ‘UCell’, ‘Seurat’
+      binary source needs_compilation
+      Seurat  5.0.3  5.1.0              TRUE
 
-Expected final lines once STEGO.R has been correctly installed.
+      Do you want to install from sources the package which needs compilation? (Yes/no/cancel) 
+      y
+      
+
+**Installing the bioconductor packages from Source.**
+
+::
+
+      Packages which are only available in source form, and may need compilation of C/C++/Fortran: ‘zlibbioc’ ‘XVector’ ‘SparseArray’ ‘S4Arrays’ ‘IRanges’ ‘Biobase’ ‘DelayedArray’ ‘GenomicRanges’ ‘S4Vectors’
+        ‘BiocNeighbors’ ‘BiocParallel’
+      Do you want to attempt to install these from sources? (Yes/no/cancel) 
+      y
+
+
+**Expected final lines once STEGO.R has been correctly installed.**
 
 :: 
 
@@ -146,13 +150,17 @@ To have access to wider variety of font, you will need to install the following 
 
 ::
 
-   # needed to use for the first time :D
-   require(extrafont)
-   font_import()
-   loadfonts()
-   
-   fonts <- fonttable()
-   head(fonts)
+      # import all of the fonts to your system. Will only need to be done the first time.
+      require(extrafont)
+      font_import()
+      
+      # when it asks if you would like to install the different fonts
+      y
+      
+      loadfonts()
+      
+      fonts <- fonttable()
+      head(fonts)
 
 Running STEGO.R
 ---------------
