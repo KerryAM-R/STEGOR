@@ -65,6 +65,55 @@ Downloading and installing STEGO.R
 
 Follow the steps in the **install.R** file found in the **Directory_for_Project**
 
+
+:: 
+
+      # see https://stegor-documents.readthedocs.io/en/latest/index.html for more details on the tutorial to follow through.
+      # This is to make sure with installing from source is set to the g++ compiler
+      Sys.setenv("CXX" = "g++")
+      
+      # installing STEGO.R
+      if (!require("BiocManager", quietly = TRUE))
+        install.packages("BiocManager")
+      
+      if (!require("devtools", quietly = TRUE))
+        install.packages("devtools")
+      
+      if (!require("usethis", quietly = TRUE))
+        install.packages("usethis")
+      
+      # install STEGO.R with Devtools
+      # if you get asked about installing from SOURCE, select NO.
+      # if asked about updating the packages, select either 1 for all, or 3 for none.
+      # also run this line to check for updates
+      devtools::install_github("KerryAM-R/STEGO.R")
+      
+      # if asked to update the app either select 1 to updated all
+      1
+      # if asked to install from source on the M1 Mac chip (Seurat)
+      y
+      
+      # if then prompted with all the bioconductor based packages to install from source on M1 or greater Mac chip
+      y
+      
+      # under development - latest build, but may be unstable
+      # devtools::install_github("KerryAM-R/STEGO.R", ref = "beta-version", force = T)
+      
+      # import all of the fonts to your system. Will only need to be done the first time.
+      require(extrafont)
+      font_import()
+      
+      # when it asks if you would like to install the different fonts
+      y
+      
+      loadfonts()
+      
+      fonts <- fonttable()
+      head(fonts)
+      
+      # you many need to add in the git_token, and the Renviorn is opened with the following code.
+      usethis::edit_r_environ()
+
 **STEGO.R not found/API issue**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
