@@ -195,12 +195,12 @@ This folder contains the following folder:
   :alt: Alternative text
 
 
-the user will also have access to the following files 
+The user will also have access to the following files:
 
 - Installing.R
-- 1. preprocessing.R (10x only)
-- 2b. ClusTCR2_large.R 
-- 3a-c filtering_merging_harmony_annotating.R
+- 1_preprocessing.R (10x only)
+- 2b_ClusTCR2_large.R 
+- 3a-c_filtering_merging_harmony_annotating.R
 - Project.Rproj
 - STEGO.R 
 
