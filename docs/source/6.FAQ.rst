@@ -32,3 +32,24 @@ What is the difference between the vdj_gene_cdr3_AG_BD and vj_cdr3_AG_BD or vdj_
 2. only the vj genes are present for both paired chains, while the d gene is absernt from the gene name. 
 3. Only the vdj genes are present for both the alpha/gamma and beta/delta. The cdr3 sequence is not present. 
 
+
+ClusTCR questions
+------------------
+
+Why did the app crash when running clusTCR?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. there may be no clusters generated based on the v_gene and length. 
+
+e.g., In the demo data, the BD does not produce clusters for the K409 combind data. 
+
+:: 
+
+    creating empty matrixes
+    Performing edit distance
+    keeping edit distance of 1
+    Creating target and source object
+    Warning: Error in [[: subscript out of bounds
+
+
+
