@@ -7,7 +7,7 @@
   <title>Step 2. TCRex and ClusTCR2 &mdash; STEGO.R 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=fab6a3b9" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=03b827c4" />
 
   
   <!--[if lt IE 9]>
@@ -52,7 +52,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Step 2. TCRex and ClusTCR2</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#a-merging-tcrex"><strong>2a.</strong> Merging TCRex</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#b-clustering-with-clustcr2"><strong>2b.</strong> Clustering with ClusTCR2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#error-issues">Error issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#command-line-process">Command line process</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="3.STEP3SeuratQC.html">Step 3. Quality control</a></li>
@@ -150,20 +150,31 @@
 </ol>
 <a class="reference internal image-reference" href="_images/2b_clustering_table_for_analysis.png"><img alt="Alternative text" src="_images/2b_clustering_table_for_analysis.png" style="width: 600px;" /></a>
 </section>
-<section id="error-issues">
-<h2>Error issues<a class="headerlink" href="#error-issues" title="Link to this heading"></a></h2>
-<p>If the file produces a matrix larger than 2^31, the user will need to use the command-line process.</p>
+<section id="command-line-process">
+<h2>Command line process<a class="headerlink" href="#command-line-process" title="Link to this heading"></a></h2>
+<p><strong>Step 2b. has command line equivalent codes.</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">require</span><span class="p">(</span><span class="n">ClusTCR2</span><span class="p">)</span>
-<span class="n">clust</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">raw</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s2">&quot;1_ClusTCR/AG_Multi_ClusTCR.csv&quot;</span><span class="p">)</span>
-<span class="n">names</span><span class="p">(</span><span class="n">clust</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">raw</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">step1</span> <span class="o">&lt;-</span> <span class="n">ClusTCR2</span><span class="p">::</span><span class="n">ClusTCR_Large</span><span class="p">(</span><span class="n">clust</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">raw</span><span class="p">,</span><span class="n">allele</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span><span class="n">v_gene</span> <span class="o">=</span> <span class="n">names</span><span class="p">(</span><span class="n">clust</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">raw</span><span class="p">)[</span><span class="mi">2</span><span class="p">])</span>
-<span class="n">step2</span> <span class="o">&lt;-</span> <span class="n">ClusTCR2</span><span class="p">::</span><span class="n">mcl_cluster_large</span><span class="p">(</span><span class="n">step1</span><span class="p">)</span>
-<span class="n">saveRDS</span><span class="p">(</span><span class="n">step2</span><span class="p">,</span><span class="s2">&quot;1_ClusTCR/AG_clusTCR2.all.rds&quot;</span><span class="p">)</span> <span class="c1"># saves the two list objects</span>
-<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">step2</span><span class="p">[[</span><span class="mi">1</span><span class="p">]],</span><span class="s2">&quot;3_Analysis/AG_clusTCR2.csv&quot;</span><span class="p">,</span><span class="n">row</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+<span class="c1"># this process assumes that you have already merged the files using the interface, and saved the file in 1_ClusTCR folder</span>
 
+<span class="c1"># alpha/gamma chain -----</span>
+<span class="n">clust</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">raw</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s2">&quot;1_ClusTCR/AG_Multi_ClusTCR.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># this should print the v_gene name</span>
+<span class="n">names</span><span class="p">(</span><span class="n">clust</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">raw</span><span class="p">)</span>
+
+<span class="c1"># once you have checked the v_gene name matches, proceeded to runing the clustering step (1 edit distance), followed by the mcl step to label the clusters.</span>
+<span class="n">step1</span> <span class="o">&lt;-</span> <span class="n">ClusTCR2</span><span class="p">::</span><span class="n">ClusTCR_Large</span><span class="p">(</span><span class="n">clust</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">raw</span><span class="p">,</span><span class="n">allele</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span><span class="n">v_gene</span> <span class="o">=</span> <span class="s2">&quot;v_gene&quot;</span><span class="p">)</span>
+<span class="n">step2</span> <span class="o">&lt;-</span> <span class="n">ClusTCR2</span><span class="p">::</span><span class="n">mcl_cluster_large</span><span class="p">(</span><span class="n">step1</span><span class="p">)</span>
+<span class="c1"># this saves both the analysis cluster table and the list object that can create each of the unique network plots</span>
+<span class="n">saveRDS</span><span class="p">(</span><span class="n">step2</span><span class="p">,</span><span class="s2">&quot;1_ClusTCR/AG_clusTCR2.all.rds&quot;</span><span class="p">)</span>
+
+<span class="c1"># saves the final clustering table for the Step 4. Analysis section.</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">step2</span><span class="p">[[</span><span class="mi">1</span><span class="p">]],</span><span class="s2">&quot;AG_clusTCR2.csv&quot;</span><span class="p">,</span><span class="n">row</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+
+ <span class="c1"># beta/delta chain ----</span>
 <span class="n">clust</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">raw</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s2">&quot;1_ClusTCR/BD_Multi_ClusTCR.csv&quot;</span><span class="p">)</span>
 <span class="n">names</span><span class="p">(</span><span class="n">clust</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">raw</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">step1</span> <span class="o">&lt;-</span> <span class="n">ClusTCR2</span><span class="p">::</span><span class="n">ClusTCR_Large</span><span class="p">(</span><span class="n">clust</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">raw</span><span class="p">,</span><span class="n">allele</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span><span class="n">v_gene</span> <span class="o">=</span> <span class="n">names</span><span class="p">(</span><span class="n">clust</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">raw</span><span class="p">)[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">step1</span> <span class="o">&lt;-</span> <span class="n">ClusTCR2</span><span class="p">::</span><span class="n">ClusTCR_Large</span><span class="p">(</span><span class="n">clust</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">raw</span><span class="p">,</span> <span class="n">allele</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">v_gene</span> <span class="o">=</span> <span class="s2">&quot;v_gene&quot;</span><span class="p">)</span>
 <span class="n">step2</span> <span class="o">&lt;-</span> <span class="n">ClusTCR2</span><span class="p">::</span><span class="n">mcl_cluster_large</span><span class="p">(</span><span class="n">step1</span><span class="p">)</span>
 <span class="n">saveRDS</span><span class="p">(</span><span class="n">step2</span><span class="p">,</span><span class="s2">&quot;1_ClusTCR/BD_clusTCR2.all.rds&quot;</span><span class="p">)</span> <span class="c1"># saves the two list objects</span>
 <span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">step2</span><span class="p">[[</span><span class="mi">1</span><span class="p">]],</span><span class="s2">&quot;3_Analysis/BD_clusTCR2.csv&quot;</span><span class="p">,</span><span class="n">row</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>

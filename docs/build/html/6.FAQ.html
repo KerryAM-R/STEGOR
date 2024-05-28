@@ -7,7 +7,7 @@
   <title>Frequenctly Asked Questions &mdash; STEGO.R 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=fab6a3b9" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=03b827c4" />
 
   
   <!--[if lt IE 9]>
@@ -57,6 +57,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#vdj-meta-data-questions">VDJ meta-data Questions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#what-do-the-vdj-gene-cdr3-ag-bd-mean">What do the vdj_gene_cdr3_AG_BD mean?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#what-is-the-difference-between-the-vdj-gene-cdr3-ag-bd-and-vj-cdr3-ag-bd-or-vdj-gene-ag-bd">What is the difference between the vdj_gene_cdr3_AG_BD and vj_cdr3_AG_BD or vdj_gene_AG_BD?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#clustcr-questions">ClusTCR questions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#why-did-the-app-crash-when-running-clustcr">Why did the app crash when running clusTCR?</a></li>
 </ul>
 </li>
 </ul>
@@ -112,6 +116,23 @@
 <li><p>only the vj genes are present for both paired chains, while the d gene is absernt from the gene name.</p></li>
 <li><p>Only the vdj genes are present for both the alpha/gamma and beta/delta. The cdr3 sequence is not present.</p></li>
 </ol>
+</section>
+</section>
+<section id="clustcr-questions">
+<h2>ClusTCR questions<a class="headerlink" href="#clustcr-questions" title="Link to this heading"></a></h2>
+<section id="why-did-the-app-crash-when-running-clustcr">
+<h3>Why did the app crash when running clusTCR?<a class="headerlink" href="#why-did-the-app-crash-when-running-clustcr" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>there may be no clusters generated based on the v_gene and length.</p></li>
+</ol>
+<p>e.g., In the demo data, the BD does not produce clusters for the K409 combind data.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">creating</span> <span class="n">empty</span> <span class="n">matrixes</span>
+<span class="n">Performing</span> <span class="n">edit</span> <span class="n">distance</span>
+<span class="n">keeping</span> <span class="n">edit</span> <span class="n">distance</span> <span class="n">of</span> <span class="mi">1</span>
+<span class="n">Creating</span> <span class="n">target</span> <span class="ow">and</span> <span class="n">source</span> <span class="nb">object</span>
+<span class="ne">Warning</span><span class="p">:</span> <span class="n">Error</span> <span class="ow">in</span> <span class="p">[[:</span> <span class="n">subscript</span> <span class="n">out</span> <span class="n">of</span> <span class="n">bounds</span>
+</pre></div>
+</div>
 </section>
 </section>
 </section>

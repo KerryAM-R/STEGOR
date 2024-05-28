@@ -168,6 +168,53 @@ i. Quick tutorial for understanding RStudio environment with this <a class="refe
 <section id="downloading-and-installing-stego-r">
 <h2>Downloading and installing STEGO.R<a class="headerlink" href="#downloading-and-installing-stego-r" title="Link to this heading"></a></h2>
 <p>Follow the steps in the <strong>install.R</strong> file found in the <strong>Directory_for_Project</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># see https://stegor-documents.readthedocs.io/en/latest/index.html for more details on the tutorial to follow through.
+# This is to make sure with installing from source is set to the g++ compiler
+Sys.setenv(&quot;CXX&quot; = &quot;g++&quot;)
+
+# installing STEGO.R
+if (!require(&quot;BiocManager&quot;, quietly = TRUE))
+  install.packages(&quot;BiocManager&quot;)
+
+if (!require(&quot;devtools&quot;, quietly = TRUE))
+  install.packages(&quot;devtools&quot;)
+
+if (!require(&quot;usethis&quot;, quietly = TRUE))
+  install.packages(&quot;usethis&quot;)
+
+# install STEGO.R with Devtools
+# if you get asked about installing from SOURCE, select NO.
+# if asked about updating the packages, select either 1 for all, or 3 for none.
+# also run this line to check for updates
+devtools::install_github(&quot;KerryAM-R/STEGO.R&quot;)
+
+# if asked to update the app either select 1 to updated all
+1
+# if asked to install from source on the M1 Mac chip (Seurat)
+y
+
+# if then prompted with all the bioconductor based packages to install from source on M1 or greater Mac chip
+y
+
+# under development - latest build, but may be unstable
+# devtools::install_github(&quot;KerryAM-R/STEGO.R&quot;, ref = &quot;beta-version&quot;, force = T)
+
+# import all of the fonts to your system. Will only need to be done the first time.
+require(extrafont)
+font_import()
+
+# when it asks if you would like to install the different fonts
+y
+
+loadfonts()
+
+fonts &lt;- fonttable()
+head(fonts)
+
+# you many need to add in the git_token, and the Renviorn is opened with the following code.
+usethis::edit_r_environ()
+</pre></div>
+</div>
 <section id="stego-r-not-found-api-issue">
 <h3><strong>STEGO.R not found/API issue</strong><a class="headerlink" href="#stego-r-not-found-api-issue" title="Link to this heading"></a></h3>
 <p>You will need to create a git token</p>
@@ -187,25 +234,26 @@ i. Quick tutorial for understanding RStudio environment with this <a class="refe
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">When</span> <span class="n">you</span> <span class="n">see</span> <span class="n">this</span> <span class="n">line</span><span class="p">:</span> <span class="s2">&quot;These packages have more recent versions available. It is recommended to update all of them. Which would you like to update?&quot;</span>
 
 <span class="n">Answer</span> <span class="k">with</span>  <span class="s2">&quot;1&quot;</span> <span class="ow">and</span> <span class="n">hit</span> <span class="s2">&quot;Enter&quot;</span><span class="o">.</span>
-
-<span class="n">On</span> <span class="n">a</span> <span class="n">Mac</span> <span class="k">if</span> <span class="n">you</span> <span class="n">see</span> <span class="s2">&quot;Do you want to install from sources the package which needs compilation? (Yes/no/cancel)&quot;</span><span class="p">,</span> <span class="n">answer</span> <span class="k">with</span>  <span class="s2">&quot;no&quot;</span> <span class="ow">and</span> <span class="n">hit</span> <span class="s2">&quot;Enter&quot;</span><span class="o">.</span> <span class="n">This</span> <span class="n">same</span> <span class="n">message</span> <span class="n">will</span> <span class="n">appear</span> <span class="k">as</span> <span class="n">an</span> <span class="n">popup</span> <span class="n">on</span> <span class="n">Windows</span><span class="o">.</span>
-
-<span class="n">Once</span> <span class="nb">all</span> <span class="n">packages</span> <span class="n">are</span> <span class="n">installed</span><span class="p">,</span> <span class="n">this</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="n">final</span> <span class="n">section</span> <span class="n">of</span> <span class="n">the</span> <span class="n">installation</span> <span class="n">process</span><span class="o">.</span>
 </pre></div>
 </div>
 <p><strong>Other Mac prompts on M1 or greater chip</strong></p>
 <p>The installation may ask you the following to install from source. In this instance, select yes.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>There is a binary version available but the source version is later:
-binary source needs_compilation
-    Seurat  5.0.3  5.1.0              TRUE
+ binary source needs_compilation
+ Seurat  5.0.3  5.1.0              TRUE
 
- Do you want to install from sources the package which needs compilation? (Yes/no/cancel) y
- Packages which are only available in source form, and may need compilation of C/C++/Fortran: ‘zlibbioc’ ‘XVector’ ‘SparseArray’ ‘S4Arrays’ ‘Biobase’ ‘DelayedArray’ ‘GenomicRanges’ ‘BiocNeighbors’ ‘BiocParallel’
- Do you want to attempt to install these from sources? (Yes/no/cancel) y
-    installing the source packages ‘zlibbioc’, ‘XVector’, ‘SparseArray’, ‘S4Arrays’, ‘GenomeInfoDb’, ‘Biobase’, ‘DelayedArray’, ‘GenomicRanges’. ‘SummarizedExperiment’, ‘SingleCellExperiment’, ‘BiocNeighbors’, ‘BiocParallel’, ‘UCell’, ‘Seurat’
+ Do you want to install from sources the package which needs compilation? (Yes/no/cancel)
+ y
 </pre></div>
 </div>
-<p>Expected final lines once STEGO.R has been correctly installed.</p>
+<p><strong>Installing the bioconductor packages from Source.</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Packages which are only available in source form, and may need compilation of C/C++/Fortran: ‘zlibbioc’ ‘XVector’ ‘SparseArray’ ‘S4Arrays’ ‘IRanges’ ‘Biobase’ ‘DelayedArray’ ‘GenomicRanges’ ‘S4Vectors’
+  ‘BiocNeighbors’ ‘BiocParallel’
+Do you want to attempt to install these from sources? (Yes/no/cancel)
+y
+</pre></div>
+</div>
+<p><strong>Expected final lines once STEGO.R has been correctly installed.</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>R CMD build
        ✔  checking for file ‘/Users/kerrymullan/Desktop/STEGO_copy.R/Temp/Rtmp0n6xNi/remotes176117593b632/KerryAM-R-STEGO.R-df4640eae1a05f44f3c91ca527215f4af56894ff/DESCRIPTION’ ...
        ─  preparing ‘STEGO.R’:
@@ -234,9 +282,13 @@ binary source needs_compilation
 <section id="installing-fonts">
 <h2>Installing fonts<a class="headerlink" href="#installing-fonts" title="Link to this heading"></a></h2>
 <p>To have access to wider variety of font, you will need to install the following found in the Install.R folder</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># needed to use for the first time :D</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># import all of the fonts to your system. Will only need to be done the first time.</span>
 <span class="n">require</span><span class="p">(</span><span class="n">extrafont</span><span class="p">)</span>
 <span class="n">font_import</span><span class="p">()</span>
+
+<span class="c1"># when it asks if you would like to install the different fonts</span>
+<span class="n">y</span>
+
 <span class="n">loadfonts</span><span class="p">()</span>
 
 <span class="n">fonts</span> <span class="o">&lt;-</span> <span class="n">fonttable</span><span class="p">()</span>

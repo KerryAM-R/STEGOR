@@ -109,7 +109,7 @@
 </div>
 <section id="a-quality-control-of-a-seurat-object">
 <h2><strong>3a.</strong> Quality control of a Seurat object<a class="headerlink" href="#a-quality-control-of-a-seurat-object" title="Link to this heading"></a></h2>
-<p>This section describes the Seurat QC process for human samples with 10x Genomics.</p>
+<p><strong>This section describes the Seurat QC process for human samples with 10x Genomics.</strong></p>
 <a class="reference internal image-reference" href="_images/3a.png"><img alt="Alternative text" src="_images/3a.png" style="width: 200px;" /></a>
 <ol class="arabic simple">
 <li><p>Upload both the meta-data.csv file and the matrix file (.csv.gz, .csv or .h5).</p></li>
@@ -146,6 +146,18 @@
 <ol class="arabic simple" start="10">
 <li><p>Now your file has completed the Seurat QC and has had the TCR sequences added to the meta-data. click the “Download Seurat” object and save it to the <strong>“2_SCobj”</strong> folder.</p></li>
 </ol>
+<p><strong>command-line equivalent</strong></p>
+<p>Once the user has identified the parameters for filtering, we recommend using the command-line function that automates this process.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">###### Step 3a. Automated file filtering ------</span>
+<span class="c1"># default parameteres: folder = &quot;1_SeuratQC&quot;, dataset_type = &quot;10x&quot;, species = &quot;hs&quot;,  features.min = 200, features.max = 6000, percent.mt = 20, percent.rb = 5, dimension_sc = 15, resolution_sc = 1, limit_to_TCR_GEx = F, save_plots = T</span>
+
+<span class="c1"># run defaults for 10x based on seurat.</span>
+<span class="n">automated_sc_filtering</span><span class="p">(</span><span class="n">dataset_type</span> <span class="o">=</span> <span class="s2">&quot;10x&quot;</span><span class="p">)</span>
+
+<span class="c1"># BD Rhapsody (immune panel) -----</span>
+<span class="n">automated_sc_filtering</span><span class="p">(</span><span class="n">dataset_type</span> <span class="o">=</span> <span class="s2">&quot;BD_rap&quot;</span><span class="p">,</span><span class="n">features</span><span class="o">.</span><span class="n">min</span> <span class="o">=</span> <span class="mi">45</span><span class="p">,</span><span class="n">features</span><span class="o">.</span><span class="n">max</span> <span class="o">=</span> <span class="mi">160</span><span class="p">,</span> <span class="n">percent</span><span class="o">.</span><span class="n">mt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">percent</span><span class="o">.</span><span class="n">rb</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 <section id="b-merging-multiple-seurat-objects-and-batch-correction">
 <h2><strong>3b.</strong> Merging multiple Seurat objects and batch correction.<a class="headerlink" href="#b-merging-multiple-seurat-objects-and-batch-correction" title="Link to this heading"></a></h2>
@@ -160,7 +172,7 @@
 <li><p>Download the merged.rds object</p></li>
 </ol>
 <a class="reference internal image-reference" href="_images/3b_downloadmerged_obj.png"><img alt="Alternative text" src="_images/3b_downloadmerged_obj.png" style="width: 600px;" /></a>
-<p>For many file merging and annotating as the program window may disappear, we recommend merging and annotating using ** **</p>
+<p>** For many file merging and annotating as the program window may disappear, we recommend merging and annotating using command-line functions **</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">require</span><span class="p">(</span><span class="n">STEGO</span><span class="o">.</span><span class="n">R</span><span class="p">)</span>
 <span class="c1">###### merging seurat object ------</span>
 <span class="c1"># Check that you are in the correct working directory with your RDS files</span>
@@ -172,7 +184,7 @@
 <span class="c1"># merges the different layers in V5 of seurat</span>
 <span class="n">sc</span> <span class="o">&lt;-</span> <span class="n">JoinLayers</span><span class="p">(</span><span class="n">sc_merge</span><span class="p">,</span>  <span class="n">assay</span> <span class="o">=</span> <span class="s2">&quot;RNA&quot;</span><span class="p">)</span>
 
-<span class="c1"># save the merged file - it will not have the scaled data and PCA stored any more due to the merging process. This is in case R crashes and it needs to be read in</span>
+<span class="c1"># save the merged file - it will not have the scaled data and PCA stored any more due to the merging process.</span>
 <span class="n">saveRDS</span><span class="p">(</span><span class="n">sc_merge</span><span class="p">,</span><span class="s2">&quot;2_scObj/sc_merge.rds&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -248,7 +260,7 @@ sc &lt;-     scGate_annotating(
 
 sc@meta.data$Cell_Index_old &lt;- sc@meta.data$Cell_Index
 sc@meta.data$Cell_Index &lt;- rownames(sc@meta.data)
-head(sc@meta.data)
+
 saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 </pre></div>
 </div>
@@ -548,7 +560,7 @@ saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 </section>
 <section id="d-removing-unwanted-sample-and-or-downsampling-optional">
 <h2><strong>3d.</strong> Removing unwanted sample and/or downsampling (optional)<a class="headerlink" href="#d-removing-unwanted-sample-and-or-downsampling-optional" title="Link to this heading"></a></h2>
-<p>This section allows the user to remove problematic cells based on any of the information in the meta data. For isntance. If I wanted to add the downsampled object, which contains the K409 samples (melanoma study), need to be removed to avoid data duplication.</p>
+<p>This section allows the user to remove problematic cells based on any of the information in the meta data. This could be used to remove problematic samples post QC. Reasons for removal may be due to poor TCR-seq coverage. Also, you could limit the analysis to cells with both the GEx and TCR-seq present.</p>
 <a class="reference internal image-reference" href="_images/3d_removingsamples_from_md.png"><img alt="Alternative text" src="_images/3d_removingsamples_from_md.png" style="width: 600px;" /></a>
 </section>
 </section>
