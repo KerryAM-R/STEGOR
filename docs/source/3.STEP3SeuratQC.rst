@@ -21,7 +21,7 @@ Step 3. Quality control
 1. Upload both the meta-data.csv file and the matrix file (.csv.gz, .csv or .h5). 
 2. Add the file name, which will be identical to the previous file name.
 3. Select the data origin, as it will change the cut-off settings.
-      - 10x Genomics >6000 features (transcripts per cell), are deemed to be doublets.
+      - 10x Genomics >2500 features (transcripts per cell), are deemed to be doublets.
       - BD Rhapsody Immune panel > 150 features, are deemed to be doublets.
 4.   Check that the file was uploaded
 5.   Look at the first volcano plot "before" tab, as we need to check the cut-off for the MtDNA and rDNA cut-offs
