@@ -77,7 +77,9 @@ Additionally there are several formats for the TCR contig file: paired dominant,
 
    The **TCR_Explore** tool is designed for the interrogation of the TCR repertoire independent of gene expression data. For more information, visit `TCR_Explore <https://tcr-explore.erc.monash.edu>`_.
 
-   :target: _blank
+   .. raw:: html
+
+      <a href="https://tcr-explore.erc.monash.edu" target="_blank">TCR_Explore</a>
 
 File outputs and storage for STEP 1. 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
