@@ -73,7 +73,7 @@ Additionally there are several formats for the TCR contig file: paired dominant,
 
 **Array**
 
-* Note: The TCR_Explore file is for the interrogation of the TCR repertoire independent of the gene expression data at the `TCR_Explore <https://tcr-explore.erc.monash.edu>`_ *
+* Note: The TCR_Explore file is for the interrogation of the TCR repertoire independent of the gene expression data at the `TCR_Explore <https://tcr-explore.erc.monash.edu>`_ {newtab} *
 
 File outputs and storage for STEP 1. 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -86,16 +86,16 @@ Upload the documents to the required sections depending on the technology and fi
       - (10x Genomics and Array, as this is added from the "Sample Tags" in BD Rhapsody) column and used through out the process. This name needs to be unqiue to the file.
       - If, at a latter point it needs to be updated, this can be done with the "Updated_label.csv", located in 3_Analysis folder
 
-Download to each of the 1_ folders e.g.,
+Download to each of the `1_` folders e.g.,
 4. Download the TCRex (functional Beta chains) to "1_TCRex" folder
 5. Download both the "meta-data" and "Matrix" in the SeuratQC into the "1_SeuratQC" folder
-6. Two files need to be downloaded per sample under the "ClusTCR" to the "1_ClusTCR" folder. They will have the prefix of AG_ and BD_ (*Version 1.5*)
+6. Two files need to be downloaded per sample under the "ClusTCR" to the "1_ClusTCR" folder. They will have the prefix of `AG_` and `BD_` (*Version 1.5*)
 7. Download the TCR_Explore file "1_TCR_Explore" folder
 
 or 
 
 4. Download all files in order of TCRex, Seruat (matrix and meta.data),ClusTCR2 and TCR_Explore to the download folder. 
-5. Move all files to the respective folders in the Project directory according 1_
+5. Move all files to the respective folders in the Project directory according `1_`
 
 Automated STEP 1. 
 -----------------
@@ -112,7 +112,12 @@ Within the raw data folder should be subfolders for each unique sample in the da
         * TCR files (needs to have the word contig to be found)
     - Sample1_treatment2
     - Sample2_treatment1
-        
+
+
+.. image:: img/1_10xFolderformatting.png
+  :width: 600
+  :alt: Alternative text
+
 Use the preprocessing.R found in the R folder of the project_director
 
 .. image:: img/1_preprocessing_auto.png
