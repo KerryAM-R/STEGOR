@@ -50,3 +50,18 @@ html_theme_options = {
     'logo_only': True,
     'display_version': False,
 }
+
+
+from sphinx.writers.html import HTMLTranslator
+from sphinx.util.docutils import is_html5_writer_available
+
+class PatchedHTMLTranslator(
+    HTML5Translator if is_html5_writer_available() else HTMLTranslator
+):
+    def visit_reference(self, node):
+        if 'target' not in node.attributes and 'refuri' in node.attributes:
+            node.attributes['target'] = '_blank'
+        super().visit_reference(node)
+
+def setup(app):
+    app.set_translator('html', PatchedHTMLTranslator)
