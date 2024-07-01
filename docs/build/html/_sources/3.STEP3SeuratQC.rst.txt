@@ -289,14 +289,28 @@ Check that there the signal overlaps with the gene expression, as per the featur
   :width: 600
   :alt: Alternative text
 
-**3d.** Removing unwanted sample and/or downsampling (optional)
-----------------------------------------------------------------
+**3d.** Removing samples (optional)
+-----------------------------------
 
 This section allows the user to remove problematic cells based on any of the information in the meta data. This could be used to remove problematic samples post QC. Reasons for removal may be due to poor TCR-seq coverage. Also, you could limit the analysis to cells with both the GEx and TCR-seq present. 
+
+Additionally, this step can be used to extract certain samples. For instance, we extracted the 
 
 
 .. image:: img/3d_removing samples_from_md.png
   :width: 600
   :alt: Alternative text
 
+Under development: Downsampling. This section will be used for limiting to an even number of cell per annotation model and/or dataset origin to add a background data for smaller data to help with the FindMarker statistic. 
+
+
+**3e.** Re-formatting meta-data 
+----------------------------------------------
+
+In instances where the user has already done the QC, they will need to reformat their meta-data to make it compatible with STEGO.R formatting. 
+
+The currently available formatting is for scRepertoire that has:
+
+1. TCR1 (Alpha v_gene j_gene) and TCR1_cdr3
+2. TCR2 (BETA v_gene j_gene) and TCR2_cdr3
 

@@ -63,7 +63,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#creating-custom-annotation-stratergies">Creating custom annotation stratergies</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#d-removing-unwanted-sample-and-or-downsampling-optional"><strong>3d.</strong> Removing unwanted sample and/or downsampling (optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#d-removing-samples-optional"><strong>3d.</strong> Removing samples (optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#e-re-formatting-meta-data"><strong>3e.</strong> Re-formatting meta-data</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="4.STEP4Analysis.html">Step 4. Analysis</a></li>
@@ -558,10 +559,21 @@ saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 <a class="reference internal image-reference" href="_images/3c_checking_mem_gate.png"><img alt="Alternative text" src="_images/3c_checking_mem_gate.png" style="width: 600px;" /></a>
 </section>
 </section>
-<section id="d-removing-unwanted-sample-and-or-downsampling-optional">
-<h2><strong>3d.</strong> Removing unwanted sample and/or downsampling (optional)<a class="headerlink" href="#d-removing-unwanted-sample-and-or-downsampling-optional" title="Link to this heading"></a></h2>
+<section id="d-removing-samples-optional">
+<h2><strong>3d.</strong> Removing samples (optional)<a class="headerlink" href="#d-removing-samples-optional" title="Link to this heading"></a></h2>
 <p>This section allows the user to remove problematic cells based on any of the information in the meta data. This could be used to remove problematic samples post QC. Reasons for removal may be due to poor TCR-seq coverage. Also, you could limit the analysis to cells with both the GEx and TCR-seq present.</p>
+<p>Additionally, this step can be used to extract certain samples. For instance, we extracted the</p>
 <a class="reference internal image-reference" href="_images/3d_removingsamples_from_md.png"><img alt="Alternative text" src="_images/3d_removingsamples_from_md.png" style="width: 600px;" /></a>
+<p>Under development: Downsampling. This section will be used for limiting to an even number of cell per annotation model and/or dataset origin to add a background data for smaller data to help with the FindMarker statistic.</p>
+</section>
+<section id="e-re-formatting-meta-data">
+<h2><strong>3e.</strong> Re-formatting meta-data<a class="headerlink" href="#e-re-formatting-meta-data" title="Link to this heading"></a></h2>
+<p>In instances where the user has already done the QC, they will need to reformat their meta-data to make it compatible with STEGO.R formatting.</p>
+<p>The currently available formatting is for scRepertoire that has:</p>
+<ol class="arabic simple">
+<li><p>TCR1 (Alpha v_gene j_gene) and TCR1_cdr3</p></li>
+<li><p>TCR2 (BETA v_gene j_gene) and TCR2_cdr3</p></li>
+</ol>
 </section>
 </section>
 
