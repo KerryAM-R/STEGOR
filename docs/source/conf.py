@@ -42,26 +42,22 @@ html_css_files = [
     'custom.css'
 ]
 
-
-html_theme = 'sphinx_rtd_theme'
-html_static_path = ['_static']
 html_logo = "logo-removebg-preview_green.png"
 html_theme_options = {
     'logo_only': True,
     'display_version': False,
 }
 
+# -- Custom Patched HTML Translator to open links in new tab
 
-from sphinx.writers.html import HTMLTranslator
+from sphinx.writers.html import HTMLTranslator, HTML5Translator
 from sphinx.util.docutils import is_html5_writer_available
 
-class PatchedHTMLTranslator(
-    HTML5Translator if is_html5_writer_available() else HTMLTranslator
-):
+class PatchedHTMLTranslator(HTML5Translator if is_html5_writer_available() else HTMLTranslator):
     def visit_reference(self, node):
         if 'target' not in node.attributes and 'refuri' in node.attributes:
             node.attributes['target'] = '_blank'
-        super().visit_reference(node)
+        super(PatchedHTMLTranslator, self).visit_reference(node)
 
 def setup(app):
     app.set_translator('html', PatchedHTMLTranslator)
