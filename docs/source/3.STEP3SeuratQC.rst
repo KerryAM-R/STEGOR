@@ -115,8 +115,11 @@ batch correction
     - Run VariableFeatures
     - Run Scale
     - Run PCA
-    - Run Harmony *Note: Harmony R package is used for the batch correction.* 
-        * https://www.nature.com/articles/s41592-019-0619-0 for more detail
+
+    .. raw:: html
+        - Run Harmony *Note: Harmony R package is used for the batch correction.* 
+            * Visit <a href="https://www.nature.com/articles/s41592-019-0619-0" target="_blank">Harmony publication</a> for more detail.
+
     - Run Dimentional Reduction
 
 4. Once completed click the "Download merged Seurat"
@@ -155,7 +158,7 @@ upload the merged file to commence the annotation process.
   :width: 750
   :alt: Alternative text
 
-This is what the window will print once hte annotation is completed.
+This is what the window will print once the annotation is completed.
 
 .. image:: img/3c_processed_anno.png
   :width: 750
