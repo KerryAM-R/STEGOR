@@ -17,19 +17,14 @@ Step 2. TCRex and ClusTCR2
 
 .. raw:: html
 
-    TCRex is a user-friendly webtool designed to facilitate the prediction of epitope-TCR binding. It starts from a TCR file containing a list of TCR beta sequences. After selecting the epitopes of interest, TCRex predicts the binding between every TCR sequence and every epitope. Currently it supports predictions for 100 epitopes. More information on how to use this tool and interpret the results can be found at <a href="https://tcrex.biodatamining.be" target="_blank">TCRex</a> website.
-
-<br>
+    TCRex is a user-friendly webtool designed to facilitate the prediction of epitope-TCR binding. It starts from a TCR file containing a list of TCR beta sequences. After selecting the epitopes of interest, TCRex predicts the binding between every TCR sequence and every epitope. Currently it supports predictions for 100 epitopes. More information on how to use this tool and interpret the results can be found at <a href="https://tcrex.biodatamining.be" target="_blank">TCRex</a> website. <br>
 
 1. Upload all the files stored in the "1_TCRex" for merging and save the merged file to the 1_TCRex. 
     - if this doesnt allow for selection of multiple files, try using in the browser instead. 
 
-
 .. raw:: html
 
-    2. The TCRex merge file will be uploaded to the <a href="https://tcrex.biodatamining.be" target="_blank">TCRex</a> website to predict if the beta chain will interact with certain epitopes.
-
-<br>
+    2. The TCRex merge file will be uploaded to the <a href="https://tcrex.biodatamining.be" target="_blank">TCRex</a> website to predict if the beta chain will interact with certain epitopes. <br>
 
 3. Once the TCRex process is complete, download the processed file, and move it to the **3_Analysis** folder.
 
