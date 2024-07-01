@@ -183,7 +183,7 @@ The annotations are added to the end of the meta data table in the Seurat object
               cycling = T,
               Th1_cytokines = T,
               TCRseq = T,
-              threshold = 0.2, # change to 0.2 if you use the focused immuen panel from BD rhapsody
+              threshold = 0.25, # change to 0.55 if you use the focused BD Rhapsody immuen panel 
               reductionType = "harmony",
               chunk_size = 50000
             )
