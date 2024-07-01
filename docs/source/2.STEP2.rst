@@ -20,7 +20,7 @@ TCRex is a user-friendly webtool designed to facilitate the prediction of epitop
 1. Upload all the files stored in the "1_TCRex" for merging and save the merged file to the 1_TCRex. 
     - if this doesnt allow for selection of multiple files, try using in the browser instead. 
 
-2. The TCRex merge file will be uploaded to the `TCRex website <https://tcrex.biodatamining.be>`_ to predict if the beta chain will interact with certain epitopes.
+2. The TCRex merge file will be uploaded to the <a href="https://tcrex.biodatamining.be" target="_blank">TCRex</a> website to predict if the beta chain will interact with certain epitopes.
 3. Once the TCRex process is complete, download the processed file, and move it to the **3_Analysis** folder
 
 .. image:: img/2a_TCRex_merge.png
