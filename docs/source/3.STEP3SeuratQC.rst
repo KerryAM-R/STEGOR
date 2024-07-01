@@ -121,8 +121,11 @@ batch correction
 4. Once completed click the "Download merged Seurat"
 
 .. note::
+
     .. raw:: html
+
         * Visit <a href="https://www.nature.com/articles/s41592-019-0619-0" target="_blank">Harmony publication</a> for more detail.
+
 
 .. image:: img/3b_batch_corrected_including_background.png
   :width: 750
