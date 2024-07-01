@@ -37,6 +37,8 @@ Recommended to use a 64-bit OS with at least 16GB of RAM, ideally >=32GB. This i
 
 When running STEGO.R merging and annotation steps, we recommend to limit the number of other running programs to help prevent RAM memory overflow, espeically if you have <32Gb of RAM. 
 
+Storage requirements will depend on the number of cells annotating. For instance I needed at least 200 GB of free space on my mac to process the V2 and V3 of the T cell Atlas. 
+
 **Download the project directory**
 ----------------------------------
 1. From the github repository `STEGO.R <https://github.com/KerryAM-R/STEGO.R>`_ 
