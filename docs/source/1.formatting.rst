@@ -87,6 +87,7 @@ Upload the documents to the required sections depending on the technology and fi
       - If, at a latter point it needs to be updated, this can be done with the "Updated_label.csv", located in 3_Analysis folder
 
 Download to each of the `1_` folders e.g.,
+
 4. Download the TCRex (functional Beta chains) to "1_TCRex" folder
 5. Download both the "meta-data" and "Matrix" in the SeuratQC into the "1_SeuratQC" folder
 6. Two files need to be downloaded per sample under the "ClusTCR" to the "1_ClusTCR" folder. They will have the prefix of `AG_` and `BD_` (*Version 1.5*)
