@@ -89,13 +89,13 @@ Upload the documents to the required sections depending on the technology and fi
 Download to each of the 1_ folders e.g.,
 4. Download the TCRex (functional Beta chains) to "1_TCRex" folder
 5. Download both the "meta-data" and "Matrix" in the SeuratQC into the "1_SeuratQC" folder
-6. Two files need to be downloaded per sample under the "ClusTCR" to the "1_ClusTCR" folder. They will have the prefix of AG_ and BD_ (*Version 1.5*)
+6. Two files need to be downloaded per sample under the "ClusTCR" to the "1_ClusTCR" folder. They will have the prefix of AG and BD (*Version 1.5*)
 7. Download the TCR_Explore file "1_TCR_Explore" folder
 
 or 
 
 4. Download all files in order of TCRex, Seruat (matrix and meta.data),ClusTCR2 and TCR_Explore to the download folder. 
-5. Move all files to the respective folders in the Project directory according 1_
+5. Move all files to the respective folders in the Project directory according "1_"
 
 Automated STEP 1. 
 -----------------
