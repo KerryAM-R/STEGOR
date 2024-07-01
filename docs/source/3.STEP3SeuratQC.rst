@@ -115,15 +115,14 @@ batch correction
     - Run VariableFeatures
     - Run Scale
     - Run PCA
-
-.. raw:: html
-
     - Run Harmony *Note: Harmony R package is used for the batch correction.* 
-            * Visit <a href="https://www.nature.com/articles/s41592-019-0619-0" target="_blank">Harmony publication</a> for more detail.
-
     - Run Dimentional Reduction
 
 4. Once completed click the "Download merged Seurat"
+
+.. note::
+    .. raw:: html
+        * Visit <a href="https://www.nature.com/articles/s41592-019-0619-0" target="_blank">Harmony publication</a> for more detail.
 
 .. image:: img/3b_batch_corrected_including_background.png
   :width: 750
