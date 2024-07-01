@@ -112,7 +112,12 @@ Within the raw data folder should be subfolders for each unique sample in the da
         * TCR files (needs to have the word contig to be found)
     - Sample1_treatment2
     - Sample2_treatment1
-        
+
+
+.. image:: img/1_10xFolderformatting.png
+  :width: 600
+  :alt: Alternative text
+
 Use the preprocessing.R found in the R folder of the project_director
 
 .. image:: img/1_preprocessing_auto.png
