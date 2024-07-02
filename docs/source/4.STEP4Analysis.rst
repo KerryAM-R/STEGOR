@@ -41,14 +41,14 @@ This will include the following default files that can be uploaded:
 
 To make selecting the "**Data source**" and "**Species**", there are functions to identify if the TCR-seq formattting is AIRR or not. The species is currently either human (hs) or mouse (mm) and based on the gene formatting of all caps (hs) or proper case (mm). The latter is needed as R is a case sensative language. 
 
-If you need additional identifiers for the analysis section, this can be added by switching "add additional labels" to "yes" and upload the "Update_labels.csv". 
+If you need additional identifiers for the analysis section, this can be added by switching "add additional labels" to "yes" and upload the "Update_labels.csv". The file consists of the original ID column, and the header "ID" must not be changed. The user can add as many columns. Any special characters will be convered to either .  or _. 
 
 .. image:: img/4_updating_labs.png
   :width: 300
   :alt: Alternative text
 
 
-.. csv-table:: table
+.. csv-table:: Updated labelling for the colitis dataset. 
     :header-rows: 1
     :file: path/Update_labels.csv
     :widths: 40, 60
