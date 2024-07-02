@@ -43,7 +43,8 @@ To make selecting the "**Data source**" and "**Species**", there are functions t
 
 If you need additional identifiers for the analysis section, this can be added by switching "add additional labels" to "yes" and upload the "Upload_labels.csv". 
 
-.. csv-table:: Upload_new_labels_table
+
+.. csv-table:: table
     :header-rows: 1
     :file: path/Upload_labels.csv
     :widths: 40, 40, 40
