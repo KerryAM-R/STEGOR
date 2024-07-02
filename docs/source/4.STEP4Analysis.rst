@@ -47,7 +47,7 @@ If you need additional identifiers for the analysis section, this can be added b
 .. csv-table:: table
     :header-rows: 1
     :file: path/Update_labels.csv
-    :widths: 40, 40, 40
+    :widths: 40, 60
     :class: longtable
 
 
