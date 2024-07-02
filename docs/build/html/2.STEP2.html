@@ -104,23 +104,17 @@
 </div>
 <section id="a-merging-tcrex">
 <h2><strong>2a.</strong> Merging TCRex<a class="headerlink" href="#a-merging-tcrex" title="Link to this heading"></a></h2>
-<p>TCRex is a user-friendly webtool designed to facilitate the prediction of epitope-TCR binding. It starts from a TCR file containing a list of TCR beta sequences. After selecting the epitopes of interest, TCRex predicts the binding between every TCR sequence and every epitope. Currently it supports predictions for 100 epitopes. More information on how to use this tool and interpret the results can be found at <a class="reference external" href="https://tcrex.biodatamining.be/instructions/">TCRex</a></p>
-<ol class="arabic simple">
-<li><dl class="simple">
-<dt>Upload all the files stored in the “1_TCRex” for merging and save the merged file to the 1_TCRex.</dt><dd><ul class="simple">
-<li><p>if this doesnt allow for selection of multiple files, try using in the browser instead.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>The TCRex merge file will be uploaded to the <a class="reference external" href="https://tcrex.biodatamining.be">TCRex website</a> to predict if the beta chain will interact with certain epitopes.</p></li>
-<li><p>Once the TCRex process is complete, download the processed file, and move it to the <strong>3_Analysis</strong> folder</p></li>
+TCRex is a user-friendly webtool designed to facilitate the prediction of epitope-TCR binding. It starts from a TCR file containing a list of TCR beta sequences. After selecting the epitopes of interest, TCRex predicts the binding between every TCR sequence and every epitope. Currently it supports predictions for 100 epitopes. More information on how to use this tool and interpret the results can be found at <a href="https://tcrex.biodatamining.be" target="_blank">TCRex</a> website. </br><ol class="arabic simple">
+<li><p>Upload all the files stored in the “1_TCRex” for merging and save the merged file to the 1_TCRex.</p></li>
+</ol>
+2. The TCRex merge file will be uploaded to the <a href="https://tcrex.biodatamining.be" target="_blank">TCRex</a> website to predict if the beta chain will interact with certain epitopes. </br><ol class="arabic simple" start="3">
+<li><p>Once the TCRex process is complete, download the processed file, and move it to the <strong>3_Analysis</strong> folder.</p></li>
 </ol>
 <a class="reference internal image-reference" href="_images/2a_TCRex_merge.png"><img alt="Alternative text" src="_images/2a_TCRex_merge.png" style="width: 600px;" /></a>
 </section>
 <section id="b-clustering-with-clustcr2">
 <h2><strong>2b.</strong> Clustering with ClusTCR2<a class="headerlink" href="#b-clustering-with-clustcr2" title="Link to this heading"></a></h2>
-<p>[insert text here to explain ClusTCR2]</p>
+<p>ClusTCR2 is an R alternative to the python package ClusTCR [1], specifically developed to be applied to single cell TCR sequencing data. The original version of ClusTCR applies a two-step process to cluster large sets of TCR sequences. The first step involves encoding TCRs into a numerical vector, based on the physicochemical properties of the amino acids. K-means clustering is applied to the amino acid vectors to create large families of pre-clusters. During the second step, a hashing function is used to identify all pairs of CDR3 amino acid sequences with ≤ 1 Hamming distance mismatch. From these CDR3 pairs, a graph is constructed , and communities are detected using the Markov clustering (MCL) algorithm, which will be the final clusters.</p>
 <p>This process requires the user to upload AG separate for the BD clustering. This is due to how the data is re-combined with the meta data in the Seurat object in STEP4. Analysis.</p>
 <ol class="arabic simple">
 <li><dl class="simple">

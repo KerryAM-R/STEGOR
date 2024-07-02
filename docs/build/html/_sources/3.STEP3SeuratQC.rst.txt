@@ -21,7 +21,7 @@ Step 3. Quality control
 1. Upload both the meta-data.csv file and the matrix file (.csv.gz, .csv or .h5). 
 2. Add the file name, which will be identical to the previous file name.
 3. Select the data origin, as it will change the cut-off settings.
-      - 10x Genomics >6000 features (transcripts per cell), are deemed to be doublets.
+      - 10x Genomics >2500 features (transcripts per cell), are deemed to be doublets.
       - BD Rhapsody Immune panel > 150 features, are deemed to be doublets.
 4.   Check that the file was uploaded
 5.   Look at the first volcano plot "before" tab, as we need to check the cut-off for the MtDNA and rDNA cut-offs
@@ -116,10 +116,16 @@ batch correction
     - Run Scale
     - Run PCA
     - Run Harmony *Note: Harmony R package is used for the batch correction.* 
-        * https://www.nature.com/articles/s41592-019-0619-0 for more detail
     - Run Dimentional Reduction
 
 4. Once completed click the "Download merged Seurat"
+
+.. note::
+
+    .. raw:: html
+
+        * Visit <a href="https://www.nature.com/articles/s41592-019-0619-0" target="_blank">Harmony publication</a> for more detail.
+
 
 .. image:: img/3b_batch_corrected_including_background.png
   :width: 750
@@ -155,7 +161,7 @@ upload the merged file to commence the annotation process.
   :width: 750
   :alt: Alternative text
 
-This is what the window will print once hte annotation is completed.
+This is what the window will print once the annotation is completed.
 
 .. image:: img/3c_processed_anno.png
   :width: 750
@@ -183,7 +189,7 @@ The annotations are added to the end of the meta data table in the Seurat object
               cycling = T,
               Th1_cytokines = T,
               TCRseq = T,
-              threshold = 0.2, # change to 0.2 if you use the focused immuen panel from BD rhapsody
+              threshold = 0.25, # change to 0.55 if you use the focused BD Rhapsody immuen panel 
               reductionType = "harmony",
               chunk_size = 50000
             )

@@ -7,7 +7,7 @@
   <title>Step 4. Analysis &mdash; STEGO.R 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=fab6a3b9" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=03b827c4" />
 
   
   <!--[if lt IE 9]>
@@ -52,8 +52,9 @@
 <li class="toctree-l1"><a class="reference internal" href="2.STEP2.html">Step 2. TCRex and ClusTCR2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3.STEP3SeuratQC.html">Step 3. Quality control</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Step 4. Analysis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#application-structure">Application structure</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#uploading-the-files">Uploading the files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#application-structure">Application structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uploaded-files">Uploaded files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#side-bar">Side bar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#side-bar-panel">Side Bar Panel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tcr-seq-gex">TCR-seq -&gt; GEX</a></li>
@@ -100,35 +101,31 @@
 <p>Under active construction</p>
 <p>This section will include example analyses depending on the type of data present.</p>
 </div>
-<p>The analysis section is divided into several sub-sections.</p>
-<ul class="simple">
-<li><p>Overview</p></li>
-<li><p>TCR -&gt; GEX</p></li>
-<li><p>Prioritisation</p></li>
-<li></li>
-</ul>
-<p><strong>Version 1.</strong> Preliminar process that include the automated scGate annotation steps</p>
-<p><strong>Version 2.</strong> Improved the process with automations in STEP 1. and STEP 4. (focused extraction with prioritising the TCR order) as well as the post analysis section for easier identificaiton of TCR of interest (extracting the meta-data, filtering and summarising).</p>
 <section id="application-structure">
 <h2>Application structure<a class="headerlink" href="#application-structure" title="Link to this heading"></a></h2>
-<p>Features for all Tabs.</p>
-<section id="uploading-the-files">
-<h3>Uploading the files<a class="headerlink" href="#uploading-the-files" title="Link to this heading"></a></h3>
-<p>There first tab will show in the side panel the files that can be uploaded.</p>
-<p>This includes:
-- Annotated  object (.rds)
-- Adding in additional identifiers if needed. This file is merged with the meta-data based on the ‘Sample_Name’</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>If you dont wish to do this everytime, add the extra identifiers with the STEGO.R::update_sc()</p></li>
-</ul>
-</div></blockquote>
+<p>The analysis section is divided into several sub-sections.</p>
 <ul class="simple">
-<li><p>Two clusTCR2 files (prefex with AG and BD) (.csv)</p></li>
-<li><p>TCRex output file (.tsv)</p></li>
+<li><p>Uploaded files</p></li>
+<li><p>Overview</p></li>
+<li><p>TCR -&gt; GEX</p></li>
+<li><p>Automation (TCR -&gt; GEx)</p></li>
+<li><p>GEx -&gt; TCR</p></li>
 </ul>
-<p>Side bar panel for uploading the four analysis files.</p>
-<a class="reference internal image-reference" href="_images/4_overview_sbp.png"><img alt="Alternative text" src="_images/4_overview_sbp.png" style="width: 200px;" /></a>
+</section>
+<section id="uploaded-files">
+<h2>Uploaded files<a class="headerlink" href="#uploaded-files" title="Link to this heading"></a></h2>
+<p>There first tab will show in the side panel the files that can be uploaded.</p>
+<section id="side-bar">
+<h3>Side bar<a class="headerlink" href="#side-bar" title="Link to this heading"></a></h3>
+<p>To streamline the analysis, for this section you will only see the following:</p>
+<a class="reference internal image-reference" href="_images/4_files_to_upload.png"><img alt="Alternative text" src="_images/4_files_to_upload.png" style="width: 400px;" /></a>
+<p>This will include the following default files that can be uploaded:
+- Upload seurat file (.rds)
+- Upload AG clusTCR2 file (.csv)
+- Upload BD clusTCR2 file (.csv)
+- Upload TCRex (.tsv)</p>
+<p>To make selecting the “<strong>Data source</strong>” and “<strong>Species</strong>”, there are functions to identify if the TCR-seq formattting is AIRR or not. The species is currently either human (hs) or mouse (mm) and based on the gene formatting of all caps (hs) or proper case (mm). The latter is needed as R is a case sensative language.</p>
+<p>If you need additional identifiers for the analysis section, this can be added by switching “add additional labels” to “yes” and upload the “Upload_labels.csv”.</p>
 <p>Uploaded example K409 Melanoma dataset</p>
 <a class="reference internal image-reference" href="_images/4_uploading.png"><img alt="Alternative text" src="_images/4_uploading.png" style="width: 1200px;" /></a>
 </section>

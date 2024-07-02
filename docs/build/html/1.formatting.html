@@ -155,9 +155,9 @@ Copy all your raw files to the 0_Raw_files folder within your project.</p>
 <p>Additionally there are several formats for the TCR contig file: paired dominant, AIRR dominant (unpaired), AIRR unfilted. For the latter two file formates we include to filter to keep only the ‘paired’ and if BCR was present as well.</p>
 <a class="reference internal image-reference" href="_images/1_BDFormatting.png"><img alt="Alternative text" src="_images/1_BDFormatting.png" style="width: 1200px;" /></a>
 <p><strong>Array</strong></p>
-<ul class="simple">
-<li><p>Note: The TCR_Explore file is for the interrogation of the TCR repertoire independent of the gene expression data at the <a class="reference external" href="https://tcr-explore.erc.monash.edu">TCR_Explore</a> {newtab} *</p></li>
-</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+The **TCR_Explore** tool is designed for the interrogation of the TCR repertoire independent of gene expression data. For more information, visit <a href="https://tcr-explore.erc.monash.edu" target="_blank">TCR_Explore</a>.</div>
 <section id="file-outputs-and-storage-for-step-1">
 <h3>File outputs and storage for STEP 1.<a class="headerlink" href="#file-outputs-and-storage-for-step-1" title="Link to this heading"></a></h3>
 <p>Upload the documents to the required sections depending on the technology and files available. Repeat for each of the samples within your project.</p>
@@ -173,11 +173,13 @@ Copy all your raw files to the 0_Raw_files folder within your project.</p>
 </dl>
 </li>
 </ol>
-<p>Download to each of the <cite>1_</cite> folders e.g.,
-4. Download the TCRex (functional Beta chains) to “1_TCRex” folder
-5. Download both the “meta-data” and “Matrix” in the SeuratQC into the “1_SeuratQC” folder
-6. Two files need to be downloaded per sample under the “ClusTCR” to the “1_ClusTCR” folder. They will have the prefix of <cite>AG_</cite> and <cite>BD_</cite> (<em>Version 1.5</em>)
-7. Download the TCR_Explore file “1_TCR_Explore” folder</p>
+<p>Download to each of the <cite>1_</cite> folders e.g.,</p>
+<ol class="arabic simple" start="4">
+<li><p>Download the TCRex (functional Beta chains) to “1_TCRex” folder</p></li>
+<li><p>Download both the “meta-data” and “Matrix” in the SeuratQC into the “1_SeuratQC” folder</p></li>
+<li><p>Two files need to be downloaded per sample under the “ClusTCR” to the “1_ClusTCR” folder. They will have the prefix of <cite>AG_</cite> and <cite>BD_</cite> (<em>Version 1.5</em>)</p></li>
+<li><p>Download the TCR_Explore file “1_TCR_Explore” folder</p></li>
+</ol>
 <p>or</p>
 <ol class="arabic simple" start="4">
 <li><p>Download all files in order of TCRex, Seruat (matrix and meta.data),ClusTCR2 and TCR_Explore to the download folder.</p></li>
@@ -193,7 +195,7 @@ Copy all your raw files to the 0_Raw_files folder within your project.</p>
 <li><dl class="simple">
 <dt>0_rawfiles</dt><dd><ul>
 <li><dl class="simple">
-<dt>Sample1_treatment1</dt><dd><ul>
+<dt>treatment1_SampleID1</dt><dd><ul>
 <li><p>barcode</p></li>
 <li><p>features</p></li>
 <li><p>Matrix</p></li>

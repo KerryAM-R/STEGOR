@@ -7,45 +7,55 @@ Step 4. Analysis
     This section will include example analyses depending on the type of data present.
 
 
-The analysis section is divided into several sub-sections. 
 
-- Overview 
-- TCR -> GEX 
-- Prioritisation 
-- 
-
-**Version 1.** Preliminar process that include the automated scGate annotation steps
-
-**Version 2.** Improved the process with automations in STEP 1. and STEP 4. (focused extraction with prioritising the TCR order) as well as the post analysis section for easier identificaiton of TCR of interest (extracting the meta-data, filtering and summarising). 
 
 Application structure
 ---------------------
+The analysis section is divided into several sub-sections. 
 
-Features for all Tabs. 
+- Uploaded files
+- Overview 
+- TCR -> GEX 
+- Automation (TCR -> GEx)
+- GEx -> TCR
 
-Uploading the files
-^^^^^^^^^^^^^^^^^^^
+Uploaded files
+--------------
 
 There first tab will show in the side panel the files that can be uploaded. 
 
-This includes:
-- Annotated  object (.rds)
-- Adding in additional identifiers if needed. This file is merged with the meta-data based on the 'Sample_Name'
-    - If you dont wish to do this everytime, add the extra identifiers with the STEGO.R::update_sc()
-- Two clusTCR2 files (prefex with AG and BD) (.csv)
-- TCRex output file (.tsv)
+Side bar
+^^^^^^^^
 
-Side bar panel for uploading the four analysis files. 
+To streamline the analysis, for this section you will only see the following:
 
-.. image:: img/4_overview_sbp.png
-  :width: 200
+.. image:: img/4_files_to_upload.png
+  :width: 400
   :alt: Alternative text
+
+This will include the following default files that can be uploaded: 
+- Upload seurat file (.rds)
+- Upload AG clusTCR2 file (.csv)
+- Upload BD clusTCR2 file (.csv)
+- Upload TCRex (.tsv)
+
+To make selecting the "**Data source**" and "**Species**", there are functions to identify if the TCR-seq formattting is AIRR or not. The species is currently either human (hs) or mouse (mm) and based on the gene formatting of all caps (hs) or proper case (mm). The latter is needed as R is a case sensative language. 
+
+If you need additional identifiers for the analysis section, this can be added by switching "add additional labels" to "yes" and upload the "Upload_labels.csv". 
+
+.. csv-table:: Upload_new_labels_table
+    :header-rows: 1
+    :file: path/Upload_labels.csv
+    :widths: 40, 40, 40
+    :class: longtable
 
 Uploaded example K409 Melanoma dataset
 
 .. image:: img/4_uploading.png
   :width: 1200
   :alt: Alternative text
+
+
 
 Side Bar Panel 
 ^^^^^^^^^^^^^^

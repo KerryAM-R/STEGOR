@@ -117,7 +117,7 @@
 <li><p>Add the file name, which will be identical to the previous file name.</p></li>
 <li><dl class="simple">
 <dt>Select the data origin, as it will change the cut-off settings.</dt><dd><ul class="simple">
-<li><p>10x Genomics &gt;6000 features (transcripts per cell), are deemed to be doublets.</p></li>
+<li><p>10x Genomics &gt;2500 features (transcripts per cell), are deemed to be doublets.</p></li>
 <li><p>BD Rhapsody Immune panel &gt; 150 features, are deemed to be doublets.</p></li>
 </ul>
 </dd>
@@ -200,13 +200,7 @@
 <li><p>Run VariableFeatures</p></li>
 <li><p>Run Scale</p></li>
 <li><p>Run PCA</p></li>
-<li><dl class="simple">
-<dt>Run Harmony <em>Note: Harmony R package is used for the batch correction.</em></dt><dd><ul>
-<li><p><a class="reference external" href="https://www.nature.com/articles/s41592-019-0619-0">https://www.nature.com/articles/s41592-019-0619-0</a> for more detail</p></li>
-</ul>
-</dd>
-</dl>
-</li>
+<li><p>Run Harmony <em>Note: Harmony R package is used for the batch correction.</em></p></li>
 <li><p>Run Dimentional Reduction</p></li>
 </ul>
 </dd>
@@ -214,6 +208,9 @@
 </li>
 <li><p>Once completed click the “Download merged Seurat”</p></li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+* Visit <a href="https://www.nature.com/articles/s41592-019-0619-0" target="_blank">Harmony publication</a> for more detail.</div>
 <a class="reference internal image-reference" href="_images/3b_batch_corrected_including_background.png"><img alt="Alternative text" src="_images/3b_batch_corrected_including_background.png" style="width: 750px;" /></a>
 <p><em>Note: Depending on the number of files, and total number of cells will impact the speed of merging</em></p>
 <p>If you have more than a few files to merge and annotate, we recommend using the following code:</p>
@@ -236,7 +233,7 @@
 <p>This section describes how to annotated the files either from the “default” and/or “custom” modules with scGate. If you have large files, we recommend using scripts and not the interface.</p>
 <p>upload the merged file to commence the annotation process.</p>
 <a class="reference internal image-reference" href="_images/3c_annotating_pocessing.png"><img alt="Alternative text" src="_images/3c_annotating_pocessing.png" style="width: 750px;" /></a>
-<p>This is what the window will print once hte annotation is completed.</p>
+<p>This is what the window will print once the annotation is completed.</p>
 <a class="reference internal image-reference" href="_images/3c_processed_anno.png"><img alt="Alternative text" src="_images/3c_processed_anno.png" style="width: 750px;" /></a>
 <p>The annotations are added to the end of the meta data table in the Seurat object.</p>
 <a class="reference internal image-reference" href="_images/3c_annotations_in_meta.data.png"><img alt="Alternative text" src="_images/3c_annotations_in_meta.data.png" style="width: 750px;" /></a>
@@ -254,7 +251,7 @@ sc &lt;-     scGate_annotating(
           cycling = T,
           Th1_cytokines = T,
           TCRseq = T,
-          threshold = 0.2, # change to 0.2 if you use the focused immuen panel from BD rhapsody
+          threshold = 0.25, # change to 0.55 if you use the focused BD Rhapsody immuen panel
           reductionType = &quot;harmony&quot;,
           chunk_size = 50000
         )
