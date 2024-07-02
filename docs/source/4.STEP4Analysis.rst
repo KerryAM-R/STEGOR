@@ -49,6 +49,13 @@ If you need additional identifiers for the analysis section, this can be added b
     :widths: 40, 40, 40
     :class: longtable
 
+
+
+Main panel 
+^^^^^^^^^^
+
+Depending on what you have uploaded, the main panel will render several tables. The first table is of the Seurat object's meta-data and you will see how it adds the additional labels after the "Sample_Name" column. 
+
 Uploaded example K409 Melanoma dataset
 
 .. image:: img/4_uploading.png
@@ -57,8 +64,8 @@ Uploaded example K409 Melanoma dataset
 
 
 
-Side Bar Panel 
-^^^^^^^^^^^^^^
+Variable used for all analysis in the side bar
+----------------------------------------------
 
 These drop down menues allow the user to change what is presented on the graphs and the analysis
 
