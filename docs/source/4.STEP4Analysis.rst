@@ -24,7 +24,7 @@ Uploaded files
 
 There first tab will show in the side panel the files that can be uploaded. 
 
-side bar
+Side bar
 ^^^^^^^^
 
 To streamline the analysis, for this section you will only see the following:
@@ -41,20 +41,6 @@ This will include the following default files that can be uploaded:
 
 To make selecting the "**Data source**" and "**Species**", there are functions to identify if the TCR-seq formattting is AIRR or not. The species is currently either human (hs) or mouse (mm) and based on the gene formatting of all caps (hs) or proper case (mm). The latter is needed as R is a case sensative language. 
 
-This includes:
-- Annotated  object (.rds)
-- Adding in additional identifiers if needed. This file is merged with the meta-data based on the 'Sample_Name'
-    - If you dont wish to do this everytime, add the extra identifiers with the STEGO.R::update_sc()
-- Two clusTCR2 files (prefex with AG and BD) (.csv)
-- TCRex output file (.tsv)
-
-
-Uploaded example K409 Melanoma dataset
-
-.. image:: img/4_uploading.png
-  :width: 1200
-  :alt: Alternative text
-
 If you need additional identifiers for the analysis section, this can be added by switching "add additional labels" to "yes" and upload the "Upload_labels.csv". 
 
 .. csv-table:: Upload_new_labels_table
@@ -62,6 +48,12 @@ If you need additional identifiers for the analysis section, this can be added b
     :file: path/Upload_labels.csv
     :widths: 40, 40, 40
     :class: longtable
+
+Uploaded example K409 Melanoma dataset
+
+.. image:: img/4_uploading.png
+  :width: 1200
+  :alt: Alternative text
 
 
 
