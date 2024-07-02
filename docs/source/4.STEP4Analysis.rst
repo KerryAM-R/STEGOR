@@ -19,11 +19,8 @@ The analysis section is divided into several sub-sections.
 - Automation (TCR -> GEx)
 - GEx -> TCR
 
-
-
 Uploaded files
 --------------
-
 
 There first tab will show in the side panel the files that can be uploaded. 
 
@@ -51,17 +48,22 @@ This includes:
 - Two clusTCR2 files (prefex with AG and BD) (.csv)
 - TCRex output file (.tsv)
 
-Side bar panel for uploading the four analysis files. 
-
-.. image:: img/4_overview_sbp.png
-  :width: 200
-  :alt: Alternative text
 
 Uploaded example K409 Melanoma dataset
 
 .. image:: img/4_uploading.png
   :width: 1200
   :alt: Alternative text
+
+If you need additional identifiers for the analysis section, this can be added by switching "add additional labels" to "yes" and upload the "Upload_labels.csv". 
+
+.. csv-table:: Upload_new_labels_table
+    :header-rows: 1
+    :file: path/Upload_labels.csv
+    :widths: 40, 40, 40
+    :class: longtable
+
+
 
 Side Bar Panel 
 ^^^^^^^^^^^^^^
