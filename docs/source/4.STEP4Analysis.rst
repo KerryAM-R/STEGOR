@@ -61,18 +61,20 @@ Main panel
 
 Depending on what you have uploaded, the main panel will render several tables. The first table is of the Seurat object's meta-data and you will see how it adds the additional labels after the "Sample_Name" column. 
 
-Uploaded example K409 Melanoma dataset
+Uploaded example of the colitis complication to melanoma therapy dataset (GSE144469)
 
 .. image:: img/4_uploading.png
   :width: 1200
   :alt: Alternative text
 
 
-
 Variable used for all analysis in the side bar
 ----------------------------------------------
 
-These drop down menues allow the user to change what is presented on the graphs and the analysis
+The side bar contains several reactive variables that can be used for the various analyses. 
+
+
+
 
 The selected individuals = Sample Name (default)
 
