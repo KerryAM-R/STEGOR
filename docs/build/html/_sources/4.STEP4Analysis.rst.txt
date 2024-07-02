@@ -43,6 +43,10 @@ To make selecting the "**Data source**" and "**Species**", there are functions t
 
 If you need additional identifiers for the analysis section, this can be added by switching "add additional labels" to "yes" and upload the "Update_labels.csv". 
 
+.. image:: img/4_updating_labs.png
+  :width: 300
+  :alt: Alternative text
+
 
 .. csv-table:: table
     :header-rows: 1
