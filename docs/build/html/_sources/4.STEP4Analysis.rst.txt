@@ -112,11 +112,17 @@ Overview
 The purpose of this section was to be able to interrogate the overview of the GEx only population dynamics regardless of TCR-seq and visa versa with TCR-seq only. 
 
 
-
-
-
 Side bar (OV only)
 ^^^^^^^^^^^^^^^^^^
+
+There are two aspects that are specific to the overview section that includes splitting the graphs based on the "selected sample", adn in the TCR section for colouring by the binned clone counts, clone frequency or top expanded clones. 
+
+.. image:: img/4_split_OV.png
+  :width: 200
+  :alt: Alternative text
+.. image:: img/4_type_of_graph_OV.png
+  :width: 200
+  :alt: Alternative text
 
 main panel (OV)
 ^^^^^^^^^^^^^^^^
