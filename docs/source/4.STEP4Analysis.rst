@@ -68,10 +68,29 @@ Uploaded example of the colitis complication to melanoma therapy dataset (GSE144
   :alt: Alternative text
 
 
-Variable used for all analysis in the side bar
-----------------------------------------------
+Overview
+--------
+
+The purpose of this section was to be able to interrogate the overview of the GEx only population dynamics regardless of TCR-seq and visa versa with TCR-seq only. 
+
+Side bar (All)
+^^^^^^^^^^^^^^
+
+
+
+Side bar (OV only)
+^^^^^^^^^^^^^^^^^^
+
+main panel (OV)
+^^^^^^^^^^^^^^^^
+
+
+The GEx section contains the following subs
+
 
 The side bar contains several reactive variables that can be used for the various analyses. 
+
+
 
 
 
