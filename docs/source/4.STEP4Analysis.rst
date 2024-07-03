@@ -68,13 +68,28 @@ Uploaded example of the colitis complication to melanoma therapy dataset (GSE144
   :alt: Alternative text
 
 
+Side bar (Analysis sections)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The side bar has variables that may be relevant to the all analyses, or only a specific section. 
+
+The variables common to the analysis section include:
+
+- V gene with/without CDR3
+- Selected Sample
+
+.. image:: img/4_general_features_OV.png
+  :width: 200
+  :alt: Alternative text
+
+
+
 Overview
 --------
 
 The purpose of this section was to be able to interrogate the overview of the GEx only population dynamics regardless of TCR-seq and visa versa with TCR-seq only. 
 
-Side bar (All)
-^^^^^^^^^^^^^^
+
 
 
 
