@@ -82,7 +82,29 @@ The variables common to the analysis section include:
   :width: 200
   :alt: Alternative text
 
+- restricing to one sample for filtering purposes
 
+.. image:: img/4_colouring.png
+  :width: 200
+  :alt: Alternative text
+
+- colouring 
+
+.. image:: img/4_colouring.png
+  :width: 200
+  :alt: Alternative text
+
+- Plotting parameter (e.g., text size)
+
+.. image:: img/4_params_all.png
+  :width: 200
+  :alt: Alternative text
+
+- Legend parameters
+
+.. image:: img/4_legend_params_all.png
+  :width: 200
+  :alt: Alternative text
 
 Overview
 --------
