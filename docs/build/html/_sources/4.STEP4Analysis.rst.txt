@@ -41,7 +41,7 @@ This will include the following default files that can be uploaded:
 
 To make selecting the "**Data source**" and "**Species**", there are functions to identify if the TCR-seq formattting is AIRR or not. The species is currently either human (hs) or mouse (mm) and based on the gene formatting of all caps (hs) or proper case (mm). The latter is needed as R is a case sensative language. 
 
-If you need additional identifiers for the analysis section, this can be added by switching "add additional labels" to "yes" and upload the "Update_labels.csv". The file consists of the original ID column, and the header "ID" must not be changed. The user can add as many columns. Any special characters will be convered to either .  or _. 
+If you need additional identifiers for the analysis section, this can be added by switching "add additional labels" to "yes" and upload the "Update_labels.csv". The file consists of the first column labelled as "ID" must not be changed. This first column must match the unique identifiers used in the "Sample_Name" column for ease of use. The user can add as many columns. Any special characters will be convered to either .  or _. An example is given with the colitis dataset that has three broad categories under the condition column. The user can then add additional variables that could be used for analysis.This was added to the analysis section, so the user does not have to go back to Step 1, and is also restrictive to one unique label. 
 
 .. image:: img/4_updating_labs.png
   :width: 300
@@ -61,18 +61,76 @@ Main panel
 
 Depending on what you have uploaded, the main panel will render several tables. The first table is of the Seurat object's meta-data and you will see how it adds the additional labels after the "Sample_Name" column. 
 
-Uploaded example K409 Melanoma dataset
+Uploaded example of the colitis complication to melanoma therapy dataset (GSE144469)
 
 .. image:: img/4_uploading.png
   :width: 1200
   :alt: Alternative text
 
 
+Side bar (Analysis sections)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Variable used for all analysis in the side bar
-----------------------------------------------
+The side bar has variables that may be relevant to the all analyses, or only a specific section. 
 
-These drop down menues allow the user to change what is presented on the graphs and the analysis
+The variables common to the analysis section include:
+
+- V gene with/without CDR3
+- Selected Sample
+
+.. image:: img/4_general_features_OV.png
+  :width: 200
+  :alt: Alternative text
+
+- restricing to one sample for filtering purposes
+
+.. image:: img/4_colouring.png
+  :width: 200
+  :alt: Alternative text
+
+- colouring 
+
+.. image:: img/4_colouring.png
+  :width: 200
+  :alt: Alternative text
+
+- Plotting parameter (e.g., text size)
+
+.. image:: img/4_params_all.png
+  :width: 200
+  :alt: Alternative text
+
+- Legend parameters
+
+.. image:: img/4_legend_params_all.png
+  :width: 200
+  :alt: Alternative text
+
+Overview
+--------
+
+The purpose of this section was to be able to interrogate the overview of the GEx only population dynamics regardless of TCR-seq and visa versa with TCR-seq only. 
+
+
+
+
+
+Side bar (OV only)
+^^^^^^^^^^^^^^^^^^
+
+main panel (OV)
+^^^^^^^^^^^^^^^^
+
+
+The GEx section contains the following subs
+
+
+The side bar contains several reactive variables that can be used for the various analyses. 
+
+
+
+
+
 
 The selected individuals = Sample Name (default)
 

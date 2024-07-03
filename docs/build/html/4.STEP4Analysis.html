@@ -56,10 +56,13 @@
 <li class="toctree-l2"><a class="reference internal" href="#uploaded-files">Uploaded files</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#side-bar">Side bar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#main-panel">Main panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#side-bar-analysis-sections">Side bar (Analysis sections)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#variable-used-for-all-analysis-in-the-side-bar">Variable used for all analysis in the side bar</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#side-bar-ov-only">Side bar (OV only)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#main-panel-ov">main panel (OV)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tcr-seq-gex">TCR-seq -&gt; GEX</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#automation-tcr-gex">Automation (TCR -&gt; GEX)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gex-tcr">GEx -&gt; TCR</a></li>
@@ -128,10 +131,10 @@
 - Upload BD clusTCR2 file (.csv)
 - Upload TCRex (.tsv)</p>
 <p>To make selecting the “<strong>Data source</strong>” and “<strong>Species</strong>”, there are functions to identify if the TCR-seq formattting is AIRR or not. The species is currently either human (hs) or mouse (mm) and based on the gene formatting of all caps (hs) or proper case (mm). The latter is needed as R is a case sensative language.</p>
-<p>If you need additional identifiers for the analysis section, this can be added by switching “add additional labels” to “yes” and upload the “Update_labels.csv”. The file consists of the original ID column, and the header “ID” must not be changed. The user can add as many columns. Any special characters will be convered to either .  or _.</p>
+<p>If you need additional identifiers for the analysis section, this can be added by switching “add additional labels” to “yes” and upload the “Update_labels.csv”. The file consists of the first column labelled as “ID” must not be changed. This first column must match the unique identifiers used in the “Sample_Name” column for ease of use. The user can add as many columns. Any special characters will be convered to either .  or _. An example is given with the colitis dataset that has three broad categories under the condition column. The user can then add additional variables that could be used for analysis.This was added to the analysis section, so the user does not have to go back to Step 1, and is also restrictive to one unique label.</p>
 <a class="reference internal image-reference" href="_images/4_updating_labs.png"><img alt="Alternative text" src="_images/4_updating_labs.png" style="width: 300px;" /></a>
-<table class="longtable docutils align-default" id="id1">
-<caption><span class="caption-text">Updated labelling for the colitis dataset.</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<table class="longtable docutils align-default" id="id2">
+<caption><span class="caption-text">Updated labelling for the colitis dataset.</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 40.0%" />
 <col style="width: 60.0%" />
@@ -220,13 +223,46 @@
 <section id="main-panel">
 <h3>Main panel<a class="headerlink" href="#main-panel" title="Link to this heading"></a></h3>
 <p>Depending on what you have uploaded, the main panel will render several tables. The first table is of the Seurat object’s meta-data and you will see how it adds the additional labels after the “Sample_Name” column.</p>
-<p>Uploaded example K409 Melanoma dataset</p>
+<p>Uploaded example of the colitis complication to melanoma therapy dataset (GSE144469)</p>
 <a class="reference internal image-reference" href="_images/4_uploading.png"><img alt="Alternative text" src="_images/4_uploading.png" style="width: 1200px;" /></a>
 </section>
+<section id="side-bar-analysis-sections">
+<h3>Side bar (Analysis sections)<a class="headerlink" href="#side-bar-analysis-sections" title="Link to this heading"></a></h3>
+<p>The side bar has variables that may be relevant to the all analyses, or only a specific section.</p>
+<p>The variables common to the analysis section include:</p>
+<ul class="simple">
+<li><p>V gene with/without CDR3</p></li>
+<li><p>Selected Sample</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/4_general_features_OV.png"><img alt="Alternative text" src="_images/4_general_features_OV.png" style="width: 200px;" /></a>
+<ul class="simple">
+<li><p>restricing to one sample for filtering purposes</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/4_colouring.png"><img alt="Alternative text" src="_images/4_colouring.png" style="width: 200px;" /></a>
+<ul class="simple">
+<li><p>colouring</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/4_colouring.png"><img alt="Alternative text" src="_images/4_colouring.png" style="width: 200px;" /></a>
+<ul class="simple">
+<li><p>Plotting parameter (e.g., text size)</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/4_params_all.png"><img alt="Alternative text" src="_images/4_params_all.png" style="width: 200px;" /></a>
+<ul class="simple">
+<li><p>Legend parameters</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/4_legend_params_all.png"><img alt="Alternative text" src="_images/4_legend_params_all.png" style="width: 200px;" /></a>
 </section>
-<section id="variable-used-for-all-analysis-in-the-side-bar">
-<h2>Variable used for all analysis in the side bar<a class="headerlink" href="#variable-used-for-all-analysis-in-the-side-bar" title="Link to this heading"></a></h2>
-<p>These drop down menues allow the user to change what is presented on the graphs and the analysis</p>
+</section>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The purpose of this section was to be able to interrogate the overview of the GEx only population dynamics regardless of TCR-seq and visa versa with TCR-seq only.</p>
+<section id="side-bar-ov-only">
+<h3>Side bar (OV only)<a class="headerlink" href="#side-bar-ov-only" title="Link to this heading"></a></h3>
+</section>
+<section id="main-panel-ov">
+<h3>main panel (OV)<a class="headerlink" href="#main-panel-ov" title="Link to this heading"></a></h3>
+<p>The GEx section contains the following subs</p>
+<p>The side bar contains several reactive variables that can be used for the various analyses.</p>
 <p>The selected individuals = Sample Name (default)</p>
 <p>Display by Selected Individual = no or yes. This is linked to the “Selected Individual” button.</p>
 <p>Number of plot row  = 2. This allows the user to select the number of rows to display as desired.</p>
@@ -254,8 +290,9 @@
 </dd>
 </dl>
 <img alt="Alternative text" src="_images/4_plot_parameters.png" />
-<section id="overview">
-<h3>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h3>
+</section>
+<section id="id1">
+<h3>Overview<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><dl class="simple">
 <dt>GEx</dt><dd><ul>
