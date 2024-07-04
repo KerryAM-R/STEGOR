@@ -171,8 +171,29 @@ This section is split into four subsections.
 - ClusTCR
 - Epitope 
 
-Common side bar variables
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Sidebar common features
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- heatmap
+- Cut-offs for FindMarker (Defaults)
+    + logFC = 0.25
+    + Minimum point count = 0.25
+    + adjusted p-value = 0.1
+    + Bins for the dot plot (changed from seruat default 25 to 10).
+- 
+
+.. image:: img/4_TCRGEX_heatmap.png
+  :width: 300
+  :alt: Alternative text
+.. image:: img/4_TCRGEX_cutoff.png
+  :width: 300
+  :alt: Alternative text
+
+
+
+
+Clonal abudance 
+^^^^^^^^^^^^^^^
 
 
 
