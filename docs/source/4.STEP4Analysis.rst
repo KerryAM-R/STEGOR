@@ -136,7 +136,7 @@ This section focuses on a general interrogation of the annotations regardless of
     + The user can display the "Colour by:" as any of the variables as either a pie chart or bar plot. 
 
 .. image:: img/4_OV_UMAP_split.png
-  :width: 600
+  :width: 1200
   :alt: Alternative text
 
 TCR
