@@ -156,7 +156,7 @@ This section focuses on TCR expansion, and include replicating features from scR
 - Clonality (counts)
     + UMAP plot
 
-*Note: Clonal expansion plot and  Clonality (counts) variable can be changed with counts (Number_expanded), frequency (Frequency_Expanded) or most abundant clones (Top_clonotypes).
+*Note: Clonal expansion plot and  Clonality (counts) variable can be changed with counts (Number_expanded), frequency (Frequency_Expanded) or most abundant clones (Top_clonotypes).*
 
 .. image:: img/4_OV_TCRonly.png
   :width: 600
@@ -171,8 +171,41 @@ This section is split into four subsections.
 - ClusTCR
 - Epitope 
 
-Common side bar variables
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Sidebar common features
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Heatmap
+    + The user can change the zero, from one count, maximum count colouring scale. 
+    + This is based on total counts, and I have not yet developed a frequency scaling.
+- Cut-offs for FindMarker (Defaults)
+    + logFC = 0.25
+    + Minimum point count = 0.25
+    + adjusted p-value = 0.1
+    + Bins for the dot plot (changed from seruat default 25 to 10).
+- Dot plot
+    + Change the colours of the normalised expression from lower, mid and high.
+    + Also the dotplot will by default only display the 30 most significant transcripts. This was chosen based on developer preference of high quality figures with the default text sizes. 
+- Violin plot
+    + The user can keep in the point (jitter)
+    + The user can alter the transparancy of the violin plot. This is needed as the jittered dot points are behind the violin layer in the graph. 
+
+
+.. image:: img/4_TCRGEX_heatmap.png
+  :width: 300
+  :alt: Alternative text
+.. image:: img/4_TCRGEX_cutoff.png
+  :width: 300
+  :alt: Alternative text
+.. image:: img/4_TCRGEX_dotplot.png
+  :width: 300
+  :alt: Alternative text
+.. image:: img/4_TCRGEX_violin.png
+  :width: 300
+  :alt: Alternative text
+
+
+Clonal abudance 
+^^^^^^^^^^^^^^^
 
 
 

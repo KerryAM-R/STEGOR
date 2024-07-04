@@ -69,8 +69,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#tcr-gex">TCR -&gt; GEx</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#common-side-bar-variables">Common side bar variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sidebar-common-features">Sidebar common features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clonal-abudance">Clonal abudance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tcr-seq-gex">TCR-seq -&gt; GEX</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#automation-tcr-gex">Automation (TCR -&gt; GEX)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gex-tcr">GEx -&gt; TCR</a></li>
@@ -141,8 +142,8 @@
 <p>To make selecting the “<strong>Data source</strong>” and “<strong>Species</strong>”, there are functions to identify if the TCR-seq formattting is AIRR or not. The species is currently either human (hs) or mouse (mm) and based on the gene formatting of all caps (hs) or proper case (mm). The latter is needed as R is a case sensative language.</p>
 <p>If you need additional identifiers for the analysis section, this can be added by switching “add additional labels” to “yes” and upload the “Update_labels.csv”. The file consists of the first column labelled as “ID” must not be changed. This first column must match the unique identifiers used in the “Sample_Name” column for ease of use. The user can add as many columns. Any special characters will be convered to either .  or _. An example is given with the colitis dataset that has three broad categories under the condition column. The user can then add additional variables that could be used for analysis.This was added to the analysis section, so the user does not have to go back to Step 1, and is also restrictive to one unique label.</p>
 <a class="reference internal image-reference" href="_images/4_updating_labs.png"><img alt="Alternative text" src="_images/4_updating_labs.png" style="width: 300px;" /></a>
-<table class="longtable docutils align-default" id="id4">
-<caption><span class="caption-text">Updated labelling for the colitis dataset.</span><a class="headerlink" href="#id4" title="Link to this table"></a></caption>
+<table class="longtable docutils align-default" id="id2">
+<caption><span class="caption-text">Updated labelling for the colitis dataset.</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 40.0%" />
 <col style="width: 60.0%" />
@@ -332,7 +333,7 @@
 </dl>
 </li>
 </ul>
-<p><a href="#id1"><span class="problematic" id="id2">*</span></a>Note: Clonal expansion plot and  Clonality (counts) variable can be changed with counts (Number_expanded), frequency (Frequency_Expanded) or most abundant clones (Top_clonotypes).</p>
+<p><em>Note: Clonal expansion plot and  Clonality (counts) variable can be changed with counts (Number_expanded), frequency (Frequency_Expanded) or most abundant clones (Top_clonotypes).</em></p>
 <a class="reference internal image-reference" href="_images/4_OV_TCRonly.png"><img alt="Alternative text" src="_images/4_OV_TCRonly.png" style="width: 600px;" /></a>
 </section>
 </section>
@@ -344,11 +345,54 @@
 - Exapanded
 - ClusTCR
 - Epitope</p>
-<section id="common-side-bar-variables">
-<h3>Common side bar variables<a class="headerlink" href="#common-side-bar-variables" title="Link to this heading"></a></h3>
+<section id="sidebar-common-features">
+<h3>Sidebar common features<a class="headerlink" href="#sidebar-common-features" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Heatmap</dt><dd><ul>
+<li><p>The user can change the zero, from one count, maximum count colouring scale.</p></li>
+<li><p>This is based on total counts, and I have not yet developed a frequency scaling.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Cut-offs for FindMarker (Defaults)</dt><dd><ul>
+<li><p>logFC = 0.25</p></li>
+<li><p>Minimum point count = 0.25</p></li>
+<li><p>adjusted p-value = 0.1</p></li>
+<li><p>Bins for the dot plot (changed from seruat default 25 to 10).</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Dot plot</dt><dd><ul>
+<li><p>Change the colours of the normalised expression from lower, mid and high.</p></li>
+<li><p>Also the dotplot will by default only display the 30 most significant transcripts. This was chosen based on developer preference of high quality figures with the default text sizes.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Violin plot</dt><dd><ul>
+<li><p>The user can keep in the point (jitter)</p></li>
+<li><p>The user can alter the transparancy of the violin plot. This is needed as the jittered dot points are behind the violin layer in the graph.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<a class="reference internal image-reference" href="_images/4_TCRGEX_heatmap.png"><img alt="Alternative text" src="_images/4_TCRGEX_heatmap.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/4_TCRGEX_cutoff.png"><img alt="Alternative text" src="_images/4_TCRGEX_cutoff.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/4_TCRGEX_dotplot.png"><img alt="Alternative text" src="_images/4_TCRGEX_dotplot.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/4_TCRGEX_violin.png"><img alt="Alternative text" src="_images/4_TCRGEX_violin.png" style="width: 300px;" /></a>
 </section>
-<section id="id3">
-<h3>Overview<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<section id="clonal-abudance">
+<h3>Clonal abudance<a class="headerlink" href="#clonal-abudance" title="Link to this heading"></a></h3>
+</section>
+<section id="id1">
+<h3>Overview<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><dl class="simple">
 <dt>GEx</dt><dd><ul>
