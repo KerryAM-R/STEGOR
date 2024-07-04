@@ -61,8 +61,16 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#side-bar-ov-only">Side bar (OV only)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#main-panel-ov">main panel (OV)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#main-panel-ov">Main panel (OV)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gex">GEx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tcr">TCR</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tcr-gex">TCR -&gt; GEx</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#common-side-bar-variables">Common side bar variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tcr-seq-gex">TCR-seq -&gt; GEX</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#automation-tcr-gex">Automation (TCR -&gt; GEX)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gex-tcr">GEx -&gt; TCR</a></li>
@@ -133,8 +141,8 @@
 <p>To make selecting the “<strong>Data source</strong>” and “<strong>Species</strong>”, there are functions to identify if the TCR-seq formattting is AIRR or not. The species is currently either human (hs) or mouse (mm) and based on the gene formatting of all caps (hs) or proper case (mm). The latter is needed as R is a case sensative language.</p>
 <p>If you need additional identifiers for the analysis section, this can be added by switching “add additional labels” to “yes” and upload the “Update_labels.csv”. The file consists of the first column labelled as “ID” must not be changed. This first column must match the unique identifiers used in the “Sample_Name” column for ease of use. The user can add as many columns. Any special characters will be convered to either .  or _. An example is given with the colitis dataset that has three broad categories under the condition column. The user can then add additional variables that could be used for analysis.This was added to the analysis section, so the user does not have to go back to Step 1, and is also restrictive to one unique label.</p>
 <a class="reference internal image-reference" href="_images/4_updating_labs.png"><img alt="Alternative text" src="_images/4_updating_labs.png" style="width: 300px;" /></a>
-<table class="longtable docutils align-default" id="id2">
-<caption><span class="caption-text">Updated labelling for the colitis dataset.</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<table class="longtable docutils align-default" id="id4">
+<caption><span class="caption-text">Updated labelling for the colitis dataset.</span><a class="headerlink" href="#id4" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 40.0%" />
 <col style="width: 60.0%" />
@@ -233,24 +241,16 @@
 <ul class="simple">
 <li><p>V gene with/without CDR3</p></li>
 <li><p>Selected Sample</p></li>
-</ul>
-<a class="reference internal image-reference" href="_images/4_general_features_OV.png"><img alt="Alternative text" src="_images/4_general_features_OV.png" style="width: 200px;" /></a>
-<ul class="simple">
 <li><p>restricing to one sample for filtering purposes</p></li>
-</ul>
-<a class="reference internal image-reference" href="_images/4_colouring.png"><img alt="Alternative text" src="_images/4_colouring.png" style="width: 200px;" /></a>
-<ul class="simple">
 <li><p>colouring</p></li>
-</ul>
-<a class="reference internal image-reference" href="_images/4_colouring.png"><img alt="Alternative text" src="_images/4_colouring.png" style="width: 200px;" /></a>
-<ul class="simple">
 <li><p>Plotting parameter (e.g., text size)</p></li>
-</ul>
-<a class="reference internal image-reference" href="_images/4_params_all.png"><img alt="Alternative text" src="_images/4_params_all.png" style="width: 200px;" /></a>
-<ul class="simple">
 <li><p>Legend parameters</p></li>
 </ul>
+<a class="reference internal image-reference" href="_images/4_general_features_OV.png"><img alt="Alternative text" src="_images/4_general_features_OV.png" style="width: 200px;" /></a>
+<a class="reference internal image-reference" href="_images/4_restrict.png"><img alt="Alternative text" src="_images/4_restrict.png" style="width: 200px;" /></a>
+<a class="reference internal image-reference" href="_images/4_colouring.png"><img alt="Alternative text" src="_images/4_colouring.png" style="width: 200px;" /></a>
 <a class="reference internal image-reference" href="_images/4_legend_params_all.png"><img alt="Alternative text" src="_images/4_legend_params_all.png" style="width: 200px;" /></a>
+<a class="reference internal image-reference" href="_images/4_params_all.png"><img alt="Alternative text" src="_images/4_params_all.png" style="width: 200px;" /></a>
 </section>
 </section>
 <section id="overview">
@@ -259,43 +259,96 @@
 <section id="side-bar-ov-only">
 <h3>Side bar (OV only)<a class="headerlink" href="#side-bar-ov-only" title="Link to this heading"></a></h3>
 <p>There are two aspects that are specific to the overview section that includes splitting the graphs based on the “selected sample”, adn in the TCR section for colouring by the binned clone counts, clone frequency or top expanded clones.</p>
-<a class="reference internal image-reference" href="img/4_split_OV.png"><img alt="Alternative text" src="img/4_split_OV.png" style="width: 200px;" /></a>
-<a class="reference internal image-reference" href="img/4_type_of_graph_OV.png"><img alt="Alternative text" src="img/4_type_of_graph_OV.png" style="width: 200px;" /></a>
+<a class="reference internal image-reference" href="_images/4_split_OV.png"><img alt="Alternative text" src="_images/4_split_OV.png" style="width: 200px;" /></a>
+<a class="reference internal image-reference" href="_images/4_type_of_graph_OV.png"><img alt="Alternative text" src="_images/4_type_of_graph_OV.png" style="width: 200px;" /></a>
 </section>
 <section id="main-panel-ov">
-<h3>main panel (OV)<a class="headerlink" href="#main-panel-ov" title="Link to this heading"></a></h3>
-<p>The GEx section contains the following subs</p>
-<p>The side bar contains several reactive variables that can be used for the various analyses.</p>
-<p>The selected individuals = Sample Name (default)</p>
-<p>Display by Selected Individual = no or yes. This is linked to the “Selected Individual” button.</p>
-<p>Number of plot row  = 2. This allows the user to select the number of rows to display as desired.</p>
-<p>The “Split graph by:” button allows for some graphs e.g., Pie charts, to be split by this variable rather than the “Selected Individual”</p>
-<a class="reference internal image-reference" href="_images/4_display-graph.png"><img alt="Alternative text" src="_images/4_display-graph.png" style="width: 300px;" /></a>
-<p>The user can also select which variable to colour the graphs by with “Colour by:”</p>
-<p>Additionally, the uder can also select the colouring Palettes that includes: “default”, “rainbow”, “random”, “heat.colors”, “terrain.colors”, “topo.colors”, “hcl.colors”, “one”</p>
-<p>The “one” colour is linked to the “One colour”. Additionally all NA variable will be coloured the light grey #E5E5E5</p>
-<a class="reference internal image-reference" href="_images/4_colouring_buttons.png"><img alt="Alternative text" src="_images/4_colouring_buttons.png" style="width: 200px;" /></a>
-<p>For some of the functions, the user can restrict to “What individuals to include”</p>
-<p>This includes both the
-- “Display one individual?”
-- “Display one individual”</p>
-<p>For instance this is used to filter the TCR table in the clonal abudance section to more easily identify the most abundant cloens relative to a specific sample/individual based on the “selected individuals” button.</p>
-<a class="reference internal image-reference" href="_images/4_What_individuals_to_include.png"><img alt="Alternative text" src="_images/4_What_individuals_to_include.png" style="width: 200px;" /></a>
-<p>The user can also select the plot parameters that are relevant to the majority of the graphs</p>
-<dl class="simple">
-<dt>This includes:</dt><dd><ul class="simple">
-<li><p>Axis number size - size of the numbered axis</p></li>
-<li><p>Axis text size i.e., axis title</p></li>
-<li><p>Legend text size</p></li>
-<li><p>legend location (left, right, top, bottom or none)</p></li>
-<li><p>Type of Font</p></li>
+<h3>Main panel (OV)<a class="headerlink" href="#main-panel-ov" title="Link to this heading"></a></h3>
+<p>The GEx section contains the following sections: GEx and TCR</p>
+<section id="gex">
+<h4>GEx<a class="headerlink" href="#gex" title="Link to this heading"></a></h4>
+<p>This section focuses on a general interrogation of the annotations regardless of TCR</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Percentage</dt><dd><ul>
+<li><p>This section is divided into percentage (Selected sample vs Colour by:) and can be downloaded as a .csv file.</p></li>
 </ul>
 </dd>
 </dl>
-<img alt="Alternative text" src="_images/4_plot_parameters.png" />
+</li>
+<li><dl class="simple">
+<dt>UMAP plot</dt><dd><ul>
+<li><p>This can be have the full dataset or split by selected samples.</p></li>
+<li><p>Samples can be removed from the “Order of graph (Selected Sample)”</p></li>
+<li><p>Additionally, as there can be overlapping with labels, the user can chose in the “Show all labels?” to show all or selected.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Summary chart</dt><dd><ul>
+<li><p>As we used the semi-supervised annotation stratergy, this usually causes lots of overlap in the UMAP plot.</p></li>
+<li><p>The user can display the “Colour by:” as any of the variables as either a pie chart or bar plot.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<a class="reference internal image-reference" href="_images/4_OV_UMAP_split.png"><img alt="Alternative text" src="_images/4_OV_UMAP_split.png" style="width: 600px;" /></a>
 </section>
-<section id="id1">
-<h3>Overview<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<section id="tcr">
+<h4>TCR<a class="headerlink" href="#tcr" title="Link to this heading"></a></h4>
+<p>This section focuses on TCR expansion, and include replicating features from scRepertoire i.e., clonal expansion presented on the UMAP.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Overlap</dt><dd><ul>
+<li><p>Summary table to show the clonal expansion based on the Selected Sample column</p></li>
+<li><p>Upset table that is “V gene with/without CDR3” vs “Selected Sample”</p></li>
+<li><p>If &lt;31 groups to compare, it will render an UPSET plot. This is a type of VENN diagram for more complex comparisons. The top bar represents the unique clones that overlapped the samples if there was a dot and line connection. The right bar graph is the unique clones for each sample</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Line Graph</dt><dd><ul>
+<li><p>This section was developed for explore multi-sample/time series based data</p></li>
+<li><p>The way the samples were labelled can split the text by - . etc.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Clonal expansion plot</dt><dd><ul>
+<li><p>bar plot of the clonal</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Clonality (counts)</dt><dd><ul>
+<li><p>UMAP plot</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><a href="#id1"><span class="problematic" id="id2">*</span></a>Note: Clonal expansion plot and  Clonality (counts) variable can be changed with counts (Number_expanded), frequency (Frequency_Expanded) or most abundant clones (Top_clonotypes).</p>
+<a class="reference internal image-reference" href="_images/4_OV_TCRonly.png"><img alt="Alternative text" src="_images/4_OV_TCRonly.png" style="width: 600px;" /></a>
+</section>
+</section>
+</section>
+<section id="tcr-gex">
+<h2>TCR -&gt; GEx<a class="headerlink" href="#tcr-gex" title="Link to this heading"></a></h2>
+<p>This section is split into four subsections.
+- Clonal abudance
+- Exapanded
+- ClusTCR
+- Epitope</p>
+<section id="common-side-bar-variables">
+<h3>Common side bar variables<a class="headerlink" href="#common-side-bar-variables" title="Link to this heading"></a></h3>
+</section>
+<section id="id3">
+<h3>Overview<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><dl class="simple">
 <dt>GEx</dt><dd><ul>
@@ -322,31 +375,6 @@
 <h3>TCR-seq -&gt; GEX<a class="headerlink" href="#tcr-seq-gex" title="Link to this heading"></a></h3>
 <p>Each section has a summary table, UMAP, Heatmap, stats, dot-plot and over-representation.</p>
 <p>Some of the secions also have unique features.</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt>Clonal abudance</dt><dd><ul>
-<li><p>Bar graph</p></li>
-<li><p>Ridge and Violin plots (for a specific gene)</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>Exapanded</p></li>
-<li><dl class="simple">
-<dt>ClusTCR</dt><dd><ul>
-<li><p>Motif</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Epitope</dt><dd><ul>
-<li><p>Load Epitope list</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
 </section>
 <section id="automation-tcr-gex">
 <h3>Automation (TCR -&gt; GEX)<a class="headerlink" href="#automation-tcr-gex" title="Link to this heading"></a></h3>

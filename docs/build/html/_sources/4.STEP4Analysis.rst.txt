@@ -54,8 +54,6 @@ If you need additional identifiers for the analysis section, this can be added b
     :widths: 40, 60
     :class: longtable
 
-
-
 Main panel 
 ^^^^^^^^^^
 
@@ -77,32 +75,24 @@ The variables common to the analysis section include:
 
 - V gene with/without CDR3
 - Selected Sample
+- restricing to one sample for filtering purposes
+- colouring 
+- Plotting parameter (e.g., text size)
+- Legend parameters
 
 .. image:: img/4_general_features_OV.png
   :width: 200
   :alt: Alternative text
-
-- restricing to one sample for filtering purposes
-
+.. image:: img/4_restrict.png
+  :width: 200
+  :alt: Alternative text
 .. image:: img/4_colouring.png
   :width: 200
   :alt: Alternative text
-
-- colouring 
-
-.. image:: img/4_colouring.png
-  :width: 200
-  :alt: Alternative text
-
-- Plotting parameter (e.g., text size)
-
-.. image:: img/4_params_all.png
-  :width: 200
-  :alt: Alternative text
-
-- Legend parameters
-
 .. image:: img/4_legend_params_all.png
+  :width: 200
+  :alt: Alternative text
+.. image:: img/4_params_all.png
   :width: 200
   :alt: Alternative text
 
@@ -124,65 +114,74 @@ There are two aspects that are specific to the overview section that includes sp
   :width: 200
   :alt: Alternative text
 
-main panel (OV)
+Main panel (OV)
 ^^^^^^^^^^^^^^^^
 
 
-The GEx section contains the following subs
+The GEx section contains the following sections: GEx and TCR
 
+GEx
+~~~
 
-The side bar contains several reactive variables that can be used for the various analyses. 
+This section focuses on a general interrogation of the annotations regardless of TCR
 
+- Percentage
+    + This section is divided into percentage (Selected sample vs Colour by:) and can be downloaded as a .csv file. 
+- UMAP plot
+    + This can be have the full dataset or split by selected samples. 
+    + Samples can be removed from the "Order of graph (Selected Sample)"
+    + Additionally, as there can be overlapping with labels, the user can chose in the "Show all labels?" to show all or selected.
+- Summary chart
+    + As we used the semi-supervised annotation stratergy, this usually causes lots of overlap in the UMAP plot. 
+    + The user can display the "Colour by:" as any of the variables as either a pie chart or bar plot. 
 
-
-
-
-
-The selected individuals = Sample Name (default)
-
-Display by Selected Individual = no or yes. This is linked to the "Selected Individual" button. 
-
-Number of plot row  = 2. This allows the user to select the number of rows to display as desired.
-
-The "Split graph by:" button allows for some graphs e.g., Pie charts, to be split by this variable rather than the "Selected Individual"
-
-.. image:: img/4_display-graph.png
-  :width: 300
+.. image:: img/4_OV_UMAP_split.png
+  :width: 600
   :alt: Alternative text
 
-The user can also select which variable to colour the graphs by with "Colour by:" 
+TCR
+~~~
 
-Additionally, the uder can also select the colouring Palettes that includes: "default", "rainbow", "random", "heat.colors", "terrain.colors", "topo.colors", "hcl.colors", "one"
+This section focuses on TCR expansion, and include replicating features from scRepertoire i.e., clonal expansion presented on the UMAP. 
 
-The "one" colour is linked to the "One colour". Additionally all NA variable will be coloured the light grey #E5E5E5
+- Overlap 
+    + Summary table to show the clonal expansion based on the Selected Sample column
+    + Upset table that is "V gene with/without CDR3" vs "Selected Sample"
+    + If <31 groups to compare, it will render an UPSET plot. This is a type of VENN diagram for more complex comparisons. The top bar represents the unique clones that overlapped the samples if there was a dot and line connection. The right bar graph is the unique clones for each sample
+- Line Graph
+    + This section was developed for explore multi-sample/time series based data
+    + The way the samples were labelled can split the text by - . etc.
+- Clonal expansion plot 
+    + bar plot of the clonal 
+- Clonality (counts)
+    + UMAP plot
 
-.. image:: img/4_colouring_buttons.png
+*Note: Clonal expansion plot and  Clonality (counts) variable can be changed with counts (Number_expanded), frequency (Frequency_Expanded) or most abundant clones (Top_clonotypes).
+
+.. image:: img/4_OV_TCRonly.png
+  :width: 600
   :alt: Alternative text
-  :width: 200
 
-For some of the functions, the user can restrict to "What individuals to include"
+TCR -> GEx 
+-----------
 
-This includes both the 
-- "Display one individual?"
-- "Display one individual"
+This section is split into four subsections. 
+- Clonal abudance
+- Exapanded
+- ClusTCR
+- Epitope 
 
-For instance this is used to filter the TCR table in the clonal abudance section to more easily identify the most abundant cloens relative to a specific sample/individual based on the "selected individuals" button. 
+Common side bar variables
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: img/4_What_individuals_to_include.png
-  :width: 200
-  :alt: Alternative text
 
-The user can also select the plot parameters that are relevant to the majority of the graphs
 
-This includes:
-    - Axis number size - size of the numbered axis
-    - Axis text size i.e., axis title
-    - Legend text size
-    - legend location (left, right, top, bottom or none)
-    - Type of Font 
 
-.. image:: img/4_plot_parameters.png
-  :alt: Alternative text
+
+
+
+
+
 
 Overview
 ^^^^^^^^
@@ -203,14 +202,7 @@ Each section has a summary table, UMAP, Heatmap, stats, dot-plot and over-repres
 
 Some of the secions also have unique features.
 
-- Clonal abudance
-    - Bar graph 
-    - Ridge and Violin plots (for a specific gene)
-- Exapanded
-- ClusTCR
-    - Motif 
-- Epitope 
-    - Load Epitope list 
+
 
 Automation (TCR -> GEX)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
