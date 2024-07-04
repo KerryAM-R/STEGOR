@@ -84,7 +84,7 @@ The variables common to the analysis section include:
 
 - restricing to one sample for filtering purposes
 
-.. image:: img/4_colouring.png
+.. image:: img/4_restrict.png
   :width: 200
   :alt: Alternative text
 
