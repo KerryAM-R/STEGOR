@@ -156,7 +156,7 @@ This section focuses on TCR expansion, and include replicating features from scR
 - Clonality (counts)
     + UMAP plot
 
-*Note: Clonal expansion plot and  Clonality (counts) variable can be changed with counts (Number_expanded), frequency (Frequency_Expanded) or most abundant clones (Top_clonotypes).
+*Note: Clonal expansion plot and  Clonality (counts) variable can be changed with counts (Number_expanded), frequency (Frequency_Expanded) or most abundant clones (Top_clonotypes).*
 
 .. image:: img/4_OV_TCRonly.png
   :width: 600
