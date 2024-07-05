@@ -136,7 +136,7 @@ This section focuses on a general interrogation of the annotations regardless of
     + The user can display the "Colour by:" as any of the variables as either a pie chart or bar plot. 
 
 .. image:: img/4_OV_UMAP_split.png
-  :width: 600
+  :width: 1200
   :alt: Alternative text
 
 TCR
@@ -159,7 +159,7 @@ This section focuses on TCR expansion, and include replicating features from scR
 *Note: Clonal expansion plot and  Clonality (counts) variable can be changed with counts (Number_expanded), frequency (Frequency_Expanded) or most abundant clones (Top_clonotypes).*
 
 .. image:: img/4_OV_TCRonly.png
-  :width: 600
+  :width: 300
   :alt: Alternative text
 
 TCR -> GEx 
