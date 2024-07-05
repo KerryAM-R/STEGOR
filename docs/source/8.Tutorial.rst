@@ -35,12 +35,21 @@ STEP 3b.
 STEP 3c. 
 ^^^^^^^^
 
+
+
+- Why use semi-supervised annotations? 
+- What are the available annotation models in STEGO.R?
+- How to do a custom annotation? 
+
 STEP 3d. 
 ^^^^^^^^
 
 
+
 STEP 3e. 
 ^^^^^^^^
+
+
 
 
 
