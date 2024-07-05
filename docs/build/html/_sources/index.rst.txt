@@ -22,3 +22,4 @@ Contents
    5.postAnalysis
    6.FAQ
    7.History
+   8.Tutorial

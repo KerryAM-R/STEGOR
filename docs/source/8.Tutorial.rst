@@ -1,0 +1,50 @@
+Tutorial 
+========
+
+This section will include access to a test datasest to learn how to use STEGO.R. 
+
+This will include the video tutorials. 
+
+Datasets
+--------
+
+Tutorial directory (https://zenodo.org/records/12665808) that contains the melanoma dataset with the lymph node and tumor single cell sample. 
+
+
+The T cell atlas V2 (https://zenodo.org/records/12569981) will be used to demonstrate some of the functionality in Step 4. Analysis and post-analysis section. 
+
+Quality control (Steps 1 to 3)
+------------------------------
+
+If you already have an .rds seurat object, and the TCR data was processed with scRepertoire proceed to Step 3e. to reformat the meta-data and then step 3c (annotation) and 3d (option).
+
+STEP 1. 
+^^^^^^^^
+
+
+STEP 2. 
+^^^^^^^^
+
+
+STEP 3a. 
+^^^^^^^^
+
+STEP 3b. 
+^^^^^^^^
+
+STEP 3c. 
+^^^^^^^^
+
+STEP 3d. 
+^^^^^^^^
+
+
+STEP 3e. 
+^^^^^^^^
+
+
+
+
+Analysis 
+-----------
+
