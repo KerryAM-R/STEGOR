@@ -2,11 +2,7 @@ Step 4. Analysis
 ================
 .. note::
 
-    Under active construction
-    
-    This section will include example analyses depending on the type of data present.
-
-
+    This section goes over what is present in STEGO.R. The video tutorial will present some examples of each that will depend on specific biological questions. 
 
 
 Application structure
@@ -248,17 +244,53 @@ The "Cut off greater than" helps calculate by defaul the D50, or the count above
   :width: 300
   :alt: Alternative text
 
+.. raw:: html
 
-I have also used this section in the STEGO.R V3 <a href="https://www.biorxiv.org/content/10.1101/2023.09.27.559702v3" target="_blank">pre-print</a> for compairing the before and after treatment of a single clone. 
+    I have also used this section in the STEGO.R V3 <a href="https://www.biorxiv.org/content/10.1101/2023.09.27.559702v3" target="_blank">preprint</a> for compairing the before and after treatment of a single clone. 
 
 
+ClusTCR2
+^^^^^^^^
 
+This section will look into the clusters produced in STEP 2.
 
+The user can select which chain they wish to interrogate e.g., TRA, TRB, TRG and TRD, as well as which cluster to interrogate. 
+
+The clsuters are ordered in how many total TCR were assocaited with a specific cluster. 
+
+The only additional plot that the user can interrogate is the motif. 
+
+.. image:: img/4_TCRGEX_clustering.png
+  :width: 300
+  :alt: Alternative text
+
+.. image:: img/4_TCRGEX_motif.png
+  :width: 1200
+  :alt: Alternative text
+
+Epitope (TCRex)
+^^^^^^^^^^^^^^^^
+
+This epitope section was designed to interrogate the TCRex outputs in STEGO.R. 
+
+This section includes  in the sidebar to add the TCR headers to the meta-data including the epitope and pathology. 
+
+The epitope list is ordered based on TCR with the most sequences. 
+
+The top associated epitope for the colitis compliation to melanoma treatment was the melanoma epitope ELAGIGILTV.
+
+.. image:: img/4_TCRGEX_epitope.png
+  :width: 300
+  :alt: Alternative text
+
+.. image:: img/4_TCRGEX_epitope_stats.png
+  :width: 1200
+  :alt: Alternative text
 
 
 
 Automation (TCR -> GEX)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------
 
 - Clonotype 
     - Download public (bar graphs), summary table, dot plot for each public-like clone
@@ -276,10 +308,10 @@ Automation (TCR -> GEX)
     - Unselect "Add in Epitope data" to focus on the annotations. So, you can identify the TCR linked to specific annotation models (e.g., FunctionTcell)
 
 GEx -> TCR
-^^^^^^^^^^^
+-----------
 
 - Annotation
-    - Under development 
+    - No longer being developed. 
 
 - Marker 
     - Single marker

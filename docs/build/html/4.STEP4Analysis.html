@@ -72,10 +72,12 @@
 <li class="toctree-l3"><a class="reference internal" href="#sidebar-common-features">Sidebar common features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#clonal-abundance">Clonal abundance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#expansion">Expansion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#automation-tcr-gex">Automation (TCR -&gt; GEX)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#gex-tcr">GEx -&gt; TCR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clustcr2">ClusTCR2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#epitope-tcrex">Epitope (TCRex)</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#automation-tcr-gex">Automation (TCR -&gt; GEX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gex-tcr">GEx -&gt; TCR</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="5.postAnalysis.html">Post Analysis</a></li>
@@ -112,8 +114,7 @@
 <h1>Step 4. Analysis<a class="headerlink" href="#step-4-analysis" title="Link to this heading"></a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Under active construction</p>
-<p>This section will include example analyses depending on the type of data present.</p>
+<p>This section goes over what is present in STEGO.R. The video tutorial will present some examples of each that will depend on specific biological questions.</p>
 </div>
 <section id="application-structure">
 <h2>Application structure<a class="headerlink" href="#application-structure" title="Link to this heading"></a></h2>
@@ -425,7 +426,7 @@
 </ul>
 <p>In order to render the table efficiently, I have included a filter under the clonal abundance section to the top 50, as well as included a minimum count threshold (default = 2).</p>
 <a class="reference internal image-reference" href="_images/4_TCRGEX_abundance.png"><img alt="Alternative text" src="_images/4_TCRGEX_abundance.png" style="width: 300px;" /></a>
-<a class="reference internal image-reference" href="img/4_TCRGEX_clonal_abudance_section.png"><img alt="Alternative text" src="img/4_TCRGEX_clonal_abudance_section.png" style="width: 1200px;" /></a>
+<a class="reference internal image-reference" href="_images/4_TCRGEX_clonal_abudance_section.png"><img alt="Alternative text" src="_images/4_TCRGEX_clonal_abudance_section.png" style="width: 1200px;" /></a>
 </section>
 <section id="expansion">
 <h3>Expansion<a class="headerlink" href="#expansion" title="Link to this heading"></a></h3>
@@ -433,10 +434,28 @@
 <p>The sidebar contains some variables to help decide on what the count cut-off could be.</p>
 <p>The “Cut off greater than” helps calculate by defaul the D50, or the count above which 50% of the repertiore is represented. This is used to calculate “Cut off greater than” count.</p>
 <a class="reference internal image-reference" href="_images/4_TCRGEX_expanded.png"><img alt="Alternative text" src="_images/4_TCRGEX_expanded.png" style="width: 300px;" /></a>
-<p>I have also used this section in the STEGO.R V3 &lt;a href=”<a class="reference external" href="https://www.biorxiv.org/content/10.1101/2023.09.27.559702v3">https://www.biorxiv.org/content/10.1101/2023.09.27.559702v3</a>” target=”_blank”&gt;pre-print&lt;/a&gt; for compairing the before and after treatment of a single clone.</p>
+I have also used this section in the STEGO.R V3 <a href="https://www.biorxiv.org/content/10.1101/2023.09.27.559702v3" target="_blank">preprint</a> for compairing the before and after treatment of a single clone.</section>
+<section id="clustcr2">
+<h3>ClusTCR2<a class="headerlink" href="#clustcr2" title="Link to this heading"></a></h3>
+<p>This section will look into the clusters produced in STEP 2.</p>
+<p>The user can select which chain they wish to interrogate e.g., TRA, TRB, TRG and TRD, as well as which cluster to interrogate.</p>
+<p>The clsuters are ordered in how many total TCR were assocaited with a specific cluster.</p>
+<p>The only additional plot that the user can interrogate is the motif.</p>
+<a class="reference internal image-reference" href="_images/4_TCRGEX_clustering.png"><img alt="Alternative text" src="_images/4_TCRGEX_clustering.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/4_TCRGEX_motif.png"><img alt="Alternative text" src="_images/4_TCRGEX_motif.png" style="width: 1200px;" /></a>
+</section>
+<section id="epitope-tcrex">
+<h3>Epitope (TCRex)<a class="headerlink" href="#epitope-tcrex" title="Link to this heading"></a></h3>
+<p>This epitope section was designed to interrogate the TCRex outputs in STEGO.R.</p>
+<p>This section includes  in the sidebar to add the TCR headers to the meta-data including the epitope and pathology.</p>
+<p>The epitope list is ordered based on TCR with the most sequences.</p>
+<p>The top associated epitope for the colitis compliation to melanoma treatment was the melanoma epitope ELAGIGILTV.</p>
+<a class="reference internal image-reference" href="_images/4_TCRGEX_epitope.png"><img alt="Alternative text" src="_images/4_TCRGEX_epitope.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/4_TCRGEX_epitope_stats.png"><img alt="Alternative text" src="_images/4_TCRGEX_epitope_stats.png" style="width: 1200px;" /></a>
+</section>
 </section>
 <section id="automation-tcr-gex">
-<h3>Automation (TCR -&gt; GEX)<a class="headerlink" href="#automation-tcr-gex" title="Link to this heading"></a></h3>
+<h2>Automation (TCR -&gt; GEX)<a class="headerlink" href="#automation-tcr-gex" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><dl class="simple">
 <dt>Clonotype</dt><dd><ul>
@@ -473,11 +492,11 @@
 </ul>
 </section>
 <section id="gex-tcr">
-<h3>GEx -&gt; TCR<a class="headerlink" href="#gex-tcr" title="Link to this heading"></a></h3>
+<h2>GEx -&gt; TCR<a class="headerlink" href="#gex-tcr" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><dl class="simple">
 <dt>Annotation</dt><dd><ul>
-<li><p>Under development</p></li>
+<li><p>No longer being developed.</p></li>
 </ul>
 </dd>
 </dl>
@@ -491,7 +510,6 @@
 </dl>
 </li>
 </ul>
-</section>
 </section>
 </section>
 
