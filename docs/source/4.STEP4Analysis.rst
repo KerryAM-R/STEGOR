@@ -176,6 +176,10 @@ This section is split into four subsections.
 Sidebar common features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. image:: img/4_TCRGEX_collapsed.png
+  :width: 300
+  :alt: Alternative text
+
 - Heatmap
     + The user can change the zero, from one count, maximum count colouring scale. 
     + This is based on total counts, and I have not yet developed a frequency scaling.
@@ -193,49 +197,63 @@ Sidebar common features
 
 
 .. image:: img/4_TCRGEX_heatmap.png
-  :width: 400
+  :width: 300
   :alt: Alternative text
 .. image:: img/4_TCRGEX_cutoff.png
-  :width: 400
+  :width: 300
   :alt: Alternative text
 .. image:: img/4_TCRGEX_dotplot.png
-  :width: 400
+  :width: 300
   :alt: Alternative text
 .. image:: img/4_TCRGEX_violin.png
-  :width: 400
+  :width: 300
   :alt: Alternative text
 
 
-Clonal abudance 
-^^^^^^^^^^^^^^^
-
-
-
-
-
-
-
-
-
-
-Overview
-^^^^^^^^
-- GEx
-    - Percentage (Table)
-    - UMAP of the annotation models
-    - Pie chart
-- TCR
-    - UPSET plot (<31)
-    - Line graph (clone tracking)
-    - expansion (bar) 
-    - expansion (UMAP)
-
-TCR-seq -> GEX
+Clonal abundance 
 ^^^^^^^^^^^^^^^^
 
-Each section has a summary table, UMAP, Heatmap, stats, dot-plot and over-representation.
+The purpose of the clonal abundance section is for the interrogation of single clones or groups of clones. 
 
-Some of the secions also have unique features.
+The user can select the type of comparison to:
+
+- Background (BG)
+    - This will compare the selected clone(s) to the rest of the data provided. 
+- singlets 
+    - This will compare the selected clone(s) to the cells with a TCR based on the "V gene with/without CDR3" that were only observed once in the data, as these are less likely to be antigen specific. 
+- Clones 
+    - compair to a specific clone(s). This will bring up the ident.2 to select the clones. 
+
+In order to render the table efficiently, I have included a filter under the clonal abundance section to the top 50, as well as included a minimum count threshold (default = 2). 
+
+.. image:: img/4_TCRGEX_abundance.png
+  :width: 300
+  :alt: Alternative text
+
+.. image:: img/4_TCRGEX_clonal_abudance_section.png
+  :width: 1200
+  :alt: Alternative text
+
+Expansion
+^^^^^^^^^^
+
+This section was aimed to interrogate if there was a consistant gene expression signature of the expanded clones regarless of the TCR arragement. 
+
+The sidebar contains some variables to help decide on what the count cut-off could be. 
+
+The "Cut off greater than" helps calculate by defaul the D50, or the count above which 50% of the repertiore is represented. This is used to calculate "Cut off greater than" count. 
+
+
+.. image:: img/4_TCRGEX_expanded.png
+  :width: 300
+  :alt: Alternative text
+
+
+I have also used this section in the STEGO.R V3 <a href="https://www.biorxiv.org/content/10.1101/2023.09.27.559702v3" target="_blank">pre-print</a> for compairing the before and after treatment of a single clone. 
+
+
+
+
 
 
 
