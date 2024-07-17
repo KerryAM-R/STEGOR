@@ -4,11 +4,10 @@ Installation
 To use STEGO, first install R, RStudio and other required programs
 ------------------------------------------------------------------
 
+Please install R version 4.3.2 or greater. If your operating system doesn't support this version of R, than some of the functions (e.g., annotation with scGate) may not work as expected. 
 
 MAC:
 ^^^^
-
-Please install R version 4.3.2 or greater. If your operating system doesn't support this version of R, than some of the functions (e.g., annotation with scGate) may not work as expected. 
 
 * Install `R_mac <https://cran.r-project.org/bin/macosx/>`_ 
 * Install `RStudio <https://posit.co/download/rstudio-desktop/>`_
@@ -37,7 +36,7 @@ Recommended to use a 64-bit OS with at least 16GB of RAM, ideally >=32GB. This i
 
 When running STEGO.R merging and annotation steps, we recommend to limit the number of other running programs to help prevent RAM memory overflow, espeically if you have <32Gb of RAM. 
 
-Storage requirements will depend on the number of cells annotating. For instance I needed at least 200 GB of free space on my mac to process the V2 and V3 of the T cell Atlas. 
+Storage requirements will depend on the number of cells annotating. For example, at least 200 GB of free space on a Macbook Pro was needed to process the T cell Atlas (V2/V3). 
 
 **Download the project directory**
 ----------------------------------
@@ -47,7 +46,7 @@ Storage requirements will depend on the number of cells annotating. For instance
    ii. Unzip the **Directory_for_Project** 
    iii. Rename the folder, if desired. 
 
-This folder contains instructions on how to process the data and, will be used to set up the R.project environment.
+This folder contains instructions on how to process the data and will be used to set up the R.project environment.
   
 2. In the Directory_for_Project open up the Project.Rproj 
    i. Quick tutorial for understanding RStudio environment with this `YouTube <https://www.youtube.com/watch?v=FIrsOBy5k58>`_ video.
@@ -228,9 +227,7 @@ Run the following lines in R. A window will opened that runs the STEGO.R shiny R
 
 You are now ready to process your scRNA-seq with scTCR-seq data!
 
-.. note:: 
-   If a window doesnt open
-      you will need to trouble shoot which packages haven't been installed.
+Note, if a window doesnt open, you will need to troubleshoot which packages haven't been installed.
 
 
 Trouble shooting missing packages
@@ -238,9 +235,9 @@ Trouble shooting missing packages
       
 Check that you have the latest version of R. 
 
-Check that you downloaded first the devtools and bioconductor
+Check that you downloaded first the devtools and bioconductor.
 
-API issue with creating a github token
+API issue with creating a github token.
 
 
 Understanding the "Directory_for_Project" Folder
