@@ -1,5 +1,5 @@
-Tutorial 
-========
+Video Tutorial 
+==============
 
 This section will include access to a test datasest to learn how to use STEGO.R. 
 
