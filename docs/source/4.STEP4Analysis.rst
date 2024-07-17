@@ -81,19 +81,19 @@ The variables common to the analysis section include:
 - Legend parameters
 
 .. image:: img/4_general_features_OV.png
-  :width: 400
+  :width: 300
   :alt: Alternative text
 .. image:: img/4_restrict.png
-  :width: 400
+  :width: 300
   :alt: Alternative text
 .. image:: img/4_colouring.png
-  :width: 400
+  :width: 300
   :alt: Alternative text
 .. image:: img/4_legend_params_all.png
-  :width: 400
+  :width: 300
   :alt: Alternative text
 .. image:: img/4_params_all.png
-  :width: 400
+  :width: 300
   :alt: Alternative text
 
 Overview
@@ -108,10 +108,10 @@ Side bar (OV only)
 There are two aspects that are specific to the overview section that includes splitting the graphs based on the "selected sample", adn in the TCR section for colouring by the binned clone counts, clone frequency or top expanded clones. 
 
 .. image:: img/4_split_OV.png
-  :width: 400
+  :width: 300
   :alt: Alternative text
 .. image:: img/4_type_of_graph_OV.png
-  :width: 400
+  :width: 300
   :alt: Alternative text
 
 Main panel (OV)
