@@ -290,7 +290,7 @@ The top associated epitope for the colitis compliation to melanoma treatment was
 
 
 Automation (TCR -> GEX)
------------
+---------------------------------
 
 - Clonotype 
     - Download public (bar graphs), summary table, dot plot for each public-like clone
