@@ -61,7 +61,7 @@ Depending on what you have uploaded, the main panel will render several tables. 
 
 Uploaded example of the colitis complication to melanoma therapy dataset (GSE144469)
 
-.. image:: img/4_uploading.png
+.. image:: img/4_file_uploading.png
   :width: 1200
   :alt: Alternative text
 
