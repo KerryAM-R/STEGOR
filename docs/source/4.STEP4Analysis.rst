@@ -75,24 +75,23 @@ The variables common to the analysis section include:
 
 - V gene with/without CDR3
 - Selected Sample
-- restricing to one sample for filtering purposes
-- colouring 
-- Plotting parameter (e.g., text size)
-- Legend parameters
+- Restricing to one sample for filtering purposes
+- Colouring 
+- Plot text
+- Legend
 
-.. image:: img/4_general_features_OV.png
+.. image:: img/4_ALL_general_features.png
   :width: 300
   :alt: Alternative text
-.. image:: img/4_restrict.png
+
+Within each of the colouring, plot text and legend 
+.. image:: img/4_ALL_colouring.png
   :width: 300
   :alt: Alternative text
-.. image:: img/4_colouring.png
+.. image:: img/4_ALL_plot_parameter.png
   :width: 300
   :alt: Alternative text
-.. image:: img/4_legend_params_all.png
-  :width: 300
-  :alt: Alternative text
-.. image:: img/4_params_all.png
+.. image:: img/4_ALL_legend.png
   :width: 300
   :alt: Alternative text
 
