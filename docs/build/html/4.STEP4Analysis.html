@@ -70,9 +70,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#tcr-gex">TCR -&gt; GEx</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#sidebar-common-features">Sidebar common features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#clonal-abudance">Clonal abudance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tcr-seq-gex">TCR-seq -&gt; GEX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clonal-abundance">Clonal abundance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expansion">Expansion</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#automation-tcr-gex">Automation (TCR -&gt; GEX)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gex-tcr">GEx -&gt; TCR</a></li>
 </ul>
@@ -142,8 +141,8 @@
 <p>To make selecting the “<strong>Data source</strong>” and “<strong>Species</strong>”, there are functions to identify if the TCR-seq formattting is AIRR or not. The species is currently either human (hs) or mouse (mm) and based on the gene formatting of all caps (hs) or proper case (mm). The latter is needed as R is a case sensative language.</p>
 <p>If you need additional identifiers for the analysis section, this can be added by switching “add additional labels” to “yes” and upload the “Update_labels.csv”. The file consists of the first column labelled as “ID” must not be changed. This first column must match the unique identifiers used in the “Sample_Name” column for ease of use. The user can add as many columns. Any special characters will be convered to either .  or _. An example is given with the colitis dataset that has three broad categories under the condition column. The user can then add additional variables that could be used for analysis.This was added to the analysis section, so the user does not have to go back to Step 1, and is also restrictive to one unique label.</p>
 <a class="reference internal image-reference" href="_images/4_updating_labs.png"><img alt="Alternative text" src="_images/4_updating_labs.png" style="width: 300px;" /></a>
-<table class="longtable docutils align-default" id="id2">
-<caption><span class="caption-text">Updated labelling for the colitis dataset.</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<table class="longtable docutils align-default" id="id1">
+<caption><span class="caption-text">Updated labelling for the colitis dataset.</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 40.0%" />
 <col style="width: 60.0%" />
@@ -233,7 +232,7 @@
 <h3>Main panel<a class="headerlink" href="#main-panel" title="Link to this heading"></a></h3>
 <p>Depending on what you have uploaded, the main panel will render several tables. The first table is of the Seurat object’s meta-data and you will see how it adds the additional labels after the “Sample_Name” column.</p>
 <p>Uploaded example of the colitis complication to melanoma therapy dataset (GSE144469)</p>
-<a class="reference internal image-reference" href="_images/4_uploading.png"><img alt="Alternative text" src="_images/4_uploading.png" style="width: 1200px;" /></a>
+<a class="reference internal image-reference" href="_images/4_file_uploading.png"><img alt="Alternative text" src="_images/4_file_uploading.png" style="width: 1200px;" /></a>
 </section>
 <section id="side-bar-analysis-sections">
 <h3>Side bar (Analysis sections)<a class="headerlink" href="#side-bar-analysis-sections" title="Link to this heading"></a></h3>
@@ -256,7 +255,7 @@
 <a class="reference internal image-reference" href="_images/4_ALL_general_features.png"><img alt="Alternative text" src="_images/4_ALL_general_features.png" style="width: 300px;" /></a>
 <p>Within each of the colouring, plot text and legend.</p>
 <a class="reference internal image-reference" href="_images/4_ALL_colouring.png"><img alt="Alternative text" src="_images/4_ALL_colouring.png" style="width: 300px;" /></a>
-<a class="reference internal image-reference" href="img/4_ALL_plot_parameter.png"><img alt="Alternative text" src="img/4_ALL_plot_parameter.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/4_ALL_plot_parameter.png"><img alt="Alternative text" src="_images/4_ALL_plot_parameter.png" style="width: 300px;" /></a>
 <a class="reference internal image-reference" href="_images/4_ALL_legend.png"><img alt="Alternative text" src="_images/4_ALL_legend.png" style="width: 300px;" /></a>
 </section>
 </section>
@@ -355,6 +354,7 @@
 </ul>
 <section id="sidebar-common-features">
 <h3>Sidebar common features<a class="headerlink" href="#sidebar-common-features" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="_images/4_TCRGEX_collapsed.png"><img alt="Alternative text" src="_images/4_TCRGEX_collapsed.png" style="width: 300px;" /></a>
 <ul class="simple">
 <li><dl class="simple">
 <dt>Heatmap</dt><dd><ul>
@@ -391,42 +391,49 @@
 </dl>
 </li>
 </ul>
-<a class="reference internal image-reference" href="_images/4_TCRGEX_heatmap.png"><img alt="Alternative text" src="_images/4_TCRGEX_heatmap.png" style="width: 400px;" /></a>
-<a class="reference internal image-reference" href="_images/4_TCRGEX_cutoff.png"><img alt="Alternative text" src="_images/4_TCRGEX_cutoff.png" style="width: 400px;" /></a>
-<a class="reference internal image-reference" href="_images/4_TCRGEX_dotplot.png"><img alt="Alternative text" src="_images/4_TCRGEX_dotplot.png" style="width: 400px;" /></a>
-<a class="reference internal image-reference" href="_images/4_TCRGEX_violin.png"><img alt="Alternative text" src="_images/4_TCRGEX_violin.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/4_TCRGEX_heatmap.png"><img alt="Alternative text" src="_images/4_TCRGEX_heatmap.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/4_TCRGEX_cutoff.png"><img alt="Alternative text" src="_images/4_TCRGEX_cutoff.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/4_TCRGEX_dotplot.png"><img alt="Alternative text" src="_images/4_TCRGEX_dotplot.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/4_TCRGEX_violin.png"><img alt="Alternative text" src="_images/4_TCRGEX_violin.png" style="width: 300px;" /></a>
 </section>
-<section id="clonal-abudance">
-<h3>Clonal abudance<a class="headerlink" href="#clonal-abudance" title="Link to this heading"></a></h3>
-</section>
-<section id="id1">
-<h3>Overview<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<section id="clonal-abundance">
+<h3>Clonal abundance<a class="headerlink" href="#clonal-abundance" title="Link to this heading"></a></h3>
+<p>The purpose of the clonal abundance section is for the interrogation of single clones or groups of clones.</p>
+<p>The user can select the type of comparison to:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>GEx</dt><dd><ul>
-<li><p>Percentage (Table)</p></li>
-<li><p>UMAP of the annotation models</p></li>
-<li><p>Pie chart</p></li>
+<dt>Background (BG)</dt><dd><ul>
+<li><p>This will compare the selected clone(s) to the rest of the data provided.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>TCR</dt><dd><ul>
-<li><p>UPSET plot (&lt;31)</p></li>
-<li><p>Line graph (clone tracking)</p></li>
-<li><p>expansion (bar)</p></li>
-<li><p>expansion (UMAP)</p></li>
+<dt>singlets</dt><dd><ul>
+<li><p>This will compare the selected clone(s) to the cells with a TCR based on the “V gene with/without CDR3” that were only observed once in the data, as these are less likely to be antigen specific.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Clones</dt><dd><ul>
+<li><p>compair to a specific clone(s). This will bring up the ident.2 to select the clones.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ul>
+<p>In order to render the table efficiently, I have included a filter under the clonal abundance section to the top 50, as well as included a minimum count threshold (default = 2).</p>
+<a class="reference internal image-reference" href="_images/4_TCRGEX_abundance.png"><img alt="Alternative text" src="_images/4_TCRGEX_abundance.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="img/4_TCRGEX_clonal_abudance_section.png"><img alt="Alternative text" src="img/4_TCRGEX_clonal_abudance_section.png" style="width: 1200px;" /></a>
 </section>
-<section id="tcr-seq-gex">
-<h3>TCR-seq -&gt; GEX<a class="headerlink" href="#tcr-seq-gex" title="Link to this heading"></a></h3>
-<p>Each section has a summary table, UMAP, Heatmap, stats, dot-plot and over-representation.</p>
-<p>Some of the secions also have unique features.</p>
+<section id="expansion">
+<h3>Expansion<a class="headerlink" href="#expansion" title="Link to this heading"></a></h3>
+<p>This section was aimed to interrogate if there was a consistant gene expression signature of the expanded clones regarless of the TCR arragement.</p>
+<p>The sidebar contains some variables to help decide on what the count cut-off could be.</p>
+<p>The “Cut off greater than” helps calculate by defaul the D50, or the count above which 50% of the repertiore is represented. This is used to calculate “Cut off greater than” count.</p>
+<a class="reference internal image-reference" href="_images/4_TCRGEX_expanded.png"><img alt="Alternative text" src="_images/4_TCRGEX_expanded.png" style="width: 300px;" /></a>
+<p>I have also used this section in the STEGO.R V3 &lt;a href=”<a class="reference external" href="https://www.biorxiv.org/content/10.1101/2023.09.27.559702v3">https://www.biorxiv.org/content/10.1101/2023.09.27.559702v3</a>” target=”_blank”&gt;pre-print&lt;/a&gt; for compairing the before and after treatment of a single clone.</p>
 </section>
 <section id="automation-tcr-gex">
 <h3>Automation (TCR -&gt; GEX)<a class="headerlink" href="#automation-tcr-gex" title="Link to this heading"></a></h3>
