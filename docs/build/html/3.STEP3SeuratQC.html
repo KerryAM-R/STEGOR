@@ -71,6 +71,7 @@
 <li class="toctree-l1"><a class="reference internal" href="5.postAnalysis.html">Post Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6.FAQ.html">Frequenctly Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="7.History.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8.Tutorial.html">Video Tutorial</a></li>
 </ul>
 
         </div>
@@ -136,7 +137,7 @@
 </ol>
 <a class="reference internal image-reference" href="_images/3a_AfterViolin.png"><img alt="Alternative text" src="_images/3a_AfterViolin.png" style="width: 600px;" /></a>
 <ol class="arabic simple" start="7">
-<li><p>The user can then inspect the presence of the top variable features, elbow plot and Heatmaps. The latter two plots are to aid in setting the number of dimentions to use for the UMAP dimentional reduction. Default is set to 15. The resolutions are used for the unsupervised clustering. <em>Note: I use the scGate for the annotation stratergy rather than the unsupervised clusters as it is not suitable for identifying subtle differences in T cell sub-populations.</em></p></li>
+<li><p>The user can then inspect the presence of the top variable features, elbow plot and Heatmaps. The latter two plots are to aid in setting the number of dimentions to use for the UMAP dimentional reduction. Default is set to 15. The resolutions are used for the unsupervised clustering. <em>Note: we recommend using scGate for the annotation  rather than the unsupervised clusters as it is not suitable for identifying subtle differences in T cell sub-populations.</em></p></li>
 <li><p>In the side panel, hit the “Run clustering” button to run the dimentionality reduction.</p></li>
 </ol>
 <a class="reference internal image-reference" href="_images/3a_UMAP.png"><img alt="UMAP" src="_images/3a_UMAP.png" style="width: 600px;" /></a>
@@ -162,7 +163,7 @@
 </section>
 <section id="b-merging-multiple-seurat-objects-and-batch-correction">
 <h2><strong>3b.</strong> Merging multiple Seurat objects and batch correction.<a class="headerlink" href="#b-merging-multiple-seurat-objects-and-batch-correction" title="Link to this heading"></a></h2>
-<p>This section is to merge multiple .rds objects and correct for the batch effect.</p>
+<p>This section explains how to merge multiple .rds objects and correct for batch effects.</p>
 <section id="merging">
 <h3>Merging<a class="headerlink" href="#merging" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
@@ -173,7 +174,7 @@
 <li><p>Download the merged.rds object</p></li>
 </ol>
 <a class="reference internal image-reference" href="_images/3b_downloadmerged_obj.png"><img alt="Alternative text" src="_images/3b_downloadmerged_obj.png" style="width: 600px;" /></a>
-<p>** For many file merging and annotating as the program window may disappear, we recommend merging and annotating using command-line functions **</p>
+<p>** For repeated file merging and annotating, the program window may disappear, so we recommend merging and annotating using command-line functions **</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">require</span><span class="p">(</span><span class="n">STEGO</span><span class="o">.</span><span class="n">R</span><span class="p">)</span>
 <span class="c1">###### merging seurat object ------</span>
 <span class="c1"># Check that you are in the correct working directory with your RDS files</span>
@@ -231,7 +232,7 @@
 <section id="c-annotating-the-seurat-object">
 <h2><strong>3c.</strong> Annotating the Seurat object<a class="headerlink" href="#c-annotating-the-seurat-object" title="Link to this heading"></a></h2>
 <p>This section describes how to annotated the files either from the “default” and/or “custom” modules with scGate. If you have large files, we recommend using scripts and not the interface.</p>
-<p>upload the merged file to commence the annotation process.</p>
+<p>Upload the merged file to commence the annotation process.</p>
 <a class="reference internal image-reference" href="_images/3c_annotating_pocessing.png"><img alt="Alternative text" src="_images/3c_annotating_pocessing.png" style="width: 750px;" /></a>
 <p>This is what the window will print once the annotation is completed.</p>
 <a class="reference internal image-reference" href="_images/3c_processed_anno.png"><img alt="Alternative text" src="_images/3c_processed_anno.png" style="width: 750px;" /></a>
@@ -264,7 +265,6 @@ saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 </div>
 <section id="default-annotation-models-with-scgate">
 <h3>Default annotation models with scGate<a class="headerlink" href="#default-annotation-models-with-scgate" title="Link to this heading"></a></h3>
-<p><em>Note: Under development.</em></p>
 <p>The scGate threshold was set to 0.2 for full capture and 0.55 for the immune panel (&lt;400 transcripts).</p>
 <ul class="simple">
 <li><dl class="simple">
@@ -319,7 +319,7 @@ saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 </li>
 <li><p><strong>Mouse</strong></p></li>
 </ul>
-<p><em>Note: Requires varification of models development.</em></p>
+<p><em>Note: Under development.</em></p>
 </section>
 <section id="functional-t-cell-annotations">
 <h3>Functional T cell annotations<a class="headerlink" href="#functional-t-cell-annotations" title="Link to this heading"></a></h3>
@@ -546,7 +546,7 @@ saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 <p>Design the panel to add into the nine custom databases in <strong>custom_db</strong> folder</p>
 <p>Do not rename the master file. However, the file will need to be altered to set the markers. The user will need to define the name as well as the singature (gene list). If multiple genes are used, separate with ; as per the scGate documentation.</p>
 <p>The user can alter the names in front of the _scGate_Model.tsv, while the latter is used to find each type of annotation.</p>
-<p>To use scGate effectively, the genes within a set are read as OR (either of the marker need to be present), while the levels equate to AND i.e., All markers need to be present. These levels then need to use positive or negative under the use_as column. We recommend not defining the positive and negative markers in the</p>
+<p>To use scGate effectively, the genes within a set are read as OR (either of the marker need to be present), while the levels equate to AND i.e., All markers need to be present. These levels then need to be defined as positive or negative under the use_as column.</p>
 <a class="reference internal image-reference" href="_images/3c_example_model_scGate.png"><img alt="Alternative text" src="_images/3c_example_model_scGate.png" style="width: 300px;" /></a>
 <p>Use a fresh run of the app, so the new database is read into, otherwise it will be the default.</p>
 <a class="reference internal image-reference" href="_images/3c_runningthe_mem.png"><img alt="Alternative text" src="_images/3c_runningthe_mem.png" style="width: 600px;" /></a>

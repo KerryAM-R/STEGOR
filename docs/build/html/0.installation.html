@@ -77,6 +77,7 @@
 <li class="toctree-l1"><a class="reference internal" href="5.postAnalysis.html">Post Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6.FAQ.html">Frequenctly Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="7.History.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8.Tutorial.html">Video Tutorial</a></li>
 </ul>
 
         </div>
@@ -107,9 +108,9 @@
 <h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
 <section id="to-use-stego-first-install-r-rstudio-and-other-required-programs">
 <h2>To use STEGO, first install R, RStudio and other required programs<a class="headerlink" href="#to-use-stego-first-install-r-rstudio-and-other-required-programs" title="Link to this heading"></a></h2>
+<p>Please install R version 4.3.2 or greater. If your operating system doesn’t support this version of R, than some of the functions (e.g., annotation with scGate) may not work as expected.</p>
 <section id="mac">
 <h3>MAC:<a class="headerlink" href="#mac" title="Link to this heading"></a></h3>
-<p>Please install R version 4.3.2 or greater. If your operating system doesn’t support this version of R, than some of the functions (e.g., annotation with scGate) may not work as expected.</p>
 <ul class="simple">
 <li><p>Install <a class="reference external" href="https://cran.r-project.org/bin/macosx/">R_mac</a></p></li>
 <li><p>Install <a class="reference external" href="https://posit.co/download/rstudio-desktop/">RStudio</a></p></li>
@@ -137,7 +138,7 @@ and also the gfortran</p>
 <h3>Sytem requirements<a class="headerlink" href="#sytem-requirements" title="Link to this heading"></a></h3>
 <p>Recommended to use a 64-bit OS with at least 16GB of RAM, ideally &gt;=32GB. This is needed for the memory intensive merging and annotation steps.</p>
 <p>When running STEGO.R merging and annotation steps, we recommend to limit the number of other running programs to help prevent RAM memory overflow, espeically if you have &lt;32Gb of RAM.</p>
-<p>Storage requirements will depend on the number of cells annotating. For instance I needed at least 200 GB of free space on my mac to process the V2 and V3 of the T cell Atlas.</p>
+<p>Storage requirements will depend on the number of cells annotating. For example, at least 200 GB of free space on a Macbook Pro was needed to process the T cell Atlas (V2/V3).</p>
 </section>
 </section>
 <section id="download-the-project-directory">
@@ -151,7 +152,7 @@ and also the gfortran</p>
 </ol>
 </li>
 </ol>
-<p>This folder contains instructions on how to process the data and, will be used to set up the R.project environment.</p>
+<p>This folder contains instructions on how to process the data and will be used to set up the R.project environment.</p>
 <ol class="arabic simple" start="2">
 <li><p>In the Directory_for_Project open up the Project.Rproj
 i. Quick tutorial for understanding RStudio environment with this <a class="reference external" href="https://www.youtube.com/watch?v=FIrsOBy5k58">YouTube</a> video.</p></li>
@@ -307,19 +308,13 @@ y
 </pre></div>
 </div>
 <p>You are now ready to process your scRNA-seq with scTCR-seq data!</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<dl class="simple">
-<dt>If a window doesnt open</dt><dd><p>you will need to trouble shoot which packages haven’t been installed.</p>
-</dd>
-</dl>
-</div>
+<p>Note, if a window doesnt open, you will need to troubleshoot which packages haven’t been installed.</p>
 </section>
 <section id="trouble-shooting-missing-packages">
 <h2>Trouble shooting missing packages<a class="headerlink" href="#trouble-shooting-missing-packages" title="Link to this heading"></a></h2>
 <p>Check that you have the latest version of R.</p>
-<p>Check that you downloaded first the devtools and bioconductor</p>
-<p>API issue with creating a github token</p>
+<p>Check that you downloaded first the devtools and bioconductor.</p>
+<p>API issue with creating a github token.</p>
 </section>
 <section id="understanding-the-directory-for-project-folder">
 <h2>Understanding the “Directory_for_Project” Folder<a class="headerlink" href="#understanding-the-directory-for-project-folder" title="Link to this heading"></a></h2>

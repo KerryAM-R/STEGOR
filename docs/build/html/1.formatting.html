@@ -50,7 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="0.installation.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Step 1. Formatting</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#running-stego-r">Running STEGO.R</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#manual-process">Manual process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#manual-processing">Manual processing</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#file-outputs-and-storage-for-step-1">File outputs and storage for STEP 1.</a></li>
 </ul>
 </li>
@@ -63,6 +63,7 @@
 <li class="toctree-l1"><a class="reference internal" href="5.postAnalysis.html">Post Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6.FAQ.html">Frequenctly Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="7.History.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8.Tutorial.html">Video Tutorial</a></li>
 </ul>
 
         </div>
@@ -104,7 +105,7 @@ Copy all your raw files to the 0_Raw_files folder within your project.</p>
 </div>
 <section id="running-stego-r">
 <h2>Running STEGO.R<a class="headerlink" href="#running-stego-r" title="Link to this heading"></a></h2>
-<p>Now the the R environment is set up and the STEGO.R and it’s dependencies are installed, we can now run the application.</p>
+<p>Now the the R environment is set up and the STEGO.R and its dependencies are installed, we can now run the application.</p>
 <p>Run the following lines in R. A window will opened that runs the STEGO.R shiny R application.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">require</span><span class="p">(</span><span class="n">STEGO</span><span class="o">.</span><span class="n">R</span><span class="p">)</span>
 
@@ -113,10 +114,10 @@ Copy all your raw files to the 0_Raw_files folder within your project.</p>
 </div>
 <p>You are now ready to process your scRNA-seq with scTCR-seq data!</p>
 </section>
-<section id="manual-process">
-<h2>Manual process<a class="headerlink" href="#manual-process" title="Link to this heading"></a></h2>
+<section id="manual-processing">
+<h2>Manual processing<a class="headerlink" href="#manual-processing" title="Link to this heading"></a></h2>
 <p>Formatting the <strong>10x Genomics</strong>, <strong>BD Rhapsody</strong> or Array to create the necessary documents for Seurat QC process, ClusTCR2, TCRex and TCR_Explore.</p>
-<p>While this process was initially developed for TCR-seq, we have also included the capacity for pairing the BCR sequences.</p>
+<p>While this process was initially developed for TCRs, we have also included the capacity for pairing the BCR sequences.</p>
 <p><strong>Table 1. File to upload in the respective section.</strong></p>
 <table class="docutils align-default">
 <thead>
@@ -151,7 +152,7 @@ Copy all your raw files to the 0_Raw_files folder within your project.</p>
 <p><em>Under development: multi-TCR (requires unfiltered contig file)</em></p>
 <a class="reference internal image-reference" href="_images/1_10xFormatting.png"><img alt="Alternative text" src="_images/1_10xFormatting.png" style="width: 1200px;" /></a>
 <p><strong>BD Rhapsody</strong></p>
-<p>There are two format outputs of BD Rhapsody aligment of either a cellxgene (.csv.gz) or the barcode, features and matrix file. Unlike the 10x Genomics, there is also an extra file called “Sample Tags”, which contains the multi-plex ID names. The <strong>“Sample Tags”</strong> file is required. However, if this file is not created (one sample in the experiment), it can be created under the “Create Sample Tags file”.</p>
+<p>There are two format outputs of BD Rhapsody aligment of either a cellxgene (.csv.gz) or the barcode, features and matrix file. Unlike 10x Genomics, there is also an extra file called “Sample Tags”, which contains the multi-plex ID names. The <strong>“Sample Tags”</strong> file is required. However, if this file is not created (one sample in the experiment), it can be created under the “Create Sample Tags file”.</p>
 <p>Additionally there are several formats for the TCR contig file: paired dominant, AIRR dominant (unpaired), AIRR unfilted. For the latter two file formates we include to filter to keep only the ‘paired’ and if BCR was present as well.</p>
 <a class="reference internal image-reference" href="_images/1_BDFormatting.png"><img alt="Alternative text" src="_images/1_BDFormatting.png" style="width: 1200px;" /></a>
 <p><strong>Array</strong></p>
@@ -175,14 +176,14 @@ The **TCR_Explore** tool is designed for the interrogation of the TCR repertoire
 </ol>
 <p>Download to each of the <cite>1_</cite> folders e.g.,</p>
 <ol class="arabic simple" start="4">
-<li><p>Download the TCRex (functional Beta chains) to “1_TCRex” folder</p></li>
+<li><p>Download the TCRex output (containing functional Beta chains) to “1_TCRex” folder</p></li>
 <li><p>Download both the “meta-data” and “Matrix” in the SeuratQC into the “1_SeuratQC” folder</p></li>
 <li><p>Two files need to be downloaded per sample under the “ClusTCR” to the “1_ClusTCR” folder. They will have the prefix of <cite>AG_</cite> and <cite>BD_</cite> (<em>Version 1.5</em>)</p></li>
 <li><p>Download the TCR_Explore file “1_TCR_Explore” folder</p></li>
 </ol>
 <p>or</p>
 <ol class="arabic simple" start="4">
-<li><p>Download all files in order of TCRex, Seruat (matrix and meta.data),ClusTCR2 and TCR_Explore to the download folder.</p></li>
+<li><p>Download all files in order of TCRex, Seurat (matrix and meta.data), ClusTCR2 and TCR_Explore to the download folder.</p></li>
 <li><p>Move all files to the respective folders in the Project directory according <cite>1_</cite></p></li>
 </ol>
 </section>
