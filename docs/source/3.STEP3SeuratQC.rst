@@ -34,7 +34,7 @@ Step 3. Quality control
   :width: 600
   :alt: Alternative text
 
-7. The user can then inspect the presence of the top variable features, elbow plot and Heatmaps. The latter two plots are to aid in setting the number of dimentions to use for the UMAP dimentional reduction. Default is set to 15. The resolutions are used for the unsupervised clustering. *Note: I use the scGate for the annotation stratergy rather than the unsupervised clusters as it is not suitable for identifying subtle differences in T cell sub-populations.*
+7. The user can then inspect the presence of the top variable features, elbow plot and Heatmaps. The latter two plots are to aid in setting the number of dimentions to use for the UMAP dimentional reduction. Default is set to 15. The resolutions are used for the unsupervised clustering. *Note: we recommend using scGate for the annotation  rather than the unsupervised clusters as it is not suitable for identifying subtle differences in T cell sub-populations.*
 
 8. In the side panel, hit the "Run clustering" button to run the dimentionality reduction.
 
@@ -71,7 +71,7 @@ Once the user has identified the parameters for filtering, we recommend using th
 **3b.** Merging multiple Seurat objects and batch correction.
 ------------------------------------------------------------------
 
-This section is to merge multiple .rds objects and correct for the batch effect. 
+This section explains how to merge multiple .rds objects and correct for batch effects. 
 
 Merging
 ^^^^^^^
@@ -88,7 +88,7 @@ Merging
   :width: 600
   :alt: Alternative text
 
-** For many file merging and annotating as the program window may disappear, we recommend merging and annotating using command-line functions **
+** For repeated file merging and annotating, the program window may disappear, so we recommend merging and annotating using command-line functions **
 
 ::
 
@@ -155,7 +155,7 @@ If you have more than a few files to merge and annotate, we recommend using the 
 
 This section describes how to annotated the files either from the "default" and/or "custom" modules with scGate. If you have large files, we recommend using scripts and not the interface. 
 
-upload the merged file to commence the annotation process. 
+Upload the merged file to commence the annotation process. 
 
 .. image:: img/3c_annotating_pocessing.png
   :width: 750
@@ -203,8 +203,6 @@ The annotations are added to the end of the meta data table in the Seurat object
 Default annotation models with scGate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*Note: Under development.*
-
 The scGate threshold was set to 0.2 for full capture and 0.55 for the immune panel (<400 transcripts). 
 
 * **Human** 
@@ -230,7 +228,7 @@ The scGate threshold was set to 0.2 for full capture and 0.55 for the immune pan
 
 * **Mouse** 
 
-*Note: Requires varification of models development.*
+*Note: Under development.*
 
 
 Functional T cell annotations
@@ -270,7 +268,7 @@ Do not rename the master file. However, the file will need to be altered to set 
 
 The user can alter the names in front of the _scGate_Model.tsv, while the latter is used to find each type of annotation. 
 
-To use scGate effectively, the genes within a set are read as OR (either of the marker need to be present), while the levels equate to AND i.e., All markers need to be present. These levels then need to use positive or negative under the use_as column. We recommend not defining the positive and negative markers in the 
+To use scGate effectively, the genes within a set are read as OR (either of the marker need to be present), while the levels equate to AND i.e., All markers need to be present. These levels then need to be defined as positive or negative under the use_as column. 
 
 .. image:: img/3c_example_model_scGate.png
   :width: 300
