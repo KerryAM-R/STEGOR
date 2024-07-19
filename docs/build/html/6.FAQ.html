@@ -63,9 +63,14 @@
 <li class="toctree-l3"><a class="reference internal" href="#why-did-the-app-crash-when-running-clustcr">Why did the app crash when running clusTCR?</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#annotating">Annotating</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#why-does-the-umap-look-messy-with-the-semi-supervised-annotations">1. Why does the UMAP look messy with the semi-supervised annotations?</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="7.History.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8.Tutorial.html">Video Tutorial</a></li>
 </ul>
 
         </div>
@@ -133,6 +138,17 @@
 <span class="ne">Warning</span><span class="p">:</span> <span class="n">Error</span> <span class="ow">in</span> <span class="p">[[:</span> <span class="n">subscript</span> <span class="n">out</span> <span class="n">of</span> <span class="n">bounds</span>
 </pre></div>
 </div>
+</section>
+</section>
+<section id="annotating">
+<h2>Annotating<a class="headerlink" href="#annotating" title="Link to this heading"></a></h2>
+<section id="why-does-the-umap-look-messy-with-the-semi-supervised-annotations">
+<h3>1. Why does the UMAP look messy with the semi-supervised annotations?<a class="headerlink" href="#why-does-the-umap-look-messy-with-the-semi-supervised-annotations" title="Link to this heading"></a></h3>
+<p>The UMAP is created from the single sample principal components (PCs) or the harmony equivalent to PC. These PC or dimentions of variation are representative of the variable features. In this pipeline we chose up to 1:15 PC’s for the single sample and 1:30 PC’s for the Harmony process.</p>
+<p>The PC’s are calculated based on the most variable features. Our default selection is all for a single sample, and 3000 for merging.</p>
+<p>So, depending on the underlying structure of the dataset the biologically relevant markers required for annotation many not be represented in the PC’s. If they are not among the variable features, they will not be scaled either.</p>
+<p>To overcome this issue, I included the markers required for annotation added to the list of variable features.</p>
+<p>CD4 vs CD8 example.</p>
 </section>
 </section>
 </section>

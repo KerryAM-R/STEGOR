@@ -28,9 +28,11 @@ History
 
 - Step 1. pre-processing.R
     - preprocessing_10x() # for 10x Genomics
+
  - Step 2b. ClusTCR2_large.R
     - ClusTCR_Large() 
     - mcl_cluster_large()
+
 - Step 3a-c. filtering_merging_harmony_annotating.R
     - automated_sc_filtering()
     - merging_multi_SeuratRDS()

@@ -21,6 +21,10 @@ If you already have an .rds seurat object, and the TCR data was processed with s
 STEP 1. 
 ^^^^^^^^
 
+.. youtube:: aRB31LTj_VM
+   :width: 640
+   :height: 360
+
 
 STEP 2. 
 ^^^^^^^^

@@ -52,4 +52,24 @@ e.g., In the demo data, the BD does not produce clusters for the K409 combind da
     Warning: Error in [[: subscript out of bounds
 
 
+Annotating
+----------
+
+1. Why does the UMAP look messy with the semi-supervised annotations? 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The UMAP is created from the single sample principal components (PCs) or the harmony equivalent to PC. These PC or dimentions of variation are representative of the variable features. In this pipeline we chose up to 1:15 PC's for the single sample and 1:30 PC's for the Harmony process. 
+
+The PC's are calculated based on the most variable features. Our default selection is all for a single sample, and 3000 for merging.
+
+So, depending on the underlying structure of the dataset the biologically relevant markers required for annotation many not be represented in the PC's. If they are not among the variable features, they will not be scaled either. 
+
+To overcome this issue, I included the markers required for annotation added to the list of variable features. 
+
+
+
+CD4 vs CD8 example. 
+
+
+
 
