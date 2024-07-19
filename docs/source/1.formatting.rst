@@ -79,7 +79,7 @@ Additionally there are several formats for the TCR contig file: paired dominant,
     
        The **TCR_Explore** tool is designed for the interrogation of the TCR repertoire independent of gene expression data. For more information, visit <a href="https://tcr-explore.erc.monash.edu" target="_blank">TCR_Explore</a>.
 
-File outputs and storage for STEP 1. 
+File outputs and storage for Step 1. 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Upload the documents to the required sections depending on the technology and files available. Repeat for each of the samples within your project.
@@ -102,7 +102,7 @@ or
 4. Download all files in order of TCRex, Seurat (matrix and meta.data), ClusTCR2 and TCR_Explore to the download folder. 
 5. Move all files to the respective folders in the Project directory according `1_`
 
-Automated STEP 1. 
+Automated Step 1. 
 -----------------
 
 **Currently available for 10x genomics**
