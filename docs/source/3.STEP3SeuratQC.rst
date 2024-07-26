@@ -255,6 +255,25 @@ Functional T cell annotations
 
    </details>
 
+Simple T cell annotations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+. raw:: html
+
+   <details>
+     <summary>Simple Annotation Table</summary>
+
+.. csv-table:: 
+    :header-rows: 1
+    :file: path/anno_table_simple.csv
+    :widths: 20, 30, 50
+    :class: longtable
+
+    DN = double negative; Th = T helper, Tfh = follicular T helper, Treg = regulatory T cell 
+
+.. raw:: html
+
+
 Creating custom annotation stratergies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
