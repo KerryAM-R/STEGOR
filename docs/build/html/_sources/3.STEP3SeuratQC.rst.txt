@@ -234,17 +234,66 @@ The scGate threshold was set to 0.2 for full capture and 0.55 for the immune pan
 Functional T cell annotations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. csv-table:: Annotation_table
+.. raw:: html
+
+   <details>
+     <summary>Annotation Table</summary>
+
+.. csv-table::
     :header-rows: 1
     :file: path/anno_table.csv
     :widths: 20, 30, 50
     :class: longtable
 
-Cyto = GZMA,GZMB,PRF1,GNLY,NKG7
+.. raw:: html
 
-Naive = CCR7, SELL
+   </details>
 
-DN = double negative; Th = T helper, Tfh = follicular T helper, Tc = cytotoxic T cell; Treg = regulatory T cell 
+.. raw:: html
+
+   <details>
+     <summary>Annotation Details</summary>
+
+   Cyto = GZMA, GZMB, PRF1, GNLY, NKG7
+
+   Naive = CCR7, SELL
+
+   DN = double negative; Th = T helper, Tfh = follicular T helper, Tc = cytotoxic T cell; Treg = regulatory T cell
+
+   </details>
+
+Simple T cell annotations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+     <summary>Simple Annotation Table</summary>
+
+.. csv-table::
+    :header-rows: 1
+    :file: path/anno_table_simple.csv
+    :widths: 20, 30, 50
+    :class: longtable
+
+.. raw:: html
+
+   </details>
+
+.. raw:: html
+
+   <details>
+     <summary>Simple Annotation Table</summary>
+
+   Cyto = GZMA, GZMB, PRF1, GNLY, NKG7
+
+   Naive = CCR7, SELL
+
+   DN = double negative; Th = T helper, Tfh = follicular T helper, Tc = cytotoxic T cell; Treg = regulatory T cell
+
+   </details>
+
 
 Creating custom annotation stratergies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

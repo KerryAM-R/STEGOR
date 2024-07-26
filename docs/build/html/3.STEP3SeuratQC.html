@@ -60,6 +60,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#c-annotating-the-seurat-object"><strong>3c.</strong> Annotating the Seurat object</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#default-annotation-models-with-scgate">Default annotation models with scGate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#functional-t-cell-annotations">Functional T cell annotations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simple-t-cell-annotations">Simple T cell annotations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#creating-custom-annotation-stratergies">Creating custom annotation stratergies</a></li>
 </ul>
 </li>
@@ -323,8 +324,8 @@ saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 </section>
 <section id="functional-t-cell-annotations">
 <h3>Functional T cell annotations<a class="headerlink" href="#functional-t-cell-annotations" title="Link to this heading"></a></h3>
-<table class="longtable docutils align-default" id="id1">
-<caption><span class="caption-text">Annotation_table</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<details>
+  <summary>Annotation Table</summary><table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 20.0%" />
 <col style="width: 30.0%" />
@@ -527,10 +528,108 @@ saveRDS(sc,&quot;3_analysis/sc_anno.rds&quot;)
 </tr>
 </tbody>
 </table>
-<p>Cyto = GZMA,GZMB,PRF1,GNLY,NKG7</p>
-<p>Naive = CCR7, SELL</p>
-<p>DN = double negative; Th = T helper, Tfh = follicular T helper, Tc = cytotoxic T cell; Treg = regulatory T cell</p>
-</section>
+</details><details>
+  <summary>Annotation Details</summary>
+
+Cyto = GZMA, GZMB, PRF1, GNLY, NKG7
+
+Naive = CCR7, SELL
+
+DN = double negative; Th = T helper, Tfh = follicular T helper, Tc = cytotoxic T cell; Treg = regulatory T cell
+
+</details></section>
+<section id="simple-t-cell-annotations">
+<h3>Simple T cell annotations<a class="headerlink" href="#simple-t-cell-annotations" title="Link to this heading"></a></h3>
+<details>
+  <summary>Simple Annotation Table</summary><table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Cell type</p></th>
+<th class="head"><p>Sub-classification</p></th>
+<th class="head"><p>Panel</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CD4</p></td>
+<td><p>Treg</p></td>
+<td><p>CD8A-, CD8B-, FOXP3, RORC- , CCR6-,CXCR6-</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Treg.IL17</p></td>
+<td><p>CD8A-, CD8B-, FOXP3, RORC , CCR6, CXCR6</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Tcm-Tn</p></td>
+<td><p>CD8A-, CD8B- , FOXP3- , RORC- , CCR6-,CXCR6-, GZMB-, IFNG-, GNLY-, NKG7-, CXCL13-, IL21-, IL7R, TCF7, CCR7</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Tfh</p></td>
+<td><p>CD8A-, CD8B- , FOXP3- , RORC- , CCR6-,CXCR6-, GZMB-, IFNG-, GNLY-, NKG7-, CXCL13, IL21</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Th1</p></td>
+<td><p>CD8A-, CD8B- , FOXP3- , RORC- , CCR6-,CXCR6-, GZMB, IFNG, GNLY, NKG7</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Th17</p></td>
+<td><p>CD8A, CD8B, FOXP3-, RORC , CCR6,CXCR6,</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>other</p></td>
+<td><p>CD8A-, CD8B- ,CD4, CD40LG, FOXP3- , RORC- , CCR6-,CXCR6-, GZMB-, IFNγ-, GNLY-, NKG7-, CXCL13-, IL21-, IL7R-, TCF7-, CCR7-</p></td>
+</tr>
+<tr class="row-odd"><td><p>CD8</p></td>
+<td><p>Tcm-Tem</p></td>
+<td><p>CD8A, CD8B,CD4-, CD40LG-, ITGAE-,GZMK</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Tcm-Tn</p></td>
+<td><p>CD8A, CD8B,CD4-, CD40LG-, ITGAE-,GZMK-, GZMB-, PRF1-, GNLY-, SELL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Teff</p></td>
+<td><p>CD8A, CD8B,CD4-, CD40LG-, ITGAE-,GZMK-, GZMB, PRF1, GNLY,</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Teff.TS</p></td>
+<td><p>CD8A, CD8B,CD4-, CD40LG-, ITGAE, ENTPD1</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Trm</p></td>
+<td><p>CD8A, CD8B,CD4-, CD40LG-, ITGAE, ENTPD1-, CD160-</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Trm.A</p></td>
+<td><p>CD8A, CD8B,CD4-, CD40LG-, ITGAE, ENTPD1-, CD160</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>other</p></td>
+<td><p>CD8A, CD8B,CD4-, CD40LG-, ITGAE-,GZMK-, GZMB-, PRF1-, GNLY-, SELL-</p></td>
+</tr>
+<tr class="row-even"><td><p>DN</p></td>
+<td><p>DN</p></td>
+<td><p>CD8A-, CD8B- ,CD4-, CD40LG-, FOXP3- , RORC- , CCR6-,CXCR6-, GZMB-, IFNγ-, GNLY-, NKG7-, CXCL13-, IL21-, IL7R-, TCF7-, CCR7-</p></td>
+</tr>
+<tr class="row-odd"><td><p>DP</p></td>
+<td><p>DP</p></td>
+<td><p>CD8A, CD8B,CD4, CD40LG</p></td>
+</tr>
+</tbody>
+</table>
+</details><details>
+  <summary>Simple Annotation Table</summary>
+
+Cyto = GZMA, GZMB, PRF1, GNLY, NKG7
+
+Naive = CCR7, SELL
+
+DN = double negative; Th = T helper, Tfh = follicular T helper, Tc = cytotoxic T cell; Treg = regulatory T cell
+
+</details></section>
 <section id="creating-custom-annotation-stratergies">
 <h3>Creating custom annotation stratergies<a class="headerlink" href="#creating-custom-annotation-stratergies" title="Link to this heading"></a></h3>
 <p>The user can add additonal annotations beyond the default.</p>
