@@ -234,17 +234,26 @@ The scGate threshold was set to 0.2 for full capture and 0.55 for the immune pan
 Functional T cell annotations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. csv-table:: Annotation_table
+. raw:: html
+
+   <details>
+     <summary>Annotation Table</summary>
+
+.. csv-table:: 
     :header-rows: 1
     :file: path/anno_table.csv
     :widths: 20, 30, 50
     :class: longtable
 
-Cyto = GZMA,GZMB,PRF1,GNLY,NKG7
+    Cyto = GZMA,GZMB,PRF1,GNLY,NKG7
 
-Naive = CCR7, SELL
+    Naive = CCR7, SELL
 
-DN = double negative; Th = T helper, Tfh = follicular T helper, Tc = cytotoxic T cell; Treg = regulatory T cell 
+    DN = double negative; Th = T helper, Tfh = follicular T helper, Tc = cytotoxic T cell; Treg = regulatory T cell 
+
+.. raw:: html
+
+   </details>
 
 Creating custom annotation stratergies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
