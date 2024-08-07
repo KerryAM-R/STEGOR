@@ -1,0 +1,75 @@
+Frequenctly Asked Questions
+===========================
+
+!!! Note
+
+    Under active construction
+
+
+VDJ meta-data Questions
+-----------------------
+
+What do the vdj_gene_cdr3_AG_BD mean? 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+During the intial processing step 1. there meta data, based on the TCR-seq is summarised into differen columns.
+
+v = v_gene, j = j_gene and d = diversity.
+
+cdr3 = variable cdr3 sequence. 
+
+AG = alpha/gamma 
+
+BD = beta/delta chains
+
+This column has the vj of the alpha/gamma chains cdr3 sequence and the vdj of the beta/delta with cdr3 sequence
+
+
+What is the difference between the vdj_gene_cdr3_AG_BD and vj_cdr3_AG_BD or vdj_gene_AG_BD?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. has the complete pairing information of the TCR (see previous question for naming covention)
+2. only the vj genes are present for both paired chains, while the d gene is absernt from the gene name. 
+3. Only the vdj genes are present for both the alpha/gamma and beta/delta. The cdr3 sequence is not present. 
+
+
+ClusTCR questions
+------------------
+
+Why did the app crash when running clusTCR?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. there may be no clusters generated based on the v_gene and length. 
+
+e.g., In the demo data, the BD does not produce clusters for the K409 combind data. 
+
+:: 
+
+    creating empty matrixes
+    Performing edit distance
+    keeping edit distance of 1
+    Creating target and source object
+    Warning: Error in [[: subscript out of bounds
+
+
+Annotating
+----------
+
+1. Why does the UMAP look messy with the semi-supervised annotations? 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The UMAP is created from the single sample principal components (PCs) or the harmony equivalent to PC. These PC or dimentions of variation are representative of the variable features. In this pipeline we chose up to 1:15 PC's for the single sample and 1:30 PC's for the Harmony process. 
+
+The PC's are calculated based on the most variable features. Our default selection is all for a single sample, and 3000 for merging.
+
+So, depending on the underlying structure of the dataset the biologically relevant markers required for annotation many not be represented in the PC's. If they are not among the variable features, they will not be scaled either. 
+
+To overcome this issue, I included the markers required for annotation added to the list of variable features. 
+
+
+
+CD4 vs CD8 example. 
+
+
+
+

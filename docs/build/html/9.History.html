@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>History &mdash; STEGO.R 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=03b827c4" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo-removebg-preview_green.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="0.installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.formatting.html">Step 1. Formatting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.STEP2.html">Step 2. TCRex and ClusTCR2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.STEP3SeuratQC.html">Step 3. Quality control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.STEP4Analysis.html">Step 4. Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.postAnalysis.html">Post Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.UserTips.html">Frequenctly Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7.FAQ.html">Frequenctly Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">STEGO.R</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">History</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/9.History.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="history">
+<h1>History<a class="headerlink" href="#history" title="Link to this heading"></a></h1>
+<section id="version-2-0">
+<h2><strong>Version 2.0</strong><a class="headerlink" href="#version-2-0" title="Link to this heading"></a></h2>
+<p><strong>Major additions</strong></p>
+<blockquote>
+<div><p>Added in the automated section for the TCR -&gt; GEx focused analysis.</p>
+<p>Layout changes of the tabs to match the steps in the tutorial to improve user experience.</p>
+<p>Added in the post analysis section for easy extraction of the final meta data table. Also in this section added in filtering and summarising .csv files as needed, which can be useful when explore the summary outputs of the automated preocesses to know which TCR to focus on.</p>
+<p>Change exporting from the .h5Seurat to .rds object due to V4 vs V5 Seurat update.</p>
+<p>Added in V4 and V5 to merging and annotation, due to data storage changes with Seurat objects.</p>
+<p>Changed Top clonotype to clonal abudance.</p>
+<p>Improve the merging function to reduce to 2 at a time in a loop.</p>
+<p>Improved harmony_batch_correction_2_Scaling() to add in Seruat_version, as there was a object layout change between V4 and V5.</p>
+<p>Improve the scGate_annotating() function to include batch annotations for larger datasets. I recommended with the system I have between 50,000 to 100,000 cells per batch (max) due to computational time requirements.</p>
+</div></blockquote>
+<p><strong>New Functions</strong></p>
+<blockquote>
+<div><p>Updated the Directory_for_project to include the new command-line functions. This is for larger dataset to help automate the process.</p>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Step 1. pre-processing.R</dt><dd><ul>
+<li><p>preprocessing_10x() # for 10x Genomics</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>Step 2b. ClusTCR2_large.R</dt><dd><ul>
+<li><p>ClusTCR_Large()</p></li>
+<li><p>mcl_cluster_large()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Step 3a-c. filtering_merging_harmony_annotating.R</dt><dd><ul>
+<li><p>automated_sc_filtering()</p></li>
+<li><p>merging_multi_SeuratRDS()</p></li>
+<li><p>harmony_batch_correction_1_variableFeatures()</p></li>
+<li><p>harmony_batch_correction_1_variableFeatures()</p></li>
+<li><p>harmony_batch_correction_2_Scaling()</p></li>
+<li><p>harmony_batch_correction_3_PC()</p></li>
+<li><p>harmony_batch_correction_4_Harmony()</p></li>
+<li><p>scGate_annotating()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<blockquote>
+<div><p>Fixed program not opening if the user was not working in the project file. Removed the need to find the custom_db folder and sub-folders.</p>
+</div></blockquote>
+<p><strong>minor changes</strong></p>
+<blockquote>
+<div><p>Change the layout coloring to purple and better highlighting the active tab.</p>
+<p>Also, added in changing colour when hovering over the buttons.</p>
+<p>Add in coloring to better see if the list variable colour was selected and hovering to more accurately pick the list variables.</p>
+<p>Added in heatmap figures for the top clonotype section (re-labelled to clonal abudance).</p>
+<p>Removed redundant packages.</p>
+<p>Fixed some figure download issues.</p>
+</div></blockquote>
+</section>
+<section id="version-1-5">
+<h2><strong>Version 1.5</strong><a class="headerlink" href="#version-1-5" title="Link to this heading"></a></h2>
+<p><strong>Major additions</strong></p>
+<blockquote>
+<div><p>Added in ‘stats’, ‘dot plot’ and ‘over-representation’ to “Expanded”, “Epitope and  “ClusTCR2” section under the “TCR and GEX”</p>
+<p>Added in the “Marker” tab to the “TCR and GEX” analysis which is used to identify T cells associated with specific transcript for a single marker. The Dextramer (dual marker) is <em>under development</em>.</p>
+<p>Changed from a single ClusTCR2 output file to segregate to two files with the suffix <em>AG_</em> and <em>BD_</em>. This was to increase the clustering speed, as well as streamline the merging process in the “Analysis” section.</p>
+</div></blockquote>
+<p><strong>Bug Fixes</strong></p>
+<blockquote>
+<div><p>Fixed the issue with cell Index issue causing no identificaiton of over-represented marker analysis in the “Expanded” section.</p>
+</div></blockquote>
+<p><strong>Other changes</strong></p>
+<blockquote>
+<div><p>Added in a novel ID and keeping the original cell ID, which is needed for adding in the multi-TCR section that is under active development.</p>
+<p>Added in a place holder for the proritisation scheme with a list of ‘rule’ of the analysis. This is being actively developed and refined based on the anlysis of the 12 available datasets.</p>
+</div></blockquote>
+</section>
+<section id="version-1-0">
+<h2><strong>Version 1.0</strong><a class="headerlink" href="#version-1-0" title="Link to this heading"></a></h2>
+<p>Purpose of STEGO</p>
+<p>STEGO.R 1.0 has involve streamlining the quality control processes of both GEx and TCR-seq data.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Graziella.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

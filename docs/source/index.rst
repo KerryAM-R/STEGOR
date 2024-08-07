@@ -22,5 +22,6 @@ Contents
    5.postAnalysis
    6.UserTips
    7.FAQ
-   8.History
-   9.Tutorial
+   8.Tutorial
+   9.History
+   

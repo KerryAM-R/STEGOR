@@ -1,0 +1,88 @@
+History
+=======
+**Version 2.0**
+---------------
+**Major additions**
+
+    Added in the automated section for the TCR -> GEx focused analysis. 
+
+    Layout changes of the tabs to match the steps in the tutorial to improve user experience. 
+
+    Added in the post analysis section for easy extraction of the final meta data table. Also in this section added in filtering and summarising .csv files as needed, which can be useful when explore the summary outputs of the automated preocesses to know which TCR to focus on. 
+
+    Change exporting from the .h5Seurat to .rds object due to V4 vs V5 Seurat update. 
+
+    Added in V4 and V5 to merging and annotation, due to data storage changes with Seurat objects. 
+
+    Changed Top clonotype to clonal abudance. 
+
+    Improve the merging function to reduce to 2 at a time in a loop. 
+
+    Improved harmony_batch_correction_2_Scaling() to add in Seruat_version, as there was a object layout change between V4 and V5. 
+
+    Improve the scGate_annotating() function to include batch annotations for larger datasets. I recommended with the system I have between 50,000 to 100,000 cells per batch (max) due to computational time requirements. 
+
+**New Functions**
+
+    Updated the Directory_for_project to include the new command-line functions. This is for larger dataset to help automate the process. 
+
+- Step 1. pre-processing.R
+    - preprocessing_10x() # for 10x Genomics
+
+ - Step 2b. ClusTCR2_large.R
+    - ClusTCR_Large() 
+    - mcl_cluster_large()
+
+- Step 3a-c. filtering_merging_harmony_annotating.R
+    - automated_sc_filtering()
+    - merging_multi_SeuratRDS()
+    - harmony_batch_correction_1_variableFeatures()
+    - harmony_batch_correction_1_variableFeatures()
+    - harmony_batch_correction_2_Scaling()
+    - harmony_batch_correction_3_PC()
+    - harmony_batch_correction_4_Harmony()
+    - scGate_annotating()
+
+**Bug Fixes**
+
+    Fixed program not opening if the user was not working in the project file. Removed the need to find the custom_db folder and sub-folders.
+
+**minor changes**
+
+    Change the layout coloring to purple and better highlighting the active tab.
+
+    Also, added in changing colour when hovering over the buttons.
+
+    Add in coloring to better see if the list variable colour was selected and hovering to more accurately pick the list variables. 
+
+    Added in heatmap figures for the top clonotype section (re-labelled to clonal abudance). 
+
+    Removed redundant packages. 
+
+    Fixed some figure download issues. 
+
+**Version 1.5**
+---------------
+**Major additions**
+
+  Added in 'stats', 'dot plot' and 'over-representation' to "Expanded", "Epitope and  "ClusTCR2" section under the "TCR and GEX"
+  
+  Added in the "Marker" tab to the "TCR and GEX" analysis which is used to identify T cells associated with specific transcript for a single marker. The Dextramer (dual marker) is *under development*. 
+
+  Changed from a single ClusTCR2 output file to segregate to two files with the suffix *AG_* and *BD_*. This was to increase the clustering speed, as well as streamline the merging process in the "Analysis" section. 
+
+**Bug Fixes**
+
+  Fixed the issue with cell Index issue causing no identificaiton of over-represented marker analysis in the "Expanded" section.
+
+**Other changes**
+
+  Added in a novel ID and keeping the original cell ID, which is needed for adding in the multi-TCR section that is under active development.
+
+  Added in a place holder for the proritisation scheme with a list of 'rule' of the analysis. This is being actively developed and refined based on the anlysis of the 12 available datasets. 
+
+**Version 1.0**
+---------------
+Purpose of STEGO
+
+STEGO.R 1.0 has involve streamlining the quality control processes of both GEx and TCR-seq data. 
