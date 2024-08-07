@@ -20,6 +20,7 @@ Contents
    3.STEP3SeuratQC
    4.STEP4Analysis
    5.postAnalysis
-   6.FAQ
-   7.History
-   8.Tutorial
+   6.UserTips
+   7.FAQ
+   8.History
+   9.Tutorial
