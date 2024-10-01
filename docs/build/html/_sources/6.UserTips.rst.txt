@@ -3,7 +3,9 @@ User Tips for the analysis
 
 !!! Note
 
-    Under active construction
+    This section is for user based advice. If you have any susggestions that helped with your analysis, we would appreviate you sending us your user experince to Kerry.mullan@uantwerpen.be or add an issue on the github https://github.com/KerryAM-R/STEGOR/issues
+    
+    
 
 
 Tip for analysis
