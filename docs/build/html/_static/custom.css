@@ -3,6 +3,11 @@
     color: #d8ffc2 !important; /* White text color */
 }
 
+/* change to increase the width of the readthedocs */
+.wy-nav-content {
+    max-width: 1200px !important;
+}
+
 /* Ensure text remains visible when hovered */
 .wy-nav-content-wrap a.wy-logo:hover {
     color: #d8ffc2 !important; /* White text color */
@@ -93,7 +98,7 @@ div[role="search"] input[type="text"] {
 
 /* Change the default color of hyperlinks */
 a {
-    color: #6F00B0; /* Change to your desired color */		
+    color: #6F00B0; /* Change to your desired color */
 }
 
 /* Change the hover color of hyperlinks */
