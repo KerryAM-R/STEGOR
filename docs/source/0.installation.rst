@@ -38,8 +38,8 @@ When running STEGO.R merging and annotation steps, we recommend to limit the num
 
 Storage requirements will depend on the number of cells annotating. For example, at least 200 GB of free space on a Macbook Pro was needed to process the T cell Atlas (V2/V3). 
 
-**Download the project directory**
-----------------------------------
+Download the project directory
+------------------------------
 1. From the github repository `STEGO.R <https://github.com/KerryAM-R/STEGO.R>`_ 
 
    i. Download the `Directory_for_Project.zip <https://raw.githubusercontent.com/KerryAM-R/STEGO.R/main/Directory_for_Project.zip>`_
