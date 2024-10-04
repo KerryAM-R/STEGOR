@@ -1,0 +1,33 @@
+Publications and citations
+==========================
+
+**Citing STEGO.R**
+------------------------------------
+
+Science Advance (under consideration)
+
+
+Print print `bioRxiv <https://doi.org/10.1101/2023.09.27.559702>`_
+
+  1. STEGO.R: an application to aid in scRNA-seq and scTCR-seq processing and analysis (V1)
+
+  2. T cell receptor-centric perspective to multimodal single-cell data analysis (V2)
+
+**Citing other related research**
+------------------------------------
+
+if you use the STEGO.R wrap around for the QC, we recommend also citing these other tools that made STEGO.R workflow possible. 
+
+1. **Seurat**  
+   Hao et al. (2023). Dictionary learning for integrative, multimodal, and scalable single-cell analysis. *Nature Biotechnology*, `Seurat V5 <https://doi.org/10.1038/s41587-023-01767-y>`_.
+   
+2. **scGate**  
+   Andreatta, M., Berenstein, A. J., & Carmona, S. J. (2022). “scGate: marker-based purification of cell types from heterogeneous single-cell RNA-seq datasets.” _Bioinformatics_, *38*, 2642-2644. `scGate <https://doi.org/10.1093/bioinformatics/btab1018>`_.
+
+3. **clustcrdist**  
+   Sebastiaan Valkiers (2024). clustcrdist tool. `clustcrdist <https://doi.org/10.5281/zenodo.13861610>`_.
+
+4. **IMW-DETECT**  
+   ImmuneWatch (IMW)-DETECT (Version 1.0) tool (2024; Available at: https://www.immunewatch.com/detect)
+5. **TCRex**
+    `TCRex <https://doi.org/10.3389/fimmu.2019.02820>`

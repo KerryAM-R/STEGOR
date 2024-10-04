@@ -24,4 +24,5 @@ Contents
    7.FAQ
    8.Tutorial
    9.History
+   10.Publications
    
