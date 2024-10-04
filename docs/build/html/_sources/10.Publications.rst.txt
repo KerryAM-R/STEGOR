@@ -30,4 +30,4 @@ if you use the STEGO.R wrap around for the QC, we recommend also citing these ot
 4. **IMW-DETECT**  
    ImmuneWatch (IMW)-DETECT (Version 1.0) tool (2024; Available at: https://www.immunewatch.com/detect)
 5. **TCRex**
-    `TCRex <https://doi.org/10.3389/fimmu.2019.02820>`
+    Gielis, S., Moris, P., Bittremieux, W., De Neuter, N., Ogunjimi, B., Laukens, K., & Meysman, P. (2019). Detection of Enriched T Cell Epitope Specificity in Full T Cell Receptor Sequence Repertoires. _Frontiers in Immunology_, *10*, Article 2820. `TCRex DOI <https://doi.org/10.3389/fimmu.2019.02820>`_.
